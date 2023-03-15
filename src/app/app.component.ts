@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
-import { ApiStudentsService } from './core/services/students/api-students.service';
+import { ApiStudentsService } from './core/services/students/api/api-students.service';
 import { Students } from './core/models/Students/transformed/students.model';
+import { StudentsService } from './core/services/students/students.service';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +15,9 @@ export class AppComponent {
 
 
 
-  constructor(private apiService: ApiStudentsService){
+  constructor(private apiService: StudentsService){
 
-    this.apiService.getAllStudens().subscribe((value) => { this.students = value});
+    this.apiService.getCleanStudents().subscribe((value) => { this.students = value});
   }
 
   testApi(){
