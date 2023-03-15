@@ -1,0 +1,10 @@
+<form 
+*ngIf="userRegister" [formGroup]="userRegister">
+  <label>Usuario</label>
+  <input type="text" formControlName="Usuario" required />
+
+  <label>Contraseña</label>
+  <input type="password" formControlName="Contraseña" required />
+
+  <button type="submit">Submit</button>
+</form>

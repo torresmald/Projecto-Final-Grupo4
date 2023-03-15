@@ -5,6 +5,7 @@ import { RegisterRoutingModule } from './register-routing.module';
 import { FamiliesComponent } from './families/families.component';
 import { TeachersComponent } from './teachers/teachers.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -12,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     FamiliesComponent,
     TeachersComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,
