@@ -1,7 +1,6 @@
-import { Parent } from './api-parents.model';
+import { Parents } from '../../Parents/transformed/parents.model';
 
-export interface student {
-
+export interface Students {
 
     id: string,
     name: string,
@@ -11,7 +10,7 @@ export interface student {
     email: string,
     date: string,
     areas: string[],
-    tutor: Parent[],
+    tutor: Parents[],
     diseases: string[],
     nutrition: string[],
     grade: string[],
