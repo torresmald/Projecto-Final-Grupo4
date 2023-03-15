@@ -1,4 +1,4 @@
-import { ApiStudents } from '../../models/Students/api/api-students.model';
+import { ApiStudents } from '../../../models/Students/api/api-students.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';

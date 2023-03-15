@@ -1,7 +1,7 @@
 import { ApiParents } from '../../Parents/api/api-parents.model';
 
 export interface ApiStudents {
-    _id: string,
+    _id?: string,
     id: string,
     name: string,
     image: string,
@@ -14,7 +14,7 @@ export interface ApiStudents {
     diseases: string[],
     nutrition: string[],
     grade: string[],
-    __v: number,
-    createdAt: string,
-    updatedAt: string
+    __v?: number,
+    createdAt?: string,
+    updatedAt?: string
 }
