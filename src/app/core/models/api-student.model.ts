@@ -1,6 +1,6 @@
 import { Parent } from './api-parents.model';
 
-export interface student {
+export interface Student {
 
 
     id: string,
