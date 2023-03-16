@@ -23,21 +23,17 @@ export class RegisterComponent implements OnInit {
     private fb: FormBuilder,
     private parentsService: ParentsService,
     private teachersService: TeachersService,
-    private router: Router,
-    
+    private router: Router
   ) {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
-        console.log(this.currentRoute);
       }
     });
     this.createNewForm();
   }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
   public createNewForm() {
     this.userRegister = this.fb.group({
       email: new FormControl('', [Validators.required]),
@@ -47,7 +43,7 @@ export class RegisterComponent implements OnInit {
 
   public login() {
     console.log(this.currentRoute);
-    
+
     if (this.currentRoute === '/register/families') {
       const userRequest = this.parentsService.loginParent(
         this.userRegister?.value
@@ -61,9 +57,7 @@ export class RegisterComponent implements OnInit {
           this.errors = error.error;
         },
       });
-      console.log(this.userRegister?.value);
-    } else{
-      
+    } else {
       const userRequest = this.teachersService.loginTeacher(
         this.userRegister?.value
       );
@@ -76,7 +70,6 @@ export class RegisterComponent implements OnInit {
           this.errors = error.error;
         },
       });
-      console.log(this.userRegister?.value);
     }
   }
 }
