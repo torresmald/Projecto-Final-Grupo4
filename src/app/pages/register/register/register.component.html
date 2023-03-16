@@ -1,5 +1,4 @@
-<form 
-*ngIf="userRegister" [formGroup]="userRegister">
+<form *ngIf="userRegister" [formGroup]="userRegister" (submit)="goToMyView()">
   <label>Usuario</label>
   <input type="text" formControlName="Usuario" required />
 
