@@ -17,7 +17,7 @@ export class AppComponent {
 
   constructor(private apiService: StudentsService){
 
-    this.apiService.getCleanStudents().subscribe((value) => { this.students = value});
+    this.apiService.getStudents().subscribe((value) => { this.students = value});
   }
 
   testApi(){
