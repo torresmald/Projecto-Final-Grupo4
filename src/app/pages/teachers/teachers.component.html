@@ -1,9 +1,6 @@
-<p>teachers works!</p>
 
 <div *ngFor="let student of students">
-    
     <p>Nombre: {{ student.name }}</p>
-    <p>Direccion: {{ student.address }}</p>
-    <p>Curso: {{ student.grade }}</p>
-
+    <p>Curso: {{student.grade}}</p>
+    <button (click)="goDetail(student.id)">Ir al Detalle</button>
 </div>

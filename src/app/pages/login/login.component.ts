@@ -8,6 +8,7 @@ import {
 import { ParentsService } from 'src/app/core/services/parents/parents.service';
 import { TeachersService } from './../../core/services/teachers/teachers.service';
 import { CourierService } from 'src/app/core/services/courier/courier.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -29,10 +30,10 @@ export class LoginComponent implements OnInit {
     private loginBuilder: FormBuilder,
     private serviceTeacher: TeachersService,
     private serviceParents: ParentsService,
-    private msgCourier: CourierService
+    private msgCourier: CourierService,
+    private router: Router
   ) {
     this.msgCourier.isTeacher.subscribe((value) => {
-      console.log(value);
       this.teacher = value;
     });
   }
@@ -42,11 +43,14 @@ export class LoginComponent implements OnInit {
       const request = this.teacher
         ? this.serviceTeacher.loginTeacher(this.loginForm?.value)
         : this.serviceParents.loginParent(this.loginForm?.value);
-
       request.subscribe(() => {
-        this.teacher
-          ? alert('Te has logeado como maestro')
-          : alert('Te has logeado como tutor');
+        if (this.teacher) {
+          this.router.navigate(['/teacherView']);
+          alert('Te has logeado como maestro');
+        } else {
+          alert('Te has logeado como tutor');
+          this.router.navigate(['/familyView']);
+        }
       });
     } else {
       alert('error al iniciar sesion');
