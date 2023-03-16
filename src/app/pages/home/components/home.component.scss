@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.home-buttons{
+    padding: 50px;
+    &-button{
+        &-teacher{
+            padding: 50px;
+            background-color: rgb(56, 182, 255);
+            border-radius: 50px;
+            width: 250px;
+            height: 100px;
+        }
+        &-family{
+            padding: 50px;
+            background-color:rgb(126, 217, 87);
+            border-radius: 50px;
+            width: 250px;
+            height: 100px;
+        }
+    }
+}
