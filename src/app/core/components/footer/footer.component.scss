@@ -1,0 +1,65 @@
+.body{
+    background-color: rgb(255, 87, 87);
+    box-shadow: 1px 1px 1px 1px rgb(190, 190, 190);
+    width: 100%;
+    bottom: 0%;
+}
+
+.footer{
+    font-family: sans-serif;
+    &icons{
+        height: 15%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        color: beige;
+        &--icon{
+            color:beige;
+            font-size: 24px;
+            display: inline-block;
+        }
+        &--icon i{
+            transition: 0.2s;
+        }
+        &--icon i:hover{
+            font-size: 29px;
+        }
+        &--div {
+            padding: 25px 25px 0;
+        }
+    }
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    font-weight: bold;
+    &list{
+        height: 100%;
+        align-items: center;
+        display: flex;
+        text-decoration: none;
+        &--url{
+            list-style: none;
+        }
+        &--url a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: beige;
+            transition: 0.2s;
+        }
+        &--url a:hover{
+            font-size: 19px;
+        }
+    }
+}
+
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color:beige;
+}
