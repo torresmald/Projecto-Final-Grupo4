@@ -17,11 +17,15 @@ const routes: Routes = [
     loadChildren: () => import('../app/pages/register/register.module').then(m => m.RegisterModule),
   }, 
   {
+    path: 'students',
+    loadChildren: () => import('../app/pages/students/students.module').then(m => m.StudentsModule),
+  }, 
+
+  {
     path: '**',
     redirectTo: ''
-  }
-
-
+  },
+ 
 
 ];
 
