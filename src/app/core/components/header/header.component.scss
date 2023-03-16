@@ -15,3 +15,30 @@
         color: beige;
     }
 }
+.logo{
+    width: 250px;
+}
+.links {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    font-weight: bold;
+    &list{
+        height: 100%;
+        align-items: center;
+        display: flex;
+        text-decoration: none;
+        &--url{
+            list-style: none;
+        }
+        &--url a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: beige;
+            transition: 0.2s;
+        }
+        &--url a:hover{
+            font-size: 19px;
+        }
+    }
+}
