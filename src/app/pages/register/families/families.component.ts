@@ -29,6 +29,4 @@ export class FamiliesComponent {
       password: new FormControl('', [Validators.required]),
     });
   }
-
-  
 }

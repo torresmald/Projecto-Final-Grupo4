@@ -42,8 +42,6 @@ export class RegisterComponent implements OnInit {
   }
 
   public login() {
-    console.log(this.currentRoute);
-
     if (this.currentRoute === '/register/families') {
       const userRequest = this.parentsService.loginParent(
         this.userRegister?.value
@@ -51,7 +49,7 @@ export class RegisterComponent implements OnInit {
       userRequest.subscribe({
         next: () => {
           this.userRegister?.reset();
-          this.router.navigate(['']);
+          this.router.navigate(['parents']);
         },
         error: (error) => {
           this.errors = error.error;
@@ -64,7 +62,7 @@ export class RegisterComponent implements OnInit {
       userRequest.subscribe({
         next: () => {
           this.userRegister?.reset();
-          this.router.navigate(['']);
+          this.router.navigate(['teachers']);
         },
         error: (error) => {
           this.errors = error.error;
