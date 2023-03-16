@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CourierService } from 'src/app/core/services/courier/courier.service';
+
 
 @Component({
   selector: 'app-home',
@@ -9,15 +11,20 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private msgCourier: CourierService
   ){}
 
   public goToTeachers(){
-    this.router.navigate(['register/teachers'])
+    this.msgCourier.trueTeacher();
+    console.log('maestro')
+    this.router.navigate(['login']);
   }
-  
+
   public goToFamilies(){
-    this.router.navigate(['register/families'])
+    this.msgCourier.falseTeacher();
+    console.log('familia')
+    this.router.navigate(['login']);
   }
 
 
