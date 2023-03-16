@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: () => import('../app/pages/students/students.module').then(m => m.StudentsModule),
   }, 
   {
+    path: 'teacher',
+    loadChildren: () => import('../app/pages/teachers/teachers.module').then(m => m.TeachersModule)
+  },
+  {
     path: 'teacherView',
     loadChildren: () => import('../app/pages/teacher-view/teacher-view.module').then(m => m.TeacherViewModule),
   },
@@ -29,7 +33,7 @@ const routes: Routes = [
     loadChildren: () => import('../app/pages/family-view/family-view.module').then(m => m.FamilyViewModule),
   },
   {
-    path: 'studentDetail',
+    path: 'studentDetail/:id',
     loadChildren: () => import('../app/pages/student-detail/student-detail.module').then(m => m.StudentDetailModule),
   },
   {

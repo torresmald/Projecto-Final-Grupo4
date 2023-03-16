@@ -5,10 +5,10 @@ import { ApiParents } from 'src/app/core/models/Parents/api/api-parents.model';
 import { Parents } from 'src/app/core/models/Parents/transformed/parents.model';
 import { ApiUsers } from 'src/app/core/models/Users/api/api-users.model';
 const parents = 'parents';
-const register = 'register';
+
 const login = 'login';
 const API_URLS = {
-  DOMAIN: 'http://localhost:3000/',
+  DOMAIN: 'https://api-projecto-final-grupo4.vercel.app/',
   PARENTS: 'parents/'
 }
 

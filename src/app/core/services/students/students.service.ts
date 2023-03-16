@@ -18,4 +18,10 @@ export class StudentsService {
       })
     );
   }
+  public getStudentDetail(id: string) : Observable<Students> {
+    return this.studentsdService.getStudentDetail(id).pipe(
+      map((student: ApiStudents) => transformDataStudents(student)
+      )
+    )
+  }
 }

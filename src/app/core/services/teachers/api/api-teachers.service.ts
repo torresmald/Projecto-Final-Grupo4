@@ -7,7 +7,7 @@ const teachers = 'teachers';
 const register = 'register';
 const login = 'login';
 const API_URLS = {
-  DOMAIN: 'http://localhost:3000/',
+  DOMAIN: 'https://api-projecto-final-grupo4.vercel.app/',
   TEACHERS: 'teachers/'
 }
 @Injectable({
