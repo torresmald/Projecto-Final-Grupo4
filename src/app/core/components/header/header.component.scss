@@ -1,0 +1,17 @@
+.body{
+    background-color: rgb(255, 87, 87);
+    box-shadow: 1px 1px 1px 1px rgb(190, 190, 190);
+    width: 100%;
+    bottom: 0%;
+}
+.header{
+    font-family: sans-serif;
+    &--logo{
+        height: 15%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        text-align: center;
+        color: beige;
+    }
+}
