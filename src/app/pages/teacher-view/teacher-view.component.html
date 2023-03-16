@@ -3,7 +3,8 @@
     <a routerLink="/teacher" class="nav-item">Mis alumnos</a>
     <a routerLink="/teacher-messages" class="nav-item">Mensajes</a>
     <p
-    >Hola:{{token.user.name}}</p>
+    *ngIf="token"
+    >Hola:{{token.name}}</p>
 </nav>
 
 <div class="container">
