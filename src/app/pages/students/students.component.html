@@ -1,4 +1,10 @@
-<p>students</p>
+<div class="student-card" *ngFor="let student of students">
+    <p class="name">Nombre: {{ student.name }}</p>
+    <img [src]="student.image" alt="Foto del alumno" height="100">
+    <p class="clase">Curso: {{student.grade}}</p>
+ 
+    <button class="button_teachers" (click)="goDetail(student.id)">Ir al Detalle</button>
+</div>
 
 
 
