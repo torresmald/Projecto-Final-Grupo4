@@ -1,11 +1,10 @@
 <div
   *ngIf="loginForm"
-  [ngClass]="{ 'container': !teacher, 'container right-panel-active': teacher }"
+  [ngClass]="{'container': !teacher, 'container right-panel-active': teacher }"
 >
   <div class="form-container sign-up-container">
-    <a href=""> < </a>
     <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
-      <h1>Acceso Profesorado</h1>
+      <h1>{{teacher ? 'Acceso Profesorado' : 'Acceso Familias'}}</h1>
       <span>Introduce Email y contraseña</span>
       <input
         type="email"
@@ -29,7 +28,7 @@
 
   <div class="form-container sign-in-container">
     <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
-      <h1>Acceso Familias</h1>
+      <h1>{{teacher ? 'Acceso Profesorado' : 'Acceso Familias'}}</h1>
       <span>Introduce el email y la contraseña</span>
       <input
         type="email"
