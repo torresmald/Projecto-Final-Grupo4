@@ -1,4 +1,78 @@
-<div *ngIf="loginForm" id="main-wrapper" class="container">
+<div
+  *ngIf="loginForm"
+  [ngClass]="{ container: !teacher, 'container right-panel-active': teacher }"
+>
+  <div class="form-container sign-up-container">
+    <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
+      <h1>Acceso Profesorado</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>Introduce Email y contraseña</span>
+      <input
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+        required
+      />
+      <input
+        type="password"
+        placeholder="Contraseña"
+        formControlName="password"
+        required
+      />
+      <a href="#">Olvidaste tu contraseña?</a>
+      <button>Acceder</button>
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
+      <h1>Acceso Familias</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>Introduce el email y la contraseña</span>
+      <input
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+        required
+      />
+      <input
+        type="password"
+        placeholder="Contraseña"
+        formControlName="password"
+        required
+      />
+      <a href="#">Olvidaste tu contraseña?</a>
+      <button>Acceder</button>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Bienvenido!</h1>
+        <p>Eres tutor o un familiar?</p>
+        <button (click)="isFamily()" class="ghost" id="signIn">
+          Acceso Familias
+        </button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Bienvenido</h1>
+        <p>Perteneces al profesorado?</p>
+        <button (click)="isFamily()" class="ghost" id="signUp">
+          Acceso Profesorado
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div *ngIf="loginForm" id="main-wrapper" class="container">
   <div class="row justify-content-center">
     <div class="col-xl-10">
       <div class="card border-0">
@@ -7,12 +81,12 @@
             <div class="col-lg-6">
               <div class="p-5">
                 <div class="mb-5">
-                  <h3 class="h4 font-weight-bold text-theme">Login</h3>
+                  <h3 class="h4 font-weight-bold text-theme">{{teacher ? 'Acceso Profesorado' : 'Acceso Familias'}}</h3>
                 </div>
 
-                <h6 class="h5 mb-0">{{teacher ? 'Profesor' : 'Familia'}}</h6>
+                <h6 class="h5 mb-0">Bienvenido</h6>
                 <p class="text-muted mt-2 mb-5">
-                  Enter your email address and password to access admin panel.
+                  Introduce tu correo y contraseña para acceder
                 </p>
 
                 <form
@@ -20,7 +94,7 @@
                 [formGroup]="loginForm"
                 >
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label for="exampleInputEmail1">Correo</label>
                     <input
                       type="email"
                       class="form-control"
@@ -30,7 +104,7 @@
                     />
                   </div>
                   <div class="form-group mb-5">
-                    <label for="exampleInputPassword1">Password</label>
+                    <label for="exampleInputPassword1">Contraseña</label>
                     <input
                       type="password"
                       class="form-control"
@@ -40,10 +114,9 @@
                     />
                   </div>
                   <button
-                  class="btn btn-theme">Login</button>
-                  <a href="#l" class="forgot-link float-right text-primary"
-                    >Forgot password?</a
-                  >
+                  class="btn btn-theme">Acceder</button>
+                  <a (click)="isFamily()" class="forgot-link float-right text-primary"
+                    >{{teacher ? 'Eres un familiar?' : 'Eres maestro?'}}</a>
                 </form>
               </div>
             </div>
@@ -63,18 +136,10 @@
             </div>
           </div>
         </div>
-        <!-- end card-body -->
       </div>
-      <!-- end card -->
 
-      <p class="text-muted text-center mt-3 mb-0">
-        Don't have an account?
-        <a href="register.html" class="text-primary ml-1">register</a>
-      </p>
-
-      <!-- end row -->
     </div>
-    <!-- end col -->
+
   </div>
-  <!-- Row -->
-</div>
+
+</div> -->

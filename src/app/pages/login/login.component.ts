@@ -18,8 +18,9 @@ import { ModalService } from 'src/app/core/services/modal/modal.service';
 })
 export class LoginComponent implements OnInit {
   public loginForm?: FormGroup;
-  public teacher?: boolean = false;
+  public teacher: boolean = false;
   public isUserLogged: boolean = false;
+  public flag: boolean = false;
 
   ngOnInit(): void {
     this.loginForm = this.loginBuilder.group({
@@ -41,6 +42,9 @@ export class LoginComponent implements OnInit {
     });
   }
 
+
+  
+
   public userLogin() {
     if (this.loginForm?.valid) {
       const request = this.teacher
@@ -61,4 +65,11 @@ export class LoginComponent implements OnInit {
       alert('error al iniciar sesion');
     }
   }
+
+
+  public isFamily(){
+
+    this.teacher = !this.teacher
+}
+
 }
