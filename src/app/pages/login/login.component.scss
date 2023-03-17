@@ -1,7 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
+	overflow: hidden;
 	box-sizing: border-box;
 }
 
@@ -14,11 +19,12 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
+	
 }
 
 h1 {
 	font-weight: bold;
-	margin: 0;
+	margin: 20px 0px;
 }
 
 h2 {
@@ -55,6 +61,7 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+	margin: 2px 5px;
     
 
 }
@@ -71,6 +78,7 @@ button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
+
 
 form {
 	background-color: #FFFFFF;
@@ -213,45 +221,41 @@ input {
 	transform: translateX(20%);
 }
 
-.social-container {
-	margin: 20px 0;
+
+
+
+@media all and  (max-width: 768px) {	
+	
+
+  .container.right-panel-active .sign-up-container {
+	transform: translateX(0%);
+	width: 100%;
+	animation: show 0.6s;
 }
 
-.social-container a {
-	border: 1px solid #DDDDDD;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
+  .right-panel-active .sign-in-container{
+
+	display: none;
+	z-index: 0;
+  }
+
+  .sign-in-container{
+
+	width: 100%;
+	z-index: 9999;
+	position: absolute;
+  }
+
+  .overlay {
+	position: relative;
+	display: none;
+	z-index: 0;
+  }
+
+
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
 
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
 
 
 
