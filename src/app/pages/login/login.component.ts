@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     private serviceTeacher: TeachersService,
     private serviceParents: ParentsService,
     private msgCourier: CourierService,
-    private router: Router,
+    public router: Router,
     private modalService: ModalService
   ) {
     this.msgCourier.isTeacher.subscribe((value) => {
