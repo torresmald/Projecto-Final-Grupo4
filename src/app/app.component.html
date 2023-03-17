@@ -1,6 +1,6 @@
-<app-header></app-header>
+<app-header *ngIf="!_router.url.includes('login')" ></app-header>
 <app-loading></app-loading>
 <app-modal></app-modal>
 <router-outlet> </router-outlet>
 
-<app-footer></app-footer>
+<app-footer *ngIf="!_router.url.includes('login')"></app-footer>

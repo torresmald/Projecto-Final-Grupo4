@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
 import { ApiStudentsService } from './core/services/students/api/api-students.service';
 import { Students } from './core/models/Students/transformed/students.model';
 import { StudentsService } from './core/services/students/students.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,16 +11,11 @@ import { StudentsService } from './core/services/students/students.service';
 })
 export class AppComponent {
   title = 'proyecto-final-grupo4';
-  public students: Students[] = [];
 
 
 
-  constructor(private apiService: StudentsService){
+  constructor(public _router: Router){}
 
-    this.apiService.getStudents().subscribe((value) => { this.students = value});
-  }
-
-  testApi(){
-    console.log(this.students);
-  }
 }
+
+
