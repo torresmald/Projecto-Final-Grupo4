@@ -7,12 +7,14 @@ import { CoreRoutingModule } from './core-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     FooterComponent, 
     HeaderComponent, 
-    NavbarComponent
+    NavbarComponent, 
+    ModalComponent
   ],
   imports: [
     CommonModule, 

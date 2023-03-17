@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, ReplaySubject, tap } from 'rxjs';
 import { ApiParents } from '../../models/Parents/api/api-parents.model';
-import { Parents } from '../../models/Parents/transformed/parents.model';
 import { ApiUsers } from '../../models/Users/api/api-users.model';
 import { ApiParentsService } from './api/api-parents.service';
 const TOKEN_KEY = 'user-token-key';
