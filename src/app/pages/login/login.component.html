@@ -1,3 +1,7 @@
+<app-alert *ngIf="alertSuccess" [successAlert]="msg"></app-alert>
+<app-alert *ngIf="alertError" [errorAlert]="'Debes Completar todos los campos'"></app-alert>
+
+
 <div
   *ngIf="loginForm"
   [ngClass]="{'container': !teacher, 'container right-panel-active': teacher }"
@@ -12,6 +16,12 @@
         formControlName="email"
         required
       />
+      
+      <p class="error"
+      *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched">
+      Escribe un nombre
+    </p>
+
       <input
         type="password"
         placeholder="Contraseña"

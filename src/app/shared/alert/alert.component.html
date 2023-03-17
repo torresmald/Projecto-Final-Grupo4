@@ -1,0 +1,34 @@
+<div *ngIf="successMesage" class="body">
+
+    <div class="modalBody">
+
+        <div class="modalBody__decor">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/900px-Sign-check-icon.png?20200929115132" alt="">
+        </div>
+
+        <div class="modalBody__msg">
+            <p>{{successMesage}}</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div *ngIf="errorMenssage" class="body">
+
+    <div class="modalBody">
+
+        <div class="modalBody__decor2">
+            <img src="../../../assets/image/pngegg.png" alt="">
+        </div>
+
+        <div class="modalBody__msg">
+            <p>{{errorMenssage}}</p>
+        </div>
+
+    </div>
+
+
+</div>
+

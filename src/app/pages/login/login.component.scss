@@ -231,6 +231,7 @@ input {
 	transform: translateX(0%);
 	width: 100%;
 	animation: show 0.6s;
+	z-index: 9999;
 }
 
   .right-panel-active .sign-in-container{

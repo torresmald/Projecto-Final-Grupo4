@@ -1,0 +1,91 @@
+.body{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    animation: in 1.5s ease infinite alternate;
+    -webkit-transition-delay: 0s
+    
+   
+
+}
+
+.modalBody{
+
+    width: 290px;
+    height: 80px;
+    background-color: red;
+    -webkit-animation: out 2s infinite alternate;
+    
+    
+    
+
+    &__decor{
+
+        background-color: rgba(6, 196, 28, 0.687);
+     
+        height: 25%;
+        box-shadow: 1px 0px 5px black;
+
+        }
+
+        &__decor img{
+
+            width: 6%;
+            margin-bottom: 5%;
+            margin-left: 1%;
+        }
+
+    
+    &__decor2{
+
+        background-color: rgb(241, 8, 8);
+     
+        height: 25%;
+        box-shadow: 1px 0px 5px black;
+
+        
+    }
+    &__decor2 img{
+
+        width: 6%;
+        margin-bottom: 5%;
+        margin-left: 1%;
+    }
+    
+
+    &__msg{
+
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: 1px 3px 5px black;
+        font-size: 17px;
+        font-weight: bold;
+     
+    }
+
+
+    
+}
+
+
+@keyframes out {
+    from {background-color: rgba(140, 255, 0, 0.671);}
+    to {background-color: rgb(0, 255, 8);}
+  }
+
+@keyframes in {
+    0% {
+        transform: translatey(-11%);
+    }
+    100% {
+        transform: translatey(10%);
+    }
+}
+
+
