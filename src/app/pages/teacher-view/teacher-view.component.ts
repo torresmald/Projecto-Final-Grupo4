@@ -12,6 +12,5 @@ export class TeacherViewComponent {
   constructor(){
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user) : null;
-    console.log(this.token);
   }
 }

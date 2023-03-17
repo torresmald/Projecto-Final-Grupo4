@@ -52,7 +52,10 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => import('../app/pages/family-contact/family-contact.module').then(m => m.FamilyContactModule),
   },
-
+  {
+    path: 'contact',
+    loadChildren: () => import('../app/pages/family-contact/family-contact.module').then(m => m.FamilyContactModule),
+  },
   {
     path: '**',
     redirectTo: ''

@@ -25,4 +25,8 @@ export class TeachersService {
       })
     );
   }
+  public logout() {
+    const removeToken = localStorage.removeItem(TOKEN_KEY);
+    this.userLogged$.next(false);
+  }
 }
