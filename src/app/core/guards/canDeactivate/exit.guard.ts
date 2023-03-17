@@ -14,7 +14,7 @@ export class ExitGuard implements CanDeactivate<LoginComponent> {
     currentRoute: ActivatedRouteSnapshot,
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot): Observable<boolean> | boolean {
-      if (!component.loginForm?.dirty) {
+      if (!component.loginForm?.dirty || component.isUserLogged) {
         return true;
       } else {
         this.modalService.showModal('NO HAS TERMINADO DE RELLENAR EL FORMULARIO');

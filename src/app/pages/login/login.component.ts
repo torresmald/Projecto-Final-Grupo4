@@ -9,6 +9,7 @@ import { ParentsService } from 'src/app/core/services/parents/parents.service';
 import { TeachersService } from './../../core/services/teachers/teachers.service';
 import { CourierService } from 'src/app/core/services/courier/courier.service';
 import { Router } from '@angular/router';
+import { ModalService } from 'src/app/core/services/modal/modal.service';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public loginForm?: FormGroup;
   public teacher?: boolean = false;
+  public isUserLogged: boolean = false;
 
   ngOnInit(): void {
     this.loginForm = this.loginBuilder.group({
@@ -31,7 +33,8 @@ export class LoginComponent implements OnInit {
     private serviceTeacher: TeachersService,
     private serviceParents: ParentsService,
     private msgCourier: CourierService,
-    private router: Router
+    private router: Router,
+    private modalService: ModalService
   ) {
     this.msgCourier.isTeacher.subscribe((value) => {
       this.teacher = value;
@@ -45,10 +48,12 @@ export class LoginComponent implements OnInit {
         : this.serviceParents.loginParent(this.loginForm?.value);
       request.subscribe(() => {
         if (this.teacher) {
+          this.isUserLogged = true;
           this.router.navigate(['/teacherView']);
-          alert('Te has logeado como maestro');
+          this.modalService.showModal('Logado como Profesor');
         } else {
-          alert('Te has logeado como tutor');
+          this.isUserLogged = true;
+          this.modalService.showModal('Logado como Padre');
           this.router.navigate(['/familyView']);
         }
       });
