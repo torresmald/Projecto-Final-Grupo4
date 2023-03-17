@@ -1,0 +1,9 @@
+<div class="modalBackground" *ngIf="shouldShowModal">
+  <div class="modalContainer">
+    <div class="bodyModal">{{ modalMessage }}</div>
+    <div class="footerModal">
+      <button (click)="confirm(true)">Exit</button>
+      <button (click)="confirm(false)">Continue</button>
+    </div>
+  </div>
+</div>
