@@ -1,14 +1,16 @@
 <app-alert *ngIf="alertSuccess" [successAlert]="msg"></app-alert>
-<app-alert *ngIf="alertError" [errorAlert]="'Debes Completar todos los campos'"></app-alert>
-
+<app-alert
+  *ngIf="alertError"
+  [errorAlert]="'Debes Completar todos los campos'"
+></app-alert>
 
 <div
   *ngIf="loginForm"
-  [ngClass]="{'container': !teacher, 'container right-panel-active': teacher }"
+  [ngClass]="{ container: !teacher, 'container right-panel-active': teacher }"
 >
   <div class="form-container sign-up-container">
     <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
-      <h1>{{teacher ? 'Acceso Profesorado' : 'Acceso Familias'}}</h1>
+      <h1>{{ teacher ? "Acceso Profesorado" : "Acceso Familias" }}</h1>
       <span>Introduce Email y contraseña</span>
       <input
         type="email"
@@ -16,10 +18,18 @@
         formControlName="email"
         required
       />
-      
-      <p class="error"
-      *ngIf="!loginForm.get('email')?.valid && loginForm.get('email')?.touched">
-      Escribe un nombre
+
+      <p
+        *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['required']
+"
+      >
+        Email requerido
+      </p>
+
+      <p
+      *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['email']"
+    >
+      Formato de email incorrecto
     </p>
 
       <input
@@ -28,17 +38,28 @@
         formControlName="password"
         required
       />
+
+      <p
+      *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']
+"
+    >
+      Escribe una contraseña
+    </p>
+
+
       <a href="#">Olvidaste tu contraseña?</a>
       <div>
         <button>Acceder</button>
-        <button type="button" (click)="router.navigate(['/home'])">atras</button>
+        <button type="button" (click)="router.navigate(['/home'])">
+          atras
+        </button>
       </div>
     </form>
   </div>
 
   <div class="form-container sign-in-container">
     <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
-      <h1>{{teacher ? 'Acceso Profesorado' : 'Acceso Familias'}}</h1>
+      <h1>{{ teacher ? "Acceso Profesorado" : "Acceso Familias" }}</h1>
       <span>Introduce el email y la contraseña</span>
       <input
         type="email"
@@ -46,16 +67,38 @@
         formControlName="email"
         required
       />
+
+      <p
+        *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['required']"
+      >
+        Email requerido
+      </p>
+
+      <p
+      *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['email']"
+    >
+      Formato de email incorrecto
+    </p>
+
       <input
         type="password"
         placeholder="Contraseña"
         formControlName="password"
         required
       />
+
+      <p
+      *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']
+"
+    >
+      Escribe una contraseña
+    </p>
       <a href="#">Olvidaste tu contraseña?</a>
       <div>
         <button>Acceder</button>
-        <button type="button" (click)="router.navigate(['/home'])">atras</button>
+        <button type="button" (click)="router.navigate(['/home'])">
+          atras
+        </button>
       </div>
     </form>
   </div>
