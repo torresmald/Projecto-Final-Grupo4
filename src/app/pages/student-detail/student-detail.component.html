@@ -1,1 +1,26 @@
-<p>{{student?.name}}</p>
+<div class="student-detail">
+    <div class="student-detail__image">
+        <img [src]="student?.image" alt="Foto del alumno" height="100">
+    </div>
+    <div class="student-detail__info">
+        <h4>Nombre: {{student?.name}}</h4>
+        <p>Direccion: {{student?.address}}</p>
+        <p>Telefono: {{student?.phone}}</p>
+        <p>Año de nacimiento: {{student?.date}}</p>
+        <p>Clase: {{student?.grade}}</p>
+        <p>Alergias: {{student?.nutrition}}</p>
+        <p>Medicamentos: {{student?.diseases}}</p>
+        <p>Areas: {{student?.areas}}</p>
+        <div class="" *ngFor="let tutor of tutors">
+            <p class="name">Correo: {{ tutor.email}}</p>
+
+        </div>
+
+     
+
+       
+
+    </div>
+
+
+

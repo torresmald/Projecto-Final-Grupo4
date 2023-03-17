@@ -1,7 +1,10 @@
+import { Parents } from './../../core/models/Parents/transformed/parents.model';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { Students } from 'src/app/core/models/Students/transformed/students.model';
 import { StudentsService } from 'src/app/core/services/students/students.service';
+
 const TOKEN_KEY = 'user-token-key';
 
 @Component({
@@ -14,6 +17,7 @@ export class StudentDetailComponent {
   public students: Students[] = [];
   public grade?: string[];
   public token?: string[];
+  public tutors?: Parents[];
   
   constructor(private activatedRoute: ActivatedRoute, private studentService: StudentsService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
@@ -26,5 +30,11 @@ export class StudentDetailComponent {
       const studentId = params['id'];
       this.studentService.getStudentDetail(studentId).subscribe((student) => this.student = student)
     })
+    
   }
-}
+ 
+ 
+  }
+
+ 
+
