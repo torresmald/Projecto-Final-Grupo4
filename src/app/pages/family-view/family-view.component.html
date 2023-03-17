@@ -2,6 +2,9 @@
     <a routerLink="/notifications">Notificaciones</a>
     <a routerLink="/resources">Recursos</a>
     <a routerLink="/contact">Contacto</a> 
+    <p
+    *ngFor="let child of token?.childs"
+    >Mi hijo: {{child.name}}</p>
 </nav>
 
 <div class="mainContainer">
