@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ApiTeachers } from 'src/app/core/models/Teachers/api/api-teachers.model';
-import { ApiUsers } from 'src/app/core/models/Users/api/api-users.model';
 const TOKEN_KEY = 'user-token-key';
 @Component({
   selector: 'app-teacher-view',
