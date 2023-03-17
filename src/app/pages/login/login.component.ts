@@ -10,7 +10,7 @@ import { TeachersService } from './../../core/services/teachers/teachers.service
 import { CourierService } from 'src/app/core/services/courier/courier.service';
 import { Router } from '@angular/router';
 import { ModalService } from 'src/app/core/services/modal/modal.service';
-import { ApiTeachers } from 'src/app/core/models/Teachers/api/api-teachers.model';
+import { ValidationErrors } from '@angular/forms';
 const TOKEN_KEY = 'user-token-key';
 
 @Component({
@@ -25,11 +25,12 @@ export class LoginComponent implements OnInit {
   public alertSuccess: boolean = false;
   public alertError: boolean = false;
   public msg: string = '';
+  public formErr: string = '';
 
   ngOnInit(): void {
     this.loginForm = this.loginBuilder.group({
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required, Validators.maxLength(8)]),
+      password: new FormControl('', [Validators.required]),
     });
   }
 
@@ -52,9 +53,10 @@ export class LoginComponent implements OnInit {
   public userLogin() {
     if (this.loginForm?.valid) {
       const request = this.teacher
-        ? this.serviceTeacher.loginTeacher(this.loginForm?.value)
-        : this.serviceParents.loginParent(this.loginForm?.value);
-      request.subscribe(() => {
+        ? this.serviceTeacher.loginTeacher(this.loginForm?.value): this.serviceParents.loginParent(this.loginForm?.value);
+         
+        request.subscribe(() => {
+          
         if (this.teacher) {
           this.isUserLogged = true;
           let teacherName = ''
