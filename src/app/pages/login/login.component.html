@@ -1,15 +1,11 @@
 <div
   *ngIf="loginForm"
-  [ngClass]="{ container: !teacher, 'container right-panel-active': teacher }"
+  [ngClass]="{ 'container': !teacher, 'container right-panel-active': teacher }"
 >
   <div class="form-container sign-up-container">
+    <a href=""> < </a>
     <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
       <h1>Acceso Profesorado</h1>
-      <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-      </div>
       <span>Introduce Email y contraseña</span>
       <input
         type="email"
@@ -24,17 +20,16 @@
         required
       />
       <a href="#">Olvidaste tu contraseña?</a>
-      <button>Acceder</button>
+      <div>
+        <button>Acceder</button>
+        <button (click)="router.navigate(['/home'])">atras</button>
+      </div>
     </form>
   </div>
+
   <div class="form-container sign-in-container">
     <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
       <h1>Acceso Familias</h1>
-      <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-      </div>
       <span>Introduce el email y la contraseña</span>
       <input
         type="email"
@@ -49,7 +44,10 @@
         required
       />
       <a href="#">Olvidaste tu contraseña?</a>
-      <button>Acceder</button>
+      <div>
+        <button>Acceder</button>
+        <button (click)="router.navigate(['/home'])">atras</button>
+      </div>
     </form>
   </div>
   <div class="overlay-container">
