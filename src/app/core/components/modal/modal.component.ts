@@ -9,6 +9,7 @@ import { ModalService } from '../../services/modal/modal.service';
 export class ModalComponent implements OnInit {
   public shouldShowModal? : boolean;
   public modalMessage?: string;
+  public loginModal?: boolean;
 
   constructor(private  modalService: ModalService) {}
   
