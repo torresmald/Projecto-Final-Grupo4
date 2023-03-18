@@ -29,10 +29,7 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
-        .button_teachers{
-            border-radius: 10px;  
-            background-color: rgb(56, 182, 255);
-        }
+      
     }
     
     .student-info{
@@ -95,4 +92,16 @@
         justify-content: space-between;
 
  
+}
+
+.button_back{
+    border-radius: 10px;  
+    background-color: rgb(56, 182, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    margin-left: 70px;
+
+   
 }

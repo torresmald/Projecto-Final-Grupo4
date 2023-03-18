@@ -1,3 +1,7 @@
+<div class="div_back">
+    <button class="button_back_students" (click)="goBack()">Volver</button>
+</div>
+
 <div class="student-card" *ngFor="let student of students">
     <p class="name">Nombre: {{ student.name }}</p>
     <img [src]="student.image" alt="Foto del alumno" height="100">
@@ -5,6 +9,8 @@
  
     <button class="button_teachers" (click)="goDetail(student.id)">Ir al Detalle</button>
 </div>
+
+
 
 
 
