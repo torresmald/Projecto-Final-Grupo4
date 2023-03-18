@@ -9,16 +9,18 @@
 .footer{
     font-family: sans-serif;
     &icons{
-        height: 15%;
         display: flex;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
         text-align: center;
+        margin: 0;
         color: beige;
         &--icon{
             color:beige;
             font-size: 24px;
             display: inline-block;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         &--icon i{
             transition: 0.2s;
