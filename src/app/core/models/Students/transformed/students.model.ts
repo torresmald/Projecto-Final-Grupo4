@@ -1,7 +1,6 @@
 import { Parents } from '../../Parents/transformed/parents.model';
 
 export interface Students {
-
     id: string,
     name: string,
     image: string,
@@ -14,5 +13,4 @@ export interface Students {
     diseases: string[],
     nutrition: string[],
     grade: string[],
-
 }
