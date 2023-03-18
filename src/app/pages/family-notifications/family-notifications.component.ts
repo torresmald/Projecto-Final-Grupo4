@@ -13,7 +13,7 @@ export class FamilyNotificationsComponent implements OnInit {
   public notifications?: Notifications[] = [];
   public token?: ApiParents;
   public tokenChildName?: string;
-  public notificationChildName?: Notifications;
+  public notificationChildName?: string;
   constructor(private messageService: NotificationsService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user) : null;
@@ -23,7 +23,7 @@ export class FamilyNotificationsComponent implements OnInit {
   ngOnInit(): void {
     this.messageService
       .getNotification()
-      .subscribe((value) => this.notificationChildName = value.map((student) => student.student.filter((name) => name.name.includes(this.tokenChildName)))
+      .subscribe((value) => value.map((notification) => notification.student.map((student) => student.name === this.tokenChildName))
       );
   }
 }
