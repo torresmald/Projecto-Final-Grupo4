@@ -10,11 +10,11 @@ const TOKEN_KEY = 'user-token-key';
   templateUrl: './family-notifications.component.html',
   styleUrls: ['./family-notifications.component.scss'],
 })
-export class FamilyNotificationsComponent implements OnInit {
+export class FamilyNotificationsComponent  {
   public notifications?: Notifications[] = [];
   public token?: Students[];
   public tokenChildName?: string;
-  public myChild?: Notifications[];
+  public myChilds?: Notifications[];
   constructor(private messageService: NotificationsService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user.childs) : null;
@@ -24,13 +24,12 @@ export class FamilyNotificationsComponent implements OnInit {
     .getNotification()
     .subscribe(
       (value) =>
-        (this.notifications = value.filter(
-          (student) => student.name === this.tokenChildName
-        ))
+        this.myChilds = value.filter((obj) => obj.student.some((student) => student.name === this.tokenChildName))
+        
     );
-  console.log(this.notifications);
-  }
-  ngOnInit(): void {
-   
   }
 }
+
+// (this.notifications = value.filter(
+//   (student) => student.name === this.tokenChildName
+// ))
