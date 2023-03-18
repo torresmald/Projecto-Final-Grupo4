@@ -1,6 +1,57 @@
+
+<div *ngIf="errorMenssage" class="body">
+
+    <div class="cardAlert">
+        <div class="cardAlert__img">
+            <img src="../../../assets/logos/error.jpg" alt="">
+        </div>
+        <div class="title">
+            <p>{{ errorTitle }}</p>
+        </div>
+        <div class="msg">
+            <p>{{ errorMenssage }}</p>
+        </div>
+    </div>
+
+</div>
+
+
+
 <div *ngIf="successMesage" class="body">
 
+    <div class="cardAlert">
+        <div class="cardAlert__img2">
+            <img src="../../../assets/logos/Succes.jpg" alt="">
+        </div>
+        <div class="title2">
+            <p>{{successTitle}}</p>
+        </div>
+        <div class="msg">
+            <p>{{ successMesage }}</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="successMesage" class="body">
+
     <div class="modalBody">
+        
 
         <div class="modalBody__decor">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/900px-Sign-check-icon.png?20200929115132" alt="">
@@ -31,4 +82,4 @@
 
 
 </div>
-
+ -->

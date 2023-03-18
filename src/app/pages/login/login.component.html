@@ -1,7 +1,7 @@
-<app-alert *ngIf="alertSuccess" [successAlert]="msg"></app-alert>
+<app-alert *ngIf="alertSuccess" [successAlertMsg]="msg" [successAlertTitle]="'Bienvenido'"></app-alert>
 <app-alert
   *ngIf="alertError"
-  [errorAlert]="'Debes Completar todos los campos'"
+  [errorAlertMsg]="'Debes Completar todos los campos'" [errorAlertTitle]="'Error'"
 ></app-alert>
 
 <div

@@ -9,21 +9,30 @@ export class AlertComponent implements OnChanges {
 
   successMesage: string;
   errorMenssage: string;
+  errorTitle: string;
+  successTitle: string;
   
-  @Input() public successAlert: string = ''; 
-  @Input() public errorAlert: string = ''; 
+  @Input() public successAlertMsg: string = ''; 
+  @Input() public errorAlertMsg: string = ''; 
+  @Input() public successAlertTitle: string = '';
+  @Input() public errorAlertTitle: string = '';
+
 
   constructor(){
     
-    this.successMesage = this.successAlert;
-    this.errorMenssage = this.errorAlert
+    this.successMesage = this.successAlertMsg;
+    this.errorMenssage = this.errorAlertMsg
+    this.errorTitle = this.errorAlertTitle;
+    this.successTitle = this.successAlertTitle
 
   }
 
   ngOnChanges() {
     
-    this.successMesage = this.successAlert;   
-    this.errorMenssage = this.errorAlert;  
+    this.successMesage = this.successAlertMsg;
+    this.errorMenssage = this.errorAlertMsg
+    this.errorTitle = this.errorAlertTitle;
+    this.successTitle = this.successAlertTitle  
   }
 
 
