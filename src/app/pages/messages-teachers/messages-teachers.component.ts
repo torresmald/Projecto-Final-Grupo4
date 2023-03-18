@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { StudentsService } from 'src/app/core/services/students/students.service';
 import { ApiStudents } from './../../core/models/Students/api/api-students.model';
 import { NotificationsService } from './../../core/services/notifications/notifications.service';
@@ -15,7 +16,7 @@ export class MessagesTeachersComponent implements OnInit {
   public msgForm?: FormGroup
   public students: ApiStudents[] = [];
 
-  constructor (private msgBuilder: FormBuilder, private studentService: ApiStudentsService, private notificationService: NotificationsService) {}
+  constructor (private msgBuilder: FormBuilder, private studentService: ApiStudentsService, private notificationService: NotificationsService, private router: Router) {}
 
 
   ngOnInit(): void {
@@ -26,20 +27,18 @@ export class MessagesTeachersComponent implements OnInit {
       date: new FormControl('', Validators.required),
       description: new FormControl(''),
       student: new FormControl(this.students)
-      
     })
    
   }
 
   public newNotifications() {
-
-
-    this.notificationService.postNotification(this.msgForm?.value).subscribe(() => {
-      
-    })
-
-   
+    console.log(this.msgForm?.value);
     
+    this.notificationService.postNotification(this.msgForm?.value).subscribe(() => {
+      alert('Enviado con exito');
+      this.msgForm?.reset();
+      this.router.navigate(['teacherView']);
+    })    
   }
 
 }
