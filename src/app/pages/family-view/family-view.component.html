@@ -8,7 +8,7 @@
   <div class="columnL" *ngIf="token" >
     <div class="card" style="width: 18rem" *ngFor="let child of token.childs">
         <p>Mi hijo:</p> 
-        <img src= {{ child.image }} class="card-img-top" alt="...">
+        <img src= "{{ child.image }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"> {{ child.name }} </h5>
           <p class="card-text"> Clase: {{ child.grade }} </p>
@@ -16,7 +16,6 @@
           <p class="card-text"> Teléfono de contacto: {{ child.phone }} </p>
           <p class="card-text"> Email de contacto: {{ child.email }} </p>
           <p class="card-text"> Dirección: {{ child.address }} </p>
-          <p class="card-text"> Tutor/a: {{ child.tutor }} </p>
           <p class="card-text"> Enfermedades: {{ child.diseases }} </p>
           <p class="card-text"> Alergias alimentarias: {{ child.nutrition }} </p>
         </div>
