@@ -60,28 +60,28 @@ export class LoginComponent implements OnInit {
           let teacherName = '';
           const authToken = localStorage.getItem(TOKEN_KEY);
           authToken ? (teacherName = JSON.parse(authToken).user.name) : null;
-          this.msg = `Bienvenido ${teacherName}`;
+          this.msg = `Has iniciado sesión correctamente ${teacherName}`;
           this.alertSuccess = true;
           setTimeout(() => {
             this.router.navigate(['/teacherView']);
            
             this.alertSuccess = false;
-          }, 3000);
+          }, 4000);
         } else {
           this.isUserLogged = true;
           this.serviceTeacher.userLogged$.next(true);
-          this.msg = 'Bienvenido';
+          this.msg = 'Has iniciado sesión correctamente';
           this.alertSuccess = true;
           setTimeout(() => {
             this.router.navigate(['/familyView']);
-          }, 3000);
+          }, 4000);
         }
       });
     } else {
       this.alertError = true;
       setTimeout(() => {
         this.alertError = false;
-      }, 3000);
+      }, 4000);
     }
   }
 
