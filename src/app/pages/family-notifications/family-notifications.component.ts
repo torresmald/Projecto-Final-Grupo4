@@ -11,6 +11,7 @@ const TOKEN_KEY = 'user-token-key';
   styleUrls: ['./family-notifications.component.scss'],
 })
 export class FamilyNotificationsComponent  {
+  public openNoti: boolean = false;
   public notifications?: Notifications[] = [];
   public token?: Students[];
   public tokenChildName?: string;
@@ -25,9 +26,19 @@ export class FamilyNotificationsComponent  {
     .subscribe(
       (value) =>
         this.myChilds = value.filter((obj) => obj.student.some((student) => student.name === this.tokenChildName))
+       
         
     );
   }
+
+  openNotification(){
+
+    
+
+    this.openNoti = !this.openNoti
+
+  }
+  
 }
 
 // (this.notifications = value.filter(

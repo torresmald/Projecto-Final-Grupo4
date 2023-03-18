@@ -1,7 +1,20 @@
-<div 
->
-  <div class="student-card" *ngFor="let notification of myChilds">
-    <p class="name">Nombre: {{ notification.name }}</p>
+
+<h3>Notificaciones</h3>
+<div *ngFor="let notification of myChilds" class="body">
+
+
+<div  class="card">
+  <img src="https://icons-for-free.com/download-icon-email+inbox+letter+mail+message+messages+icon-1320196706209650448_512.png" alt="">
+  <div class="left">
+    <p class="left__name">{{notification.name}}</p>
+    <p class="left__date">{{notification.date}}</p>
+  </div>
+  <div class="right">
+    Aqui se pueden agregar botones
   </div>
 </div>
 
+<div class="cardActive card"><p>{{ notification.description}}</p></div>
+
+
+</div>
