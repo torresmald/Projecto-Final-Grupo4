@@ -7,7 +7,7 @@ export interface Notifications {
     name: string,
     date: string,
     description: string,
-    student: Students,
+    student: Students[],
     createdAt: string,
     updateAt: string,
 

@@ -1,1 +1,13 @@
-<p>family-notifications works!</p>
+<div
+*ngIf="token"
+>
+    <ul 
+    *ngFor="let notification of notifications">
+      <li>{{ notification.date }}</li>
+      <li>{{ notification.name }}</li>
+      <li>{{ notification.description }}</li>
+      <li *ngFor="let student of notification.student">{{ student.name }}</li>
+    </ul>
+    
+</div>
+
