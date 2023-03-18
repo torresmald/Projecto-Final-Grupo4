@@ -1,11 +1,7 @@
-<div
-*ngIf="notifications"
+<div 
 >
-    <ul
-      *ngFor="let name of notifications"  
-    >
-      <li>{{name}}</li>
-    </ul>
-    
+  <div class="student-card" *ngFor="let notification of myChilds">
+    <p class="name">Nombre: {{ notification.name }}</p>
+  </div>
 </div>
 

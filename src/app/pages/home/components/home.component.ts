@@ -23,13 +23,11 @@ export class HomeComponent implements OnInit {
   }
   public goToTeachers(){
     this.msgCourier.trueTeacher();
-    console.log('maestro')
     this.router.navigate(['login']);
   }
 
   public goToFamilies(){
     this.msgCourier.falseTeacher();
-    console.log('familia')
     this.router.navigate(['login']);
   }
 
