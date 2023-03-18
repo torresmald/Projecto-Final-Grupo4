@@ -1,0 +1,11 @@
+<div
+*ngIf="token"
+>
+<p> Email: {{token.email}}</p>
+<p
+   *ngIf="token.name"
+>{{messageName}} </p>
+<p
+   *ngIf="token.email"
+>{{messageEmail}} </p>
+</div>

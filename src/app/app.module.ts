@@ -12,6 +12,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { MyAccountComponent } from './pages/my-account/my-account.component';
 
 
 
@@ -24,6 +25,7 @@ import { SharedModule } from './shared/shared.module';
     HomeComponent,
     NotFoundComponent,
     StudentsComponent,
+    MyAccountComponent,
 
    
     

@@ -47,60 +47,45 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
-  
-
   public userLogin() {
     if (this.loginForm?.valid) {
       const request = this.teacher
-        ? this.serviceTeacher.loginTeacher(this.loginForm?.value): this.serviceParents.loginParent(this.loginForm?.value);
-         
-        request.subscribe(() => {
-          
+        ? this.serviceTeacher.loginTeacher(this.loginForm?.value)
+        : this.serviceParents.loginParent(this.loginForm?.value);
+
+      request.subscribe(() => {
         if (this.teacher) {
           this.isUserLogged = true;
-          let teacherName = ''
+          this.serviceTeacher.userLogged$.next(true);
+          let teacherName = '';
           const authToken = localStorage.getItem(TOKEN_KEY);
           authToken ? (teacherName = JSON.parse(authToken).user.name) : null;
-          this.msg = `Bienvenido ${teacherName}`
+          this.msg = `Bienvenido ${teacherName}`;
           this.alertSuccess = true;
-
-
           setTimeout(() => {
-          this.router.navigate(['/teacherView']);
-          this.modalService.showModal('Logado como Profesor');
-          this.alertSuccess = false;
+            this.router.navigate(['/teacherView']);
+           
+            this.alertSuccess = false;
           }, 3000);
-
-      
-          
-        
         } else {
-
           this.isUserLogged = true;
-     
-          this.msg = 'Bienvenido'
+          this.serviceTeacher.userLogged$.next(true);
+          this.msg = 'Bienvenido';
           this.alertSuccess = true;
           setTimeout(() => {
-
-            this.modalService.showModal('Logado como Padre');
             this.router.navigate(['/familyView']);
           }, 3000);
-          
         }
       });
     } else {
-      this.alertError = true
+      this.alertError = true;
       setTimeout(() => {
-        this.alertError = false
+        this.alertError = false;
       }, 3000);
     }
   }
 
-
-  public isFamily(){
-
-    this.teacher = !this.teacher
-}
-
+  public isFamily() {
+    this.teacher = !this.teacher;
+  }
 }

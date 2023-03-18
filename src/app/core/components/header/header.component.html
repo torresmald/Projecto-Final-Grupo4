@@ -1,15 +1,18 @@
 <header class="body">
-    <div class="header">
-      <a class="header--logo" [routerLink]="['home']">
-        <img class="logo" src="../../../../assets/logos/LogoGeneral.png">
-      </a>
+  <div class="header">
+    <a class="header--logo" [routerLink]="['home']">
+      <img class="logo" src="../../../../assets/logos/LogoGeneral.png" />
+    </a>
     <div class="links">
       <ul class="linkslist">
-        <li class="linkslist--url"><a href="#">Login</a></li>
-        <li class="linkslist--url"><a href="#">Mi cuenta</a></li>
-        <li class="linkslist--url"><a (click)="logout()">Logout</a></li>
-        <li class="linkslist--url"><a href="#">Contacto</a></li>
+        <li class="linkslist--url">
+          <a *ngIf="isLogged" [routerLink]="['myAccount']">Mi cuenta</a>
+        </li>
+        <li class="linkslist--url">
+          <a *ngIf="isLogged" (click)="logout()">Logout</a>
+        </li>
+        <li class="linkslist--url"><a [routerLink]="['about']">Sobre Nosotros</a></li>
       </ul>
     </div>
   </div>
-  </header>
+</header>

@@ -3,7 +3,7 @@
  [formGroup]="msgForm"
  >
     <input formControlName="name" type="text" placeholder="nombre" >
-    <input formControlName="date"   type="text" placeholder="fecha">
+    <input formControlName="date"   type="date" placeholder="fecha">
     <input formControlName="description" type="text" placeholder="descripcion" >
     <select formControlName="student">  
         <option *ngFor="let student of students" [value]="student._id">{{student.name}}</option>

@@ -20,16 +20,17 @@ export class FamilyNotificationsComponent implements OnInit {
     authToken ? (this.token = JSON.parse(authToken).user.childs) : null;
     this.tokenChildName = this.token?.map((name) => name.name).join('');
     console.log(this.tokenChildName);
+    this.messageService
+    .getNotification()
+    .subscribe(
+      (value) =>
+        (this.notifications = value.filter(
+          (student) => student.name === this.tokenChildName
+        ))
+    );
+  console.log(this.notifications);
   }
   ngOnInit(): void {
-    this.messageService
-      .getNotification()
-      .subscribe(
-        (value) =>
-          (this.notifications = value.filter(
-            (student) => student.name === this.tokenChildName
-          ))
-      );
-    console.log(this.notifications);
+   
   }
 }

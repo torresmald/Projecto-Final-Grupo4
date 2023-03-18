@@ -13,6 +13,14 @@ const routes: Routes = [
     loadChildren: () => import('../app/pages/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'about',
+    loadChildren: () => import('../app/pages/about/about.module').then(m => m.AboutModule)
+  },
+  {
+    path: 'myAccount',
+    loadChildren: () => import('../app/pages/my-account/my-account.module').then(m => m.MyAccountModule)
+  },
+  {
     path: 'login',
     loadChildren: () => import('../app/pages/login/login.module').then(m => m.LoginModule),
   }, 
@@ -47,10 +55,6 @@ const routes: Routes = [
   {
     path: 'resources',
     loadChildren: () => import('../app/pages/family-resources/family-resources.module').then(m => m.FamilyResourcesModule),
-  },
-  {
-    path: 'contact',
-    loadChildren: () => import('../app/pages/family-contact/family-contact.module').then(m => m.FamilyContactModule),
   },
   {
     path: 'contact',
