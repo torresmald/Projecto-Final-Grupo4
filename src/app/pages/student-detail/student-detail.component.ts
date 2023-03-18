@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { Students } from 'src/app/core/models/Students/transformed/students.model';
 import { StudentsService } from 'src/app/core/services/students/students.service';
+import { Teachers} from 'src/app/core/models/Teachers/transformed/teachers.model';
 
 const TOKEN_KEY = 'user-token-key';
 
@@ -19,7 +20,8 @@ export class StudentDetailComponent {
   public token?: string[];
   public tutors?: Parents[];
   
-  constructor(private activatedRoute: ActivatedRoute, private studentService: StudentsService) {
+  
+  constructor(private activatedRoute: ActivatedRoute, private studentService: StudentsService,private route : Router) { 
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user.grade) : null;
     this.studentService
@@ -30,11 +32,11 @@ export class StudentDetailComponent {
       const studentId = params['id'];
       this.studentService.getStudentDetail(studentId).subscribe((student) => this.student = student)
     })
-    
-  }
- 
- 
-  }
-
  
 
+  }
+  public goBack(): void{
+    this.route.navigate(['students']);
+
+  }
+}

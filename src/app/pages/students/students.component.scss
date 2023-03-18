@@ -1,35 +1,127 @@
-.student-card{
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #ccc;
-    background-color: #ffffff;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-    }
-    .name{
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
+.student-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  background-color: #ffffff;
 
-    .clase{
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
- .button_teachers{
-  border-radius: 10px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .clase {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .button_teachers {
+    border-radius: 10px;
     background-color: rgb(56, 182, 255);
- }
+  }
+}
+
+.button_back_students {
+  border-radius: 10px;
+  background-color: rgb(56, 182, 255);
+}
+.div_back {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+
+
+@mixin center($extend: true) {
+  @if $extend {
+    @extend %center;
+  } @else {
+    position: absolute;
+    left: 90%;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+%center {
+  @include center($extend: false);
+}
+
+body {
+  background: #111;
+}
+
+.button_back_students {
+  @include center;
+  
+  
+  color: #111010;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #111010;
+  font-size: 18px;
+  border-radius: 40px;
+  
+  font-family: "Raleway", sans-serif;
+  transition: 0.6s;
+  overflow: hidden;
+  &:focus {
+    outline: 0;
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+  &:hover {
+    background: #2dea2d;
+    cursor: pointer;
+    &:before {
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 0.6;
+      transition: 0.7s;
     }
-   
+    &:after {
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 1;
+      transition: 0.7s;
+    }
+  }
+}

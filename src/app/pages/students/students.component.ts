@@ -31,6 +31,9 @@ export class StudentsComponent {
       
       this.router.navigate(['/studentDetail', id])
     }
+    public goBack(): void{
+      this.router.navigate(['teacherView']);
+    }
   }
   
 
