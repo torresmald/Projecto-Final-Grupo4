@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './components/about.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AboutComponent } from './components/about.component';
   ],
   imports: [
     CommonModule,
-    AboutRoutingModule
+    AboutRoutingModule,
+    CarouselModule
   ]
 })
 export class AboutModule { }
