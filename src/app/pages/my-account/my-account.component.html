@@ -1,11 +1,16 @@
-<div
-*ngIf="token"
->
-<p> Email: {{token.email}}</p>
-<p
-   *ngIf="token.name"
->{{messageName}} </p>
-<p
-   *ngIf="token.email"
->{{messageEmail}} </p>
-</div>
+
+  <div class="mi-cuenta">
+    <h2 class="titulo">Mis datos de contacto</h2>
+    <div class="image-and-dates">
+      <div class="image_div">
+        <img src="../../../assets/logos/icono foto perfil gris (2).png" alt="Imagen de perfil">
+      </div>
+      <div class="dates" *ngIf="token">
+        <p>Nombre: {{token.name}}</p>
+        <p>Email: {{token.email}}</p>
+        <p>Curso: {{token.grade}}</p>
+      </div>
+    </div>
+    <a routerLink="/teacherView" class="boton-volver">Volver</a>
+  </div>
+

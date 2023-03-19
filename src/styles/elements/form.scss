@@ -1,0 +1,17 @@
+@mixin botonVolver($colorgeneral) {
+  display: inline-block;
+  background-color: $colorgeneral;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($colorgeneral, 10%);
+  }
+}
