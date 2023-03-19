@@ -10,7 +10,6 @@ import { ModalService } from 'src/app/core/services/modal/modal.service';
 export class ModalNotificationComponent {
   @Input() notification?: Notifications;
   constructor(){
-    console.log(this.notification);
   }
 
   

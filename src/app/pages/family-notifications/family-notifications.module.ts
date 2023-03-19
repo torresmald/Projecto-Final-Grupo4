@@ -5,6 +5,7 @@ import { FamilyNotificationsRoutingModule } from './family-notifications-routing
 import { FamilyNotificationsComponent } from './family-notifications.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ModalNotificationComponent } from './modal-notification/modal-notification.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ModalNotificationComponent } from './modal-notification/modal-notificat
   ],
   imports: [
     CommonModule,
-    FamilyNotificationsRoutingModule
+    FamilyNotificationsRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class FamilyNotificationsModule { }
