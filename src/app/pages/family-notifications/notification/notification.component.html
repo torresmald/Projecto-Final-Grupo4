@@ -10,13 +10,17 @@
       <p class="left__date">{{ notifications?.date }}</p>
     </div>
     <div class="right">
-      <button (click)="hideNotification()">Leido</button>
-      <button (click)="inButton()">mas info</button>
+  
+      <button class="buttonArrow" (click)="inButton()">
+        <i *ngIf="!infoButton" class="fa fa-arrow-down" aria-hidden="true"></i>
+        <i *ngIf="infoButton" class="fa fa-arrow-up" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 
   <div [ngClass]="{ 'cardDisable': !infoButton,
   'cardActive': infoButton}" class="cardDisable card">
     <p>{{ notifications?.description }}</p>
+    <div><button (click)="hideNotification()">Leido</button></div>
   </div>
 </div>
