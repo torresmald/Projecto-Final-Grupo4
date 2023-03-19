@@ -1,5 +1,6 @@
-<div>
-  <div [ngClass]="{ ocultar: isPressed }">
+<div class="body" [ngClass]="{ 'body': !isPressed,
+'hidden': isPressed}">
+  <div class="card" >
     <img
       src="https://icons-for-free.com/download-icon-email+inbox+letter+mail+message+messages+icon-1320196706209650448_512.png"
       alt=""
@@ -10,10 +11,12 @@
     </div>
     <div class="right">
       <button (click)="hideNotification()">Leido</button>
+      <button (click)="inButton()">mas info</button>
     </div>
   </div>
 
-  <div class="cardActive card">
+  <div [ngClass]="{ 'cardDisable': !infoButton,
+  'cardActive': infoButton}" class="cardDisable card">
     <p>{{ notifications?.description }}</p>
   </div>
 </div>

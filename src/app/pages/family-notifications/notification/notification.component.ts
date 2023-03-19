@@ -12,9 +12,16 @@ export class NotificationComponent {
   @Output() public hideNotifications: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public isPressed:boolean = false;
+  public infoButton:boolean = false
 
   public hideNotification(){
     this.isPressed = !this.isPressed;
     this.hideNotifications.emit(this.isPressed);
+  }
+
+  public inButton(){
+
+    this.infoButton = !this.infoButton
+
   }
 }
