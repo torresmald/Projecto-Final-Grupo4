@@ -9,7 +9,7 @@
   margin-top: 20px;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 
   &:hover {
     background-color: darken($colorgeneral, 10%);
