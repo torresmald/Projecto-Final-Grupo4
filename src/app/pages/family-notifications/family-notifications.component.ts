@@ -12,12 +12,14 @@ const TOKEN_KEY = 'user-token-key';
 })
 export class FamilyNotificationsComponent  {
   public openNoti: boolean = false;
+
   public showNotification: boolean = false;
   public notifications?: Notifications[] = [];
   public token?: Students[];
   public tokenChildName?: string;
   public savedNotification?: Notifications;
-  
+  public readedNotification?: Notifications;
+
   constructor(private messageService: NotificationsService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user.childs) : null;
@@ -29,8 +31,13 @@ export class FamilyNotificationsComponent  {
         this.notifications = value.filter((obj) => obj.student.some((student) => student.name === this.tokenChildName))
     );
   }
+
   public deleteNotification(isTouched: any) {
     this.showNotification = isTouched ? true : false;
+
+  public editNotification(event: Notifications){
+    this.readedNotification = event;
+
   }
   public openNotification(){
     this.openNoti = !this.openNoti

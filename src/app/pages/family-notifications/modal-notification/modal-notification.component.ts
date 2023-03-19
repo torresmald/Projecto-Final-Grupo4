@@ -12,7 +12,7 @@ export class ModalNotificationComponent {
   @Output() public closeNotifications: EventEmitter<boolean> =
     new EventEmitter<boolean>();
   constructor(){
-
+  
   }
 
   closeNotification(){
