@@ -12,7 +12,7 @@ const TOKEN_KEY = 'user-token-key';
 })
 export class FamilyNotificationsComponent  {
   public openNoti: boolean = false;
-  public showNotificacion: boolean = true;
+  public showNotification: boolean = false;
   public notifications?: Notifications[] = [];
   public token?: Students[];
   public tokenChildName?: string;
@@ -30,8 +30,8 @@ export class FamilyNotificationsComponent  {
         this.notifications = value.filter((obj) => obj.student.some((student) => student.name === this.tokenChildName))
     );
   }
-  public hideNotification(isTouched: any) {
-    this.showNotificacion = isTouched ? true : false;
+  public deleteNotification(isTouched: any) {
+    this.showNotification = isTouched ? true : false;
   }
   public editNotification(event: Notifications){
     this.readedNotification = event;
@@ -42,4 +42,8 @@ export class FamilyNotificationsComponent  {
   public moreInfoNotification(event: Notifications){
     this.savedNotification = event;
   } 
+
+  public closeNotifications(event: boolean){
+    this.showNotification = false
+  }
 }
