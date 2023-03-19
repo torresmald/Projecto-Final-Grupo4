@@ -13,7 +13,7 @@ import { ApiStudentsService } from './../../core/services/students/api/api-stude
 })
 export class MessagesTeachersComponent implements OnInit {
 
-  public msgForm?: FormGroup
+  public msgForm?: FormGroup;
   public students: ApiStudents[] = [];
 
   constructor (private msgBuilder: FormBuilder, private studentService: ApiStudentsService, private notificationService: NotificationsService, private router: Router) {}
@@ -26,14 +26,13 @@ export class MessagesTeachersComponent implements OnInit {
       name: new FormControl('', Validators.required),
       date: new FormControl('', Validators.required),
       description: new FormControl(''),
+      calendar: new FormControl(''),
       student: new FormControl(this.students)
     })
    
   }
 
-  public newNotifications() {
-    console.log(this.msgForm?.value);
-    
+  public newNotifications() {    
     this.notificationService.postNotification(this.msgForm?.value).subscribe(() => {
       alert('Enviado con exito');
       this.msgForm?.reset();

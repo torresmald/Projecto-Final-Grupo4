@@ -28,7 +28,6 @@ export class AlertComponent implements OnChanges {
   }
 
   ngOnChanges() {
-    
     this.successMesage = this.successAlertMsg;
     this.errorMenssage = this.errorAlertMsg
     this.errorTitle = this.errorAlertTitle;

@@ -12,35 +12,27 @@ const TOKEN_KEY = 'user-token-key';
 })
 export class FamilyNotificationsComponent  {
   public openNoti: boolean = false;
+  public showNotifitacion: boolean = false;
   public notifications?: Notifications[] = [];
   public token?: Students[];
   public tokenChildName?: string;
-  public myChilds?: Notifications[];
   constructor(private messageService: NotificationsService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user.childs) : null;
     this.tokenChildName = this.token?.map((name) => name.name).join('');
-    console.log(this.tokenChildName);
     this.messageService
     .getNotification()
     .subscribe(
       (value) =>
-        this.myChilds = value.filter((obj) => obj.student.some((student) => student.name === this.tokenChildName))
-       
-        
+        this.notifications = value.filter((obj) => obj.student.some((student) => student.name === this.tokenChildName))
     );
   }
+  public hideNotification(name: string) {
+    const index = this.notifications?.findIndex(item => item.name === name);
 
-  openNotification(){
-
-    
-
-    this.openNoti = !this.openNoti
-
+    this.showNotifitacion = true;
   }
-  
+  public openNotification(){
+    this.openNoti = !this.openNoti
+  } 
 }
-
-// (this.notifications = value.filter(
-//   (student) => student.name === this.tokenChildName
-// ))
