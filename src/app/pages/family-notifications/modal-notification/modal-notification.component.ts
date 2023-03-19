@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Notifications } from 'src/app/core/models/Notifications/notifications.model';
 import { ModalService } from 'src/app/core/services/modal/modal.service';
 
@@ -9,9 +9,19 @@ import { ModalService } from 'src/app/core/services/modal/modal.service';
 })
 export class ModalNotificationComponent {
   @Input() notification?: Notifications;
+  @Output() public closeNotifications: EventEmitter<boolean> =
+    new EventEmitter<boolean>();
   constructor(){
-    console.log(this.notification);
+
   }
+
+  closeNotification(){
+
+  this.closeNotifications.emit(false);
+
+
+  }
+  
 
   
 }

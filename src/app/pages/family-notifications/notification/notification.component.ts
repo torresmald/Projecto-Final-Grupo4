@@ -9,7 +9,7 @@ import { NotificationsService } from 'src/app/core/services/notifications/notifi
 })
 export class NotificationComponent {
   @Input() notifications?: Notifications;
-  @Output() public hideNotifications: EventEmitter<boolean> =
+  @Output() public deleteNotifications: EventEmitter<boolean> =
     new EventEmitter<boolean>();
   @Output() public savedNotification: EventEmitter<Notifications> =
     new EventEmitter<Notifications>();
@@ -24,7 +24,7 @@ export class NotificationComponent {
     this.notificationService.deleteNotification(id).subscribe();
 
     this.isPressed = !this.isPressed;
-    this.hideNotifications.emit(this.isPressed);
+    this.deleteNotifications.emit(this.isPressed);
   }
   public moreInfoNotification(notifications?: Notifications) {
     this.savedNotification.emit(notifications);
@@ -32,4 +32,5 @@ export class NotificationComponent {
   public inButton() {
     this.infoButton = !this.infoButton;
   }
+
 }
