@@ -1,9 +1,12 @@
 <h3>Notificaciones</h3>
-
+<app-modal-notification
+[notification]="savedNotification"
+></app-modal-notification>
 <app-notification class="body"
 *ngFor="let item of notifications"
 [notifications]="item"
 (hideNotifications)="hideNotification($event)"
+(savedNotification)="moreInfoNotification($event)"
 >
 
 </app-notification>
