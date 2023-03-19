@@ -15,6 +15,7 @@ export class MessagesTeachersComponent implements OnInit {
 
   public msgForm?: FormGroup;
   public students: ApiStudents[] = [];
+  public calendar:Blob | string="";
 
   constructor (private msgBuilder: FormBuilder, private studentService: ApiStudentsService, private notificationService: NotificationsService, private router: Router) {}
 
@@ -26,18 +27,33 @@ export class MessagesTeachersComponent implements OnInit {
       name: new FormControl('', Validators.required),
       date: new FormControl('', Validators.required),
       description: new FormControl(''),
-      calendar: new FormControl(''),
+      calendar: new FormControl(null),
       student: new FormControl(this.students)
     })
    
   }
 
-  public newNotifications() {    
-    this.notificationService.postNotification(this.msgForm?.value).subscribe(() => {
+  public newNotifications() {  
+    const form = new FormData();
+    form.append("name", this.msgForm?.get("name")?.value);
+    form.append("date", this.msgForm?.get("date")?.value);
+    form.append("description", this.msgForm?.get("description")?.value);
+    form.append("calendar", this.calendar);
+    
+
+    this.notificationService.postNotification(form).subscribe(() => {
       alert('Enviado con exito');
       this.msgForm?.reset();
       this.router.navigate(['teacherView']);
     })    
   }
+  public uploadImage(event:any) {
+    const reader = new FileReader();
+    if(event.target.files && event.target.files.length) {
+      const file = event.target.files[0];      
+      reader.readAsArrayBuffer(file);   
+      this.calendar=file;   
+  }
+}
 
 }

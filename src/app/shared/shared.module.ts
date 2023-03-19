@@ -7,6 +7,6 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
   declarations: [AlertComponent, ScrollToTopComponent],
   imports: [CommonModule],
 
-  exports: [ScrollToTopComponent, AlertComponent],
+  exports: [ScrollToTopComponent, AlertComponent ],
 })
 export class SharedModule {}

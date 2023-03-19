@@ -6,7 +6,6 @@ export interface ApiStudents {
     name: string,
     image: string,
     phone: number,
-    calendar: string,
     address: string,
     email: string,
     date: string,

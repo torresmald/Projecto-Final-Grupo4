@@ -15,7 +15,7 @@ export class NotificationsService {
   public getNotification(): Observable<Notifications[]>{
     return this.request.get<Notifications[]>(`${API_URLS}`);
   }
-  public postNotification(body: Notification): Observable<Notification>{
+  public postNotification(body: FormData): Observable<Notification>{
     return this.request.post<Notification>(`${API_URLS}`, body);
   }
 
