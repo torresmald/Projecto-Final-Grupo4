@@ -19,4 +19,9 @@ export class NotificationsService {
     return this.request.post<Notification>(`${API_URLS}`, body);
   }
 
+   public deleteNotification(id: string): Observable<Notification>{
+    return this.request.delete<Notification>(`${API_URLS}/${id}`);
+  }
+
+
 }
