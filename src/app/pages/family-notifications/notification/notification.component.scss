@@ -3,7 +3,7 @@ h3{
     margin-bottom: 70px;
     font-size: 15px;
 }
-.ocultar{
+.hidden{
     display: none;
 }
 .body{
@@ -59,23 +59,32 @@ img{
 
 }
 
-.cardActive{
+.cardDisable{
     z-index: 0;
     transition: 1s;
     position: relative;
     opacity: 0;
     transform: translateY(-60%);
+    transition: 2s;
     
     
 }
 
-.cardActive p{
+.cardActive {
+    margin-top: 7px;
+    margin-bottom: 20px;
+    opacity: 1;
+    transition: 2s;
+    z-index: 0;
+}
+
+.cardActive  p{
 
     margin: 7px 25px;
    
 }
 
-.card:hover + .cardActive{
-    margin-top: 48px;
-    opacity: 1;
-}
+// .card:hover + .cardActive{
+//     margin-top: 48px;
+//     opacity: 1;
+// }
