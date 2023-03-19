@@ -16,6 +16,7 @@ export class FamilyNotificationsComponent  {
   public notifications?: Notifications[] = [];
   public token?: Students[];
   public tokenChildName?: string;
+  
   constructor(private messageService: NotificationsService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user.childs) : null;
