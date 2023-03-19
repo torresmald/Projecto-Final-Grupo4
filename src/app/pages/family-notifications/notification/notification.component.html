@@ -1,0 +1,19 @@
+<div>
+  <div [ngClass]="{ ocultar: isPressed }">
+    <img
+      src="https://icons-for-free.com/download-icon-email+inbox+letter+mail+message+messages+icon-1320196706209650448_512.png"
+      alt=""
+    />
+    <div class="left">
+      <p class="left__name">{{ notifications?.name }}</p>
+      <p class="left__date">{{ notifications?.date }}</p>
+    </div>
+    <div class="right">
+      <button (click)="hideNotification()">Leido</button>
+    </div>
+  </div>
+
+  <div class="cardActive card">
+    <p>{{ notifications?.description }}</p>
+  </div>
+</div>

@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { FamilyNotificationsRoutingModule } from './family-notifications-routing.module';
 import { FamilyNotificationsComponent } from './family-notifications.component';
+import { NotificationComponent } from './notification/notification.component';
 
 
 @NgModule({
   declarations: [
-    FamilyNotificationsComponent
+    FamilyNotificationsComponent,
+    NotificationComponent
   ],
   imports: [
     CommonModule,
