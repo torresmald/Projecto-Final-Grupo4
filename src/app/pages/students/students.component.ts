@@ -16,7 +16,6 @@ export class StudentsComponent {
     public students: Students[] = [];
     public grade?: string[];
     public token?: string[];
-  
     constructor(private studentsService: StudentsService, private router: Router) {
       const authToken = localStorage.getItem(TOKEN_KEY);
       authToken ? (this.token = JSON.parse(authToken).user.grade) : null;
@@ -27,8 +26,6 @@ export class StudentsComponent {
     }
   
     public goDetail(id: string){
-      console.log(id);
-      
       this.router.navigate(['/studentDetail', id])
     }
     public goBack(): void{
