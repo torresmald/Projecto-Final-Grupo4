@@ -1,10 +1,53 @@
+@import '../../../styles/base/colors.scss';
+
 .nav {
     display: flex;
-    justify-content:space-around;
-    margin-top: 20px; 
+    justify-content:space-evenly;
+    background-color: $colorfamilias;;
+    a{
+      text-decoration: none;
+      color: $colorgeneral;
+      font-weight: bold;
+    }
   }
-.mainContainer{
+.row{
   display: flex;
-  justify-content: space-around;
-  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+.card{
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px $colorfamilias;
+  margin: 5%;
+}
+
+.card-img-top{
+  width: 10rem;
+}
+.calendar{
+  display:flex;
+  flex-wrap: wrap;
+  &--text{
+  text-align: center;
+  }
+  &--div{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px $colorfamilias;
+    &--i{
+      width: 60rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column; 
+    &--div {
+      width: 100%;
+      } 
+}
 }
