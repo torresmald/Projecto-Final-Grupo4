@@ -1,32 +1,40 @@
 <nav class="nav">
-    <a routerLink="/notifications">Notificaciones</a>
-    <a routerLink="/resources">Recursos</a>
-    <a routerLink="/contact">Contacto</a>  
+  <a routerLink="/notifications">Notificaciones</a>
+  <a routerLink="/resources">Recursos</a>
+  <a routerLink="/contact">Contacto</a>
 </nav>
 
-<div class="mainContainer">
-  <div class="columnL" *ngIf="token" >
-    <div class="card" style="width: 18rem" *ngFor="let child of token.childs">
-        <p>Mi hijo:</p> 
-        <img src= "{{ child.image }}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"> {{ child.name }} </h5>
-          <p class="card-text"> Clase: {{ child.grade }} </p>
-          <p class="card-text"> Fecha de nacimiento: {{ child.date }} </p>
-          <p class="card-text"> Teléfono de contacto: {{ child.phone }} </p>
-          <p class="card-text"> Email de contacto: {{ child.email }} </p>
-          <p class="card-text"> Dirección: {{ child.address }} </p>
-          <p class="card-text"> Enfermedades: {{ child.diseases }} </p>
-          <p class="card-text"> Alergias alimentarias: {{ child.nutrition }} </p>
+<div class="row">
+  <div *ngIf="token">
+    <div class="card" style="width: 60rem" *ngFor="let child of token.childs">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{ child.image }}" class="card-img-top" alt="..." />
         </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ child.name }}</h5>
+            <p class="card-text">Clase: {{ child.grade }}</p>
+            <p class="card-text">Fecha de nacimiento: {{ child.date }}</p>
+            <p class="card-text">Teléfono de contacto: {{ child.phone }}</p>
+            <p class="card-text">Email de contacto: {{ child.email }}</p>
+            <p class="card-text">Dirección: {{ child.address }}</p>
+            <p class="card-text">Enfermedades: {{ child.diseases }}</p>
+            <p class="card-text">
+              Alergias alimentarias: {{ child.nutrition }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="columnR">
-    <h5>Mi calendario</h5>
-    <div class="card" style="width: 18rem" *ngFor="let notification of notifications">
-      <img
-        src="{{notification.calendar}}"
-      />
+  <div class="calendar">
+    <h5 class="calendar--text">Mi calendario</h5>
+    <div
+      class="calendar--div"
+      *ngFor="let notification of notifications"
+    >
+      <img class="calendar--div--i" src="{{ notification.calendar }}" />
     </div>
     <!-- <div class="card" style="width: 18rem">
       <img
