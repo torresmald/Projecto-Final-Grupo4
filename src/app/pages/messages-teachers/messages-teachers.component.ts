@@ -39,6 +39,8 @@ export class MessagesTeachersComponent implements OnInit {
     form.append("date", this.msgForm?.get("date")?.value);
     form.append("description", this.msgForm?.get("description")?.value);
     form.append("calendar", this.calendar);
+    form.append("student", this.msgForm?.get("student")?.value);
+
     
 
     this.notificationService.postNotification(form).subscribe(() => {
