@@ -19,7 +19,9 @@ export class StudentDetailComponent {
   public grade?: string[];
   public token?: string[];
   public tutors?: Parents[];
-
+  public img = new Image();
+  public studentImg: any = new Image();
+  
   constructor(
     private activatedRoute: ActivatedRoute,
     private studentService: StudentsService,
@@ -44,6 +46,8 @@ export class StudentDetailComponent {
     this.route.navigate(['students']);
   }
   public generatePDF(student?: Students) {
+    this.img.src = '../../../assets/logos/LogoGeneral.png';
+    this.studentImg.src = this.student?.image;
     const doc = new jsPDF();
     autoTable(doc, {
       body: [
@@ -64,16 +68,11 @@ export class StudentDetailComponent {
               textColor: 'white',
             },
           },
-          {
-            styles: {
-              halign: 'center',
-            },
-          },
         ],
       ],
       theme: 'plain',
       styles: {
-        fillColor: 'black',
+        fillColor: `rgb(255, 87, 87)`,
       },
     });
 
@@ -98,6 +97,8 @@ export class StudentDetailComponent {
       ],
       theme: 'grid',
     });
-    return doc.save('estudiante');
+    doc.addImage(this.img, 'png',100,5,40,30);
+    doc.addImage(this.studentImg,'jpg',150,30,40,30);
+    return doc.save(this.student?.name);
   }
 }
