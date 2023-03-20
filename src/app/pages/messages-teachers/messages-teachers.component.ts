@@ -5,6 +5,7 @@ import { StudentsService } from 'src/app/core/services/students/students.service
 import { ApiStudents } from './../../core/models/Students/api/api-students.model';
 import { NotificationsService } from './../../core/services/notifications/notifications.service';
 import { ApiStudentsService } from './../../core/services/students/api/api-students.service';
+const TOKEN_KEY = 'user-token-key';
 
 @Component({
   selector: 'app-messages-teachers',
@@ -16,12 +17,17 @@ export class MessagesTeachersComponent implements OnInit {
   public msgForm?: FormGroup;
   public students: ApiStudents[] = [];
   public calendar:Blob | string="";
+  public token?: string[];
 
-  constructor (private msgBuilder: FormBuilder, private studentService: ApiStudentsService, private notificationService: NotificationsService, private router: Router) {}
+  constructor (private msgBuilder: FormBuilder, private studentService: ApiStudentsService, private notificationService: NotificationsService, private router: Router) {
+    const authToken = localStorage.getItem(TOKEN_KEY);
+    authToken ? (this.token = JSON.parse(authToken).user.grade) : null;
+  }
 
 
   ngOnInit(): void {
-    this.studentService.getAllStudens().subscribe((value) => { this.students = value })
+    this.studentService.getAllStudens().subscribe((value) => this.students = value.filter((grade) => grade.grade === this.token
+    ))
 
     this.msgForm = this.msgBuilder.group({
       name: new FormControl('', Validators.required),
