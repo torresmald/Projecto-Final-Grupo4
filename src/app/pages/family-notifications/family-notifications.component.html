@@ -7,9 +7,10 @@
 <app-notification class="body"
 *ngFor="let item of notifications"
 [notifications]="item"
-(hideNotifications)="deleteNotification($event)"
-(savedNotification)="moreInfoNotification($event)"
+(savedNotification)="moreInfoNotification($event ,$event)"
 (readedNotification)="editNotification($event)"
 >
 
 </app-notification>
+
+<!-- (hideNotifications)="deleteNotification($event)" -->

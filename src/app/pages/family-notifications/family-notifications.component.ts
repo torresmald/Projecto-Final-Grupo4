@@ -30,20 +30,24 @@ export class FamilyNotificationsComponent  {
         this.notifications = value.filter((obj) => obj.student.some((student) => student.name === this.tokenChildName))
     );
   }
-  public deleteNotification(isTouched: any) {
-    this.showNotification = isTouched ? true : false;
-  }
+
+  // public hideNotification(isTouched: any) {
+  //   this.showNotification = isTouched ? true : false;
+  // }
+
   public editNotification(event: Notifications){
     this.readedNotification = event;
   }
   public openNotification(){
     this.openNoti = !this.openNoti
   }
-  public moreInfoNotification(event: Notifications){
+  public moreInfoNotification(event: Notifications, isTouched: any ){
     this.savedNotification = event;
+    this.showNotification = isTouched ? true : false;
   } 
 
   public closeNotifications(event: boolean){
-    this.showNotification = false
+    
+    this.showNotification = event
   }
 }
