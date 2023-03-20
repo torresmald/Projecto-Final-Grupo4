@@ -1,107 +1,168 @@
+@import "../../../styles/elements/form.scss";
+@import "../../../styles/base/colors.scss";
 
-
-    .student-detail{
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 0 5px #ccc;
-        background-color: #ffffff;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        img{
-            width: 100px;
-            height: 100px;
-           
-            margin-bottom: 10px;
-        }
-        .name{
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-    
-        .clase{
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-      
+.student-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .info-title {
+      font-weight: bold;
+      margin-right: 10px;
     }
-    
-    .student-info{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        .info{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            .info-title{
-                font-weight: bold;
-                margin-right: 10px;
-            }
-        }
-    }
-    
-    .student-grades{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        .grade{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            .grade-title{
-                font-weight: bold;
-                margin-right: 10px;
-            }
-        }
-    }
-    
-    .student-classes{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        .class{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            .class-title{
-                font-weight: bold;
-                margin-right: 10px;
-            }
-        }
-    }
-    
-    .student-teachers{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
- 
+  }
 }
 
-.button_back{
-    border-radius: 10px;  
-    background-color: rgb(56, 182, 255);
+.student-grades {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .grade {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    width: 90px;
-    margin-left: 70px;
+    width: 100%;
+    .grade-title {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
 
-   
+.student-classes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .class {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .class-title {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
+
+.student-teachers {
+  display: flex;
+}
+
+.student-detail {
+  margin: 10px;
+  padding: 10px;
+  margin-bottom: 89px;
+  margin-top: 50px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 100px;
+    height: 100px;
+
+    margin-bottom: 10px;
+  }
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .clase {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .info-title {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
+
+.student-grades {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .grade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .grade-title {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
+
+.student-classes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .class {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .class-title {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
+
+.student-teachers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.boton-volver {
+  @include botonVolver($colorprofesores);
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border: 2px solid #111010;
+}
+.boton-student-detail {
+    display:flex;
+    align-items: center;
+  width: 100%;
+    margin-left: 35%;
+
 }
