@@ -4,14 +4,14 @@
       <img class="logo" src="../../../../assets/logos/LogoGeneral.png" />
     </a>
     <div class="links">
-      <ul class="linkslist">
-        <li class="linkslist--url">
+      <ul class="links--list">
+        <li class="links--list--url">
           <a *ngIf="isLogged" [routerLink]="['myAccount']">Mi cuenta</a>
         </li>
-        <li class="linkslist--url">
+        <li class="links--list--url">
           <a *ngIf="isLogged" (click)="logout()">Logout</a>
         </li>
-        <li class="linkslist--url"><a [routerLink]="['about']">Sobre Nosotros</a></li>
+        <li class="links--list--url"><a [routerLink]="['about']">Sobre Nosotros</a></li>
       </ul>
     </div>
   </div>

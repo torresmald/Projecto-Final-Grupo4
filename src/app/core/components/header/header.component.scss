@@ -1,3 +1,5 @@
+@import '../../../../styles/base/colors.scss';
+
 .body{
     width: 100%;
     bottom: 0%;
@@ -21,20 +23,21 @@
     justify-content: center;
     height: 50px;
     font-weight: bold;
-    &list{
-        height: 100%;
+    &--list{
         align-items: center;
+        justify-content: center;
         display: flex;
         text-decoration: none;
+        padding-inline-start: 0px;
         &--url{
             list-style: none;
         }
         &--url a {
             margin: 0 20px;
             text-decoration: none;
-            color:rgb(255, 87, 87);
+            color: $colorgeneral;
             transition: 0.2s;
-            font-size: 20px;
+            font-size: 15px;
         }
         &--url a:hover{
             font-size: 25px;
