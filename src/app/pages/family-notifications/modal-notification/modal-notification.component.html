@@ -10,7 +10,7 @@
                 <p>{{ notification?.name}}</p
                     ></div>
             <div class="header__buttons">
-                <button class="header__buttons--delete">Eliminar</button>
+                <button (click)="deleteNotification(notification)" class="header__buttons--delete">Eliminar</button>
                 
             </div>
         </div>
