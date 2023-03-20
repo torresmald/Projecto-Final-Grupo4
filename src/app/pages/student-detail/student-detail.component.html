@@ -13,10 +13,11 @@
         <p>Areas: {{student?.areas}}</p>
         <div class="" *ngFor="let tutor of tutors">
         <p class="name">Correo: {{ tutor.email}}</p>
-    
-    </div>
-    <div>
-        <button class="button_back" (click)="goBack()">Volver</button>
-    </div>
+     
+</div>
+<div class="boton-student-detail">
+    <a routerLink="/students" class="boton-volver">Volver</a>
+</div>
 
- </div>
+</div>
+
