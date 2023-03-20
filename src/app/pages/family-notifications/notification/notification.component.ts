@@ -26,7 +26,6 @@ export class NotificationComponent implements OnInit {
   public infoButton: boolean = false;
   public notificationForm?: FormGroup;
   public isReaded?: boolean = false;
-
   public deleteNotification(id?: string) {
     if (!id) {
       return;

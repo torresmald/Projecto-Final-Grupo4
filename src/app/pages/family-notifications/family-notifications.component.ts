@@ -47,7 +47,6 @@ export class FamilyNotificationsComponent  {
   } 
 
   public closeNotifications(event: boolean){
-    
     this.showNotification = event
   }
 }
