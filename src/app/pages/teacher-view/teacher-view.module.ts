@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { CalendarOptions } from '@fullcalendar/core';
 
 import { TeacherViewRoutingModule } from './teacher-view-routing.module';
 import { TeacherViewComponent } from './teacher-view.component';
+
 
 
 @NgModule({
@@ -11,7 +14,10 @@ import { TeacherViewComponent } from './teacher-view.component';
   ],
   imports: [
     CommonModule,
-    TeacherViewRoutingModule
+    TeacherViewRoutingModule,
+    FullCalendarModule 
   ]
 })
-export class TeacherViewModule { }
+export class TeacherViewModule { 
+}
+
