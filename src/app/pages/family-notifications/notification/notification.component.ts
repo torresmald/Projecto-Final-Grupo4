@@ -31,7 +31,7 @@ export class NotificationComponent implements OnInit {
     if (!id) {
       return;
     }
-    // this.notificationService.deleteNotification(id).subscribe();
+    this.notificationService.deleteNotification(id).subscribe();
     alert('Borrado')
     this.isPressed = !this.isPressed;
     // this.deleteNotifications.emit(this.isPressed);
