@@ -26,6 +26,7 @@ export class ModalNotificationComponent {
     // this.notificationService.deleteNotification(data._id).subscribe();
     // this.isPressed = !this.isPressed;
     // this.deleteNotifications.emit(this.isPressed);
+    alert("eliminado")
     this.closeNotifications.emit(false);
   }
   

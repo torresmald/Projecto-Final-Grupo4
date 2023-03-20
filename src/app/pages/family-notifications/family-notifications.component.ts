@@ -41,7 +41,7 @@ export class FamilyNotificationsComponent  {
   public openNotification(){
     this.openNoti = !this.openNoti
   }
-  public moreInfoNotification(event: Notifications, isTouched: any ){
+  public moreInfoNotification(event: Notifications, isTouched: Notifications ){
     this.savedNotification = event;
     this.showNotification = isTouched ? true : false;
   } 

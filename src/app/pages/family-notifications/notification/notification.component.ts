@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
 import { Notifications } from 'src/app/core/models/Notifications/notifications.model';
 import { NotificationsService } from 'src/app/core/services/notifications/notifications.service';
 
@@ -33,6 +32,7 @@ export class NotificationComponent implements OnInit {
       return;
     }
     // this.notificationService.deleteNotification(id).subscribe();
+    alert('Borrado')
     this.isPressed = !this.isPressed;
     // this.deleteNotifications.emit(this.isPressed);
   }
