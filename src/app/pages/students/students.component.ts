@@ -24,13 +24,13 @@ export class StudentsComponent {
         .subscribe((value) => this.students = value.filter((grade) => grade.grade === this.token
         ))
     }
-  
     public goDetail(id: string){
       this.router.navigate(['/studentDetail', id])
     }
     public goBack(): void{
       this.router.navigate(['teacherView']);
     }
+    
   }
   
 

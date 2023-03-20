@@ -1,15 +1,17 @@
 <div class="students">
-
-
-<div  *ngFor="let student of students" [ngClass]="{'hide': student.name === 'Todos', 'student-card': student.name !== 'Todos' }">
+  <div
+    *ngFor="let student of students"
+    [ngClass]="{
+      hide: student.name === 'Todos',
+      'student-card': student.name !== 'Todos'
+    }"
+  >
     <p class="name">Nombre: {{ student.name }}</p>
-    <img [src]="student.image" alt="Foto del alumno" height="100">
-    <p class="clase">Curso: {{student.grade}}</p>
- 
-    <button class="button_teachers" (click)="goDetail(student.id)">Ir al Detalle</button>
+    <img [src]="student.image" alt="Foto del alumno" height="100" />
+    <p class="clase">Curso: {{ student.grade }}</p>
+    <button class="button_teachers" (click)="goDetail(student.id)">
+      Ir al Detalle
+    </button>
+  </div>
+  
 </div>
-</div>
-
-
-
-
