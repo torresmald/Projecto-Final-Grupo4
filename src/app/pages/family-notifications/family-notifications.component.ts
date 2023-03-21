@@ -34,13 +34,6 @@ export class FamilyNotificationsComponent  {
       (value) => this.notifications = value.filter((obj) => obj.student.some((student) => (student.name === this.tokenChildName) || student.name === 'Todos'))
         
     );
-
-    this.messageService
-    .getNotification()
-    .subscribe(
-      (value) => this.notificationReaded = value.filter((notification) => notification)
-        
-    );
     
   }
 

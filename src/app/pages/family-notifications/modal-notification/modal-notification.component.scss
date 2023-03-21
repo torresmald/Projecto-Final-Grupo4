@@ -33,7 +33,6 @@
         font-size: 20px;
         font-weight: bold;
         align-items: center;
-        font-family: 'Coloring';
 
         
     }
@@ -60,21 +59,15 @@
      flex-direction: column;
      justify-content: space-between;
 
-     &__button{
-        display: flex;
-        justify-content: flex-end;
-
-     }
 
 
-  &__button button{
-    margin-bottom: 10px;
-    @include botonVolver($colorgeneral); 
-    border: 0;
-  }
+}
 
 
+.body p{
 
+
+    font-size: 18px;
 }
 
 
