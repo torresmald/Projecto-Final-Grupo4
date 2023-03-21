@@ -1,9 +1,18 @@
 <div class="card-notification">
     <div class="header">
-        <div class="header__name"><p>Titulo :{{ notification?.name }}</p></div>
-        <div class="header__date"><p></p>Fecha :{{ notification?.date }}</div>
+        <div class="header__name"><p>{{ notification?.name }}</p></div>
+        <div class="header__date"><p>{{ notification?.date }}</p></div>
     </div>
 
-    <div class="body"><p>{{ notification?.description }}</p></div>
+    <div class="body">
+        <div>
+            <p>{{ notification?.description }}</p>
+        </div>
+        <div  class="body__button">
+            <button *ngIf="notification" (click)="deleteNotification(notification)" >Eliminar</button>
+        </div>
+
+    </div>
+    
 
 </div>

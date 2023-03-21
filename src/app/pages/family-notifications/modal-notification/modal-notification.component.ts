@@ -11,25 +11,21 @@ export class ModalNotificationComponent {
   @Input() notification?: Notifications;
   @Output() public closeNotifications: EventEmitter<boolean> =
     new EventEmitter<boolean>();
-    constructor(private notificationService: NotificationsService) {}
-
-  closeNotification(){
-
-  this.closeNotifications.emit(false);
-
+  constructor(private notificationService: NotificationsService) {}
+  
+  closeNotification() {
+    this.closeNotifications.emit(false);
   }
 
   public deleteNotification(data?: Notifications) {
     if (!data) {
       return;
     }
-    // this.notificationService.deleteNotification(data._id).subscribe();
-    // this.isPressed = !this.isPressed;
-    // this.deleteNotifications.emit(this.isPressed);
+    this.notificationService.deleteNotification(data._id).subscribe();
     alert("eliminado")
     this.closeNotifications.emit(false);
   }
-  
 
-  
+
+
 }

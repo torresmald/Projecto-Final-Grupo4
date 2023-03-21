@@ -31,9 +31,6 @@ export class FamilyNotificationsComponent  {
     );
   }
 
-  // public hideNotification(isTouched: any) {
-  //   this.showNotification = isTouched ? true : false;
-  // }
 
   public editNotification(event: Notifications){
     this.readedNotification = event;
@@ -47,7 +44,8 @@ export class FamilyNotificationsComponent  {
   } 
 
   public closeNotifications(event: boolean){
-    
+
     this.showNotification = event
+
   }
 }
