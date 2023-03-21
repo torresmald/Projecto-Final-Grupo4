@@ -11,7 +11,7 @@ import { NotificationsService } from 'src/app/core/services/notifications/notifi
 export class NotificationComponent implements OnInit {
   @Input() notifications?: Notifications;
   // @Output() public deleteNotifications: EventEmitter<boolean> = new EventEmitter<boolean>();
-  @Output() public savedNotification: EventEmitter<Notifications> =new EventEmitter<Notifications>();
+  @Output() public notification: EventEmitter<Notifications> =new EventEmitter<Notifications>();
   @Output() public readedNotification: EventEmitter<Notifications> =new EventEmitter<Notifications>();
   
     ngOnInit(): void {
@@ -22,7 +22,6 @@ export class NotificationComponent implements OnInit {
     }
   constructor(private notificationService: NotificationsService,private loginBuilder: FormBuilder,
     ) {}
-  public isPressed: boolean = false;
   public infoButton: boolean = false;
   public notificationForm?: FormGroup;
   public isReaded?: boolean = false;
@@ -33,9 +32,10 @@ export class NotificationComponent implements OnInit {
     }
     this.notificationService.deleteNotification(id).subscribe();
     alert('Borrado')
-    this.isPressed = !this.isPressed;
     // this.deleteNotifications.emit(this.isPressed);
   }
+
+
   public editNotification(id?: string) {
     if (!id) {
       return;
@@ -44,10 +44,8 @@ export class NotificationComponent implements OnInit {
     this.notificationService.editNotification(id, this.notificationForm?.value).subscribe();
   }
   public moreInfoNotification(notifications?: Notifications) {
-    this.savedNotification.emit(notifications);
-    this.infoButton = !this.infoButton;
-  }
-  public inButton() {
+    this.notification.emit(notifications);
+    
   }
 
 }

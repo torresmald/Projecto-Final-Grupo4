@@ -11,20 +11,22 @@
 (readedNotification)="editNotification($event)"
 >
 </app-notification> -->
+<h3>Buzon de Notificaciones</h3>
 <div class="body">
   <div class="notification">
     <div class="list-msg">
       <app-notification
         *ngFor="let item of notifications"
         [notifications]="item"
-        (savedNotification)="moreInfoNotification($event, $event)"
+        (notification)="moreInfoNotification($event)"
         (readedNotification)="editNotification($event)"
-      >
+        >
       </app-notification>
     </div>
     <div class="msg">
-      <app-modal-notification class="msg_body"
+      <app-modal-notification *ngIf="showNotification" class="msg_body"
         [notification]="savedNotification"
+        (deleteNotifications)="deleteNotifications($event)"
       ></app-modal-notification>
     </div>
   </div>
