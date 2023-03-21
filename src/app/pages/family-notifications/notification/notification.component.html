@@ -1,4 +1,16 @@
-<div class="body" [ngClass]="{ body: !isPressed, hidden: isPressed }">
+<div  (click)="moreInfoNotification(notifications); inButton()" class="msg" [ngClass]="{ 'msg': !infoButton, 'msg-active': infoButton }" >
+  <div class="title">
+    <p class="title__name">{{ notifications?.name}}</p>
+    <p class="title__date">{{ notifications?.date}}</p>
+  </div>
+  <div class="notification"><p>{{ notifications?.description}}</p></div>
+</div>
+
+
+
+
+
+<!-- <div class="body" [ngClass]="{ body: !isPressed, hidden: isPressed }">
   <div class="card" [ngClass]="{ card: !isReaded, readed: isReaded }">
     <img
       src="../../../../assets/logos/email-icon.png"
@@ -23,13 +35,13 @@
     <p>{{ notifications?.description }}</p>
 
     <div class="card-buttons">
-<!-- 
+
       <form
         *ngIf="notificationForm"
         (submit)="editNotification(notifications?._id)"
         [formGroup]="notificationForm" >
  <div><button type="submit">Leida</button></div>
-      </form> -->
+      </form>
       <div class="card-buttons__open">
         <button (click)="moreInfoNotification(notifications)">
           Abrir
@@ -41,4 +53,6 @@
    
     </div>
   </div>
-</div>
+</div> -->
+
+

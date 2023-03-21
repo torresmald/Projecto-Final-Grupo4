@@ -45,9 +45,9 @@ export class NotificationComponent implements OnInit {
   }
   public moreInfoNotification(notifications?: Notifications) {
     this.savedNotification.emit(notifications);
+    this.infoButton = !this.infoButton;
   }
   public inButton() {
-    this.infoButton = !this.infoButton;
   }
 
 }

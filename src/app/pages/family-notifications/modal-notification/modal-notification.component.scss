@@ -1,128 +1,51 @@
-@import '../../../../styles/base/colors.scss';
-@import '../../../../styles/elements/form.scss';
-
-
-.body{
-    position: absolute;
+.card-notification{
     width: 100%;
     height: 100%;
-    background-color: rgb(254, 254, 254);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    transform: translateY(-32%);
+    flex-direction: column;
+
 }
-
-.card{
-
-    width: 70%;
-    height: 70%;
-    background-color: rgb(255, 255, 255);
-}
-
 
 .header{
 
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: row;
+    height: 20%;
+    width: 90%;
 
-    &__info{
+    
+    &__name{
+
+        border-color: #aaaaaa;
+        border-width: 1px;
+        border-style: solid;
+        width: 90%;
         display: flex;
-        flex-direction: row;
-        width: 70%;
+        margin-bottom:10px;
+        align-items: center;
 
-        &--img{
-            display: flex;
-            justify-content:flex-start;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-
-        &--img button{
-
-            position: absolute;
-
-            transform: translateY(-50px);
-            margin-left: 10px;
-            border-radius: 18px;
-            width: 30px;
-            height: 30px;
-            opacity: 0.5;
-            border: 0;
-            font-weight: bold;
-            transition: 0.3s;
-
-          
-            
-        }
-
-        &--img button:hover{
-            opacity: 1;
-        }
-
-        &--img img{
-
-            width: 86px;
-            display: flex;
-            margin-left: 35px;
-
-        }
-
-        &--img:after{
-            content: "";
-            border-radius: 50%;
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-color: $colorprofesores;
-            animation: intermitente 1.5s infinite alternate;
-            opacity: 0.5;
-            margin-left: 28px;
-        }
-
-        @keyframes intermitente {
-            0% {
-              opacity: 0.3;
-            }
-            100% {
-              opacity: 0.5;
-            }
-          }
-    }
-
-   
-
-    
-    &__info p{
-        display: flex;
-        align-items: end;
-        width: 30%;
-    
-    }
-    
-
-      
- 
-    &__buttons{
-        width: 30%;
-        margin-top: 10px;
-        margin-left: 70px;
-       
-
-        &--delete{
-            @include botonVolver($colorgeneral);
-            border: 0;
-            width: 70px;
-            padding: 0px 0px;
-            font-size: 15px;
-            margin: 0;
-        }
         
     }
 
+    &__date{
+
+        border-color: #aaaaaa;
+        border-width: 1px;
+        border-style: solid;
+        width: 90%;
+        align-items: center;
+
+    }
+
+}
+
+.body{
+height: 80%;
+display: flex;
+width: 90%;
+display: flex;
+border-color: #aaaaaa;
+border-width: 1px;
+border-style: solid;
 
 }
