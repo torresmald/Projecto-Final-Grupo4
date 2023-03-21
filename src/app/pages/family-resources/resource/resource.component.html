@@ -1,6 +1,8 @@
 <div class="card">
     <h5>{{resources?.title}}</h5>
     <p>{{resources?.description}}</p>
-    <img src="{{resources?.link}}" target="_blank" class="image">
+    <iframe src="{{video.link}}" frameborder="0"
+    *ngFor="let video of videoResources"
+    >Video</iframe>
     <p>Tipo: {{resources?.type}}</p>
 </div>
