@@ -13,8 +13,7 @@ import { StudentsRoutingModule } from './students-routing.module';
   imports: [
     CommonModule,
     StudentsRoutingModule,
-    RouterModule,
-  
+    RouterModule
   ],
  
 })
