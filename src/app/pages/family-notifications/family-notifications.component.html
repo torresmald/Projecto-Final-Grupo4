@@ -1,4 +1,4 @@
-<h3>Notificaciones</h3>
+<!-- <h3>Notificaciones</h3>
 <app-modal-notification
 *ngIf="showNotification"
 [notification]="savedNotification"
@@ -10,6 +10,25 @@
 (savedNotification)="moreInfoNotification($event ,$event)"
 (readedNotification)="editNotification($event)"
 >
-</app-notification>
-
-<!-- (hideNotifications)="deleteNotification($event)" -->
+</app-notification> -->
+<h1>Zona en proceso</h1>
+<div class="body">
+  <div class="notification">
+    <div class="list-msg">
+      <app-notification
+        *ngFor="let item of notifications"
+        [notifications]="item"
+        (savedNotification)="moreInfoNotification($event, $event)"
+        (readedNotification)="editNotification($event)"
+      >
+      </app-notification>
+    </div>
+    <div class="msg">
+      <app-modal-notification class="msg_body"
+        *ngIf="showNotification"
+        [notification]="savedNotification"
+        (closeNotifications)="closeNotifications($event)"
+      ></app-modal-notification>
+    </div>
+  </div>
+</div>

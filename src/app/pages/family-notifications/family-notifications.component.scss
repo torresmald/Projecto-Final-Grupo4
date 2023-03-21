@@ -1,17 +1,31 @@
 .body{
-
   width: 100%;
-  background-color: black;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification{
+
+  width: 60%;
+  height: 90%;
+  display: flex;
+  box-shadow: 0 0 3px black;
+  
+}
+
+.list-msg{
+
+  width: 30%;
+  overflow: auto;
+
 
 }
 
-h3{
-  text-align: center;
-  background-color: rgb(255, 255, 255);
-  font-size: 19px;
-  height: 60px;
-  position: relative;
-  z-index: 1;
-  
+.msg{
+
+  width: 70%;
+  background-color: chartreuse;
 }
 

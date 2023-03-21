@@ -1,29 +1,9 @@
-<div class="body">
-    <h1>zona en proceso</h1>
-    <div class="card">
-
-        <div class="header">
-            <div class="header__info">
-                <div class="header__info--img">
-                     <button (click)="closeNotification()">X</button>
-                     <img src="../../../../assets/logos/icono foto perfil gris (2).png" alt=""> </div>
-                <p>{{ notification?.name}}</p
-                    ></div>
-            <div class="header__buttons">
-                <button (click)="deleteNotification(notification)" class="header__buttons--delete">Eliminar</button>
-                
-            </div>
-        </div>
-        <div class="date"> Fecha </div>
-        <div class="description">
-            <div>
-                <div class="description__title">titulo</div>
-                <div class="description__description">descripcion</div>
-            </div>
-            
-        </div>
-
+<div class="card-notification">
+    <div class="header">
+        <div class="header__name"><p>Titulo :{{ notification?.name }}</p></div>
+        <div class="header__date"><p></p>Fecha :{{ notification?.date }}</div>
     </div>
 
-</div>
+    <div class="body"><p>{{ notification?.description }}</p></div>
 
+</div>
