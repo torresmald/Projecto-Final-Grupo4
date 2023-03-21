@@ -8,4 +8,12 @@ import { Resources } from 'src/app/core/models/Resources/transformed/resources.m
 })
 export class ResourceComponent {
   @Input() resources?: Resources;
+  @Input() videoResources?: Resources[];
+  constructor() {
+    console.log(this.videoResources);
+  }
+  
+  
+
+  
 }

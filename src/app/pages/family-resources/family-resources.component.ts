@@ -8,11 +8,17 @@ import { ResourcesService } from 'src/app/core/services/resources/resources.serv
   styleUrls: ['./family-resources.component.scss']
 })
 export class FamilyResourcesComponent implements OnInit {
-  constructor(private resourcesService: ResourcesService){}
   public resources?: Resources[] = [];
+  public videoResources?: Resources[] = [];
+  
+  constructor(private resourcesService: ResourcesService){
 
+  }
+  
   
   ngOnInit(): void {
       this.resourcesService.getResources().subscribe((resource) => this.resources = resource);
+      this.videoResources = this.resources?.filter((resource) => resource.type === 'songs');
+      console.log(this.videoResources);
   }
 }
