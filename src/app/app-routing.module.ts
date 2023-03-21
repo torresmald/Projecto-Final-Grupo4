@@ -57,8 +57,17 @@ const routes: Routes = [
     loadChildren: () => import('../app/pages/family-resources/family-resources.module').then(m => m.FamilyResourcesModule),
   },
   {
-    path: 'contact',
+    path: 'family-contact',
     loadChildren: () => import('../app/pages/family-contact/family-contact.module').then(m => m.FamilyContactModule),
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('../app/pages/contact/contact.module').then(m => m.ContactModule),
+  },
+  
+  {
+    path: 'privacity',
+    loadChildren: () => import('../app/pages/privacity/privacity.module').then(m => m.PrivacityModule),
   },
   {
     path: '**',
