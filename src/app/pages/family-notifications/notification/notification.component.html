@@ -1,7 +1,7 @@
 <div class="body" [ngClass]="{ body: !isPressed, hidden: isPressed }">
-  <div class="card" [ngClass]="{card: !isReaded, readed: isReaded}">
+  <div class="card" [ngClass]="{ card: !isReaded, readed: isReaded }">
     <img
-      src="https://icons-for-free.com/download-icon-email+inbox+letter+mail+message+messages+icon-1320196706209650448_512.png"
+      src="../../../../assets/logos/email-icon.png"
       alt=""
     />
     <div class="left">
@@ -9,7 +9,7 @@
       <p class="left__date">{{ notifications?.date }}</p>
     </div>
     <div class="right">
-      <button class="buttonArrow" (click)="inButton()">
+      <button class="button-arrow" (click)="inButton()">
         <i *ngIf="!infoButton" class="fa fa-arrow-down" aria-hidden="true"></i>
         <i *ngIf="infoButton" class="fa fa-arrow-up" aria-hidden="true"></i>
       </button>
@@ -17,25 +17,28 @@
   </div>
 
   <div
-    [ngClass]="{ cardDisable: !infoButton, cardActive: infoButton }"
-    class="cardDisable card"
+    [ngClass]="{ 'card-disable': !infoButton, 'card-active': infoButton }"
+    class="card-disable card"
   >
     <p>{{ notifications?.description }}</p>
-    <form
-      *ngIf="notificationForm"
-      (submit)="editNotification(notifications?._id)"
-      [formGroup]="notificationForm"
-    >
-      <div><button type="submit">Leida</button></div>
-    </form>
 
-    <div>
-      <button (click)="deleteNotification(notifications?._id)">Eliminar</button>
-    </div>
-    <div>
-      <button (click)="moreInfoNotification(notifications)">
-        Más Informacíon
-      </button>
+    <div class="card-buttons">
+<!-- 
+      <form
+        *ngIf="notificationForm"
+        (submit)="editNotification(notifications?._id)"
+        [formGroup]="notificationForm" >
+ <div><button type="submit">Leida</button></div>
+      </form> -->
+      <div class="card-buttons__open">
+        <button (click)="moreInfoNotification(notifications)">
+          Abrir
+        </button>
+      </div>
+      <div *ngIf="'card-active'" class="card-buttons__icon" (click)="deleteNotification(notifications?._id)">
+        <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+      </div>
+   
     </div>
   </div>
 </div>
