@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { FamilyResourcesRoutingModule } from './family-resources-routing.module';
 import { FamilyResourcesComponent } from './family-resources.component';
-import { ResourceComponent } from './resource/resource.component';
 import { SongsComponent } from './songs/songs.component';
+import { BooksComponent } from './books/books.component';
 
 
 @NgModule({
   declarations: [
     FamilyResourcesComponent,
-    ResourceComponent,
-    SongsComponent
+    SongsComponent,
+    BooksComponent
   ],
   imports: [
     CommonModule,
