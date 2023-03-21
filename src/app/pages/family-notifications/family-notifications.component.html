@@ -11,7 +11,6 @@
 (readedNotification)="editNotification($event)"
 >
 </app-notification> -->
-<h1>Zona en proceso</h1>
 <div class="body">
   <div class="notification">
     <div class="list-msg">
@@ -25,9 +24,7 @@
     </div>
     <div class="msg">
       <app-modal-notification class="msg_body"
-        *ngIf="showNotification"
         [notification]="savedNotification"
-        (closeNotifications)="closeNotifications($event)"
       ></app-modal-notification>
     </div>
   </div>
