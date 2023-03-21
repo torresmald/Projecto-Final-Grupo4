@@ -1,5 +1,6 @@
 @import '../../../../styles/base/colors.scss';
 @import '../../../../styles/elements/form.scss';
+@import '../../../../styles/base/fonts.scss';
 
 
 .card-notification{
@@ -32,6 +33,7 @@
         font-size: 20px;
         font-weight: bold;
         align-items: center;
+        font-family: 'Coloring';
 
         
     }
