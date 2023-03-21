@@ -1,7 +1,12 @@
-<app-alert *ngIf="alertSuccess" [successAlertMsg]="msg" [successAlertTitle]="'Bienvenido'"></app-alert>
+<app-alert
+  *ngIf="alertSuccess"
+  [successAlertMsg]="msg"
+  [successAlertTitle]="'Bienvenido'"
+></app-alert>
 <app-alert
   *ngIf="alertError"
-  [errorAlertMsg]="'Debes Completar todos los campos'" [errorAlertTitle]="'Error'"
+  [errorAlertMsg]="'Debes Completar todos los campos'"
+  [errorAlertTitle]="'Error'"
 ></app-alert>
 
 <div
@@ -20,6 +25,7 @@
       />
 
       <p
+        class="errors"
         *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['required']
 "
       >
@@ -27,10 +33,11 @@
       </p>
 
       <p
-      *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['email']"
-    >
-      Formato de email incorrecto
-    </p>
+        class="errors"
+        *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['email']"
+      >
+        Formato de email incorrecto
+      </p>
 
       <input
         type="password"
@@ -40,14 +47,13 @@
       />
 
       <p
-      *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']
+        class="errors"
+        *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']
 "
-    >
-      Escribe una contraseña
-    </p>
-
-
-      <a href="#">Olvidaste tu contraseña?</a>
+      >
+        Escribe una contraseña
+      </p>
+      <p *ngIf="errors" class="errors">{{ errors }}</p>
       <div>
         <button>Acceder</button>
         <button type="button" (click)="router.navigate(['/home'])">
@@ -70,15 +76,17 @@
 
       <p
         *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['required']"
+        class="errors"
       >
         Email requerido
       </p>
 
       <p
-      *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['email']"
-    >
-      Formato de email incorrecto
-    </p>
+        *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['email']"
+        class="errors"
+      >
+        Formato de email incorrecto
+      </p>
 
       <input
         type="password"
@@ -88,12 +96,13 @@
       />
 
       <p
-      *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']
+        class="errors"
+        *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']
 "
-    >
-      Escribe una contraseña
-    </p>
-      <a href="#">Olvidaste tu contraseña?</a>
+      >
+        Escribe una contraseña
+      </p>
+      <p *ngIf="errors" class="errors">{{ errors }}</p>
       <div>
         <button>Acceder</button>
         <button type="button" (click)="router.navigate(['/home'])">
@@ -121,4 +130,3 @@
     </div>
   </div>
 </div>
-

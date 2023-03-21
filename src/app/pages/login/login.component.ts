@@ -26,6 +26,8 @@ export class LoginComponent implements OnInit {
   public alertError: boolean = false;
   public msg: string = '';
   public formErr: string = '';
+  public name: string = '';
+  public errors?: string = '';
 
   ngOnInit(): void {
     this.loginForm = this.loginBuilder.group({
@@ -53,29 +55,38 @@ export class LoginComponent implements OnInit {
         ? this.serviceTeacher.loginTeacher(this.loginForm?.value)
         : this.serviceParents.loginParent(this.loginForm?.value);
 
-      request.subscribe(() => {
-        if (this.teacher) {
-          this.isUserLogged = true;
-          this.serviceTeacher.userLogged$.next(true);
-          let teacherName = '';
-          const authToken = localStorage.getItem(TOKEN_KEY);
-          authToken ? (teacherName = JSON.parse(authToken).user.name) : null;
-          this.msg = `Has iniciado sesión correctamente ${teacherName}`;
-          this.alertSuccess = true;
-          setTimeout(() => {
-            this.router.navigate(['/teacherView']);
-           
-            this.alertSuccess = false;
-          }, 4000);
-        } else {
-          this.isUserLogged = true;
-          this.serviceTeacher.userLogged$.next(true);
-          this.msg = 'Has iniciado sesión correctamente';
-          this.alertSuccess = true;
-          setTimeout(() => {
-            this.router.navigate(['/familyView']);
-          }, 4000);
-        }
+      request.subscribe({
+        next: () => {
+            if (this.teacher) {
+              this.isUserLogged = true;
+              this.serviceTeacher.userLogged$.next(true);
+              const authToken = localStorage.getItem(TOKEN_KEY);
+              authToken ? (this.name = JSON.parse(authToken).user.name) : null;
+              this.msg = `Has iniciado sesión correctamente ${this.name}`;
+              this.alertSuccess = true;
+              setTimeout(() => {
+                this.router.navigate(['/teacherView']);
+
+                this.alertSuccess = false;
+              }, 4000);
+            } else {
+              this.isUserLogged = true;
+              this.serviceTeacher.userLogged$.next(true);
+              const authToken = localStorage.getItem(TOKEN_KEY);
+              authToken ? (this.name = JSON.parse(authToken).user.email) : null;
+              this.msg = `Has iniciado sesión correctamente ${this.name}`;
+              this.alertSuccess = true;
+              setTimeout(() => {
+                this.router.navigate(['/familyView']);
+              }, 4000);
+            }
+          
+        },
+        error: (error) => {
+          console.log(error);
+          
+          this.errors = error.error;
+        },
       });
     } else {
       this.alertError = true;
