@@ -14,14 +14,28 @@
 <h3>Buzon de Notificaciones</h3>
 <div class="body">
   <div class="notification">
-    <div class="list-msg">
-      <app-notification
-        *ngFor="let item of notifications"
-        [notifications]="item"
-        (notification)="moreInfoNotification($event)"
-        (readedNotification)="editNotification($event)"
-        >
-      </app-notification>
+    <div class="body-list">
+
+      <div class="list-msg">
+        <app-notification
+          *ngFor="let item of notifications | paginate:page_size:page_number"
+          [notifications]="item"
+          (notification)="moreInfoNotification($event)"
+          (readedNotification)="editNotification($event)"
+          >
+        </app-notification>
+      </div>
+
+      <div class="paginator">
+        <mat-paginator 
+                 (page)="handlePageEvent($event)"
+                 [length]="notifications.length"
+                 [pageSize]="page_size"
+                 [hidePageSize]="hidePageSize"
+                >
+        </mat-paginator>
+      </div>
+
     </div>
     <div class="msg">
       <app-modal-notification *ngIf="showNotification" class="msg_body"

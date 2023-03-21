@@ -1,3 +1,6 @@
+@import '../../../styles/base/colors.scss';
+
+
 
 h3{
 
@@ -22,15 +25,30 @@ h3{
   
 }
 
+.body-list{
+  width: 30%;
+
+}
+
 .list-msg{
 
-  width: 30%;
+  
   overflow: auto;
   box-shadow: 5px 0px 15px 0px rgb(166, 166, 166);
   position: relative;
+  height: 91%;
 
 
 }
+
+.paginator mat-paginator{
+  height: 5%;
+  background-color: $colorgeneral;
+  color: black;
+  color: white;
+  
+}
+
 
 .msg{
 
@@ -46,7 +64,7 @@ h3{
  
   }
 
-  .list-msg{
+  .body-list{
 
     width: 100%;
     height: 50%;
@@ -59,6 +77,7 @@ h3{
     width: 100%;
     height: 50%;
     overflow: auto;
+    transform: translateY(30px);
     
   }
     
