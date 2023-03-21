@@ -162,7 +162,9 @@
 .boton-student-detail {
     display:flex;
     align-items: center;
-  width: 100%;
-    margin-left: 35%;
-
+    width: 100%;
+   justify-content: center;
+}
+.boton-student-detail-download{
+  @include botonVolver($colorgeneral);
 }
