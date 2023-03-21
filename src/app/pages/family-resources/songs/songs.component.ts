@@ -27,7 +27,6 @@ export class SongsComponent implements OnInit {
       });
     });
   }
-
   getSafeUrl(url: string): SafeResourceUrl {
     const youtubeEmbedUrl = url.replace('watch?v=', 'embed/');
     return this.sanitizer.bypassSecurityTrustResourceUrl(youtubeEmbedUrl);
