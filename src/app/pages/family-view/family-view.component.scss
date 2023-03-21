@@ -1,22 +1,22 @@
-@import '../../../styles/base/colors.scss';
+@import "../../../styles/base/colors.scss";
 
 .nav {
-    display: flex;
-    justify-content:space-evenly;
-    background-color: $colorfamilias;;
-    a{
-      text-decoration: none;
-      color: $colorgeneral;
-      font-weight: bold;
-    }
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $colorfamilias;
+  a {
+    text-decoration: none;
+    color: $colorgeneral;
+    font-weight: bold;
   }
-.row{
+}
+.row {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5vh;
 }
-.card{
+.card {
   justify-content: center;
   text-align: center;
   border-radius: 10px;
@@ -24,30 +24,30 @@
   margin: 5%;
 }
 
-.card-img-top{
+.card-img-top {
   width: 10rem;
 }
-.calendar{
-  display:flex;
+.calendar {
+  display: flex;
   flex-wrap: wrap;
-  &--text{
-  text-align: center;
+  &--text {
+    text-align: center;
   }
-  &--div{
-    display:flex;
+  &--div {
+    display: flex;
     justify-content: center;
     text-align: center;
     border-radius: 30px;
     box-shadow: 2px 2px 5px $colorfamilias;
-    &--i{
+    &--i {
       width: 60rem;
     }
   }
 
   @media screen and (max-width: 768px) {
-    flex-direction: column; 
+    flex-direction: column;
     &--div {
       width: 100%;
-      } 
-}
+    }
+  }
 }

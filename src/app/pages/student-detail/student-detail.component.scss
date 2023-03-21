@@ -154,7 +154,7 @@
   justify-content: space-between;
 }
 .boton-volver {
-  @include botonVolver($colorprofesores);
+  @include botonVolver($colorgeneral);
   margin-bottom: 30px;
   margin-top: 10px;
   border: 2px solid #111010;
@@ -166,5 +166,5 @@
    justify-content: center;
 }
 .boton-student-detail-download{
-  @include botonVolver($colorgeneral);
+  @include botonVolver($colorfamilias);
 }

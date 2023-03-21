@@ -46,7 +46,7 @@
   }
 }
 .boton-volver {
-  @include botonVolver($colorprofesores);
+  @include botonVolver($colorgeneral);
   margin-bottom: 30px;
   margin-top: 10px;
   border: 2px solid #111010;
