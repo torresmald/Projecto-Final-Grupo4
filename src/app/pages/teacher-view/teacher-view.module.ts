@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions } from '@fullcalendar/core';
-
+import dayGridPlugin from '@fullcalendar/daygrid'; 
+import interactionPlugin from '@fullcalendar/interaction';
 import { TeacherViewRoutingModule } from './teacher-view-routing.module';
 import { TeacherViewComponent } from './teacher-view.component';
 
@@ -15,8 +16,11 @@ import { TeacherViewComponent } from './teacher-view.component';
   imports: [
     CommonModule,
     TeacherViewRoutingModule,
-    FullCalendarModule 
-  ]
+    FullCalendarModule,
+ 
+  ],
+  providers: [],
+  bootstrap: [TeacherViewComponent]
 })
 export class TeacherViewModule { 
 }
