@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { Notifications } from 'src/app/core/models/Notifications/notifications.model';
 import { Students } from 'src/app/core/models/Students/transformed/students.model';
 import { NotificationsService } from 'src/app/core/services/notifications/notifications.service';
+
 const TOKEN_KEY = 'user-token-key';
 
 @Component({
@@ -19,18 +20,28 @@ export class FamilyNotificationsComponent  {
   public readedNotification?: Notifications;
   public page_size: number = 6;
   public page_number: number = 1;
+  public notificationReaded?: Notifications[];
   hidePageSize = true;
 
   constructor(private messageService: NotificationsService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user.childs) : null;
     this.tokenChildName = this.token?.map((name) => name.name).join('');
+
     this.messageService
     .getNotification()
     .subscribe(
-      (value) =>
-        this.notifications = value.filter((obj) => obj.student.some((student) => (student.name === this.tokenChildName) || student.name === 'Todos'))
+      (value) => this.notifications = value.filter((obj) => obj.student.some((student) => (student.name === this.tokenChildName) || student.name === 'Todos'))
+        
     );
+
+    this.messageService
+    .getNotification()
+    .subscribe(
+      (value) => this.notificationReaded = value.filter((notification) => notification)
+        
+    );
+    
   }
 
 
@@ -44,7 +55,6 @@ export class FamilyNotificationsComponent  {
   } 
 
   public deleteNotifications(event: boolean){
-
     this.showNotification = event
     
   }
