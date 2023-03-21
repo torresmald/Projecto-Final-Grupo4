@@ -9,21 +9,20 @@ import { NotificationsService } from './../../../core/services/notifications/not
 })
 export class ModalNotificationComponent {
   @Input() notification?: Notifications;
-  @Output() public closeNotifications: EventEmitter<boolean> =
-    new EventEmitter<boolean>();
+  @Output() public deleteNotifications: EventEmitter<boolean> =
+  new EventEmitter<boolean>();
+  @Output() public deleteNotificationList: EventEmitter<boolean> =
+  new EventEmitter<boolean>();
   constructor(private notificationService: NotificationsService) {}
   
-  closeNotification() {
-    this.closeNotifications.emit(false);
-  }
 
   public deleteNotification(data?: Notifications) {
     if (!data) {
       return;
     }
-    this.notificationService.deleteNotification(data._id).subscribe();
+    // this.notificationService.deleteNotification(data._id).subscribe();
     alert("eliminado")
-    this.closeNotifications.emit(false);
+    this.deleteNotifications.emit(false);
   }
 
 
