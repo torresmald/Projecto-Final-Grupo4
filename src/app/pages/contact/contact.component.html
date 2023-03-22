@@ -1,1 +1,13 @@
-<p>contact works!</p>
+<div class="container">
+  <form *ngIf="contactForm" [formGroup]="contactForm">
+    Nombre: <input type="text"
+    [class.is-invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+    class="form--control" formControlName="name" />
+
+    Email: <input type="email" [class.is-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="form--control" formControlName="email" />
+
+    Message :<input type="text" [class.is-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="form--control" formControlName="message" />
+
+    <button class="btn btn-primary" type="submit">Enviar</button>
+  </form>
+</div>

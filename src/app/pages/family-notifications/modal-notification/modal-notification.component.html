@@ -5,13 +5,13 @@
     </div>
 
     <div class="body">
-        <div>
+        <div class="body__msg">
             <p>{{ notification?.description }}</p>
         </div>
-        <div  class="body__button">
-            <button *ngIf="notification" (click)="deleteNotification(notification)" >Eliminar</button>
-        </div>
 
+        <div *ngIf="notification?.calendar" class="image">
+            <a target="_self" download="nameofFile" href="{{ notification?.calendar }}" ><img  src="{{ notification?.calendar }}" alt=""></a>
+        </div>
     </div>
     
 

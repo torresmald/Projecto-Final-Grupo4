@@ -9,22 +9,6 @@ import { NotificationsService } from './../../../core/services/notifications/not
 })
 export class ModalNotificationComponent {
   @Input() notification?: Notifications;
-  @Output() public deleteNotifications: EventEmitter<boolean> =
-  new EventEmitter<boolean>();
-  @Output() public deleteNotificationList: EventEmitter<boolean> =
-  new EventEmitter<boolean>();
-  constructor(private notificationService: NotificationsService) {}
+  constructor() {}
   
-
-  public deleteNotification(data?: Notifications) {
-    if (!data) {
-      return;
-    }
-    // this.notificationService.deleteNotification(data._id).subscribe();
-    alert("eliminado")
-    this.deleteNotifications.emit(false);
-  }
-
-
-
 }

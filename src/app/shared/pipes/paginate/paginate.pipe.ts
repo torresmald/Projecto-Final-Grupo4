@@ -1,11 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Notifications } from './../../../core/models/Notifications/notifications.model';
 
 @Pipe({
   name: 'paginate'
 })
 export class PaginatePipe implements PipeTransform {
 
-  transform(array: any, page_size: number , page_number: number): any {
+  transform(array: Notifications[], page_size: number , page_number: number): Notifications[] {
 
     if (!array.length) return []
 
