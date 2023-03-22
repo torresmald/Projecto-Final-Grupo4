@@ -21,6 +21,7 @@
           *ngFor="let item of notifications | paginate:page_size:page_number"
           [notifications]="item"
           (notification)="moreInfoNotification($event)"
+          (deleteModal)="deleteNotifications($event)"
           (readedNotification)="editNotification($event)"
           >
         </app-notification>
@@ -40,7 +41,6 @@
     <div class="msg">
       <app-modal-notification *ngIf="showNotification" class="msg_body"
         [notification]="savedNotification"
-        (deleteNotifications)="deleteNotifications($event)"
       ></app-modal-notification>
     </div>
   </div>

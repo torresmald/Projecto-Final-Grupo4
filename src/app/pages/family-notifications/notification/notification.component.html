@@ -1,17 +1,48 @@
-<div  (click)="moreInfoNotification(notifications) " class="msg" >
+<div class="msg" [ngClass]="{ msg: !isDelete, hide: isDelete }">
   <div class="title">
-    <p class="title__name">{{ notifications?.name}}</p>
-    <p class="title__date">{{ notifications?.date}}</p>
-    <div class="title__delete"></div>
+    <div class="title__header">
+      <p class="title__header--name">{{ notifications?.name }}</p>
+      <p class="title__header--date">{{ notifications?.date }}</p>
+    </div>
+
+    <div class="title__delete">
+
+      <img
+      (click)="deleteNotification(notifications?._id)"
+      src="https://cdn-icons-png.flaticon.com/512/3687/3687412.png"
+      alt=""
+    />
+
+      <form
+        *ngIf="notificationForm"
+        (submit)="editNotification(notifications?._id)"
+        [formGroup]="notificationForm"
+      >
+        <input [ngClass]="{ 'new-mail': !isReaded, 'hide': isReaded }" class="new-mail" *ngIf="!notifications?.readed"
+          (click)="moreInfoNotification(notifications)"
+          type="image"
+          src="https://icones.pro/wp-content/uploads/2021/05/icones-de-messagerie-vert.png"
+          alt="Submit Form"
+        />
+
+      
+
+        <input *ngIf="notifications?.readed"
+        (click)="moreInfoNotification(notifications)"
+        type="image"
+        src="https://e7.pngegg.com/pngimages/548/156/png-clipart-testoil-insight-services-email-computer-icons-a-gentle-bargain-to-send-gifts-miscellaneous-angle.png"
+        alt="Submit Form"
+      />
+
+      <img *ngIf="!notifications?.readed"  class="readed" src="https://e7.pngegg.com/pngimages/548/156/png-clipart-testoil-insight-services-email-computer-icons-a-gentle-bargain-to-send-gifts-miscellaneous-angle.png" alt="">
+      
+      </form>
+    </div>
   </div>
   <div class="notification">
-    <p>{{ notifications?.description}}</p>
+    <p>{{ notifications?.description }}</p>
   </div>
 </div>
-
-
-
-
 
 <!-- <div class="body" [ngClass]="{ body: !isPressed, hidden: isPressed }">
   <div class="card" [ngClass]="{ card: !isReaded, readed: isReaded }">
@@ -57,5 +88,3 @@
     </div>
   </div>
 </div> -->
-
-

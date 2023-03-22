@@ -10,21 +10,23 @@ import { NotificationsService } from 'src/app/core/services/notifications/notifi
 })
 export class NotificationComponent implements OnInit {
   @Input() notifications?: Notifications;
-  // @Output() public deleteNotifications: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() public notification: EventEmitter<Notifications> =new EventEmitter<Notifications>();
   @Output() public readedNotification: EventEmitter<Notifications> =new EventEmitter<Notifications>();
+  @Output() public deleteModal: EventEmitter<boolean> =new EventEmitter<boolean>();
   
     ngOnInit(): void {
       this.notificationForm = this.loginBuilder.group({
-        readed: new FormControl(this.isReaded),
+        readed: new FormControl(true),
         student: new FormControl(this.notifications?.student)
       });
     }
   constructor(private notificationService: NotificationsService,private loginBuilder: FormBuilder,
     ) {}
-  public infoButton: boolean = false;
   public notificationForm?: FormGroup;
-  public isReaded?: boolean = false;
+  public isReaded: boolean = false
+  public isDelete: boolean = false
+
+
 
   public deleteNotification(id?: string) {
     if (!id) {
@@ -32,7 +34,10 @@ export class NotificationComponent implements OnInit {
     }
     this.notificationService.deleteNotification(id).subscribe();
     alert('Borrado')
-    // this.deleteNotifications.emit(this.isPressed);
+
+    this.isDelete = !this.isDelete;
+    this.deleteModal.emit(false);
+
   }
 
 
@@ -40,11 +45,15 @@ export class NotificationComponent implements OnInit {
     if (!id) {
       return;
     }
-    this.isReaded = true;
     this.notificationService.editNotification(id, this.notificationForm?.value).subscribe();
+    this.isReaded = true;
+    console.log(this.notifications)
+    
   }
+  
   public moreInfoNotification(notifications?: Notifications) {
     this.notification.emit(notifications);
+
     
   }
 
