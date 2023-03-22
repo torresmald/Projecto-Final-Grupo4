@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from 'src/app/core/guards/canActivate/auth.guard';
 import { TeacherViewComponent } from './teacher-view.component';
 
 const routes: Routes = [
   {
     path:'',
-    component: TeacherViewComponent
+    component: TeacherViewComponent,
+    canActivate: [AuthGuard]
+
   }
 ];
 

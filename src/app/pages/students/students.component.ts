@@ -19,6 +19,8 @@ export class StudentsComponent {
     public token?: string[];
     public img = new Image();
     public studentImg: any = new Image();
+    public studentName: string = '';
+    public sortByName?: 'asc' | 'desc';
     constructor(private studentsService: StudentsService, private router: Router) {
       const authToken = localStorage.getItem(TOKEN_KEY);
       authToken ? (this.token = JSON.parse(authToken).user.grade) : null;

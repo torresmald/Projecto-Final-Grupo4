@@ -1,6 +1,19 @@
 @import "../../../styles/elements/form.scss";
 @import "../../../styles/base/colors.scss";
-
+@import '../../../styles/base/fonts.scss';
+.filters{
+  font-family: 'Coloring';
+  color: $colorprofesores;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  input{
+    border: 2px solid $colorgeneral;
+  }
+}
+.sort{
+  padding: 0px 10px;
+}
 .students {
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
@@ -28,6 +41,8 @@
     margin-bottom: 10px;
   }
   .name {
+    color: $colorgeneral;
+    font-family: 'Coloring';
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;

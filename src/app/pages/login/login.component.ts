@@ -64,6 +64,7 @@ export class LoginComponent implements OnInit {
               authToken ? (this.name = JSON.parse(authToken).user.name) : null;
               this.msg = `Has iniciado sesión correctamente ${this.name}`;
               this.alertSuccess = true;
+              this.loginForm?.reset();
               setTimeout(() => {
                 this.router.navigate(['/teacherView']);
 
@@ -76,6 +77,7 @@ export class LoginComponent implements OnInit {
               authToken ? (this.name = JSON.parse(authToken).user.email) : null;
               this.msg = `Has iniciado sesión correctamente ${this.name}`;
               this.alertSuccess = true;
+              this.loginForm?.reset();
               setTimeout(() => {
                 this.router.navigate(['/familyView']);
               }, 4000);
@@ -83,8 +85,6 @@ export class LoginComponent implements OnInit {
           
         },
         error: (error) => {
-          console.log(error);
-          
           this.errors = error.error;
         },
       });

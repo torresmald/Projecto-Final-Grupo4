@@ -10,7 +10,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { MyAccountComponent } from './pages/my-account/my-account.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +34,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
@@ -41,7 +42,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     SharedModule,
     NoopAnimationsModule
-  
   ],
   providers: [],
   bootstrap: [AppComponent]
