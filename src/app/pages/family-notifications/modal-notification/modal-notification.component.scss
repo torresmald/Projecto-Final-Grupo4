@@ -53,7 +53,8 @@
 
 
     .body{
-     height: 80%;
+
+     height: 70%;
      display: flex;
      width: 90%;
      flex-direction: column;
@@ -63,6 +64,23 @@
 
 }
 
+.image {
+
+    height: 30%;
+    width: 100%;
+}
+
+.image img{
+
+    width: 150px;
+    height: 100px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 1px black;
+    cursor: pointer;
+}
+
+
+
 
 .body p{
 
@@ -71,9 +89,21 @@
 }
 
 
-@media all and (max-width: 1280px){
+@media all and (min-width: 500px) and (max-width: 1280px){
     .header{
 
         margin-top: 40px;
     }
+
+}
+
+
+@media all and (max-width: 500px) {
+
+    .header{
+
+        margin-top: 40px;
+    }
+
+
 }

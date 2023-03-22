@@ -1,7 +1,9 @@
 <div class="msg" [ngClass]="{ msg: !isDelete, hide: isDelete }">
   <div class="title">
-    <p class="title__name">{{ notifications?.name }}</p>
-    <p class="title__date">{{ notifications?.date }}</p>
+    <div class="title__header">
+      <p class="title__header--name">{{ notifications?.name }}</p>
+      <p class="title__header--date">{{ notifications?.date }}</p>
+    </div>
 
     <div class="title__delete">
 
