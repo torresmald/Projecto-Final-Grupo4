@@ -10,7 +10,7 @@
         </div>
 
         <div *ngIf="notification?.calendar" class="image">
-            <img src="{{ notification?.calendar }}" alt="">
+            <a target="_self" download="nameofFile" href="{{ notification?.calendar }}" ><img  src="{{ notification?.calendar }}" alt=""></a>
         </div>
     </div>
     
