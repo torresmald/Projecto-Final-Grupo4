@@ -6,12 +6,12 @@
     <div class="links">
       <ul class="links--list">
         <li class="links--list--url">
-          <a *ngIf="isLogged" [routerLink]="['myAccount']">Mi cuenta</a>
+          <a *ngIf="isLogged" [routerLink]="['myAccount']">{{"HEADER.ACCOUNT" | translate}}</a>
         </li>
         <li class="links--list--url">
-          <a *ngIf="isLogged" (click)="logout()">Logout</a>
+          <a *ngIf="isLogged" (click)="logout()">{{"HEADER.LOGOUT" | translate}}</a>
         </li>
-        <li class="links--list--url"><a [routerLink]="['about']">{{"HEADER.ACCOUNT" | translate}}</a></li>
+        <li class="links--list--url"><a [routerLink]="['about']">{{"HEADER.ABOUT" | translate}}</a></li>
         <li class="links--list--url">
           <select #langSelect (change)="changeLang(langSelect.value)" >
             <option *ngFor="let lang of langs" [value]="lang" >

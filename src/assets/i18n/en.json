@@ -1,145 +1,27 @@
 {
   "HEADER": {
-    "HOME": "HOME",
-    "LIST": "LIST",
-    "MYGAMES": "MY GAMES",
-    "CONTACT": "CONTACT",
-    "REGISTER": "REGISTER",
-    "LOGIN": "LOGIN",
-    "ACCOUNT": "My Account",
-    "TRANSLATE": "ENGLISH"
-  },
-  "HOME": {
-    "TITLE": "WELCOME TO THE BOARD GAME LIST",
-    "SUBTITLE": "Become another geeky member of our family by delving into the wonderful world of board games",
-    "DESCRIPTION": "Are you Eurogamer? ameritrasher? Do you like cards and deckbuilding? It doesn't matter! Here you will discover a wide range of games for all players and ages.",
-    "TODO": "WHAT CAN YOU DO?",
-    "LIST1": "SEE BOARD GAME LIST",
-    "LIST2": "Access the personalized tab of each game",
-    "LIST3": "Edit/Add Table Games via a Form",
-    "LIST4": "Write me an email with suggestions about the web"
+    "ABOUT": "About Us",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "ACCOUNT": "My Account"
   },
   "FOOTER": {
-    "MADE": "DESIGNED BY",
-    "RRSS": "FOLLOW ME"
+    "HOME": "Home",
+    "CONTACT": "Contact",
+    "PRIVACY": "Privacy"
   },
-  "LIST": {
-    "TITLE": "FILTER BY TITLE",
-    "CATEGORY": "FILTER BY CATEGORY",
-    "CATEGORYDEFAULT": "CATEGORY",
-    "YEAR": "SORT BY YEAR",
-    "YEARASC": "ASCENDANT",
-    "YEARDESC": "DESCENDANT",
-    "AGE": "SORT BY AGE",
-    "AGEADULTS": "ADULTS",
-    "AGECHILDS": "CHILDS",
-    "ADDGAME": "ADD GAME",
-    "NEXTPAGE": "NEXT PAGE",
-    "PREVIOUSPAGE": "PREVIOUS PAGE",
-    "PUBLISHER": "PUBLISHER",
-    "LAUNCHYEAR": "LAUNCH YEAR",
-    "EDIT": "EDIT",
-    "DELETE": "DELETE"
-  },
-  "GAME": {
-    "CATEGORY": "CATEGORY",
-    "DESCRIPTION": "DESCRIPTION",
-    "DESIGNERS": "DESIGNERS",
-    "PUBLISHER": "PUBLISHER",
-    "LAUNCHYEAR": "LAUNCH YEAR",
-    "PLAYERS": "NUMBER PLAYERS",
-    "TIME": "PLAYING TIME",
-    "WEIGHT": "WEIGHT",
-    "CHILDS": "IS FOR CHILDS?",
-    "BACK": "BACK TO LIST"
-  },
-  "REGISTER": {
-    "REGISTER": "REGISTER",
-    "EMAIL": "EMAIL",
-    "PASSWORD": "PASSWORD",
-    "NICKNAME": "NICKNAME",
-    "AVATAR": "AVATAR",
-    "AGE": "AGE",
-    "ERRORS": {
-      "EMAILREQUIRED": "THE EMAIL IS REQUIRED",
-      "EMAILFORMAT": "THE FORMAT IS NOT VALID",
-      "PASSWORDREQUIRED": "THE PASSWORD IS REQUIRED",
-      "PASSWORDFORMAT": "THE PASSWORD MUST CONTAIN AT LEAST 6 CHARACTERS",
-      "NICKNAMEREQUIRED": "THE NICKNAME IS REQUIRED",
-      "AGEREQUIRED": "THE AGE IS REQUIRED",
-      "AGEFORMAT10": "THE AGE MUST BE AT LEAST 10 YEARS OLD",
-      "AGEFORMAT90": "THE AGE MUST BE UNDER 90 YEARS OLD"
-    }
-  },
-  "LOGIN": {
-    "LOGIN": "LOGIN",
-    "EMAIL": "EMAIL",
-    "PASSWORD": "PASSWORD",
-    "ERRORS": {
-      "EMAILREQUIRED": "THE EMAIL IS REQUIRED",
-      "PASSWORDREQUIRED": "THE PASSWORD IS REQUIRED"
-    }
-  },
-  "CONTACT": {
-    "REQUEST": "REQUEST",
-    "TITLE": "TITLE OF REQUEST",
-    "SUGGESTION": "WRITE HERE A SUGGESTION"
-  },
-  "BUTTON": {
-    "SEND": "SEND",
-    "RESET": "RESET"
-  },
-  "ACCOUNT": {
-    "WELCOME": "WELCOME",
-    "LOGOUT": "LOGOUT"
-  },
-  "FORM": {
-    "TITLE": "TITLE",
-    "PUBLISHER": "PUBLISHER",
-    "DESIGNERS": "DESIGNERS",
-    "LAUNCHYEAR": "LAUNCH YEAR",
-    "IMAGE": "IMAGE",
-    "CATEGORY": "CATEGORY",
-    "PLAYERS": "NUMBER PLAYERS",
-    "WEIGHT": "WEIGHT",
-    "PLAYING": "PLAYING TIME",
-    "CHILDS": "IS FOR CHILDS?",
-    "ADD": "ADD GAME",
-    "EDIT": "EDIT GAME",
-    "ERRORS": {
-      "TITLEREQUIRED": "THE TITLE IS REQUIRED",
-      "PUBLISHERREQUIRED": "THE PUBLISHER IS REQUIRED",
-      "DESIGNERREQUIRED": "THE DESIGNER IS REQUIRED",
-      "LAUNCHYEARREQUIRED": "THE LAUNCHYEAR IS REQUIRED",
-      "LAUNCH1895": "THE YEAR MUST BE GREATER THAN 1895",
-      "LAUNCH 2023": "THE YEAR MUST BE LESS THAN 2023",
-      "WEIGHTREQUIRED": "THE WEIGHT IS REQUIRED",
-      "WEIGHT1": "THE WEIGHT MUST BE GREATER THAN 1",
-      "WEIGHT5": "THE WEIGHT MUST BE LOWER THAN 5"
-    }
-  },
-  "MYGAMES": {
-    "LIST": "MY GAMES LIST",
-    "PUBLISHER": "PUBLISHER",
-    "LAUNCHYEAR": "LAUNCH YEAR",
-    "EDIT": "EDIT",
-    "REMOVE": "REMOVE"
-  },
-  "MYGAME": {
-    "CATEGORY": "CATEGORY",
-    "DESCRIPTION": "DESCRIPTION",
-    "DESIGNERS": "DESIGNERS",
-    "PUBLISHER": "PUBLISHER",
-    "LAUNCHYEAR": "LAUNCH YEAR",
-    "PLAYERS": "NUMBER PLAYERS",
-    "TIME": "PLAYING TIME",
-    "WEIGHT": "WEIGHT",
-    "CHILDS": "IS FOR CHILDS?",
-    "BACK": "BACK TO LIST"
+  "MYACCOUNT": {
+    "DATA": "My Contact Data",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "GRADE": "Grade"
   },
   "MODAL": {
     "CONTINUE": "CONTINUE",
     "EXIT": "EXIT",
     "MESSAGE": "ARE YOU SURE YOU WANT YO EXIT?"
+  },
+  "BUTTON":{
+    "BACK": "Back"
   }
 }
