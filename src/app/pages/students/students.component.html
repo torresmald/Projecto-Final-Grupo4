@@ -1,12 +1,46 @@
+<div class="filters">
+  <input
+    placeholder="Filtra por nombre"
+    type="text"
+    [(ngModel)]="studentName"
+  />
+</div>
+
+<fieldset class="filters">
+  <legend class="filters">Ordena por Nombre</legend>
+  <div class="sort">
+    <input
+      name="year"
+      type="radio"
+      id="asc"
+      [(ngModel)]="sortByName"
+      value="asc"
+    />
+    <label for="asc">Ascendente</label>
+  </div>
+  <div>
+    <input
+      name="year"
+      type="radio"
+      id="desc"
+      [(ngModel)]="sortByName"
+      value="desc"
+    />
+    <label for="desc">Descendente</label>
+  </div>
+</fieldset>
+
 <div class="students">
   <div
-    *ngFor="let student of students"
+    *ngFor="
+      let student of students | filterName : studentName | sortName : sortByName
+    "
     [ngClass]="{
       hide: student.name === 'Todos',
       'student-card': student.name !== 'Todos'
     }"
   >
-    <p class="name">Nombre: {{ student.name }}</p>
+    <p class="name">{{ student.name }}</p>
     <img [src]="student.image" alt="Foto del alumno" height="100" />
     <p class="clase">Curso: {{ student.grade }}</p>
     <button class="button_teachers" (click)="goDetail(student.id)">
@@ -17,6 +51,8 @@
 <div class="boton-student">
   <a routerLink="/teacherView" class="boton-volver">Volver</a>
 </div>
-<div  class="boton-student">
-  <button class="boton-student-download" (click)="generatePDF(students)">Descargar Detalles</button>
+<div class="boton-student">
+  <button class="boton-student-download" (click)="generatePDF(students)">
+    Descargar Detalles
+  </button>
 </div>

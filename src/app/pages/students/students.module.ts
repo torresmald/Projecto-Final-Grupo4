@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { StudentsRoutingModule } from './students-routing.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +15,9 @@ import { StudentsRoutingModule } from './students-routing.module';
   imports: [
     CommonModule,
     StudentsRoutingModule,
-    RouterModule
+    RouterModule,
+    SharedModule,
+    FormsModule
   ],
  
 })

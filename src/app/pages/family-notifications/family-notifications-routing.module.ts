@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from 'src/app/core/guards/canActivate/auth.guard';
 import { FamilyNotificationsComponent } from './family-notifications.component';
 
 const routes: Routes = [
   {
     path:'',
-    component: FamilyNotificationsComponent
+    component: FamilyNotificationsComponent,
+    canActivate: [AuthGuard]
+
   }
 ];
 
