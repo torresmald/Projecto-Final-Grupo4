@@ -1,5 +1,18 @@
+
 @import '../../../../styles/base/colors.scss';
 @import '../../../../styles/base/fonts.scss';
+@import '../../../../styles/elements/form.scss';
+
+.boton-volver-resources{
+  display: flex;
+  justify-content: center;
+}
+.boton-volver {
+  @include botonVolver($colorgeneral);
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border: 2px solid #111010;
+}
 
 .songs-page {
   display: flex;
@@ -83,3 +96,4 @@
       }
     }
     
+

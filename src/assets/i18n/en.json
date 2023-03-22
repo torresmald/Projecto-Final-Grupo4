@@ -1,0 +1,27 @@
+{
+  "HEADER": {
+    "ABOUT": "About Us",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "ACCOUNT": "My Account"
+  },
+  "FOOTER": {
+    "HOME": "Home",
+    "CONTACT": "Contact",
+    "PRIVACY": "Privacy"
+  },
+  "MYACCOUNT": {
+    "DATA": "My Contact Data",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "GRADE": "Grade"
+  },
+  "MODAL": {
+    "CONTINUE": "CONTINUE",
+    "EXIT": "EXIT",
+    "MESSAGE": "ARE YOU SURE YOU WANT YO EXIT?"
+  },
+  "BUTTON":{
+    "BACK": "Back"
+  }
+}
