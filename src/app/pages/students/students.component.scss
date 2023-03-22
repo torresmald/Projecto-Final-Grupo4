@@ -11,6 +11,12 @@
     border: 2px solid $colorgeneral;
   }
 }
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: baseline;
+}
 .sort{
   padding: 0px 10px;
 }
@@ -69,7 +75,7 @@
 .boton-student {
   display:flex;
   align-items: center;
-  width: 100%;
+  
  justify-content: center;
 }
 .div_back {

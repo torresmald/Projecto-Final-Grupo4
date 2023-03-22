@@ -29,7 +29,16 @@
     <label for="desc">Descendente</label>
   </div>
 </fieldset>
-
+<div class="buttons">
+  <div class="boton-student">
+    <a routerLink="/teacherView" class="boton-volver">Volver</a>
+  </div>
+  <div class="boton-student">
+    <button class="boton-student-download" (click)="generatePDF(students)">
+      Descargar Detalles
+    </button>
+  </div>
+</div>
 <div class="students">
   <div
     *ngFor="
@@ -48,11 +57,4 @@
     </button>
   </div>
 </div>
-<div class="boton-student">
-  <a routerLink="/teacherView" class="boton-volver">Volver</a>
-</div>
-<div class="boton-student">
-  <button class="boton-student-download" (click)="generatePDF(students)">
-    Descargar Detalles
-  </button>
-</div>
+
