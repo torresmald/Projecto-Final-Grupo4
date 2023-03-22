@@ -1,5 +1,6 @@
 @import '../../../../styles/base/colors.scss';
 @import '../../../../styles/base/fonts.scss';
+@import '../../../../styles/elements/form.scss';
 
 .songs-page {
   display: flex;
@@ -70,6 +71,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 16px;
 }
+
+.boton-volver {
+  @include botonVolver($colorgeneral); 
+}  
+
 
 @media (min-width: 768px) {
   .song-container {

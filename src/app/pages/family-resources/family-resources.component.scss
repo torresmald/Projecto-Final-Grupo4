@@ -1,5 +1,7 @@
 @import '../../../styles/base/colors.scss';
 @import '../../../styles/base/fonts.scss';
+@import '../../../styles/elements/form.scss';
+
 
 .title_div {
   display: flex;
@@ -29,6 +31,7 @@
   justify-content: space-around;
   gap: 16px;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .resource-card {
@@ -71,3 +74,7 @@
   font-weight: bold;
   margin-bottom: 8px;
 }
+
+.boton-volver {
+  @include botonVolver($colorgeneral); 
+} 
