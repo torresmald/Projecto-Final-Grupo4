@@ -1,43 +1,23 @@
 <div class="body">
-  <div class="container">
-    <form *ngIf="contactForm" [formGroup]="contactForm">
-      <div class="form--group">
-        <input
-          type="text"
-          [class.is-invalid]="
-            contactForm.get('name')?.invalid && contactForm.get('name')?.touched
-          "
-          class="form--control"
-          formControlName="name"
-          placeholder="Nombre"
-        />
-      </div>
-      <div class="form--group">
-        <input
-          type="email"
-          [class.is-invalid]="
-            contactForm.get('email')?.invalid &&
-            contactForm.get('email')?.touched
-          "
-          class="form--control"
-          formControlName="email"
-          placeholder="Email"
-        />
-      </div>
-      <div class="form--group">
-        <input
-          type="text"
-          [class.is-invalid]="
-            contactForm.get('message')?.invalid &&
-            contactForm.get('message')?.touched
-          "
-          class="form--control"
-          formControlName="message"
-          placeholder="Mensaje"
-        />
-      </div>
+  <form
+    action="mailto:fullcalendar2703@gmail.com"
+    method="post"
+    enctype="text/plain"
+    class="container"
+  >
+    <div class="form--group">
+      <label  for="Nombre">Nombre</label>
+      <input class="form--control" type="text" name="Nombre" placeholder="Nombre" />
+    </div>
+    <div class="form--group">
+      <label for="Email">Email</label>
+      <input class="form--control" type="email" name="Email" placeholder="Email" />
+    </div>
+    <div class="form--group">
+      <label for="Mensaje">Mensaje</label>
+      <input class="form--control" type="text" name="Mensaje" placeholder="Escriba aquí su mensaje" />
+    </div>
 
-      <button class="form--button" type="submit">Enviar</button>
-    </form>
-  </div>
+    <button class="form--button" type="submit">Enviar</button>
+  </form>
 </div>
