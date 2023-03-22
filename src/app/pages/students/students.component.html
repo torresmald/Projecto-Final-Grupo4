@@ -1,13 +1,13 @@
 <div class="filters">
   <input
-    placeholder="Filtra por nombre"
+    placeholder="{{ 'MYSTUDENTS.FILTER' | translate}}"
     type="text"
     [(ngModel)]="studentName"
   />
 </div>
 
 <fieldset class="filters">
-  <legend class="filters">Ordena por Nombre</legend>
+  <legend class="filters"> {{ "MYSTUDENTS.SORT" | translate}} </legend>
   <div class="sort">
     <input
       name="year"
@@ -16,7 +16,7 @@
       [(ngModel)]="sortByName"
       value="asc"
     />
-    <label for="asc">Ascendente</label>
+    <label for="asc"> {{ "MYSTUDENTS.UPWARD" | translate}} </label>
   </div>
   <div>
     <input
@@ -26,16 +26,16 @@
       [(ngModel)]="sortByName"
       value="desc"
     />
-    <label for="desc">Descendente</label>
+    <label for="desc"> {{ "MYSTUDENTS.FALLING" | translate}} </label>
   </div>
 </fieldset>
 <div class="buttons">
   <div class="boton-student">
-    <a routerLink="/teacherView" class="boton-volver">Volver</a>
+    <a routerLink="/teacherView" class="boton-volver">{{ "MYSTUDENTS.BUTTONS.RETURN" | translate}}</a>
   </div>
   <div class="boton-student">
     <button class="boton-student-download" (click)="generatePDF(students)">
-      Descargar Detalles
+      {{ "MYSTUDENTS.BUTTONS.DOWNLOAD" | translate}}
     </button>
   </div>
 </div>
@@ -51,9 +51,9 @@
   >
     <p class="name">{{ student.name }}</p>
     <img [src]="student.image" alt="Foto del alumno" height="100" />
-    <p class="clase">Curso: {{ student.grade }}</p>
+    <p class="clase"> {{ "MYSTUDENTS.CLASS" | translate}}: {{ student.grade }}</p>
     <button class="button_teachers" (click)="goDetail(student.id)">
-      Ir al Detalle
+      {{ "MYSTUDENTS.BUTTONS.DETAIL" | translate}} 
     </button>
   </div>
 </div>
