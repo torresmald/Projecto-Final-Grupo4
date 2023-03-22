@@ -1,0 +1,21 @@
+.body{
+width: 100%;
+height: 100vh;
+margin-bottom: 10%;
+display: flex;
+justify-content: center;
+   
+}
+
+
+.cards-book{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    
+
+}

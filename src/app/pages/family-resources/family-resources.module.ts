@@ -9,6 +9,7 @@ import { LogicalMathActivitiesComponent } from './logical-math-activities/logica
 import { ReadingWritingActivitiesComponent } from './reading-writing-activities/reading-writing-activities.component';
 import { EnglishActivitiesComponent } from './english-activities/english-activities.component';
 import { ThematicProgrammingComponent } from './thematic-programming/thematic-programming.component';
+import { BookComponent } from './books/book/book.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ThematicProgrammingComponent } from './thematic-programming/thematic-pr
     LogicalMathActivitiesComponent,
     ReadingWritingActivitiesComponent,
     EnglishActivitiesComponent,
-    ThematicProgrammingComponent
+    ThematicProgrammingComponent,
+    BookComponent
   ],
   imports: [
     CommonModule,

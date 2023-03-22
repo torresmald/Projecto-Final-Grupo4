@@ -1,8 +1,14 @@
-<div *ngFor="let book of books">
-    <h2>{{book.title}}</h2>
-    <img [src]="book.link" >
-  </div>
-  <div class="boton-volver-resources">
-    <a routerLink="/resources" class="boton-volver">Volver</a>
-  </div>
-  
+ <div class="body">
+
+     <div class="cards-book">
+       
+
+       <app-book 
+       *ngFor="let book of books"
+     [books]="book"></app-book>
+
+
+
+     </div>
+
+   </div>
