@@ -64,3 +64,7 @@
   align-items: center;
   width: 100%;
 }
+.boton-student-download{
+  @include botonVolver($colorfamilias);
+  margin-bottom: 20px;
+}
