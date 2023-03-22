@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     ModalComponent,
     LoadingComponent,
   ],
-  imports: [CommonModule, CoreRoutingModule, RouterModule],
+  imports: [CommonModule, CoreRoutingModule, RouterModule, TranslateModule],
 
   exports: [FooterComponent, HeaderComponent, NavbarComponent, ModalComponent, LoadingComponent],
 })

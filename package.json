@@ -26,6 +26,8 @@
     "@fullcalendar/interaction": "^6.1.4",
     "@fullcalendar/list": "^6.1.4",
     "@fullcalendar/timegrid": "^6.1.4",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "i": "^0.3.7",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.28",
