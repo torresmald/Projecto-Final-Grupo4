@@ -157,7 +157,6 @@
   @include botonVolver($colorgeneral);
   margin-bottom: 30px;
   margin-top: 10px;
-  border: 2px solid #111010;
 }
 .boton-student-detail {
     display:flex;
@@ -166,5 +165,6 @@
    justify-content: center;
 }
 .boton-student-detail-download{
+  border: 0;
   @include botonVolver($colorfamilias);
 }

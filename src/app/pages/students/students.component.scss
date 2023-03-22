@@ -60,6 +60,8 @@
     margin-bottom: 10px;
   }
   .button_teachers {
+    color: white;
+    border: 0;
     border-radius: 15px;
     background-color:  rgb(56, 182, 255);
     width: 100px;
@@ -70,7 +72,7 @@
   @include botonVolver($colorgeneral);
   margin-bottom: 30px;
   margin-top: 10px;
-  border: 2px solid #111010;
+ 
 }
 .boton-student {
   display:flex;
@@ -86,6 +88,8 @@
   width: 100%;
 }
 .boton-student-download{
+  border: 0;
+
   @include botonVolver($colorfamilias);
   margin-bottom: 20px;
 }

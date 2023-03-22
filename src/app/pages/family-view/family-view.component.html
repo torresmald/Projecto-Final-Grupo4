@@ -30,11 +30,13 @@
   </div>
   <div class="calendar">
     <h5 class="calendar--text">Mi calendario</h5>
-    <div
-      class="calendar--div"
-      *ngFor="let notification of notifications"
-    >
-      <img class="calendar--div--i" src="{{ notification.calendar }}" />
+    <div class="calendar--div">
+      <div
+        class="calendar--div--i"
+        *ngFor="let notification of notifications"
+      >
+        <!-- <img class="calendar--div--i" src="{{ notification.calendar }}" /> -->
+      </div>
     </div>
     <!-- <div class="card" style="width: 18rem">
       <img
