@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { StudentsComponent } from './students.component';
 import { RouterModule } from '@angular/router';
 
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     StudentsRoutingModule,
     RouterModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
  
 })

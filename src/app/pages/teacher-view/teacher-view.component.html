@@ -1,7 +1,7 @@
 
 <nav class="nav">
-    <a routerLink="/students" class="nav-item">Mis alumnos</a>
-    <a routerLink="/teacher-messages" class="nav-item">Mensajes</a>
+    <a routerLink="/students" class="nav-item">{{ "TEACHERS.VIEW.NAV.MY STUDENTS" | translate }}</a>
+    <a routerLink="/teacher-messages" class="nav-item">{{ "TEACHERS.VIEW.NAV.MESSAGE" | translate }}</a>
 </nav>
 
 
@@ -9,11 +9,11 @@
    
     <div class='demo-app-sidebar'>
       <div class='demo-app-sidebar-section'>
-        <h2>Instruciones</h2>
+        <h2>{{ "TEACHERS.VIEW.CALENDAR.INSTRUCTIONS" | translate }}</h2>
         <ul>
-          <li>Seleccione las fechas y se le pedirá que cree un nuevo evento</li>
-          <li>Eventos para arrastrar, soltar y cambiar el tamaño  </li>
-          <li>Haga clic en un evento para eliminarlo</li>
+          <li>{{ "TEACHERS.VIEW.CALENDAR.LI1" | translate }}</li>
+          <li>{{ "TEACHERS.VIEW.CALENDAR.LI2" | translate }}</li>
+          <li>{{ "TEACHERS.VIEW.CALENDAR.LI3" | translate }}</li>
         </ul>
       </div>
       
@@ -24,7 +24,7 @@
               [checked]='calendarOptions.weekends'
               (change)='handleWeekendsToggle()'
             />
-              Quitar los fines de semana
+            {{ "TEACHERS.VIEW.CALENDAR.DELETEWEEKENDS" | translate }}
             </label>
     </div>
     <div class='demo-app-sidebar-section'>

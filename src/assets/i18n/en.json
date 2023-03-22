@@ -24,5 +24,54 @@
   },
   "BUTTON":{
     "BACK": "Back"
-  }
+  },
+  "TEACHERS":{
+    "VIEW":{
+      "NAV":{
+        "MY STUDENTS": "My students",
+        "MESSAGE": "Messages"
+      },
+      "CALENDAR":{
+        "INSTRUCTIONS" : "Instructions",
+        "LI1" : "Select the dates and you will be prompted to create a new event",
+        "LI2" : "Events for drag, drop and resize",
+        "LI3" : "Click on an event to delete it",
+        "DELETEWEEKENDS" : "Remove weekends"
+      }
+    }
+  },
+  "MYSTUDENTS":{
+    "FILTER" : "Filter by name",
+    "SORT" : "Sort by Name",
+    "UPWARD" : "Upward",
+    "FALLING" : "Falling",
+    "CLASS" : "Course",
+    "BUTTONS":{
+      "RETURN" : "Return",
+      "DOWNLOAD" : "Download details",
+      "DETAIL" : "Go to detail"
+    }
+  },
+ "MYSTUDENTDETAIL" : {
+  "NAME" : "Name",
+  "ADRESS" : "Adress",
+  "PHONE" : "Phone",
+  "YEAR" : "Year of birth",
+  "CLASS" : "Course",
+  "ALLERGIES" : "Allergies",
+  "MEDICATIONS" : "Medications",
+  "AREAS" : "Areas",
+  "EMAIL" : "Email",
+  "RETURN" : "Return",
+  "DOWNLOAD" : "Download details"
+ },
+ "TEACHERSMESSAGE" : {
+  "TITLE" : "Send messages to families",
+  "FORM" : {
+    "NAME" : "Name",
+    "DESCRIPTION" : "Description",
+    "BUTTON" : "Send"
+  },
+  "RETURN" : "Return"
+ }
 }

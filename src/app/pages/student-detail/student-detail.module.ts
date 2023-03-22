@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,7 +13,8 @@ import { StudentDetailComponent } from './student-detail.component';
   ],
   imports: [
     CommonModule,
-    StudentDetailRoutingModule
+    StudentDetailRoutingModule,
+    TranslateModule
   ]
 })
 export class StudentDetailModule { }
