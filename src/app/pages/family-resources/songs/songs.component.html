@@ -7,7 +7,11 @@
       disfrutarlas y aprender al mismo tiempo. Las utilizamos mucho como recurso educativo para favorecer la adquisición de ciertos hábitos y rutinas. 
     </p>
     <p class="section-description">¡Esperamos que os gusten y las cantéis juntos en casa!</p>
+    <div class="boton-volver-resources">
+      <a routerLink="/resources" class="boton-volver">Volver</a>
+    </div>
   </div>
+  
   <div *ngFor="let song of songs" class="song-container">
     <h2 class="song-title">{{song.title}}</h2>
     <iframe class="song-video" [src]="song.safeLink" frameborder="0" allowfullscreen></iframe>

@@ -22,5 +22,10 @@
   },
   "BUTTON":{
     "BACK": "Atrás"
+  },
+  "TEACHERVIEW": {
+    "HOME": {
+      "MYSTUDENTS": "Mis Alumnos"
+    }
   }
 }
