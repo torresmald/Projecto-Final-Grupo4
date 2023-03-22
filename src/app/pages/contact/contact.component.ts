@@ -8,17 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class ContactComponent{
-
-  public contactForm?: FormGroup; 
-
-  constructor(private buildForm : FormBuilder){
-    this.contactForm = new FormGroup({
-      name : new FormControl("", Validators.required),
-      email : new FormControl("" , Validators.required),
-      message : new FormControl("" , Validators.required)
-    })
-    
-    
-  }
-    
+  
   }

@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
   public msg: string = '';
   public formErr: string = '';
   public name: string = '';
+  public isAdmin: boolean  = false;
   public errors?: string = '';
 
   ngOnInit(): void {
@@ -62,12 +63,20 @@ export class LoginComponent implements OnInit {
               this.serviceTeacher.userLogged$.next(true);
               const authToken = localStorage.getItem(TOKEN_KEY);
               authToken ? (this.name = JSON.parse(authToken).user.name) : null;
+              authToken ? (this.isAdmin = JSON.parse(authToken).user.admin) : null;
               this.msg = `Has iniciado sesión correctamente ${this.name}`;
               this.alertSuccess = true;
               this.loginForm?.reset();
+              if(this.isAdmin){
+                this.alertSuccess = true;
+                setTimeout(() => {
+                  this.router.navigate(['/about']);
+                  this.alertSuccess = false;
+                }, 4000);
+                return;
+              }
               setTimeout(() => {
                 this.router.navigate(['/teacherView']);
-
                 this.alertSuccess = false;
               }, 4000);
             } else {
@@ -82,7 +91,6 @@ export class LoginComponent implements OnInit {
                 this.router.navigate(['/familyView']);
               }, 4000);
             }
-          
         },
         error: (error) => {
           this.errors = error.error;

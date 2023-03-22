@@ -20,7 +20,56 @@
     "CONTINUE": "CONTINUAR",
     "EXIT": "SALIR"
   },
-  "BUTTON":{
+  "BUTTON": {
     "BACK": "Atrás"
+  },
+  "TEACHERS": {
+    "VIEW": {
+      "NAV": {
+        "MY STUDENTS": "Mis alumnos",
+        "MESSAGE": "Mensajes"
+      },
+      "CALENDAR": {
+        "INSTRUCTIONS": "Instrucciones",
+        "LI1": "Seleccione las fechas y se le pedirá que cree un nuevo evento",
+        "LI2": "Eventos para arrastrar, soltar y cambiar el tamaño",
+        "LI3": "Haga clic en un evento para eliminarlo",
+        "DELETEWEEKENDS": "Quitar los fines de semana"
+      }
+    }
+  },
+  "MYSTUDENTS": {
+    "FILTER": "Filtra por nombre",
+    "SORT": "Ordena por nombre",
+    "UPWARD": "Ascendente",
+    "FALLING": "Descendente",
+    "CLASS": "Clase",
+    "BUTTONS": {
+      "RETURN": "Volver",
+      "DOWNLOAD": "Descargar los detalles",
+      "DETAIL": "Ir al detalle"
+    }
+  },
+  "MYSTUDENTDETAIL": {
+    "NAME": "Nombre",
+    "ADRESS": "Dirección",
+    "PHONE": "Teléfono",
+    "YEAR": "Año de nacimiento",
+    "CLASS": "Clase",
+    "ALLERGIES": "Alergias",
+    "MEDICATIONS": "Medicamentos",
+    "AREAS": "Areas",
+    "EMAIL": "Email",
+    "RETURN": "Volver",
+    "DOWNLOAD": "Descargar detalles"
+  },
+  "TEACHERSMESSAGE" : {
+   "TITLE" : "Enviar mensajes a las familias",
+   "FORM" : {
+     "NAME" : "Nombre",
+     "DESCRIPTION" : "Descripción",
+     "BUTTON" : "Enviar"
+   },
+   "RETURN" : "Volver"
   }
 }

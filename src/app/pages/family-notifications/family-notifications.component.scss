@@ -1,6 +1,15 @@
 @import '../../../styles/base/colors.scss';
+@import '../../../styles/base/fonts.scss';
+@import '../../../styles/elements/form.scss';
 
-
+.boton-volver{
+  display: flex;
+  justify-content: center
+}
+.boton-volver-family {
+  @include botonVolver($colorgeneral);
+  margin-bottom: 30px; 
+}
 
 h3{
 

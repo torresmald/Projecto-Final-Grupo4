@@ -15,7 +15,7 @@ export class MessagesTeachersComponent implements OnInit {
 
   public msgForm?: FormGroup;
   public students: ApiStudents[] = [];
-  public calendar:Blob | string="";
+  public image :Blob | string="";
   public token?: string[];
 
   constructor (private msgBuilder: FormBuilder, private studentService: ApiStudentsService, private notificationService: NotificationsService, private router: Router) {
@@ -32,7 +32,7 @@ export class MessagesTeachersComponent implements OnInit {
       name: new FormControl('', Validators.required),
       date: new FormControl('', Validators.required),
       description: new FormControl(''),
-      calendar: new FormControl(null),
+      image: new FormControl(null),
       student: new FormControl(this.students)
     })
    
@@ -43,7 +43,7 @@ export class MessagesTeachersComponent implements OnInit {
     form.append("name", this.msgForm?.get("name")?.value);
     form.append("date", this.msgForm?.get("date")?.value);
     form.append("description", this.msgForm?.get("description")?.value);
-    form.append("calendar", this.calendar);
+    form.append("image", this.image);
     form.append("student", this.msgForm?.get("student")?.value);
 
     
@@ -59,7 +59,7 @@ export class MessagesTeachersComponent implements OnInit {
     if(event.target.files && event.target.files.length) {
       const file = event.target.files[0];      
       reader.readAsArrayBuffer(file);   
-      this.calendar=file;   
+      this.image =file;   
   }
 }
 

@@ -3,23 +3,23 @@
         <img [src]="student?.image" alt="Foto del alumno" height="100">
     </div>
     <div class="student-detail__info">
-        <h4>Nombre: {{student?.name}}</h4>
-        <p>Direccion: {{student?.address}}</p>
-        <p>Telefono: {{student?.phone}}</p>
-        <p>Año de nacimiento: {{student?.date}}</p>
-        <p>Clase: {{student?.grade}}</p>
-        <p>Alergias: {{student?.nutrition}}</p>
-        <p>Medicamentos: {{student?.diseases}}</p>
-        <p>Areas: {{student?.areas}}</p>
+        <h4> {{ "MYSTUDENTDETAIL.NAME" | translate}}: {{student?.name}}</h4>
+        <p> {{ "MYSTUDENTDETAIL.ADRESS" | translate}}:{{student?.address}}</p>
+        <p> {{ "MYSTUDENTDETAIL.PHONE" | translate}}: {{student?.phone}}</p>
+        <p>{{ "MYSTUDENTDETAIL.YEAR" | translate}}: {{student?.date}}</p>
+        <p>{{ "MYSTUDENTDETAIL.CLASS" | translate}}: {{student?.grade}}</p>
+        <p>{{ "MYSTUDENTDETAIL.ALLERGIES" | translate}}: {{student?.nutrition}}</p>
+        <p>{{ "MYSTUDENTDETAIL.MEDICATIONS" | translate}}: {{student?.diseases}}</p>
+        <p>{{ "MYSTUDENTDETAIL.AREAS" | translate}}: {{student?.areas}}</p>
         <div class="" *ngFor="let tutor of tutors">
-        <p class="name">Correo: {{ tutor.email}}</p>
+        <p class="name">{{ "MYSTUDENTDETAIL.EMAIL" | translate}}: {{ tutor.email}}</p>
      
 </div>
 <div class="boton-student-detail">
-    <a routerLink="/students" class="boton-volver">Volver</a>
+    <a routerLink="/students" class="boton-volver">{{ "MYSTUDENTDETAIL.RETURN" | translate}}</a>
 </div>
 <div  class="boton-student-detail">
-    <button class="boton-student-detail-download" (click)="generatePDF(student)">Descargar Detalles</button>
+    <button class="boton-student-detail-download" (click)="generatePDF(student)">{{ "MYSTUDENTDETAIL.DOWNLOAD" | translate}}</button>
 </div>
 
 </div>

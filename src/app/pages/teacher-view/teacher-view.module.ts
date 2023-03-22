@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FullCalendarModule } from '@fullcalendar/angular';
@@ -17,7 +18,7 @@ import { TeacherViewComponent } from './teacher-view.component';
     CommonModule,
     TeacherViewRoutingModule,
     FullCalendarModule,
- 
+    TranslateModule
   ],
   providers: [],
   bootstrap: [TeacherViewComponent]

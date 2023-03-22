@@ -33,7 +33,6 @@ export class TeacherViewComponent {
       left: 'prev,next today',
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
-      
     },
     initialView: 'dayGridMonth',
     initialEvents: INITIAL_EVENTS, 
@@ -84,12 +83,8 @@ export class TeacherViewComponent {
       clickInfo.event.remove();
     }
   }
-
   handleEvents(events: EventApi[]) {
     this.currentEvents = events;
     this.changeDetector.detectChanges();
   }
- 
-
-  
 }
