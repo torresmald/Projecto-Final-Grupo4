@@ -5,8 +5,12 @@
     </div>
 
     <div class="body">
-        <div>
+        <div class="body__msg">
             <p>{{ notification?.description }}</p>
+        </div>
+
+        <div *ngIf="notification?.calendar" class="image">
+            <img src="{{ notification?.calendar }}" alt="">
         </div>
     </div>
     

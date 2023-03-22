@@ -34,35 +34,66 @@
 }
 
 .title{
-    margin-left: 5%;
     display: flex;
     flex-direction: row;
-    
+    width: 95%;
     text-transform: capitalize;
 
-    &__date{
-        display: flex;
-        font-size: 10px;
-        transform: translateY(7px);
-        margin-top: 5px;
-        width: 25%;
-    }
 
-    &__name { 
-        width: 55%;
-        font-weight: bold;
-        margin-top: 10px;
-        font-size:14px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
+    &__header{
+
+   width: 65%;
+   height: 80%;
+   display: flex;
+   flex-direction: column;
+   margin-left: 40px;
+   margin-top: 10px;
+
+   
+        &--name{
+            font-size: 18px;
+            opacity: 0.8;
+            font-weight: bold;
+            width: 190px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden
+
+            
+        }
+
+        &--date{
+            width: 70%;
+            font-size: 13px;
+            transform: translateY(-10px);
+        }
+
         
     }
 
+    // &__date{
+    //     display: flex;
+    //     font-size: 10px;
+    //     transform: translateY(7px);
+    //     margin-top: 5px;
+    //     width: 25%;
+    // }
+
+    // &__name { 
+    //     width: 55%;
+    //     font-weight: bold;
+    //     margin-top: 10px;
+    //     font-size:14px;
+    //     overflow: hidden;
+    //     text-overflow: ellipsis;
+    //     display: -webkit-box;
+    //     -webkit-line-clamp: 2;
+    //     -webkit-box-orient: vertical;
+        
+    // }
+
     &__delete {
-        width: 10%;
+        width: 35%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -118,7 +149,10 @@
 }
 
 
-
+.notification{
+    height: 20%;
+    margin-left: 40px;
+}
 
 
 .notification p{
@@ -126,11 +160,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 12px;
+
 
 }
 
@@ -149,17 +181,26 @@ form{
 
 
 
-@media all and (max-width: 760px) {
+@media all  and (max-width: 1500px) {
 
     .title{
 
-        &__date{
+        &__header{
 
-            transform: translateX(0px);
-            margin-top: 10px;
-
+            width: 80%;
+            
 
 
         }
+
+        &__delete{
+
+            width: 20%;
+
+            
+        }
+
+     
     }
 }
+
