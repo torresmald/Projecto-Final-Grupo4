@@ -15,8 +15,6 @@ export const INITIAL_EVENTS: EventInput[] = [
     title: 'Comedor',
     start: TODAY_STR + 'T00:00:00',
     end: TODAY_STR + 'T03:00:00',
-
-      
   },
   {
     id: createEventId(),
