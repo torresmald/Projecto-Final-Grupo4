@@ -75,7 +75,6 @@ export class StudentDetailComponent {
         fillColor: `rgb(255, 87, 87)`,
       },
     });
-
     autoTable(doc, {
       body: [
         [
