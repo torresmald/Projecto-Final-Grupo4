@@ -37,8 +37,9 @@ export class StudentsComponent {
     public generatePDF(student?: Students[]) {
       this.img.src = '../../../assets/logos/LogoGeneral.png';
       const doc = new jsPDF();
-      for (let index = 0; index < this.students.length; index++) {
+      for (let index = 0; index < this.students.length - 1; index++) {
         let student = this.students[index];
+        this.studentImg.src = student.image;        
         autoTable(doc, {
           body: [
             [
@@ -87,6 +88,10 @@ export class StudentsComponent {
           theme: 'grid',
         });
         doc.addImage(this.img, 'png',100,5,40,30);
+        doc.addImage(this.studentImg,'jpg',150,35,40,30);
+        doc.addImage(this.studentImg,'jpg',150,100,40,30);
+        doc.addImage(this.studentImg,'jpg',150,165,40,30);
+        doc.addImage(this.studentImg,'jpg',150,230,40,30);
       } 
       return doc.save('prueba');
     }
