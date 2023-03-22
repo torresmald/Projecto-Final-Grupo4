@@ -1,36 +1,67 @@
 
-    <div class="title_div">
-    <h1 class="resources-title">Banco de Recursos</h1>
+<div>
+    <a [routerLink]="['songs']">Ir a Canciones</a>
+    <a [routerLink]="['books']">Ir a Libros</a>
 </div>
-<div class="resources-page">   
-        <div class="resources-container">
-      <div class="resource-card" [routerLink]="['songs']">
-        <img class="resource-image" src="../../../assets/imagesRescources/musica.png" alt="Songs" />
-        <h2 class="resource-card__title">Canciones</h2>
-      </div>
-  
-      <div class="resource-card" [routerLink]="['books']">
-        <img class="resource-image" src="../../../assets/imagesRescources/cuento.png" alt="Books" />
-        <h2 class="resource-card__title">Cuentos</h2>
-      </div>
-  
-      <div class="resource-card" [routerLink]="['math-activities']">
-        <img class="resource-image" src="../../../assets/imagesRescources/mate.png" alt="Math Activities" />
-        <h2 class="resource-card__title">Lógico-matemáticas</h2>
-      </div>
-  
-      <div class="resource-card" [routerLink]="['reading-and-writing-activities']">
-        <img class="resource-image" src="../../../assets/imagesRescources/escribir.png" alt="Reading & Writing Activities" />
-        <h2 class="resource-card__title">Lectoescritura</h2>
-      </div>
-      <div class="resource-card" [routerLink]="['english-activities']">
-        <img class="resource-image" src="../../../assets/imagesRescources/ingles.png" alt="English Activities" />
-        <h2 class="resource-card__title">Inglés</h2>
-      </div>
-  
-      <div class="resource-card" [routerLink]="['program-activities']">
-        <img class="resource-image" src="../../../assets/imagesRescources/programacion.png" alt="Proman Activities" />
-        <h2 class="resource-card__title">Programación</h2>
-      </div>
+
+<div class="title_div">
+  <h1 class="resources-title">Banco de Recursos</h1>
+</div>
+<div class="resources-page">
+  <div class="resources-container">
+    <div class="resource-card" [routerLink]="['songs']">
+      <img
+        class="resource-image"
+        src="../../../assets/imagesRescources/musica.png"
+        alt="Songs"
+      />
+      <h2 class="resource-card__title">Canciones</h2>
     </div>
-  </div>  
+    <div class="resource-card" [routerLink]="['books']">
+      <img
+        class="resource-image"
+        src="../../../assets/imagesRescources/cuento.png"
+        alt="Books"
+      />
+      <h2 class="resource-card__title">Cuentos</h2>
+    </div>
+    <div class="resource-card" [routerLink]="['math-activities']">
+      <img
+        class="resource-image"
+        src="../../../assets/imagesRescources/mate.png"
+        alt="Math Activities"
+      />
+      <h2 class="resource-card__title">Lógico-matemáticas</h2>
+    </div>
+    <div
+      class="resource-card"
+      [routerLink]="['reading-and-writing-activities']"
+    >
+      <img
+        class="resource-image"
+        src="../../../assets/imagesRescources/escribir.png"
+        alt="Reading & Writing Activities"
+      />
+      <h2 class="resource-card__title">Lectoescritura</h2>
+    </div>
+    <div class="resource-card" [routerLink]="['english-activities']">
+      <img
+        class="resource-image"
+        src="../../../assets/imagesRescources/ingles.png"
+        alt="English Activities"
+      />
+      <h2 class="resource-card__title">Inglés</h2>
+    </div>
+    <div class="resource-card" [routerLink]="['program-activities']">
+      <img
+        class="resource-image"
+        src="../../../assets/imagesRescources/programacion.png"
+        alt="Proman Activities"
+      />
+      <h2 class="resource-card__title">Programación</h2>
+    </div>
+  </div>
+</div>
+<div class="boton-volver-resources">
+  <a routerLink="/familyView" class="boton-volver">Volver</a>
+</div>
