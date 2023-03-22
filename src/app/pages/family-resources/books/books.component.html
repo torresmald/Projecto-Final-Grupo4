@@ -1,10 +1,16 @@
-<div class="intro_div">
-  <h1 class="title">Cuentos</h1>
-  <div>
-    <img src="../../../../assets/resourcesImages/cuento.png">
-  </div>
-  <p class="view_description">
-    En esta sección encontrarás una selección de cuentos que leemos en clase. Estos cuentos están especialmente seleccionados para que los niños puedan disfrutarlos y aprender al mismo tiempo. Son una excelente herramienta para fomentar la imaginación y el amor por la lectura desde temprana edad.
-  </p>
-  <p class="view_description">¡Esperamos que disfruten de estos cuentos y los compartan juntos en casa!</p>
-</div>
+
+ <div class="body">
+
+     <div class="cards-book">
+       
+
+       <app-book 
+       *ngFor="let book of books"
+     [books]="book"></app-book>
+
+
+
+     </div>
+
+   </div>
+
