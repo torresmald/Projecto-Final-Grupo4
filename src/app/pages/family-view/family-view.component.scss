@@ -1,37 +1,82 @@
 @import "../../../styles/base/colors.scss";
+@import "../../../styles/base/fonts.scss";
 
 .nav {
   display: flex;
   justify-content: space-evenly;
-  background-color: $colorfamilias;
   a {
     text-decoration: none;
-    color: $colorgeneral;
+    color: $colorfamilias;
     font-weight: bold;
+    font-family: "Coloring";
+    font-size: 25px;
   }
+}
+.container{
+  display:block;
 }
 .row {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5vh;
+  margin-top: 3vh;
+  &--text {
+    margin: auto;
+    font-size: 30px;
+    justify-content: center;
+    font-family: "Coloring";
+    text-align: center;
+    color: $colorfamilias;
+  }
 }
 .card {
-  justify-content: center;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px $colorfamilias;
-  margin: 5%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: 2px solid transparent;
+  border-color: $colorfamilias;
+  box-shadow: 0 4px 6px rgba($colorfamilias, 0.4);
+  max-width: 50%;
+  margin:auto;
 }
 
 .card-img-top {
   width: 10rem;
 }
 .calendar {
+  justify-content: center;
+  padding: 16px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $colorfamilias;
+    box-shadow: 0 4px 6px rgba($colorfamilias, 0.4);
+  }
   &--text {
+    margin: auto;
+    margin-bottom: 4vh;
+    font-size: 30px;
+    justify-content: center;
+    font-family: "Coloring";
     text-align: center;
+    color: $colorfamilias;
   }
   &--div {
     display: flex;
@@ -39,15 +84,17 @@
     text-align: center;
     border-radius: 30px;
     box-shadow: 2px 2px 5px $colorfamilias;
+    margin:auto;
     &--i {
-      width: 60rem;
+      max-width: 15rem;
+
     }
   }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
     &--div {
-      width: 100%;
+      width: 30%;
     }
   }
 }
