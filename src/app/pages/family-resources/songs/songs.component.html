@@ -1,4 +1,18 @@
-<div *ngFor="let song of songs">
-  <h2>{{song.title}}</h2>
-  <iframe width="560" height="315" [src]="song.safeLink" frameborder="0" allowfullscreen></iframe>
+<div class="songs-page">
+  <div class="songs-intro">
+    <h1 class="section-title">Canciones</h1>
+    <p class="section-description">
+      En esta sección encontrarás una colección de canciones que cantamos en el colegio. Estas melodías
+      están especialmente seleccionadas para que los niños puedan
+      disfrutarlas y aprender al mismo tiempo. Las utilizamos mucho como recurso educativo para favorecer la adquisición de ciertos hábitos y rutinas. 
+    </p>
+    <p class="section-description">¡Esperamos que os gusten y las cantéis juntos en casa!</p>
+  </div>
+  <div *ngFor="let song of songs" class="song-container">
+    <h2 class="song-title">{{song.title}}</h2>
+    <iframe class="song-video" [src]="song.safeLink" frameborder="0" allowfullscreen></iframe>
+    <div class="song-description">
+      <p>{{song.description}}</p>
+    </div>
+  </div>
 </div>
