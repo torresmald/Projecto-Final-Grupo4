@@ -1,7 +1,7 @@
 
 import { ApiTeachers } from 'src/app/core/models/Teachers/api/api-teachers.model';
 import { Component, ChangeDetectorRef } from '@angular/core';
-import { CalendarOptions, DateSelectArg, EventClickArg, EventApi, Calendar,} from '@fullcalendar/core';
+import { CalendarOptions, DateSelectArg, EventClickArg, EventApi, } from '@fullcalendar/core';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -22,6 +22,11 @@ export class TeacherViewComponent {
   constructor(private changeDetector: ChangeDetectorRef) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user) : null;
+      // Cargar los eventos guardados en localStorage
+  const events = localStorage.getItem('events');
+  if (events) {
+    this.calendarOptions.initialEvents = JSON.parse(events);
+  }
   }
 
   calendarVisible = true;
@@ -86,5 +91,7 @@ export class TeacherViewComponent {
   handleEvents(events: EventApi[]) {
     this.currentEvents = events;
     this.changeDetector.detectChanges();
+      // Guardar los eventos en localStorage
+  localStorage.setItem('events', JSON.stringify(events));
   }
 }
