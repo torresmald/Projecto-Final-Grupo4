@@ -11,6 +11,12 @@
   margin-bottom: 30px;
   margin-top: 10px;
 }
+.boton-añadir {
+  border: 0;
+  @include botonVolver($colorfamilias);
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
 
 .title_div {
   display: flex;

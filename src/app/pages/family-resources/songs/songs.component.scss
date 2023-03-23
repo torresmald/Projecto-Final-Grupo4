@@ -8,6 +8,7 @@
   justify-content: center;
 }
 .boton-volver {
+  border: 0;
   @include botonVolver($colorgeneral);
   margin-bottom: 30px;
   margin-top: 10px;

@@ -1,0 +1,49 @@
+@import "../../../styles/base/colors.scss";
+@import '../../../styles/base/fonts.scss';
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-input,
+.form-input-file {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid $colorprofesores;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.form-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: $colorfamilias;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: $colorprofesores;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .form-title {
+    font-family: 'Coloring';
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: $colorprofesores;
+    margin-bottom: 20px;
+  }
