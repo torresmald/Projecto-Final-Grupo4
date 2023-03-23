@@ -18,7 +18,7 @@ export class FamilyNotificationsComponent  {
   public tokenChildName?: string;
   public savedNotification?: Notifications;
   public readedNotification?: Notifications;
-  public page_size: number = 6;
+  public page_size: number = 10;
   public page_number: number = 1;
   public notificationReaded?: Notifications[];
   hidePageSize = true;
