@@ -1,6 +1,7 @@
 <div class="title_div">
   <h1 class="resources-title">Banco de Recursos</h1>
 </div>
+
 <div class="resources-page">
   <div class="resources-container">
     <div class="resource-card" [routerLink]="['songs']">
@@ -56,6 +57,10 @@
     </div>
   </div>
 </div>
+<button (click)="navigateToFormGames()">
+  Añadir Recurso
+</button>
 <div class="boton-volver-resources">
   <a routerLink="/familyView" class="boton-volver">Volver</a>
 </div>
+

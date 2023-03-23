@@ -18,6 +18,9 @@
     <div class="song-description">
       <p>{{song.description}}</p>
     </div>
+    <button 
+    *ngIf="song._id"
+    (click)="deleteResource(song._id)">Borrar Recurso</button>
   </div>
 </div>
 

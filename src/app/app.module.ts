@@ -13,6 +13,7 @@ import { MyAccountComponent } from './pages/my-account/my-account.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FormResourcesComponent } from './pages/form-resources/form-resources.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     NotFoundComponent,
     StudentsComponent,
     MyAccountComponent,
+    FormResourcesComponent,
   ],
   imports: [
     FormsModule,

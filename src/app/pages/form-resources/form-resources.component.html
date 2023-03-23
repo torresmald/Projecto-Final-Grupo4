@@ -1,0 +1,21 @@
+<form
+  *ngIf="resourcesForm"
+  (submit)="createNewResource()"
+  [formGroup]="resourcesForm"
+>
+  <label for="title">Titulo</label>
+  <input type="text" id="title" formControlName="title" />
+  <label for="description">Description</label>
+  <input type="text" id="description" formControlName="description" />
+  <label for="link">Link</label>
+  <input type="text" id="link" formControlName="link" />
+  <select formControlName="type">
+    <option default value="">Tipo</option>
+    <option *ngFor="let type of types" [value]="type">
+      {{ type }}
+    </option>
+  </select>
+  <button type="submit" >
+    Enviar
+    </button>
+</form>
