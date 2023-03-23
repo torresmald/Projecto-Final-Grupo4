@@ -22,4 +22,14 @@ export class ResourcesService {
       tap(() => this.loadingService.hideLoading())
     )
   }
+  public createResource(body: Resources): Observable<Resources> {
+    return this.resourcesService
+      .createApiResources(body)
+      .pipe(map((resource) => transformDataResources(resource)));
+  }
+  public deleteResource(id: string): Observable<Resources> {
+    return this.resourcesService
+      .deleteApiResources(id)
+      .pipe(map((boardGame) => transformDataResources(boardGame)));
+  }
 }

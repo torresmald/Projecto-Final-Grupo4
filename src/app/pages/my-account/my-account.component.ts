@@ -11,6 +11,7 @@ export class MyAccountComponent implements OnInit {
   public token? : ApiTeachers & ApiParents;
   public messageName?: string;
   public messageEmail?: string;
+  public isTeacher?: boolean = false;
 
   constructor(){
     
@@ -20,5 +21,6 @@ export class MyAccountComponent implements OnInit {
     authToken ? (this.token = JSON.parse(authToken).user) : null;
     this.messageName = `Nombre ${this.token}`;
     this.messageEmail = `Email ${this.token}`;
+    this.isTeacher = this.token?.grade.includes('');
   }
 }

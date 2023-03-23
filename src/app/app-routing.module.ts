@@ -53,6 +53,10 @@ const routes: Routes = [
     loadChildren: () => import('../app/pages/family-notifications/family-notifications.module').then(m => m.FamilyNotificationsModule),
   },
   {
+    path: 'formResources',
+    loadChildren: () => import('../app/pages/form-resources/form-resources.module').then(m => m.FormResourcesModule),
+  },
+  {
     path: 'resources',
     loadChildren: () => import('../app/pages/family-resources/family-resources.module').then(m => m.FamilyResourcesModule),
   },
