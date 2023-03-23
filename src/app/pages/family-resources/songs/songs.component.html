@@ -2,25 +2,35 @@
   <div class="songs-intro">
     <h1 class="section-title">Canciones</h1>
     <p class="section-description">
-      En esta sección encontrarás una colección de canciones que cantamos en el colegio. Estas melodías
-      están especialmente seleccionadas para que los niños puedan
-      disfrutarlas y aprender al mismo tiempo. Las utilizamos mucho como recurso educativo para favorecer la adquisición de ciertos hábitos y rutinas. 
+      En esta sección encontrarás una colección de canciones que cantamos en el
+      colegio. Estas melodías están especialmente seleccionadas para que los
+      niños puedan disfrutarlas y aprender al mismo tiempo. Las utilizamos mucho
+      como recurso educativo para favorecer la adquisición de ciertos hábitos y
+      rutinas.
     </p>
-    <p class="section-description">¡Esperamos que os gusten y las cantéis juntos en casa!</p>
+    <p class="section-description">
+      ¡Esperamos que os gusten y las cantéis juntos en casa!
+    </p>
     <div class="boton-volver-resources">
       <a routerLink="/resources" class="boton-volver">Volver</a>
     </div>
   </div>
-  
+
   <div *ngFor="let song of songs" class="song-container">
-    <h2 class="song-title">{{song.title}}</h2>
-    <iframe class="song-video" [src]="song.safeLink" frameborder="0" allowfullscreen></iframe>
+    <h2 class="song-title">{{ song.title }}</h2>
+    <iframe
+      class="song-video"
+      [src]="song.safeLink"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
     <div class="song-description">
-      <p>{{song.description}}</p>
+      <p>{{ song.description }}</p>
     </div>
-    <button 
-    *ngIf="song._id"
-    (click)="deleteResource(song._id)">Borrar Recurso</button>
+    <div class="boton-volver-resources">
+      <button *ngIf="song._id" (click)="deleteResource(song._id)" class="boton-volver">
+        Borrar Recurso
+      </button>
+    </div>
   </div>
 </div>
-
