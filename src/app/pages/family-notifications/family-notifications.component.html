@@ -15,8 +15,12 @@
 <div class="boton-volver">
   <a routerLink="/familyView" class="boton-volver-family">Volver</a>
 </div>
+
+
 <div class="body">
+
   <div class="notification">
+
     <div class="body-list">
 
       <div class="list-msg">
@@ -28,23 +32,31 @@
           (readedNotification)="editNotification($event)"
           >
         </app-notification>
+
+
       </div>
 
+
       <div class="paginator">
-        <mat-paginator 
-                 (page)="handlePageEvent($event)"
-                 [length]="notifications.length"
-                 [pageSize]="page_size"
-                 [hidePageSize]="hidePageSize"
-                >
+        <mat-paginator
+        (page)="handlePageEvent($event)"
+        [length]="notifications.length"
+        [pageSize]="page_size"
+        [hidePageSize]="hidePageSize"
+             >
         </mat-paginator>
       </div>
 
-    </div>
-    <div class="msg">
-      <app-modal-notification *ngIf="showNotification" class="msg_body"
+ </div>
+
+
+
+    <div class="msg" [ngClass]="{'msg': showNotification,'msg-hide': !showNotification}">
+      <app-modal-notification *ngIf="showNotification" class="msg=body"
         [notification]="savedNotification"
       ></app-modal-notification>
     </div>
+
+
   </div>
 </div>
