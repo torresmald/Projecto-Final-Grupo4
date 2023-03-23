@@ -53,6 +53,7 @@ export class NotificationComponent implements OnInit {
   
   public moreInfoNotification(notifications?: Notifications) {
     this.notification.emit(notifications);
+  
 
     
   }

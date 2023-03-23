@@ -1,20 +1,37 @@
-import { Component } from '@angular/core';
-import { ApiStudentsService } from './core/services/students/api/api-students.service';
-import { Students } from './core/models/Students/transformed/students.model';
-import { StudentsService } from './core/services/students/students.service';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'proyecto-final-grupo4';
 
 
 
-  constructor(public _router: Router){}
+  constructor(public _router: Router){
+
+  
+
+  }
+
+  ngOnInit(): void {
+    this._router.events.subscribe(event =>{
+       if (event instanceof NavigationStart && event.url == '/notifications'){
+         setTimeout(() => {
+            window.scroll(0, window.scrollY + 200);
+         }, 40);   
+       }
+    })
+ }
+
+
+
+   
+ 
+
 
 }
 
