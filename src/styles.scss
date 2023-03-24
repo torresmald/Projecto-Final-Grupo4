@@ -1,3 +1,31 @@
-
+@use "./styles/theme/variables.scss" as *;
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color-main, #666);
+}
+
+p {
+    color: var(--font-color-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--font-color-main);
+}
+
+span {
+    color: var(--font-color-sub);
+}
+
+.card {
+    background-color: var(--bg-color-card) !important;
+    color: var(--font-color-sub) !important;
+}

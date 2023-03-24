@@ -21,11 +21,8 @@ export class HomeComponent {
     this.msgCourier.trueTeacher();
     this.router.navigate(['login']);
   }
-
   public goToFamilies(){
     this.msgCourier.falseTeacher();
     this.router.navigate(['login']);
   }
-
-
 }

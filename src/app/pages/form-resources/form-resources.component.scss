@@ -1,6 +1,16 @@
 @import "../../../styles/base/colors.scss";
 @import '../../../styles/base/fonts.scss';
+@import '../../../styles/elements/form.scss';
 
+.boton-volver-resources{
+  display: flex;
+  justify-content: center;
+}
+.boton-volver {
+  @include botonVolver($colorgeneral);
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
 .form-group {
   width: 100%;
   margin-bottom: 15px;
