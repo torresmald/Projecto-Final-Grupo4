@@ -9,7 +9,16 @@ import { ResourcesService } from 'src/app/core/services/resources/resources.serv
 })
 export class ThematicProgrammingComponent {
   public programmingActivities?: Resources[];
+  
   constructor(private resourcesService: ResourcesService) {
     this.resourcesService.getResources().subscribe((resources) => this.programmingActivities = resources.filter((resource) => resource.type === 'thematic programming'))
   }
+
+  seeImage(src: string): void {
+    const link = document.createElement('a');
+    link.href = src;
+    link.click();
+  }
+
 }
+
