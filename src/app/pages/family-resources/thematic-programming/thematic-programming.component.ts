@@ -17,6 +17,7 @@ export class ThematicProgrammingComponent {
   seeImage(src: string): void {
     const link = document.createElement('a');
     link.href = src;
+    link.target = '_blank'
     link.click();
   }
 
