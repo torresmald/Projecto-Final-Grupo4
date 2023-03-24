@@ -1,3 +1,11 @@
 <div class="boton-volver-resources">
     <a routerLink="/resources" class="boton-volver">Volver</a>
   </div>
+  
+  <div
+  *ngFor="let activity of readingActivities"
+  >
+  <p>{{activity.title}}</p>
+  <p>{{activity.description}}</p>
+  </div>
+  

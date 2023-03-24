@@ -1,16 +1,9 @@
-
- <div class="body">
-
-     <div class="cards-book">
-       
-
-       <app-book 
-       *ngFor="let book of books"
-     [books]="book"></app-book>
-
-
-
-     </div>
-
-   </div>
+<div class="boton-volver-resources">
+  <a routerLink="/resources" class="boton-volver">Volver</a>
+</div>
+<div class="body">
+  <div class="cards-book">
+    <app-book *ngFor="let book of books" [books]="book"></app-book>
+  </div>
+</div>
 

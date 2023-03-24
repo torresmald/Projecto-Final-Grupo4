@@ -1,26 +1,23 @@
 <div class="card-book">
-  
-    <div class="image-book">
-
-
-       <div><img (click)="open()" class="image" [ngClass]="{ 'img': !isOpen, 'img-active': isOpen}" src="{{ books.link }}" alt=""></div>
-
-     
+  <div class="image-book">
+    <div>
+      <img
+        (click)="open()"
+        class="image"
+        [ngClass]="{ img: !isOpen, 'img-active': isOpen }"
+        src="{{ books.link }}"
+        alt=""
+      />
+    </div>
   </div>
 
-  <div [ngClass]="{ card2: !isOpen, hide: isOpen}" class="card2">
+  <div [ngClass]="{ card2: !isOpen, hide: isOpen }" class="card2">
+    <div class="card2-title">
+      <p>{{ books.title }}</p>
+    </div>
 
-      <div class="card2-title">
-        <p>{{ books.title }}</p>
-      </div>
-  
-      <div class="card2-description" >
-          <p>{{ books.description }}</p>
-      </div>
-
+    <div class="card2-description">
+      <p>{{ books.description }}</p>
+    </div>
   </div>
-
-
 </div>
-
-
