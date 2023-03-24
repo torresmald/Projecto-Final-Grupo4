@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Resources } from 'src/app/core/models/Resources/transformed/resources.model';
 import { ResourcesService } from 'src/app/core/services/resources/resources.service';
 
@@ -8,9 +8,15 @@ import { ResourcesService } from 'src/app/core/services/resources/resources.serv
   styleUrls: ['./logical-math-activities.component.scss']
 })
 export class LogicalMathActivitiesComponent {
-  public logicalActivities?: Resources[];
+  public mathActivities: Resources[] = [];
+  
   constructor(private resourcesService: ResourcesService) {
-    this.resourcesService.getResources().subscribe((resources) => this.logicalActivities = resources.filter((resource) => resource.type === 'logical math activities'))
+    this.resourcesService.getResources().subscribe((resources) => this.mathActivities = resources.filter((resource) => resource.type === 'logical math activities'))
   }
 
+  seeImage(src: string): void {
+    const link = document.createElement('a');
+    link.href = src;
+    link.click();
+  }
 }
