@@ -6,18 +6,32 @@
     <div class="links">
       <ul class="links--list">
         <li class="links--list--url">
-          <a *ngIf="isLogged" [routerLink]="['myAccount']">{{"HEADER.ACCOUNT" | translate}}</a>
+          <a *ngIf="isLogged" [routerLink]="['myAccount']">{{
+            "HEADER.ACCOUNT" | translate
+          }}</a>
         </li>
         <li class="links--list--url">
-          <a *ngIf="isLogged" (click)="logout()">{{"HEADER.LOGOUT" | translate}}</a>
+          <a *ngIf="isLogged" (click)="logout()">{{
+            "HEADER.LOGOUT" | translate
+          }}</a>
         </li>
-        <li class="links--list--url"><a [routerLink]="['about']">{{"HEADER.ABOUT" | translate}}</a></li>
         <li class="links--list--url">
-          <select #langSelect (change)="changeLang(langSelect.value)" >
-            <option *ngFor="let lang of langs" [value]="lang" >
-              {{lang=== "es" ? '🇪🇸Español ': '🇬🇧English'}}
+          <a [routerLink]="['about']">{{ "HEADER.ABOUT" | translate }}</a>
+        </li>
+        <li class="links--list--url">
+          <select
+            #langSelect
+            (change)="changeLang(langSelect.value)"
+            class="select"
+          >
+            <option *ngFor="let lang of langs" [value]="lang" class="option">
+              {{ lang === "es" ? "🇪🇸Español " : "🇬🇧English" }}
             </option>
           </select>
+        </li>
+        <li class="links--list--url">
+          <button (click)="setThema('light')">Claro</button>
+          <button (click)="setThema('dark')">Oscuro</button>
         </li>
       </ul>
     </div>
