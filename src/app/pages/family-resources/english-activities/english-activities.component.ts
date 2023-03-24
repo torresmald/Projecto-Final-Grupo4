@@ -8,8 +8,17 @@ import { ResourcesService } from 'src/app/core/services/resources/resources.serv
   styleUrls: ['./english-activities.component.scss']
 })
 export class EnglishActivitiesComponent {
-  public englishActivities?: Resources[];
+  public englishActivities: Resources[] = [];
+
   constructor(private resourcesService: ResourcesService) {
-    this.resourcesService.getResources().subscribe((resources) => this.englishActivities = resources.filter((resource) => resource.type === 'english activities'))
+    this.resourcesService.getResources().subscribe((resources) => {
+      this.englishActivities = resources.filter((resource) => resource.type === 'english activities');
+    });
+  }
+
+  seeImage(src: string): void {
+    const link = document.createElement('a');
+    link.href = src;
+    link.click();
   }
 }
