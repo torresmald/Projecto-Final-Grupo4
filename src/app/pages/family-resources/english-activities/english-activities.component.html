@@ -1,10 +1,29 @@
-<div class="boton-volver-resources">
-  <a routerLink="/resources" class="boton-volver">Volver</a>
-</div>
-
-<div
-*ngFor="let activity of englishActivities"
->
-<p>{{activity.title}}</p>
-<p>{{activity.description}}</p>
+<div class="page">
+  <div class="intro-div">
+    <h1 class="title">Actividades de inglés</h1>
+    <div class="image-container">
+      <img src="../../../../assets/resourcesImages/ingles.png" alt="Imagen de inglés">
+    </div>
+    <p class="description">En esta sección encontrarás una variedad de actividades de inglés para que puedas practicar y reforzar los conceptos que vamos aprendiendo en clase.</p>
+    <p class="description">Esperamos que disfrutes de estas actividades y las encuentres útiles. Si tienes alguna pregunta o necesitas ayuda con alguna actividad, no dudes en preguntar a tu profe.</p>
+    <div class="boton-volver-resources">
+      <a routerLink="/resources" class="boton-volver">Volver</a>
+    </div>
+  </div>
+  <div class="activities-container">
+    <div class="card-container" *ngFor="let activity of englishActivities">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">{{activity.title}}</h2>
+        </div>
+        <div class="card-image">
+          <img [src]="activity.link" alt="{{activity.title}}">
+        </div>
+        <div class="card-description">
+          <p>{{activity.description}}</p>
+        </div>
+        <button class="download-button" (click)="seeImage(activity.link)">Ver actividad</button>
+      </div>
+    </div>
+  </div>
 </div>
