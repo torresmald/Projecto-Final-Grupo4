@@ -8,6 +8,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 import esLocale from '@fullcalendar/core/locales/es';
+import { ChatService } from 'src/app/core/services/chat/chat.service';
 
 
 const TOKEN_KEY = 'user-token-key';
@@ -19,7 +20,8 @@ const TOKEN_KEY = 'user-token-key';
 })
 export class TeacherViewComponent {
   public token?: ApiTeachers;
-  constructor(private changeDetector: ChangeDetectorRef) {
+  public text : string = '';
+  constructor(private changeDetector: ChangeDetectorRef, public chat: ChatService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user) : null;
       // Cargar los eventos guardados en localStorage
@@ -28,7 +30,6 @@ export class TeacherViewComponent {
     this.calendarOptions.initialEvents = JSON.parse(events);
   }
   }
-
   calendarVisible = true;
   calendarOptions: CalendarOptions = {
     plugins: [interactionPlugin, dayGridPlugin, timeGridPlugin, listPlugin],
@@ -93,5 +94,14 @@ export class TeacherViewComponent {
     this.changeDetector.detectChanges();
       // Guardar los eventos en localStorage
   localStorage.setItem('events', JSON.stringify(events));
+  }
+
+  public sendMessage(){
+    let messageInfo = {
+      text: this.text,
+      messageType: 1
+    };
+    this.chat.sendMessage(messageInfo);
+    this.text = '';
   }
 }
