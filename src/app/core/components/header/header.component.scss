@@ -1,47 +1,70 @@
-@import '../../../../styles/base/colors.scss';
+@import "../../../../styles/base/colors.scss";
 
-.body{
-    width: 100%;
-    bottom: 0%;
+.body {
+  width: 100%;
+  bottom: 0%;
 }
-.header{
-    font-family: sans-serif;
-        &--logo{
-        height: 15%;
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        text-align: center;
-        color: beige;
-    }
-}
-.logo{
-    width: 250px;
-}
-.links {
+.header {
+  font-family: sans-serif;
+  position: relative;
+  &--logo {
+    height: 15%;
     display: flex;
     justify-content: center;
-    height: 50px;
-    font-weight: bold;
-    &--list{
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        text-decoration: none;
-        padding-inline-start: 0px;
-        &--url{
-            list-style: none;
-        }
-        &--url a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: $colorgeneral;
-            transition: 0.2s;
-            font-size: 15px;
-        }
-        &--url a:hover{
-            font-size: 25px;
-            font-weight: bold;
-        }
+    align-items: center;
+    text-align: center;
+    color: beige;
+  }
+}
+.logo {
+  width: 250px;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  font-weight: bold;
+  &--list {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    padding-inline-start: 0px;
+    &--url {
+      list-style: none;
     }
+    &--url a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: $colorgeneral;
+      transition: 0.2s;
+      font-size: 15px;
+    }
+    &--url a:hover {
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+}
+.div {
+  &--icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    list-style: none;
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    &--button {
+      border: none;
+      border-radius: 10px;
+      background-color: $colorgeneral;
+    }
+
+    &--img {
+      width: 2rem;
+      height: 2rem;
+      margin: 0,5rem;
+    }
+  }
 }

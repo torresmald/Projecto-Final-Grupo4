@@ -29,11 +29,16 @@
             </option>
           </select>
         </li>
-        <li class="links--list--url">
-          <button (click)="setThema('light')">Claro</button>
-          <button (click)="setThema('dark')">Oscuro</button>
-        </li>
+        
       </ul>
     </div>
   </div>
+  <div class="div--icon">
+    <button class="div--icon--button" (click)="setThema('light')">
+      <img class="div--icon--img" src="../../../../assets/resourcesImages/sol.png" alt="Sol">
+    </button>
+    <button class="div--icon--button" (click)="setThema('dark')">
+      <img class="div--icon--img" src="../../../../assets/resourcesImages/luna.png" alt="Luna">
+    </button>
+  </div> 
 </header>
