@@ -161,7 +161,24 @@
   "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
   "BACKBUTTON": "Back",
   "VIEWBUTTON": "Back"
+},
+"FAMILYVIEW" : {
+  "NAV" : {
+    "1" : "Notifications",
+    "2" : "Resources",
+    "3" : "Contact"
+  },
+  "FILE" : "My son's file",
+  "CALENDAR" : "My calendar",
+  "CARD" :{
+    "GRADE" : "Class",
+    "BIRTH" : "Date of birth",
+    "PHONE" : "Telephone contact:",
+    "EMAIL" : "Contact email:",
+    "ADRESS" : "Address:",
+    "DISEASES" : "Diseases:",
+    "ALLERGIES" : "Food allergies"
+  }
 }
 }
-
 

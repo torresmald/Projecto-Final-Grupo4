@@ -159,5 +159,24 @@
     "INTRO2": "Esperamos que disfrutes de estas actividades y las encuentres útiles. Si tienes alguna pregunta o necesitas ayuda con alguna actividad, no dudes en preguntar a tu profesor.",
     "BACKBUTTON": "Volver",
     "VIEWBUTTON": "Ver Actividad"
+},
+"FAMILYVIEW" : {
+  "NAV" : {
+    "1" : "Notificaciones",
+    "2" : "Recursos",
+    "3" : "Contacto"
+  },
+  "FILE" : "Ficha de mi hijo",
+  "CALENDAR" : "Mi calendario",
+  "CARD" :{
+    "GRADE" : "Clase",
+    "BIRTH" : "Fecha de nacimiento",
+    "PHONE" : "Teléfono de contacto:",
+    "EMAIL" : "Email de contacto:",
+    "ADRESS" : "Dirección:",
+    "DISEASES" : "Enfermedades:",
+    "ALLERGIES" : "Alergias alimentarias:"
+  }
+
   }  
 }
