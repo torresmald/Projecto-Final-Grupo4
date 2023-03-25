@@ -68,7 +68,6 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => import('../app/pages/contact/contact.module').then(m => m.ContactModule),
   },
-  
   {
     path: 'privacity',
     loadChildren: () => import('../app/pages/privacity/privacity.module').then(m => m.PrivacityModule),

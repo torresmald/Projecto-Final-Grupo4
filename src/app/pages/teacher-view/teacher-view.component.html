@@ -49,5 +49,26 @@
         </ng-template>
       </full-calendar>
     </div>
-  
+    <div class="chatContainer">
+      <div class="chat">
+        <p
+          [ngClass]="{
+            local: message.messageType === 1,
+            remoto: message.messageType === 2
+          }"
+          *ngFor="let message of chat.chats"
+        >
+          {{ message.text }}
+        </p>
+        <div class="inputContainer">
+          <form (submit)="sendMessage()" class="form">
+            <input type="text" [(ngModel)]="text" name="text" placeholder="Escribe tu Mensaje" />
+            <button type="submit" class="boton-volver">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
   </div>
+
