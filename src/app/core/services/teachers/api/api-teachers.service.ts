@@ -20,4 +20,8 @@ export class ApiTeachersService {
   public loginApiTeacher(body: ApiTeachers): Observable<ApiUsers>{
     return this.request.post<ApiUsers>(`${API_URLS.DOMAIN}${teachers}/${login}`, body);
   }
+
+  public registerApiTeacher(body: ApiTeachers): Observable<ApiUsers>{
+    return this.request.post<ApiUsers>(`${API_URLS.DOMAIN}${teachers}/${register}`, body);
+  }
 }
