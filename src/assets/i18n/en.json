@@ -29,14 +29,16 @@
     "VIEW":{
       "NAV":{
         "MY STUDENTS": "My students",
-        "MESSAGE": "Messages"
+        "MESSAGE": "Messages",
+        "RESOURCES": "Add Resource"
       },
       "CALENDAR":{
         "INSTRUCTIONS" : "Instructions",
         "LI1" : "Select the dates and you will be prompted to create a new event",
         "LI2" : "Events for drag, drop and resize",
         "LI3" : "Click on an event to delete it",
-        "DELETEWEEKENDS" : "Remove weekends"
+        "DELETEWEEKENDS" : "Remove weekends",
+        "ALLEVENTS": "All Events" 
       }
     }
   },
