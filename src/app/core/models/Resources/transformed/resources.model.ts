@@ -5,5 +5,6 @@ export interface Resources {
     title: string,
     description: string,
     link: string,
-    type: ResourcesType
+    type: ResourcesType,
+    buy: string
 }
