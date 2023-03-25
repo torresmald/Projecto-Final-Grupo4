@@ -16,6 +16,7 @@ export class MessagesTeachersComponent implements OnInit {
   public msgForm?: FormGroup;
   public students: ApiStudents[] = [];
   public image :Blob | string="";
+  public calendar :Blob | string="";
   public token?: string[];
 
   constructor (private msgBuilder: FormBuilder, private studentService: ApiStudentsService, private notificationService: NotificationsService, private router: Router) {
@@ -33,6 +34,7 @@ export class MessagesTeachersComponent implements OnInit {
       date: new FormControl('', Validators.required),
       description: new FormControl(''),
       image: new FormControl(null),
+      calendar: new FormControl(null),
       student: new FormControl(this.students)
     })
    
@@ -44,6 +46,7 @@ export class MessagesTeachersComponent implements OnInit {
     form.append("date", this.msgForm?.get("date")?.value);
     form.append("description", this.msgForm?.get("description")?.value);
     form.append("image", this.image);
+    form.append("calendar", this.calendar);
     form.append("student", this.msgForm?.get("student")?.value);
 
     
@@ -55,11 +58,16 @@ export class MessagesTeachersComponent implements OnInit {
     })    
   }
   public uploadImage(event:any) {
-    const reader = new FileReader();
+    const reader1 = new FileReader();
+    const reader2 = new FileReader();
+
     if(event.target.files && event.target.files.length) {
-      const file = event.target.files[0];      
-      reader.readAsArrayBuffer(file);   
-      this.image =file;   
+      const file1 = event.target.files[0];
+      const file2 = event.target.files[0];      
+      reader1.readAsArrayBuffer(file1);  
+      reader2.readAsArrayBuffer(file2);   
+      this.image =file1;  
+      this.calendar = file2; 
   }
 }
 

@@ -27,7 +27,7 @@ export class FormResourcesComponent {
   public createNewResource(){
     const resourceRequest = this.resourcesService.createResource(this.resourcesForm?.value).subscribe(() => {
       this.resourcesForm?.reset();
-      this.router.navigate(['resources'])
+      this.router.navigate(['teacherView'])
     })
   }
 }
