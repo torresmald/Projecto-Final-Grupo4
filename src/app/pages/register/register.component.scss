@@ -1,0 +1,88 @@
+@import '../../../styles/base/colors.scss';
+
+
+.body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;flex-direction: column;
+    
+
+}
+
+.btn-select{
+
+    background-color: darkgrey;
+    width: 150px;
+    height: 43px;
+    font-size: 17px;
+    margin: 0px 4px;
+    border: 0;
+    border-radius: 4%;
+    color: white;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.btn-select:hover{
+
+    background-color: $colorprofesores;
+
+}
+
+.btn-active{
+    
+    background-color: $colorprofesores;
+    border: 0;
+    transition: 0.5s;
+    outline: none;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  
+  input, select {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 600px) {
+    input, select, button {
+      width: 90%;
+    }
+  }
