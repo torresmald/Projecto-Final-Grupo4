@@ -73,5 +73,13 @@
     "BUTTON" : "Send"
   },
   "RETURN" : "Return"
- }
+ },
+ "SONGS" : {
+  "TITLE": "Songs",
+  "INTRO1": "In this section you will find a collection of songs that we sing at school. These melodies are specially selected so that children can enjoy them and learn at the same time. We use them a lot as an educational resource to promote the acquisition of certain habits and routines.",
+  "INTRO2": "We hope you like them and sing them together at home!",
+  "BACKBUTTON": "Back",
+  "DELETEBUTTON": "Delete Resource"
+}
+
 }
