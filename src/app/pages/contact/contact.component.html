@@ -5,29 +5,29 @@
     class="container"
   >
     <div class="form--group">
-      <label for="Nombre">Nombre</label>
+      <label for="Nombre">{{ "CONTACT.NAME" | translate}}</label>
       <input
         class="form--control"
         type="text"
         name="Nombre"
-        placeholder="Nombre"
+        placeholder="{{ 'CONTACT.NAME' | translate}}"
       />
     </div>
     <div class="form--group">
       <label for="email">
-        Email
-        <input class="form--control" type="email" name="email" placeholder="Email"/>
+        {{ "CONTACT.EMAIL" | translate}}
+        <input class="form--control" type="email" name="email" placeholder="{{ 'CONTACT.EMAIL' | translate}}"/>
       </label>
     </div>
     <div class="form--group">
-      <label for="Mensaje">Mensaje</label>
+      <label for="Mensaje">{{ "CONTACT.MESSAGE" | translate}}</label>
       <input
         class="form--control"
         type="text"
         name="Mensaje"
-        placeholder="Escriba aquí su mensaje"
+        placeholder="{{ 'CONTACT.EMAIL' | translate}}"
       />
     </div>
-    <button type="submit" class="form--button">Send</button>
+    <button type="submit" class="form--button">{{ "CONTACT.SEND" | translate}}</button>
   </form>
 </div>

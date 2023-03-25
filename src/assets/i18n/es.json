@@ -63,13 +63,87 @@
     "RETURN": "Volver",
     "DOWNLOAD": "Descargar detalles"
   },
-  "TEACHERSMESSAGE" : {
-   "TITLE" : "Enviar mensajes a las familias",
-   "FORM" : {
-     "NAME" : "Nombre",
-     "DESCRIPTION" : "Descripción",
-     "BUTTON" : "Enviar"
-   },
-   "RETURN" : "Volver"
+  "TEACHERSMESSAGE": {
+    "TITLE": "Enviar mensajes a las familias",
+    "FORM": {
+      "NAME": "Nombre",
+      "DESCRIPTION": "Descripción",
+      "BUTTON": "Enviar"
+    },
+    "RETURN": "Volver"
+  },
+  "ABOUTSLIDER": {
+    "1": {
+      "TITLE": "ESCUELA INFANTIL SEMILLA",
+      "TEXT1": "Nuesta Escuela infantil 'Semilla' se encuentra ubicada en la calle Wallaby, número 42, en el municipio de Sidney, dentro de la provincia de Invent.",
+      "TEXT2": "Con un total de 100 personas de alumnado en edades comprendidas entre 2 y 5 años, dividas en 4 clases."
+    },
+    "2": {
+      "TITLE": "LOS MEJORES PROFESIONALES",
+      "TEXT": "Entre nuestra plantilla de profesionales se encuentran educadores y educadoras que promoverán el crecimiento autónomo del alumnado."
+    },
+    "3": {
+      "TITLE": "HERRAMIENTAS DE MADERA",
+      "TEXT": "Todos los objetos utilizados en las áreas de trabajo de nuestra escuela están realizadas en madera pulida y son totalmente adecuadas para el uso infantil."
+    },
+    "4": {
+      "TITLE": "EDUCACIÓN EN VALORES",
+      "TEXT": "Durante la infancia, la educación en valores como el cuidado del medioambiente son especialmente importantes. Es por ello, que promovemos acciones como el reciclaje."
+    },
+    "5": {
+      "TITLE": "DESARROLLO DE CAPACIDADES ARTÍSTICAS",
+      "TEXT": "Nos parece primordial el desarrollo cognitivo de los menores a través de la utilización de las artes: pintura, música, baile, teatro, etc..."
+    },
+    "6": {
+      "TITLE": "USO DE METODOLOGÍA MONTESSORI",
+      "TEXT": "Promover la autonomía es uno de nuestros objetivos primordiales y lo trabajamos a través de la metodología Monstessori."
+    }
+  },
+  "CONTACT": {
+    "NAME": "Nombre",
+    "EMAIL": "Email",
+    "MESSAGE": "Mensaje",
+    "SEND": "Enviar"
+  },
+  "HOME": {
+    "TEACHER": "Acceso a profesorado",
+    "FAMILY": "Acceso a familias"
+  },
+  "LOGIN": {
+    "TITLE": {
+      "1": "Acceso a profesorado",
+      "2": "Acceso a familias"
+    },
+    "FIELDS": {
+      "TITLE": "Introduce email y contraseña",
+      "EMAIL": {
+        "1": "Email requerido",
+        "2": "Formato de email incorrecto"
+      },
+      "PASSWORD": {
+        "PASSWORD": "Contraseña",
+        "1": "Escribe una contraseña"
+      },
+      "GO": "Acceder",
+      "RETURN": "Atrás"
+    },
+    "OVERLAY": {
+      "1": "Bienvenido",
+      "2": "¿Eres un familiar o tutor?",
+      "3": "Acceso familias",
+      "4": "Bienvenido",
+      "5": "¿Perteneces al profesorado?",
+      "6": "Acceso profesorado"
+    }
+  },
+  "ALERT": {
+    "SUCCESS": {
+      "TITLE": "Welcome",
+      "MSG": "You have successfully logged in"
+    },
+    "ERROR": {
+      "TITLE": "Error",
+      "MSG": "You must complete all fields"
+    }
   }
 }

@@ -1,7 +1,7 @@
 <app-alert
   *ngIf="alertSuccess"
   [successAlertMsg]="msg"
-  [successAlertTitle]="'Bienvenido'"
+  [successAlertTitle]="'Welcome'"
 ></app-alert>
 <app-alert
   *ngIf="alertError"
@@ -15,13 +15,20 @@
 >
   <div class="form-container sign-up-container">
     <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
-      <h1>{{ teacher ? "Acceso Profesorado" : "Acceso Familias" }}</h1>
-      <span>Introduce Email y contraseña</span>
+      <h1>
+        {{
+          teacher
+            ? ("LOGIN.TITLE.1" | translate)
+            : ("LOGIN.TITLE.2" | translate)
+        }}
+      </h1>
+      <span> {{ "LOGIN.FIELDS.TITLE" | translate }} </span>
       <input
         type="email"
         placeholder="Email"
         formControlName="email"
-        required autocomplete="email"
+        required
+        autocomplete="email"
       />
 
       <p
@@ -29,21 +36,22 @@
         *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['required']
 "
       >
-        Email requerido
+        {{ "LOGIN.FIELDS.EMAIL.1" | translate }}
       </p>
 
       <p
         class="errors"
         *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['email']"
       >
-        Formato de email incorrecto
+        {{ "LOGIN.FIELDS.EMAIL.2" | translate }}
       </p>
 
       <input
         type="password"
         placeholder="Contraseña"
-        formControlName="password"
-        required autocomplete="current-password"
+        formControlName="{{ 'LOGIN.FIELDS.PASSWORD.PASSWORD' | translate }}"
+        required
+        autocomplete="current-password"
       />
 
       <p
@@ -51,13 +59,13 @@
         *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']
 "
       >
-        Escribe una contraseña
+        {{ "LOGIN.FIELDS.PASSWORD.1" | translate }}
       </p>
       <p *ngIf="errors" class="errors">{{ errors }}</p>
       <div>
-        <button>Acceder</button>
+        <button>{{ "LOGIN.FIELDS.GO" | translate }}</button>
         <button type="button" (click)="router.navigate(['/home'])">
-          atras
+          {{ "LOGIN.FIELDS.RETURN" | translate }}
         </button>
       </div>
     </form>
@@ -65,34 +73,42 @@
 
   <div class="form-container sign-in-container">
     <form (ngSubmit)="userLogin()" [formGroup]="loginForm" action="#">
-      <h1>{{ teacher ? "Acceso Profesorado" : "Acceso Familias" }}</h1>
-      <span>Introduce el email y la contraseña</span>
+      <h1>
+        {{
+          teacher
+            ? ("LOGIN.TITLE.1" | translate)
+            : ("LOGIN.TITLE.2" | translate)
+        }}
+      </h1>
+      <span>{{ "LOGIN.FIELDS.TITLE" | translate }}</span>
       <input
         type="email"
         placeholder="Email"
         formControlName="email"
-        required autocomplete="email" 
+        required
+        autocomplete="email"
       />
 
       <p
         *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['required']"
         class="errors"
       >
-        Email requerido
+        {{ "LOGIN.FIELDS.EMAIL.1" | translate }}
       </p>
 
       <p
         *ngIf="loginForm.get('email')?.dirty && loginForm.get('email')?.errors?.['email']"
         class="errors"
       >
-        Formato de email incorrecto
+        {{ "LOGIN.FIELDS.EMAIL.2" | translate }}
       </p>
 
       <input
         type="password"
-        placeholder="Contraseña"
+        placeholder="{{ 'LOGIN.FIELDS.PASSWORD.PASSWORD' | translate }}"
         formControlName="password"
-        required autocomplete="current-password"
+        required
+        autocomplete="current-password"
       />
 
       <p
@@ -100,13 +116,13 @@
         *ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors?.['required']
 "
       >
-        Escribe una contraseña
+        {{ "LOGIN.FIELDS.PASSWORD.1" | translate }}
       </p>
       <p *ngIf="errors" class="errors">{{ errors }}</p>
       <div>
-        <button>Acceder</button>
+        <button>{{ "LOGIN.FIELDS.GO" | translate }}</button>
         <button type="button" (click)="router.navigate(['/home'])">
-          atras
+          {{ "LOGIN.FIELDS.RETURN" | translate }}
         </button>
       </div>
     </form>
@@ -114,17 +130,17 @@
   <div class="overlay-container">
     <div class="overlay">
       <div class="overlay-panel overlay-left">
-        <h1>Bienvenido!</h1>
-        <p>Eres tutor o un familiar?</p>
+        <h1>{{ "LOGIN.FIELDS.OVERLAY.1" | translate }}</h1>
+        <p>{{ "LOGIN.FIELDS.OVERLAY.2" | translate }}</p>
         <button (click)="isFamily()" class="ghost" id="signIn">
-          Acceso Familias
+          {{ "LOGIN.FIELDS.OVERLAY.3" | translate }}
         </button>
       </div>
       <div class="overlay-panel overlay-right">
-        <h1>Bienvenido</h1>
-        <p>Perteneces al profesorado?</p>
+        <h1>{{ "LOGIN.FIELDS.OVERLAY.4" | translate }}</h1>
+        <p>{{ "LOGIN.FIELDS.OVERLAY.5" | translate }}</p>
         <button (click)="isFamily()" class="ghost" id="signUp">
-          Acceso Profesorado
+          {{ "LOGIN.FIELDS.OVERLAY.6" | translate }}
         </button>
       </div>
     </div>
