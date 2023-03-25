@@ -1,13 +1,13 @@
 <div class="page">
   <div class="intro-div">
-    <h1 class="title">Actividades relacionadas con la programación</h1>
+    <h1 class="title">{{ "PROGRAMACTIVITIES.TITLE" | translate }}</h1>
     <div class="image-container">
       <img src="../../../../assets/resourcesImages/programacion.png" alt="Imagen de programación">
     </div>
-    <p class="description">En esta sección encontrarás una variedad de actividades relacionadas con lo que vamos viendo en nuestra programación para que puedas practicar y reforzar los conceptos que vamos aprendiendo en clase.</p>
-    <p class="description">Esperamos que disfrutes de estas actividades y las encuentres útiles. Si tienes alguna pregunta o necesitas ayuda con alguna actividad, no dudes en preguntar a tu profe.</p>
+    <p class="description">{{ "PROGRAMACTIVITIES.INTRO1" | translate }}</p>
+    <p class="description">{{ "PROGRAMACTIVITIES.INTRO2" | translate }}</p>
     <div class="boton-volver-resources">
-      <a routerLink="/resources" class="boton-volver">Volver</a>
+      <a routerLink="/resources" class="boton-volver">{{ "PROGRAMACTIVITIES.BACKBUTTON" | translate }}</a>
     </div>
   </div>
   <div class="activities-container">
@@ -22,7 +22,7 @@
         <div class="card-description">
           <p>{{activity.description}}</p>
         </div>
-        <button class="download-button" (click)="seeImage(activity.link)">Ver actividad</button>
+        <button class="download-button" (click)="seeImage(activity.link)">{{ "PROGRAMACTIVITIES.VIEWBUTTON" | translate }}</button>
       </div>
     </div>
   </div>
