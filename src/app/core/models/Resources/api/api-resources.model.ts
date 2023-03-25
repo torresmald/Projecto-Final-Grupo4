@@ -6,6 +6,7 @@ export interface ApiResources {
     description: string,
     link: string,
     type: ResourcesType,
+    buy: string,
     __v?: string,
     createdAt?: string,
     updatedAt?: string

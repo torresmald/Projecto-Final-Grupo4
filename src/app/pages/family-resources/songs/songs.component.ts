@@ -32,12 +32,4 @@ export class SongsComponent implements OnInit {
     const youtubeEmbedUrl = url.replace('watch?v=', 'embed/');
     return this.sanitizer.bypassSecurityTrustResourceUrl(youtubeEmbedUrl);
   }
-  public deleteResource(id: string){
-    if(!id){
-      return;
-    }
-    this.resourcesService.deleteResource(id).subscribe();
-    alert('Borrado con éxito');
-    this.router.navigate(['resources']);
-  }
 }

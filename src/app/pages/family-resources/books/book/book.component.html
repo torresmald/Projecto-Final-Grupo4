@@ -1,4 +1,5 @@
-<div class="card-book">
+<div class="card-book"
+*ngIf="books">
   <div class="image-book">
     <div>
       <img
@@ -18,6 +19,7 @@
 
     <div class="card2-description">
       <p>{{ books.description }}</p>
+      <a href="{{books.buy}}" target="_blank">Compralo!</a>
     </div>
   </div>
 </div>
