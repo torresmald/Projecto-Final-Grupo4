@@ -15,10 +15,6 @@ export class FamilyResourcesComponent implements OnInit {
   constructor(private resourcesService: ResourcesService, private router: Router){
 
   }
-  
-  public navigateToFormGames() {
-    this.router.navigate(['formResources']);
-  }
   ngOnInit(): void {
       this.resourcesService.getResources().subscribe((resource) => this.resources = resource);
       this.videoResources = this.resources?.filter((resource) => resource.type === 'songs');

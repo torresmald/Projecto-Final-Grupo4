@@ -21,8 +21,14 @@
                     <input formControlName="description" type="text" placeholder="{{'TEACHERSMESSAGE.FORM.DESCRIPTION' | translate}}" class="form-input">
                 </div>
                 <div class="form-group">
+                    <label for="image">Adjuntar Imagen</label>
                     <input formControlName="image" accept=".jpg,.png" 
-                    type="file" (change)="uploadImage($event)" class="form-input-file">
+                    type="file" name="image" (change)="uploadImage($event)" class="form-input-file">
+                </div>
+                <div class="form-group">
+                    <label for="image">Enviar Calendario</label>
+                    <input formControlName="calendar" accept=".jpg,.png" 
+                    type="file" name="calendar" (change)="uploadImage($event)" class="form-input-file">
                 </div>
                 <div class="form-group">
                     <select formControlName="student" class="form-input" >
