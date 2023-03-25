@@ -7,6 +7,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { TeacherViewRoutingModule } from './teacher-view-routing.module';
 import { TeacherViewComponent } from './teacher-view.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,7 +19,8 @@ import { TeacherViewComponent } from './teacher-view.component';
     CommonModule,
     TeacherViewRoutingModule,
     FullCalendarModule,
-    TranslateModule
+    TranslateModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [TeacherViewComponent]
