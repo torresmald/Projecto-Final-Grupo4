@@ -155,6 +155,13 @@
     "MSG" : "You must complete all fields"
   }
 },
+"MATHACTIVITIES": {
+  "TITLE": "Logic-Math Activities",
+  "INTRO1": "In this section you will find a variety of logic-math activities to practice and reinforce the concepts we are learning in class.",
+  "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
+  "BACKBUTTON": "Back",
+  "VIEWBUTTON": "Back"
+},
 "FAMILYVIEW" : {
   "NAV" : {
     "1" : "Notifications",
