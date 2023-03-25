@@ -1,5 +1,6 @@
 @import "../../../styles/base/colors.scss";
 @import "../../../styles/base/fonts.scss";
+@import '../../../styles/elements/form.scss';
 
 .nav {
   display: flex;
@@ -69,7 +70,8 @@ b {
 }
 
 .demo-app-main {
-  flex-grow: 1;
+  margin-top: 100px;
+  width: 50%;
   padding: 3em;
 }
 
@@ -80,15 +82,16 @@ b {
 }
 
 .chatContainer {
-  padding: 30px;
-  width: 40%;
+  border-radius: 20px;
+  background: #eaf9ff;
+  padding: 30px 30px 0px 30px;
+  width: 30%;
   height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: ghostwhite;
   position: absolute;
-  right: 0;
+  right: 10px;
   bottom: -200px;
   z-index: 10000;
 }
@@ -113,19 +116,25 @@ b {
   align-self: flex-end;
 }
 .inputContainer {
-  background-color: ghostwhite;
+  
   bottom: 0;
   width: 100%;
   padding: 10px;
   input {
-    width: 30%;
+    width: 40%;
   }
 }
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  button{
+  button {
     width: 20%;
   }
+}
+.boton-volver {
+  border: 0;
+  @include botonVolver($colorgeneral);
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
