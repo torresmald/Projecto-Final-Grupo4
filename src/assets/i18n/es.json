@@ -177,6 +177,29 @@
     "DISEASES" : "Enfermedades:",
     "ALLERGIES" : "Alergias alimentarias:"
   }
+  },
+  "READINGWRITINGACTIVITIES" : {
+    "TITLE": "Actividades de Lectoescritura",
+    "INTRO1": "En esta sección encontrarás una variedad de actividades de lectoescritura para que puedas practicar y reforzar los conceptos que vamos aprendiendo en clase.",
+    "INTRO2": "Esperamos que disfrutes de estas actividades y las encuentres útiles. Si tienes alguna pregunta o necesitas ayuda con alguna actividad, no dudes en preguntar a tu profesor.",
+    "BACKBUTTON": "Volver",
+    "VIEWBUTTON": "Ver actividad"
+  },
+  "ENGLISHACTIVITIES" : {
+    "TITLE": "Actividades de Inglés",
+    "INTRO1": "En esta sección encontrarás una variedad de actividades de inglés para que puedas practicar y reforzar los conceptos que vamos aprendiendo en clase.",
+    "INTRO2": "Esperamos que disfrutes de estas actividades y las encuentres útiles. Si tienes alguna pregunta o necesitas ayuda con alguna actividad, no dudes en preguntar a tu profesor.",
+    "BACKBUTTON": "Volver",
+    "VIEWBUTTON": "Ver Actividad"
+  },
+  "PROGRAMACTIVITIES" : {
+    "TITLE": "Actividades Relacionadas con la Programación",
+    "INTRO1": "En esta sección encontrarás una variedad de actividades relacionadas con lo que vamos viendo en nuestra programación para que puedas practicar y reforzar los conceptos que vamos aprendiendo en clase.",
+    "INTRO2": "Esperamos que disfrutes de estas actividades y las encuentres útiles. Si tienes alguna pregunta o necesitas ayuda con alguna actividad, no dudes en preguntar a tu profesor.",
+    "BACKBUTTON": "Volver",
+    "VIEWBUTTON": "Ver Actividad"
+  }
+  
+  
 
-  }  
 }
