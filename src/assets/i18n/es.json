@@ -152,5 +152,12 @@
       "TITLE": "Error",
       "MSG": "You must complete all fields"
     }
+  },
+  "MATHACTIVITIES": {
+    "TITLE": "Actividades Lógico-Matemáticas",
+    "INTRO1": "En esta sección encontrarás una variedad de actividades lógico-matemáticas para que puedas practicar y reforzar los conceptos que vamos aprendiendo en clase.",
+    "INTRO2": "Esperamos que disfrutes de estas actividades y las encuentres útiles. Si tienes alguna pregunta o necesitas ayuda con alguna actividad, no dudes en preguntar a tu profesor.",
+    "BACKBUTTON": "Volver",
+    "VIEWBUTTON": "Ver Actividad"
   }  
 }
