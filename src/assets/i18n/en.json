@@ -147,5 +147,23 @@
     "TITLE" : "Error",
     "MSG" : "You must complete all fields"
   }
+},
+"FAMILYVIEW" : {
+  "NAV" : {
+    "1" : "Notifications",
+    "2" : "Resources",
+    "3" : "Contact"
+  },
+  "FILE" : "My son's file",
+  "CALENDAR" : "My calendar",
+  "CARD" :{
+    "GRADE" : "Class",
+    "BIRTH" : "Date of birth",
+    "PHONE" : "Telephone contact:",
+    "EMAIL" : "Contact email:",
+    "ADRESS" : "Address:",
+    "DISEASES" : "Diseases:",
+    "ALLERGIES" : "Food allergies"
+  }
 }
 }
