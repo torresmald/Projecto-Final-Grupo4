@@ -63,6 +63,13 @@
     "RETURN": "Volver",
     "DOWNLOAD": "Descargar detalles"
   },
+  "SONGS": {
+    "TITLE": "Canciones",
+    "INTRO1": "En esta sección encontrarás una colección de canciones que cantamos en el colegio. Estas melodías están especialmente seleccionadas para que los niños puedan disfrutarlas y aprender al mismo tiempo. Las utilizamos mucho como recurso educativo para favorecer la adquisición de ciertos hábitos y rutinas.",
+    "INTRO2": "¡Esperamos que os gusten y las cantéis juntos en casa!",
+    "BACKBUTTON": "Volver",
+    "DELETEBUTTON": "Borrar Recurso"
+},
   "TEACHERSMESSAGE": {
     "TITLE": "Enviar mensajes a las familias",
     "FORM": {
@@ -163,5 +170,6 @@
     "DISEASES" : "Enfermedades:",
     "ALLERGIES" : "Alergias alimentarias:"
   }
+  }  
 }
 }

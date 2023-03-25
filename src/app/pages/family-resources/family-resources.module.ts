@@ -10,6 +10,7 @@ import { ReadingWritingActivitiesComponent } from './reading-writing-activities/
 import { EnglishActivitiesComponent } from './english-activities/english-activities.component';
 import { ThematicProgrammingComponent } from './thematic-programming/thematic-programming.component';
 import { BookComponent } from './books/book/book.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BookComponent } from './books/book/book.component';
   ],
   imports: [
     CommonModule,
-    FamilyResourcesRoutingModule
+    FamilyResourcesRoutingModule,
+    TranslateModule
   ]
 })
 export class FamilyResourcesModule { }
