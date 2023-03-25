@@ -49,3 +49,21 @@
     </div>
   </div>
 </div>
+<div class="chatContainer">
+  <p
+    [ngClass]="{
+      local: message.messageType === 1,
+      remoto: message.messageType === 2
+    }"
+    *ngFor="let message of chat.chats"
+  >
+    {{ message.text }}
+  </p>
+</div>
+
+<div class="inputContainer">
+  <form (submit)="sendMessage()">
+    <input type="text" [(ngModel)]="text" name="text" />
+    <button type="submit">Enviar</button>
+  </form>
+</div>

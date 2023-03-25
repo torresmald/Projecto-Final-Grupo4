@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,7 +14,8 @@ import { FamilyViewComponent } from './family-view.component';
   imports: [
     CommonModule,
     FamilyViewRoutingModule,
-    TranslateModule
+    TranslateModule,
+    FormsModule
   ]
 })
 export class FamilyViewModule { }
