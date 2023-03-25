@@ -65,6 +65,10 @@ const routes: Routes = [
     loadChildren: () => import('../app/pages/family-contact/family-contact.module').then(m => m.FamilyContactModule),
   },
   {
+    path: 'teacher-contact',
+    loadChildren: () => import('../app/pages/teacher-contact/teacher-contact.module').then(m => m.TeacherContactModule)
+  },
+  {
     path: 'contact',
     loadChildren: () => import('../app/pages/contact/contact.module').then(m => m.ContactModule),
   },

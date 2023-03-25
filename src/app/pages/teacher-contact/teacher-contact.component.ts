@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { ChatService } from 'src/app/core/services/chat/chat.service';
 
 @Component({
-  selector: 'app-family-contact',
-  templateUrl: './family-contact.component.html',
-  styleUrls: ['./family-contact.component.scss']
+  selector: 'app-teacher-contact',
+  templateUrl: './teacher-contact.component.html',
+  styleUrls: ['./teacher-contact.component.scss']
 })
-export class FamilyContactComponent {
+export class TeacherContactComponent {
   public text : string = '';
   constructor(public chat: ChatService){}
 
