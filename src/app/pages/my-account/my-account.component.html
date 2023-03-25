@@ -8,9 +8,9 @@
       />
     </div>
     <div class="dates" *ngIf="token">
-      <p>Nombre: {{ token.name }}</p>
-      <p>Email: {{ token.email }}</p>
-      <p>Curso: {{ token.grade }}</p>
+      <p> {{"MYACCOUNT.NAME" | translate}}: {{ token.name }}</p>
+      <p>{{"MYACCOUNT.EMAIL" | translate}}: {{ token.email }}</p>
+      <p>{{"MYACCOUNT.GRADE" | translate}}: {{ token.grade }}</p>
     </div>
   </div>
   <a *ngIf="isTeacher" routerLink="/teacherView" class="boton-volver"
