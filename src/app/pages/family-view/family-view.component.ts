@@ -21,6 +21,6 @@ export class FamilyViewComponent implements OnInit{
     authToken ? (this.token = JSON.parse(authToken).user) : null;  
   }
   ngOnInit(): void {
-      this.notificationsService.getNotification().subscribe((notification) => this.notifications = notification)
+      this.notificationsService.getNotification().subscribe((notification) => {this.notifications = notification.sort((a: any, b: any) => (b.date > a.date) ? 1 : ((a.date > b.date) ? -1 : 0))})
   }
 }

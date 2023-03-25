@@ -80,6 +80,80 @@
   "INTRO2": "We hope you like them and sing them together at home!",
   "BACKBUTTON": "Back",
   "DELETEBUTTON": "Delete Resource"
+},
+ "ABOUTSLIDER" : {
+   "1": {
+     "TITLE":"SEMILLA INFANT SCHOOL",
+     "TEXT1": "Our Nursery School 'Semilla' is located at Wallaby Street, number 42, in the municipality of Sidney, within the province of Invent.",
+     "TEXT2":"With a total of 100 students between the ages of 2 and 5, divided into 4 classes."
+   },
+   "2" : {
+     "TITLE":"THE BEST PROFESSIONALS",
+     "TEXT": "Among our staff of professionals are educators who will promote the autonomous growth of students."
+   },
+   "3": {
+     "TITLE":"WOODEN TOOLS",
+     "TEXT": "All the objects used in the work areas of our school are made of polished wood and are totally suitable for children's use."
+   },
+   "4" : {
+     "TITLE":"EDUCATION IN VALUES",
+     "TEXT": "During childhood, education in values ​​such as caring for the environment are especially important. That is why we promote actions such as recycling."
+   },
+   "5" : {
+     "TITLE":"DEVELOPMENT OF ARTISTIC SKILLS",
+     "TEXT": "We believe that the cognitive development of minors through the use of the arts is essential: painting, music, dance, theater, etc..."
+   },
+   "6" : {
+     "TITLE":"USE OF MONTESSORI METHODOLOGY",
+     "TEXT": "Promoting autonomy is one of our primary objectives and we work on it through the Monstessori methodology."
+   }
+ },
+ "CONTACT" : {
+  "NAME" : "Name",
+  "EMAIL" : "Email",
+  "MESSAGE" : "Message",
+  "SEND" : "Send"
+ },
+ "HOME" : {
+  "TEACHER" : "Access to teachers",
+  "FAMILY" : "Access to families"
+ },
+ "LOGIN" : {
+  "TITLE" : {
+    "1" : "Access to teachers",
+    "2" : "Access to families"
+  },
+  "FIELDS" : {
+    "TITLE" : "Enter email and password",
+    "EMAIL" : {
+        "1" : "Email required",
+        "2" : "Incorrect email format"
+    },
+    "PASSWORD" : {
+      "PASSWORD" : "Password",
+      "1" : "Enter a password"
+    },
+    "GO" : "To access",
+    "RETURN" : "Return"
+  },
+  "OVERLAY" : {
+      "1" : "Welcome",
+      "2" : "Are you a familiar or guardian?",
+      "3" : "Family access",
+      "4" : "Welcome",
+      "5" : "Do you belong to the faculty?",
+      "6" : "Teacher access"
+  }
+},
+"ALERT" : {
+  "SUCCESS" : {
+    "TITLE" : "Welcome",
+    "MSG" : "You have successfully logged in"
+  },
+  "ERROR" : {
+    "TITLE" : "Error",
+    "MSG" : "You must complete all fields"
+  }
 }
 
-}
+

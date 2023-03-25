@@ -3,17 +3,12 @@
 
 
 .body{
-
     width: 100%;
-    height: 70%;
-
-  
+    height: 70%; 
 }
 
 
 .card-book{
-
-  
     width: 320px;
     height: 370px;
     box-shadow: 0px 0px 6px black;
@@ -21,8 +16,6 @@
     margin: 40px 50px;
     position: relative;
     overflow: hidden;
-    
-
 }
 
 .image-book{
@@ -40,11 +33,9 @@
 }
 
 .image-book img:hover{
-
     width: 340px;
     height: 390px;
     transition: 0.5s;
-
 }
 
 .img-active{
@@ -55,7 +46,6 @@
 
 .hide{
 
-    
     transition: 2s;
     width: 320px;
     height: 370px;
@@ -87,9 +77,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-   
-
-  
 }
 
 
@@ -113,9 +100,13 @@
 
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     color: white;
-    
+    a{  
+        font-family: 'Coloring';
+        color: $colorfamilias;
+    }
 
 }
 
