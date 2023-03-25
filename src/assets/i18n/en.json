@@ -16,195 +16,240 @@
     "EMAIL": "Email",
     "GRADE": "Grade"
   },
-  
+
   "MODAL": {
     "CONTINUE": "CONTINUE",
     "EXIT": "EXIT",
     "MESSAGE": "ARE YOU SURE YOU WANT YO EXIT?"
   },
-  "BUTTON":{
+  "BUTTON": {
     "BACK": "Back"
   },
-  "TEACHERS":{
-    "VIEW":{
-      "NAV":{
+  "TEACHERS": {
+    "VIEW": {
+      "NAV": {
         "MY STUDENTS": "My students",
         "MESSAGE": "Messages",
         "RESOURCES": "Add Resource"
       },
-      "CALENDAR":{
-        "INSTRUCTIONS" : "Instructions",
-        "LI1" : "Select the dates and you will be prompted to create a new event",
-        "LI2" : "Events for drag, drop and resize",
-        "LI3" : "Click on an event to delete it",
-        "DELETEWEEKENDS" : "Remove weekends",
-        "ALLEVENTS": "All Events" 
+      "CALENDAR": {
+        "INSTRUCTIONS": "Instructions",
+        "LI1": "Select the dates and you will be prompted to create a new event",
+        "LI2": "Events for drag, drop and resize",
+        "LI3": "Click on an event to delete it",
+        "DELETEWEEKENDS": "Remove weekends",
+        "ALLEVENTS": "All Events"
       }
     }
   },
-  "MYSTUDENTS":{
-    "FILTER" : "Filter by name",
-    "SORT" : "Sort by Name",
-    "UPWARD" : "Upward",
-    "FALLING" : "Falling",
-    "CLASS" : "Course",
-    "BUTTONS":{
-      "RETURN" : "Return",
-      "DOWNLOAD" : "Download details",
-      "DETAIL" : "Go to detail"
+  "MYSTUDENTS": {
+    "FILTER": "Filter by name",
+    "SORT": "Sort by Name",
+    "UPWARD": "Upward",
+    "FALLING": "Falling",
+    "CLASS": "Course",
+    "BUTTONS": {
+      "RETURN": "Return",
+      "DOWNLOAD": "Download details",
+      "DETAIL": "Go to detail"
     }
   },
- "MYSTUDENTDETAIL" : {
-  "NAME" : "Name",
-  "ADRESS" : "Adress",
-  "PHONE" : "Phone",
-  "YEAR" : "Year of birth",
-  "CLASS" : "Course",
-  "ALLERGIES" : "Allergies",
-  "MEDICATIONS" : "Medications",
-  "AREAS" : "Areas",
-  "EMAIL" : "Email",
-  "RETURN" : "Return",
-  "DOWNLOAD" : "Download details"
- },
- "TEACHERSMESSAGE" : {
-  "TITLE" : "Send messages to families",
-  "FORM" : {
-    "NAME" : "Name",
-    "DESCRIPTION" : "Description",
-    "BUTTON" : "Send"
+  "MYSTUDENTDETAIL": {
+    "NAME": "Name",
+    "ADRESS": "Adress",
+    "PHONE": "Phone",
+    "YEAR": "Year of birth",
+    "CLASS": "Course",
+    "ALLERGIES": "Allergies",
+    "MEDICATIONS": "Medications",
+    "AREAS": "Areas",
+    "EMAIL": "Email",
+    "RETURN": "Return",
+    "DOWNLOAD": "Download details"
   },
-  "RETURN" : "Return"
- },
- "SONGS" : {
-  "TITLE": "Songs",
-  "INTRO1": "In this section you will find a collection of songs that we sing at school. These melodies are specially selected so that children can enjoy them and learn at the same time. We use them a lot as an educational resource to promote the acquisition of certain habits and routines.",
-  "INTRO2": "We hope you like them and sing them together at home!",
-  "BACKBUTTON": "Back",
-  "DELETEBUTTON": "Delete Resource"
-},
- "ABOUTSLIDER" : {
-   "1": {
-     "TITLE":"SEMILLA INFANT SCHOOL",
-     "TEXT1": "Our Nursery School 'Semilla' is located at Wallaby Street, number 42, in the municipality of Sidney, within the province of Invent.",
-     "TEXT2":"With a total of 100 students between the ages of 2 and 5, divided into 4 classes."
-   },
-   "2" : {
-     "TITLE":"THE BEST PROFESSIONALS",
-     "TEXT": "Among our staff of professionals are educators who will promote the autonomous growth of students."
-   },
-   "3": {
-     "TITLE":"WOODEN TOOLS",
-     "TEXT": "All the objects used in the work areas of our school are made of polished wood and are totally suitable for children's use."
-   },
-   "4" : {
-     "TITLE":"EDUCATION IN VALUES",
-     "TEXT": "During childhood, education in values ​​such as caring for the environment are especially important. That is why we promote actions such as recycling."
-   },
-   "5" : {
-     "TITLE":"DEVELOPMENT OF ARTISTIC SKILLS",
-     "TEXT": "We believe that the cognitive development of minors through the use of the arts is essential: painting, music, dance, theater, etc..."
-   },
-   "6" : {
-     "TITLE":"USE OF MONTESSORI METHODOLOGY",
-     "TEXT": "Promoting autonomy is one of our primary objectives and we work on it through the Monstessori methodology."
-   }
- },
- "CONTACT" : {
-  "NAME" : "Name",
-  "EMAIL" : "Email",
-  "MESSAGE" : "Message",
-  "SEND" : "Send"
- },
- "HOME" : {
-  "TEACHER" : "Access to teachers",
-  "FAMILY" : "Access to families"
- },
- "LOGIN" : {
-  "TITLE" : {
-    "1" : "Access to teachers",
-    "2" : "Access to families"
-  },
-  "FIELDS" : {
-    "TITLE" : "Enter email and password",
-    "EMAIL" : {
-        "1" : "Email required",
-        "2" : "Incorrect email format"
+  "TEACHERSMESSAGE": {
+    "TITLE": "Send messages to families",
+    "FORM": {
+      "NAME": "Name",
+      "DESCRIPTION": "Description",
+      "BUTTON": "Send"
     },
-    "PASSWORD" : {
-      "PASSWORD" : "Password",
-      "1" : "Enter a password"
+    "RETURN": "Return"
+  },
+  "SONGS": {
+    "TITLE": "Songs",
+    "INTRO1": "In this section you will find a collection of songs that we sing at school. These melodies are specially selected so that children can enjoy them and learn at the same time. We use them a lot as an educational resource to promote the acquisition of certain habits and routines.",
+    "INTRO2": "We hope you like them and sing them together at home!",
+    "BACKBUTTON": "Back",
+    "DELETEBUTTON": "Delete Resource"
+  },
+  "ABOUTSLIDER": {
+    "1": {
+      "TITLE": "SEMILLA INFANT SCHOOL",
+      "TEXT1": "Our Nursery School 'Semilla' is located at Wallaby Street, number 42, in the municipality of Sidney, within the province of Invent.",
+      "TEXT2": "With a total of 100 students between the ages of 2 and 5, divided into 4 classes."
     },
-    "GO" : "To access",
-    "RETURN" : "Return"
+    "2": {
+      "TITLE": "THE BEST PROFESSIONALS",
+      "TEXT": "Among our staff of professionals are educators who will promote the autonomous growth of students."
+    },
+    "3": {
+      "TITLE": "WOODEN TOOLS",
+      "TEXT": "All the objects used in the work areas of our school are made of polished wood and are totally suitable for children's use."
+    },
+    "4": {
+      "TITLE": "EDUCATION IN VALUES",
+      "TEXT": "During childhood, education in values ​​such as caring for the environment are especially important. That is why we promote actions such as recycling."
+    },
+    "5": {
+      "TITLE": "DEVELOPMENT OF ARTISTIC SKILLS",
+      "TEXT": "We believe that the cognitive development of minors through the use of the arts is essential: painting, music, dance, theater, etc..."
+    },
+    "6": {
+      "TITLE": "USE OF MONTESSORI METHODOLOGY",
+      "TEXT": "Promoting autonomy is one of our primary objectives and we work on it through the Monstessori methodology."
+    }
   },
-  "OVERLAY" : {
-      "1" : "Welcome",
-      "2" : "Are you a familiar or guardian?",
-      "3" : "Family access",
-      "4" : "Welcome",
-      "5" : "Do you belong to the faculty?",
-      "6" : "Teacher access"
-  }
-},
-"ALERT" : {
-  "SUCCESS" : {
-    "TITLE" : "Welcome",
-    "MSG" : "You have successfully logged in"
+  "CONTACT": {
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "MESSAGE": "Message",
+    "SEND": "Send"
   },
-  "ERROR" : {
-    "TITLE" : "Error",
-    "MSG" : "You must complete all fields"
-  }
-},
-"MATHACTIVITIES": {
-  "TITLE": "Logic-Math Activities",
-  "INTRO1": "In this section you will find a variety of logic-math activities to practice and reinforce the concepts we are learning in class.",
-  "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
-  "BACKBUTTON": "Back",
-  "VIEWBUTTON": "Back"
-},
-"FAMILYVIEW" : {
-  "NAV" : {
-    "1" : "Notifications",
-    "2" : "Resources",
-    "3" : "Contact"
+  "HOME": {
+    "TEACHER": "Access to teachers",
+    "FAMILY": "Access to families"
   },
-  "FILE" : "My son's file",
-  "CALENDAR" : "My calendar",
-  "CARD" :{
-    "GRADE" : "Class",
-    "BIRTH" : "Date of birth",
-    "PHONE" : "Telephone contact:",
-    "EMAIL" : "Contact email:",
-    "ADRESS" : "Address:",
-    "DISEASES" : "Diseases:",
-    "ALLERGIES" : "Food allergies"
-  }
-},
-"READINGWRITINGACTIVITIES" : {
-  "TITLE": "Reading and Writing Activities",
-  "INTRO1": "In this section you will find a variety of reading and writing activities to practice and reinforce the concepts we are learning in class.",
-  "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
-  "BACKBUTTON": "Back",
-  "VIEWBUTTON": "View Activity"
-},
-"ENGLISHACTIVITIES" : {
+  "LOGIN": {
+    "TITLE": {
+      "1": "Access to teachers",
+      "2": "Access to families"
+    },
+    "FIELDS": {
+      "TITLE": "Enter email and password",
+      "EMAIL": {
+        "1": "Email required",
+        "2": "Incorrect email format"
+      },
+      "PASSWORD": {
+        "PASSWORD": "Password",
+        "1": "Enter a password"
+      },
+      "GO": "To access",
+      "RETURN": "Return"
+    },
+    "OVERLAY": {
+      "1": "Welcome",
+      "2": "Are you a familiar or guardian?",
+      "3": "Family access",
+      "4": "Welcome",
+      "5": "Do you belong to the faculty?",
+      "6": "Teacher access"
+    }
+  },
+  "ALERT": {
+    "SUCCESS": {
+      "TITLE": "Welcome",
+      "MSG": "You have successfully logged in"
+    },
+    "ERROR": {
+      "TITLE": "Error",
+      "MSG": "You must complete all fields"
+    }
+  },
+  "MATHACTIVITIES": {
+    "TITLE": "Logic-Math Activities",
+    "INTRO1": "In this section you will find a variety of logic-math activities to practice and reinforce the concepts we are learning in class.",
+    "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
+    "BACKBUTTON": "Back",
+    "VIEWBUTTON": "Back"
+  },
+  "FAMILYVIEW": {
+    "NAV": {
+      "1": "Notifications",
+      "2": "Resources",
+      "3": "Contact"
+    },
+    "FILE": "My son's file",
+    "CALENDAR": "My calendar",
+    "CARD": {
+      "GRADE": "Class",
+      "BIRTH": "Date of birth",
+      "PHONE": "Telephone contact:",
+      "EMAIL": "Contact email:",
+      "ADRESS": "Address:",
+      "DISEASES": "Diseases:",
+      "ALLERGIES": "Food allergies"
+    }
+  },
+  "READINGWRITINGACTIVITIES": {
+    "TITLE": "Reading and Writing Activities",
+    "INTRO1": "In this section you will find a variety of reading and writing activities to practice and reinforce the concepts we are learning in class.",
+    "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
+    "BACKBUTTON": "Back",
+    "VIEWBUTTON": "View Activity"
+  },
+  "ENGLISHACTIVITIES": {
     "TITLE": "English Activities",
     "INTRO1": "In this section you will find a variety of English activities to practice and reinforce the concepts we are learning in class.",
     "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
     "BACKBUTTON": "Back",
     "VIEWBUTTON": "View Activity"
-},
-"PROGRAMACTIVITIES" : {
-  "TITLE": "Programming Activities",
-  "INTRO1": "In this section you will find a variety of programming-related activities to practice and reinforce the concepts we are learning in class.",
-  "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
-  "BACKBUTTON": "Back",
-  "VIEWBUTTON": "View Activity"
+  },
+  "PROGRAMACTIVITIES": {
+    "TITLE": "Programming Activities",
+    "INTRO1": "In this section you will find a variety of programming-related activities to practice and reinforce the concepts we are learning in class.",
+    "INTRO2": "We hope you enjoy these activities and find them useful. If you have any questions or need help with any activity, do not hesitate to ask your teacher.",
+    "BACKBUTTON": "Back",
+    "VIEWBUTTON": "View Activity"
+  },
+  "PRIVACITY": {
+    "1": "WEBSITE PRIVACY POLICY",
+    "2": "I. PRIVACY AND DATA PROTECTION POLICY",
+    "3": "Respecting the provisions of current legislation, (hereinafter, also Website) undertakes to adopt the necessary technical and organizational measures, according to the level of security appropriate to the risk of the data collected.",
+    "4": "Laws incorporated in this privacy policy",
+    "5": "This privacy policy is adapted to current Spanish and European regulations on the protection of personal data on the Internet. Specifically, it respects the following regulations:",
+    "6": "Regulation (EU) 2016/679 of the European Parliament and of the Council, of April 27, 2016, regarding the protection of natural persons with regard to the processing of personal data and the free circulation of these data (GDPR).",
+    "7": "Organic Law 3/2018, of December 5, Protection of Personal Data and guarantee of digital rights (LOPD-GDD).",
+    "8": "Royal Decree 1720/2007, of December 21, which approves the Regulations for the development of Organic Law 15/1999, of December 13, on the Protection of Personal Data (RDLOPD). ",
+    "9": "Law 34/2002, of July 11, on Services of the Information Society and Electronic Commerce (LSSI-CE).",
+    "10": "Identity of the person responsible for the processing of personal data",
+    "11": "The person responsible for the processing of personal data collected in is: XXXX, with NIF: XXXX (hereinafter, Responsible for the treatment).",
+    "12": "Your contact details are as follows:",
+    "13": "Address: XXXX",
+    "14": "Contact phone: XXXX",
+    "15": "Contact email: XXXX",
+    "16": "Registration of Personal Data",
+    "17": "In compliance with the provisions of the RGPD and the LOPD-GDD, we inform you that the personal data collected by XXX through the forms extended on its pages will be incorporated and will be processed in our file in order to facilitate, expedite and fulfill the commitments established between and the User or the maintenance of the relationship that is established in the forms that the User fills out, or to attend to a request or query of the same. Likewise, in accordance with the provisions of the RGPD and the LOPD- GDD, unless the exception provided for in article 30.5 of the GDPR applies, a record of processing activities is kept that specifies, according to its purposes, the processing activities carried out and the other circumstances established in the GDPR",
+    "18": "Principles applicable to the processing of personal data",
+    "19": "The processing of the User's personal data will be subject to the following principles contained in article 5 of the GDPR and in article 4 et seq. of Organic Law 3/2018, of December 5, on Data Protection Personal and digital rights guarantee:",
+    "20": "Principle of legality, loyalty and transparency: the User's consent will be required at all times after completely transparent information of the purposes for which personal data is collected.",
+    "21": "Principle of purpose limitation: personal data will be collected for specific, explicit and legitimate purposes.",
+    "22": "Principle of data minimization: the personal data collected will only be strictly necessary in relation to the purposes for which they are processed.",
+    "23": "Principle of accuracy: personal data must be exact and always up to date.",
+    "24": "Principle of limitation of the conservation period: personal data will only be kept in a way that allows the identification of the User during the time necessary for the purposes of its treatment.",
+    "25": "Principle of integrity and confidentiality: personal data will be processed in a way that guarantees its security and confidentiality.",
+    "26": "Principle of proactive responsibility: the Data Controller will be responsible for ensuring that the above principles are met.",
+    "27": "Categories of personal data",
+    "28": "The categories of data that are processed in are only identifying data. In no case are special categories of personal data processed within the meaning of article 9 of the GDPR.",
+    "29": "Legal basis for the processing of personal data",
+    "30": "The legal basis for the processing of personal data is consent. XXXX undertakes to obtain the express and verifiable consent of the User for the processing of their personal data for one or more specific purposes. The User shall have the right to withdraw your consent at any time. It will be as easy to withdraw consent as it is to give it. As a general rule, the withdrawal of consent will not condition the use of the Website. On occasions when the User must or can provide their data through forms To make inquiries, request information or for reasons related to the content of the Website, you will be informed if the completion of any of them is mandatory because they are essential for the correct development of the operation carried out. treatment to which personal data is intended Personal data is collected and managed by with the purpose of being able to facilitate Iterate, expedite and fulfill the commitments established between the Website and the User or the maintenance of the relationship established in the forms that the latter fills out or to attend to a request or query. Likewise, the data may be used for commercial personalization, operational and statistical purposes, and activities specific to the corporate purpose of , as well as for the extraction, storage of data and marketing studies to adapt the Content offered to the User, as well as to improve the quality, operation and browsing of the Website. At the time the personal data is obtained, the User will be informed about the specific purpose or purposes of the treatment for which the personal data will be used; that is, the use or uses that will be given to the information collected. Personal data retention periods Personal data will only be retained for the minimum time necessary for the purposes of its treatment and, in any case, only during the following period: XXXX, or until the User requests its deletion.At the time the personal data is obtained, the User will be informed about the period during which the personal data will be kept or, when this is not possible, the criteria used to determine this period. Recipients of personal data The User's personal data will be shared with the following recipients or categories of recipients: In the event that the Data Controller intends to transfer personal data to a third country or international organization, at the time it is obtain the personal data, the User will be informed about the third country or international organization to which the data is intended to be transferred, as well as the existence or absence of an adequacy decision from the Commission.",
+    "31": "Personal data of minors",
+    "32": "Respecting the provisions of articles 8 of the GDPR and 7 of Organic Law 3/2018, of December 5, Protection of Personal Data and guarantee of digital rights, only those over 14 years of age may grant their consent for the processing of your personal data lawfully by XXX If it is a minor under 14 years of age, the consent of the parents or guardians will be necessary for the treatment, and this will only be considered lawful to the extent that the They have authorized it.Secret and security of personal data undertakes to adopt the necessary technical and organizational measures, according to the level of security appropriate to the risk of the data collected, so as to guarantee the security of personal data and accidental or unlawful destruction, loss, or alteration of personal data transmitted, stored, or otherwise processed, or unauthorized disclosure of or access to such data, is prevented. cannot guarantee the impregnability of the internet or the total absence of hackers or others who fraudulently access personal data, the Data Controller undertakes to notify the User without undue delay when a breach of personal data security occurs that is likely to entail a high risk to the rights and freedoms of natural persons.Following the provisions of article 4 of the GDPR, a violation of the security of personal data is understood as any breach of security that causes the destruction, loss or accidental or illegal alteration of personal data transmitted, stored or processed in another way, or unauthorized communication or access to such data. Personal data will be treated as confidential by the Data Controller, who undertakes to inform and guarantee through a legal or contractual obligation that said confidentiality is respected by its employees, associates, and any person to whom the information is made accessible. information.",
+    "33": "Rights derived from the processing of personal data",
+    "34": "The User has and may, therefore, exercise the following rights recognized in the RGPD and Organic Law 3/2018, of December 5, on the Protection of Personal Data and guarantee of personal data before the Data Controller. digital rights:",
+    "35": "Right of access: It is the right of the User to obtain confirmation of whether or not they are treating their personal data and, if so, to obtain information about their specific personal data and the treatment that they have carried out or are carrying out, as well as, among other things, the information available on the origin of said data and the recipients of the communications made or planned thereof.",
+    "36": "Right of rectification: It is the User's right to modify their personal data that turns out to be inaccurate or, taking into account the purposes of the treatment, incomplete.",
+    "37": "Right of deletion ('the right to be forgotten'): It is the User's right, provided that current legislation does not establish otherwise, to obtain the deletion of their personal data when they are no longer necessary for the purposes for which they were collected or processed; the User has withdrawn their consent to the processing and this has no other legal basis; the User opposes the processing and there is no other legitimate reason to continue with it; the personal data has been processed unlawfully ; the personal data must be deleted in compliance with a legal obligation; or the personal data has been obtained as a result of a direct offer of information society services to a child under the age of 14. In addition to deleting the data, the Data Controller , taking into account the available technology and the cost of its application, you must take reasonable steps to inform those responsible who are processing the personal data of the request of the interested party to delete any link to that personal data.",
+    "38": "Right to limitation of treatment: It is the User's right to limit the treatment of his personal data. The User has the right to obtain the limitation of treatment when he challenges the accuracy of his personal data; the treatment is illegal; the Data Controller no longer needs the personal data, but the User needs it to make claims; and when the User has opposed the treatment.",
+    "39": "Right to data portability: In the event that the treatment is carried out by automated means, the User will have the right to receive from the Data Controller their personal data in a structured, commonly used and mechanically readable format, and to transmit them to another controller. Whenever technically possible, the Controller will transmit the data directly to that other controller.",
+    "40": "Right of opposition: It is the right of the User not to carry out the processing of their personal data or to cease their processing by XXXX.",
+    "41": "Right not to be subject to a decision based solely on automated processing, including profiling: It is the User's right not to be subject to an individualized decision based solely on automated processing of their personal data, including the elaboration of profiles, existing unless the current legislation establishes otherwise.Thus, the User may exercise their rights by written communication addressed to the Data Controller with the reference 'RGPD-', specifying: Name, surname of the User and copy of the DNI. In the cases in which the representation is admitted, the identification by the same means of the person representing the User will also be necessary, as well as the document accrediting the representation. The photocopy of the DNI may be replaced, by any other Legally valid means that proves identity Request with the specific reasons for the request or information to which you want re access. Address for the purpose of notifications. Date and signature of the applicant. Any document that proves the request made. This application and all other attached documents may be sent to the following address and/or email: Mailing address: XXXX Email: XXXXX",
+    "42": "Links to third party websites",
+    "43": "The Website may include hyperlinks or links that allow access to web pages of third parties other than , and therefore are not operated by . The owners of said websites will have their own data protection policies, being themselves, in each case, responsible for their own files and their own privacy practices Claims before the control authority In the event that the User considers that there is a problem or infraction of current regulations in the way in which are processing your personal data, you will have the right to effective judicial protection and to file a claim with a control authority, in particular, in the State where you have your habitual residence, place of work or place of the alleged infringement. of Spain, the control authority is the Spanish Data Protection Agency (https://www.aepd.es/).",
+    "44": "II. ACCEPTANCE AND CHANGES IN THIS PRIVACY POLICY",
+    "45": "It is necessary for the User to have read and agree with the conditions on the protection of personal data contained in this Privacy Policy, as well as to accept the processing of their personal data so that the Data Controller can proceed to it in the manner, during the terms and for the purposes indicated.",
+    "46": "The use of the Website will imply acceptance of its Privacy Policy. XXXX reserves the right to modify its Privacy Policy, according to its own criteria, or motivated by a legislative, jurisprudential or doctrinal change of the Spanish Agency for Data Protection. Changes or updates to this Privacy Policy will not be explicitly notified to the User. The User is recommended to consult this page periodically to be aware of the latest changes or updates. This Policy of Privacy was updated to adapt to Regulation (EU) 2016/679 of the European Parliament and of the Council, of April 27, 2016, regarding the protection of natural persons with regard to the processing of personal data and the free movement of these data (GDPR) and Organic Law 3/2018, of December 5, Protection of Personal Data and guarantee of digital rights.",
+    "47": "This Privacy Policy document for a website was created using the free online web privacy policy template generator on 03/21/2023."
+  }
 }
-
-
-
-}
-
