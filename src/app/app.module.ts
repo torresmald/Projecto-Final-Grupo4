@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/components/home.component';
+
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
@@ -19,7 +19,7 @@ import { FormResourcesComponent } from './pages/form-resources/form-resources.co
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+
     NotFoundComponent,
     StudentsComponent,
     MyAccountComponent,
