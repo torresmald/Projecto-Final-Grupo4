@@ -21,6 +21,7 @@ const TOKEN_KEY = 'user-token-key';
 export class TeacherViewComponent {
   public token?: ApiTeachers;
   public text : string = '';
+  public showChat: boolean = false;
   constructor(private changeDetector: ChangeDetectorRef, public chat: ChatService) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user) : null;
@@ -103,5 +104,8 @@ export class TeacherViewComponent {
     };
     this.chat.sendMessage(messageInfo);
     this.text = '';
+  }
+  public activateMessages(){
+    this.showChat = !this.showChat;
   }
 }
