@@ -60,12 +60,53 @@
 
       <input type="date" id="date" formControlName="date" />
 
-      <input
-        placeholder="areas"
-        type="text"
-        id="areas"
-        formControlName="areas"
-      />
+      <div formArrayName="areas" class="checkbox">
+        <label>
+          <input
+            type="checkbox"
+            name="areas"
+            value="Area 1"
+            (change)="onCheckboxChange($event)"
+          />
+          Area 1
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="areas"
+            value="Area 2"
+            (change)="onCheckboxChange($event)"
+          />
+          Area 2
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="areas"
+            value="Area 3"
+            (change)="onCheckboxChange($event)"
+          />
+          Area 3
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="areas"
+            value="Area 4"
+            (change)="onCheckboxChange($event)"
+          />
+          Area 4
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="areas"
+            value="Area 5"
+            (change)="onCheckboxChange($event)"
+          />
+          Area 5
+        </label>
+      </div>
 
       <input
         placeholder="Enfermedades/Alergias"
@@ -81,12 +122,22 @@
         formControlName="nutrition"
       />
 
-      <input
-        placeholder="Grado"
-        type="text"
-        id="grade"
-        formControlName="grade"
-      />
+      <div>
+        <label>
+          1ºA
+          <input value="1ºA" type="radio" formControlName="grade" />
+        </label>
+
+        <label>
+          2ºA
+          <input value="2ºA" type="radio" formControlName="grade" />
+        </label>
+
+        <label>
+          3ºA
+          <input value="3ºA" type="radio" formControlName="grade" />
+        </label>
+      </div>
     </div>
 
     <div *ngIf="typeUser === 'parent'">
@@ -157,17 +208,4 @@
 
     <button type="submit">Enviar</button>
   </form>
-</div>
-
-<button id="boton-chat">Abrir chat</button>
-
-<div id="minichat">
-  <header>Chat en línea</header>
-  <div class="chat-body">
-    <!-- Aquí va el contenido del chat -->
-  </div>
-  <footer>
-    <input type="text" placeholder="Escribe un mensaje...">
-    <button>Enviar</button>
-  </footer>
 </div>
