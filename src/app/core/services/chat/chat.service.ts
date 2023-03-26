@@ -14,8 +14,6 @@ export class ChatService {
     if(!this.chats){
       return;
     }
-    console.log(messageInfo);
-
     this.chats.push(messageInfo);
     this.socket.io.emit('sendMessage', messageInfo);
   }

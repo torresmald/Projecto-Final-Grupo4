@@ -27,24 +27,21 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.serviceStudent.getAllStudens().subscribe((value) => {
       this.students = value;
-    })
-
-    
+    })    
   }
 
   createUserForm(): void {
     if (this.typeUser === 'student') {
       this.formType = this.formBuilder.group({
-        name: ['', Validators.required],
-        image: ['', Validators.required],
-        phone: ['', Validators.required],
-        address: ['', Validators.required],
-        date: ['', Validators.required],
-        areas: ['', Validators.required],
-        tutor: ['', Validators.required],
-        diseases: ['', Validators.required],
-        nutrition: ['', Validators.required],
-        grade: ['', Validators.required],
+        name: [''],
+        image: [''],
+        phone: [''],
+        address: [''],
+        date: [''],
+        areas: [''],
+        diseases: [''],
+        nutrition: [''],
+        grade: [''],
       });
     } else if (this.typeUser === 'parent') {
       this.formType = this.formBuilder.group({
@@ -90,6 +87,7 @@ export class RegisterComponent implements OnInit {
     if (this.formType?.valid) {
       const formData = this.formType.value;
       if (this.typeUser === 'student') {
+        console.log(formData);
         this.serviceStudent.postNewStudent(formData).subscribe();
         console.log('agregado estudiante')
       } else if (this.typeUser === 'parent') {
