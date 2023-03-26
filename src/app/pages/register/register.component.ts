@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
   public typeUser?: string;
   public formType?: FormGroup;
   public students?: ApiStudents[];
+  public areas: string[] = [];
 
   constructor(
     private formBuilder: FormBuilder, 
@@ -33,15 +34,17 @@ export class RegisterComponent implements OnInit {
   createUserForm(): void {
     if (this.typeUser === 'student') {
       this.formType = this.formBuilder.group({
-        name: [''],
-        image: [''],
-        phone: [''],
-        address: [''],
-        date: [''],
-        areas: [''],
-        diseases: [''],
-        nutrition: [''],
-        grade: [''],
+
+        name: ['', Validators.required],
+        image: ['', Validators.required],
+        phone: ['', Validators.required],
+        address: ['', Validators.required],
+        date: ['', Validators.required],
+        areas: this.formBuilder.array([], Validators.required),
+        diseases: ['', Validators.required],
+        nutrition: ['', Validators.required],
+        grade: ['', Validators.required],
+
       });
     } else if (this.typeUser === 'parent') {
       this.formType = this.formBuilder.group({
@@ -73,6 +76,21 @@ export class RegisterComponent implements OnInit {
   
   }
 
+  onCheckboxChange(event: Event) {
+    if ((event.target as HTMLInputElement).checked) {
+      this.areas.push((event.target as HTMLInputElement).value);
+    } else {
+      const index = this.areas.indexOf((event.target as HTMLInputElement).value);
+      if (index >= 0) {
+        this.areas.splice(index, 1);
+      }
+    }
+   
+    const areasFormArray = this.formType?.get('areas') as FormArray;
+    areasFormArray.clear();
+    this.areas.forEach(area => areasFormArray.push(new FormControl(area)));
+  }
+
   onSelectChild(event: Event) {
     const childId = (event.target as HTMLSelectElement).value;
     const childArray = this.formType?.get('childs') as FormArray;
@@ -84,19 +102,25 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
+    console.log(this.formType);
     if (this.formType?.valid) {
       const formData = this.formType.value;
       if (this.typeUser === 'student') {
-        console.log(formData);
-        this.serviceStudent.postNewStudent(formData).subscribe();
-        console.log('agregado estudiante')
+
+        formData.areas = this.areas;
+        // this.serviceStudent.postNewStudent(formData).subscribe();
+        console.log(formData)
+        alert('El estudiante ha sido registrado correctamente')
+
       } else if (this.typeUser === 'parent') {
         this.serviceParent.registerApiParent(formData).subscribe();
-        console.log('agregado padre')
+        alert('El padre ha sido registrado correctamente')
       } else if (this.typeUser === 'teacher') {
         this.serviceTeacher.registerApiTeacher(formData).subscribe();
-        console.log('agregado Maestro')
+        alert('El profesor ha sido registrado correctamente')
       }
+    }else{
+      alert('El formulario esta incompleto o es invalido')
     }
   }
   
