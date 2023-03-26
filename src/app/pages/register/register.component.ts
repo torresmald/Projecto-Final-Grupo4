@@ -28,14 +28,13 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.serviceStudent.getAllStudens().subscribe((value) => {
       this.students = value;
-    })
-
-    
+    })    
   }
 
   createUserForm(): void {
     if (this.typeUser === 'student') {
       this.formType = this.formBuilder.group({
+
         name: ['', Validators.required],
         image: ['', Validators.required],
         phone: ['', Validators.required],
@@ -45,6 +44,7 @@ export class RegisterComponent implements OnInit {
         diseases: ['', Validators.required],
         nutrition: ['', Validators.required],
         grade: ['', Validators.required],
+
       });
     } else if (this.typeUser === 'parent') {
       this.formType = this.formBuilder.group({
@@ -106,10 +106,12 @@ export class RegisterComponent implements OnInit {
     if (this.formType?.valid) {
       const formData = this.formType.value;
       if (this.typeUser === 'student') {
+
         formData.areas = this.areas;
         // this.serviceStudent.postNewStudent(formData).subscribe();
         console.log(formData)
         alert('El estudiante ha sido registrado correctamente')
+
       } else if (this.typeUser === 'parent') {
         this.serviceParent.registerApiParent(formData).subscribe();
         alert('El padre ha sido registrado correctamente')
