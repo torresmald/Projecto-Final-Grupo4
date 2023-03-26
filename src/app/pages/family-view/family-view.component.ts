@@ -18,6 +18,8 @@ export class FamilyViewComponent implements OnInit{
   public token?: ApiParents;
   public notifications?: Notifications[];
   public text : string = '';
+  public showChat: boolean = false;
+
 
   constructor(private notificationsService: NotificationsService, public chat: ChatService){
     const authToken = localStorage.getItem(TOKEN_KEY);
@@ -33,5 +35,8 @@ export class FamilyViewComponent implements OnInit{
     };
     this.chat.sendMessage(messageInfo);
     this.text = '';
+  }
+  public activateMessages(){
+    this.showChat = !this.showChat;
   }
 }
