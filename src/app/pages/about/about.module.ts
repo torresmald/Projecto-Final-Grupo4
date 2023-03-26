@@ -1,5 +1,5 @@
 import { TranslateModule } from '@ngx-translate/core';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AboutRoutingModule } from './about-routing.module';
@@ -16,6 +16,9 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     AboutRoutingModule,
     CarouselModule,
     TranslateModule
-  ]
+  ],
+  schemas: [
+    NO_ERRORS_SCHEMA,
+  ],
 })
 export class AboutModule { }

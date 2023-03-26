@@ -8,3 +8,6 @@ import { Component } from '@angular/core';
 export class FooterComponent {
 
 }
+
+/* Este código define un componente de Angular llamado "FooterComponent" que se encarga de renderizar la sección de pie de página de una aplicación web. El componente utiliza una plantilla HTML externa y un archivo de estilos SCSS para definir la apariencia del pie de página.
+*/
