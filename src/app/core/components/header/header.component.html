@@ -29,16 +29,16 @@
             </option>
           </select>
         </li>
-        
       </ul>
     </div>
   </div>
-  <div class="div--icon">
-    <button class="div--icon--button" (click)="setThema('light')">
-      <img class="div--icon--img" src="../../../../assets/resourcesImages/sol.png" alt="Sol">
-    </button>
-    <button class="div--icon--button" (click)="setThema('dark')">
-      <img class="div--icon--img" src="../../../../assets/resourcesImages/luna.png" alt="Luna">
-    </button>
-  </div> 
+  <div class="icon-theme">
+    <img
+    [ngClass]="{'icon-img': theme == 'light', 'theme-change': theme == 'dark'}"
+      (click)="setThema()"
+      class="icon-img"
+      src="../../../../assets/logos/luna y sol.png"
+      alt="Sol"
+    />
+  </div>
 </header>
