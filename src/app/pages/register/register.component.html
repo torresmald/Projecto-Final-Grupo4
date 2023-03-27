@@ -38,10 +38,12 @@
       />
 
       <input
+        accept=".jpg,.png" 
         placeholder="Foto"
-        type="text"
+        type="file"
         id="image"
         formControlName="image"
+        (change)="uploadImage($event)"
       />
 
       <input

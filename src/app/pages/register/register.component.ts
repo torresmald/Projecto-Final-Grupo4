@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, AbstractControl, FormArray, FormControl } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  AbstractControl,
+  FormArray,
+  FormControl,
+} from '@angular/forms';
 import { ApiStudentsService } from './../../core/services/students/api/api-students.service';
 import { ApiStudents } from 'src/app/core/models/Students/api/api-students.model';
 import { ApiTeachersService } from './../../core/services/teachers/api/api-teachers.service';
@@ -8,35 +15,33 @@ import { ApiParentsService } from './../../core/services/parents/api/api-parents
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-
   public typeUser?: string;
   public formType?: FormGroup;
   public students?: ApiStudents[];
   public areas: string[] = [];
+  public image :Blob | string="";
 
   constructor(
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
     private serviceStudent: ApiStudentsService,
     private serviceTeacher: ApiTeachersService,
-    private serviceParent: ApiParentsService ){
-
-  }
+    private serviceParent: ApiParentsService
+  ) {}
 
   ngOnInit(): void {
     this.serviceStudent.getAllStudens().subscribe((value) => {
       this.students = value;
-    })    
+    });
   }
 
   createUserForm(): void {
     if (this.typeUser === 'student') {
       this.formType = this.formBuilder.group({
-
         name: ['', Validators.required],
-        image: ['', Validators.required],
+        image: [null, Validators.required],
         phone: ['', Validators.required],
         address: ['', Validators.required],
         date: ['', Validators.required],
@@ -44,7 +49,6 @@ export class RegisterComponent implements OnInit {
         diseases: ['', Validators.required],
         nutrition: ['', Validators.required],
         grade: ['', Validators.required],
-
       });
     } else if (this.typeUser === 'parent') {
       this.formType = this.formBuilder.group({
@@ -69,26 +73,25 @@ export class RegisterComponent implements OnInit {
   }
 
   setTypeUserForm(type: string) {
-    
-      this.typeUser = type;
-      this.createUserForm();
-      
-  
+    this.typeUser = type;
+    this.createUserForm();
   }
 
   onCheckboxChange(event: Event) {
     if ((event.target as HTMLInputElement).checked) {
       this.areas.push((event.target as HTMLInputElement).value);
     } else {
-      const index = this.areas.indexOf((event.target as HTMLInputElement).value);
+      const index = this.areas.indexOf(
+        (event.target as HTMLInputElement).value
+      );
       if (index >= 0) {
         this.areas.splice(index, 1);
       }
     }
-   
+
     const areasFormArray = this.formType?.get('areas') as FormArray;
     areasFormArray.clear();
-    this.areas.forEach(area => areasFormArray.push(new FormControl(area)));
+    this.areas.forEach((area) => areasFormArray.push(new FormControl(area)));
   }
 
   onSelectChild(event: Event) {
@@ -101,27 +104,45 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  public uploadImage(event:any) {
+    const reader = new FileReader();
+
+    if(event.target.files && event.target.files.length) {
+      const file = event.target.files[0];     
+      reader.readAsArrayBuffer(file);  
+      this.image = file;  
+  }
+}
   onSubmit(): void {
-    console.log(this.formType);
+    const form = new FormData();
+    form.append("name", this.formType?.get("name")?.value);
+    form.append("image", this.image);
+    form.append("phone", this.formType?.get("phone")?.value);
+    form.append("address", this.formType?.get("address")?.value);
+    form.append("date", this.formType?.get("date")?.value);
+    form.append("areas", this.formType?.get("areas")?.value);
+    form.append("diseases", this.formType?.get("diseases")?.value);
+    form.append("nutrition", this.formType?.get("nutrition")?.value);
+    form.append("grade", this.formType?.get("grade")?.value);
+
+
     if (this.formType?.valid) {
       const formData = this.formType.value;
       if (this.typeUser === 'student') {
-
         formData.areas = this.areas;
-        // this.serviceStudent.postNewStudent(formData).subscribe();
-        console.log(formData)
-        alert('El estudiante ha sido registrado correctamente')
-
+        console.log(formData);
+        
+        this.serviceStudent.postNewStudent(form).subscribe();
+        alert('El estudiante ha sido registrado correctamente');
       } else if (this.typeUser === 'parent') {
         this.serviceParent.registerApiParent(formData).subscribe();
-        alert('El padre ha sido registrado correctamente')
+        alert('El padre ha sido registrado correctamente');
       } else if (this.typeUser === 'teacher') {
         this.serviceTeacher.registerApiTeacher(formData).subscribe();
-        alert('El profesor ha sido registrado correctamente')
+        alert('El profesor ha sido registrado correctamente');
       }
-    }else{
-      alert('El formulario esta incompleto o es invalido')
+    } else {
+      alert('El formulario esta incompleto o es invalido');
     }
   }
-  
 }
