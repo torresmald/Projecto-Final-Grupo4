@@ -1,23 +1,23 @@
 <div class="body">
-  <div class="buttons">
+  <div [ngClass]="{'selected': typeUser !== undefined}">
     <button
       (click)="setTypeUserForm('student')"
       class="btn-select"
-      [ngClass]="{ 'btn-active': typeUser == 'student' }"
+      [ngClass]="{ 'btn-active': typeUser === 'student' }"
     >
       Estudiante
     </button>
     <button
       (click)="setTypeUserForm('parent')"
       class="btn-select"
-      [ngClass]="{ 'btn-active': typeUser == 'parent' }"
+      [ngClass]="{ 'btn-active': typeUser === 'parent' }"
     >
       Padre/Madre
     </button>
     <button
       (click)="setTypeUserForm('teacher')"
       class="btn-select"
-      [ngClass]="{ 'btn-active': typeUser == 'teacher' }"
+      [ngClass]="{ 'btn-active': typeUser === 'teacher' }"
     >
       Profesor
     </button>
@@ -29,22 +29,36 @@
     [formGroup]="formType"
     (ngSubmit)="onSubmit()"
   >
-    <div *ngIf="typeUser === 'student'">
+    <div *ngIf="typeUser === 'student'" class="student">
       <input
         placeholder="Nombre"
         type="text"
         id="name"
         formControlName="name"
       />
-
-      <input
-        accept=".jpg,.png" 
-        placeholder="Foto"
-        type="file"
-        id="image"
-        formControlName="image"
-        (change)="uploadImage($event)"
-      />
+      <p
+      class="errors"
+      *ngIf="formType.get('name')?.dirty && formType.get('name')?.errors?.['required']"
+    >
+      El nombre es requerido
+    </p>
+      <label for="">
+        Foto
+        <input
+          accept=".jpg,.png"
+          placeholder="Foto"
+          type="file"
+          id="image"
+          formControlName="image"
+          (change)="uploadImage($event)"
+        />
+        <p
+        class="errors"
+        *ngIf="formType.get('image')?.dirty && formType.get('image')?.errors?.['required']"
+      >
+        La foto es requerida
+      </p>
+      </label>
 
       <input
         placeholder="Telefono"
@@ -52,14 +66,24 @@
         id="phone"
         formControlName="phone"
       />
-
+      <p
+      class="errors"
+      *ngIf="formType.get('phone')?.dirty && formType.get('phone')?.errors?.['required']"
+    >
+      El teléfono es requerido
+    </p>
       <input
         placeholder="Direccion"
         type="text"
         id="address"
         formControlName="address"
       />
-
+      <p
+      class="errors"
+      *ngIf="formType.get('address')?.dirty && formType.get('address')?.errors?.['required']"
+    >
+      La direccion es requerida
+    </p>
       <input type="date" id="date" formControlName="date" />
 
       <div formArrayName="areas" class="checkbox">
@@ -116,33 +140,44 @@
         id="diseases"
         formControlName="diseases"
       />
-
+      <p
+      class="errors"
+      *ngIf="formType.get('diseases')?.dirty && formType.get('diseases')?.errors?.['required']"
+    >
+      Campo requerido
+    </p>
       <input
         placeholder="Dieta/Alimentacion"
         type="text"
         id="nutrition"
         formControlName="nutrition"
       />
-
-      <div>
-        <label>
-          1ºA
-          <input value="1ºA" type="radio" formControlName="grade" />
-        </label>
-
-        <label>
-          2ºA
-          <input value="2ºA" type="radio" formControlName="grade" />
-        </label>
-
-        <label>
-          3ºA
-          <input value="3ºA" type="radio" formControlName="grade" />
-        </label>
-      </div>
+      <p
+      class="errors"
+      *ngIf="formType.get('nutrition')?.dirty && formType.get('nutrition')?.errors?.['required']"
+    >
+      Campo requerido
+    </p>
+      <label for="">
+        Curso
+        <div>
+          <label>
+            1ºA
+            <input value="1ºA" type="radio" formControlName="grade" />
+          </label>
+          <label>
+            2ºA
+            <input value="2ºA" type="radio" formControlName="grade" />
+          </label>
+          <label>
+            3ºA
+            <input value="3ºA" type="radio" formControlName="grade" />
+          </label>
+        </div>
+      </label>
     </div>
 
-    <div *ngIf="typeUser === 'parent'">
+    <div class="parent" *ngIf="typeUser === 'parent'">
       <input
         placeholder="Email"
         type="email"
@@ -164,7 +199,7 @@
       </select>
     </div>
 
-    <div *ngIf="typeUser === 'teacher'">
+    <div class="teacher" *ngIf="typeUser === 'teacher'">
       <input
         placeholder="Email"
         type="email"
@@ -194,21 +229,34 @@
       />
 
       <input
-        placeholder="IDCard"
+        placeholder="Dni"
         type="text"
         id="idCard"
         formControlName="idCard"
       />
 
-      <input
-        placeholder="Grado"
-        type="text"
-        id="grade"
-        formControlName="grade"
-      />
+      <label for="">
+        Curso
+        <div>
+          <label>
+            1ºA
+            <input value="1ºA" type="radio" formControlName="grade" />
+          </label>
+          <label>
+            2ºA
+            <input value="2ºA" type="radio" formControlName="grade" />
+          </label>
+          <label>
+            3ºA
+            <input value="3ºA" type="radio" formControlName="grade" />
+          </label>
+        </div>
+      </label>
     </div>
 
-    <button type="submit">Enviar</button>
+    <button class="form-button" type="submit">
+      Enviar
+    </button>
   </form>
 </div>
 
