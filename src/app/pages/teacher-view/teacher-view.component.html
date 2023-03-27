@@ -1,148 +1,179 @@
-<nav class="nav">
-  <a routerLink="/students" class="nav-item">{{
-    "TEACHERS.VIEW.NAV.MY STUDENTS" | translate
-  }}</a>
-  <a routerLink="/teacher-messages" class="nav-item">{{
-    "TEACHERS.VIEW.NAV.MESSAGE" | translate
-  }}</a>
-  <a routerLink="/formResources" class="nav-item">{{
-    "TEACHERS.VIEW.NAV.RESOURCES" | translate
-  }}</a>
-</nav>
-
-<div class="demo-app">
-  <div class="demo-app-sidebar">
-    <!-- <div class="demo-app-sidebar-section">
-      <h2>{{ "TEACHERS.VIEW.CALENDAR.INSTRUCTIONS" | translate }}</h2>
-      <ul>
-        <li>{{ "TEACHERS.VIEW.CALENDAR.LI1" | translate }}</li>
-        <li>{{ "TEACHERS.VIEW.CALENDAR.LI2" | translate }}</li>
-        <li>{{ "TEACHERS.VIEW.CALENDAR.LI3" | translate }}</li>
-      </ul>
-    </div> -->
-
-    <div class="demo-app-sidebar-section">
-      <label>
-        <input
-          type="checkbox"
-          [checked]="calendarOptions.weekends"
-          (change)="handleWeekendsToggle()"
-        />
-        {{ "TEACHERS.VIEW.CALENDAR.DELETEWEEKENDS" | translate }}
-      </label>
-    </div>
-    <div class="demo-app-sidebar-section">
-      <h2>
-        {{ "TEACHERS.VIEW.CALENDAR.ALLEVENTS" | translate }} ({{
-          currentEvents.length
-        }})
-      </h2>
-      <ul>
-        <li *ngFor="let event of currentEvents">
-          <b>{{ event.startStr }}</b>
-          <i>{{ event.title }}</i>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="demo-app-main">
-    <full-calendar *ngIf="calendarVisible" [options]="calendarOptions">
-      <ng-template #eventContent let-arg>
-        <b>{{ arg.timeText }}</b>
-        <i>{{ arg.event.title }}</i>
-      </ng-template>
-    </full-calendar>
-  </div>
-  <div class="chatContainer">
-    <div class="header-chat" >
-      <p>Live Chat</p>
-      <img class="header-image" src="../../../assets/logos/desplegar.png" alt="Deplegar" (click)="activateMessages()" [ngClass]="{'header-image': !showChat, 'header-image-rotate': showChat}">
-    </div>
-    <div class="chat" >
-      <div class="messages" [ngClass]="{'message': !showChat, 'messages-activate': showChat}">
-        <div class="message-body">
-          <p
-            [ngClass]="{
-              local: message.messageType === 1,
-              remoto: message.messageType === 2
-            }"
-            *ngFor="let message of chat.chats"
-          >
-            {{ message.text }}
-          </p>
+<div>
+  <div>
+    <nav class="nav">
+      <a routerLink="/students" class="nav-item">{{
+        "TEACHERS.VIEW.NAV.MY STUDENTS" | translate
+      }}</a>
+      <a routerLink="/teacher-messages" class="nav-item">{{
+        "TEACHERS.VIEW.NAV.MESSAGE" | translate
+      }}</a>
+      <a routerLink="/formResources" class="nav-item">{{
+        "TEACHERS.VIEW.NAV.RESOURCES" | translate
+      }}</a>
+    </nav>
+  
+    <div class="demo-app">
+      <div class="demo-app-sidebar">
+        <div class="demo-app-sidebar-section">
+          <h2>
+            {{ "TEACHERS.VIEW.CALENDAR.ALLEVENTS" | translate }} ({{
+              currentEvents.length
+            }})
+          </h2>
         </div>
-      </div>
-      <div class="inputContainer">
-        <form (submit)="sendMessage()" class="form">
-          <input
-            type="text"
-            [(ngModel)]="text"
-            name="text"
-            placeholder="Escribe tu Mensaje"
-          />
-          <div class="button">
-            <input src="../../../assets/logos/flecha.png" alt="Logo Flecha" type="image" />
+        <div class="event-list">
+          <ul>
+            <li *ngFor="let event of currentEvents">
+              <b>{{ event.startStr }}</b>
+              <i>{{ event.title }}</i>
+            </li>
+          </ul>
+        </div>
+
+        <div class="chat-card">
+          <div class="chat-header">
+            <p>Chat en Vivo</p>
           </div>
-        </form>
+          <div class="chat-body">
+            <p
+                  [ngClass]="{
+                    local: message.messageType === 1,
+                    remoto: message.messageType === 2
+                  }"
+                  *ngFor="let message of chat.chats"
+                >
+                  {{ message.text }}
+                </p>
+
+          </div>
+          <div class="chat-input">
+            <form (submit)="sendMessage()" class="form">
+
+              <div class="text-msg">
+                <input
+                  type="text"
+                  [(ngModel)]="text"
+                  name="text"
+                  placeholder="Escribe tu Mensaje"
+                />
+              </div>
+
+              <div class="button-send">
+                <input type="image" src="https://cdn-icons-png.flaticon.com/512/3814/3814282.png">
+              </div>
+
+            </form>
+          </div>
+        </div>
+  
+  
       </div>
+  
+  
+      <div class="demo-app-main">
+        <full-calendar *ngIf="calendarVisible" [options]="calendarOptions">
+          
+          <ng-template #eventContent let-arg>
+            <b>{{ arg.timeText }}</b>
+            <i>{{ arg.event.title }}</i>
+          </ng-template>
+        </full-calendar>
+  
+       
+  
+        <!-- <div class="chatContainer">
+          <div class="header-chat" >
+            <p>Live Chat</p>
+            <img class="header-image" src="../../../assets/logos/desplegar.png" alt="Deplegar" (click)="activateMessages()" [ngClass]="{'header-image': !showChat, 'header-image-rotate': showChat}">
+          </div>
+          <div class="chat" >
+            <div class="messages" [ngClass]="{'message': !showChat, 'messages-activate': showChat}">
+              <div class="message-body">
+                <p
+                  [ngClass]="{
+                    local: message.messageType === 1,
+                    remoto: message.messageType === 2
+                  }"
+                  *ngFor="let message of chat.chats"
+                >
+                  {{ message.text }}
+                </p>
+              </div>
+            </div>
+            <div class="inputContainer">
+              <form (submit)="sendMessage()" class="form">
+                <input
+                  type="text"
+                  [(ngModel)]="text"
+                  name="text"
+                  placeholder="Escribe tu Mensaje"
+                />
+                <div class="button">
+                  <input src="../../../assets/logos/flecha.png" alt="Logo Flecha" type="image" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div> -->
+        
+      </div>
+  
+      <!-- <div class="container d-flex justify-content-center">
+        <div class="card mt-5">
+          <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
+            <i class="fas fa-chevron-left"></i>
+            <span class="pb-3">Chat</span>
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="d-flex flex-row p-3">
+            <img
+              src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png"
+              width="30"
+              height="30"
+            />
+            <div class="chat ml-2 p-3">
+              <p
+               class="chat ml-2 p-3"
+                *ngFor="let message of chat.chats"
+              >
+                {{ message.text }}
+              </p>
+            </div>
+          </div>
+  
+          <div class="d-flex flex-row p-3">
+            <div class="bg-white mr-2 p-3">
+              <p
+                class="text-muted"
+                *ngFor="let message of chat.chats"
+              >
+                {{ message.text }}
+              </p>
+              >
+            </div>
+            <img
+              src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png"
+              width="30"
+              height="30"
+            />
+          </div>
+          <form (submit)="sendMessage()" class="form">
+            <div class="form-group px-3">
+              <textarea
+                class="form-control"
+                rows="5"
+                type="text"
+                [(ngModel)]="text"
+                name="text"
+                placeholder="Escribe tu Mensaje"
+              ></textarea>
+              <button type="submit" class="boton-volver">
+                {{ "TEACHERSMESSAGE.FORM.BUTTON" | translate }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div> -->
     </div>
   </div>
-
-  <!-- <div class="container d-flex justify-content-center">
-    <div class="card mt-5">
-      <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
-        <i class="fas fa-chevron-left"></i>
-        <span class="pb-3">Chat</span>
-        <i class="fas fa-times"></i>
-      </div>
-      <div class="d-flex flex-row p-3">
-        <img
-          src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png"
-          width="30"
-          height="30"
-        />
-        <div class="chat ml-2 p-3">
-          <p
-           class="chat ml-2 p-3"
-            *ngFor="let message of chat.chats"
-          >
-            {{ message.text }}
-          </p>
-        </div>
-      </div>
-
-      <div class="d-flex flex-row p-3">
-        <div class="bg-white mr-2 p-3">
-          <p
-            class="text-muted"
-            *ngFor="let message of chat.chats"
-          >
-            {{ message.text }}
-          </p>
-          >
-        </div>
-        <img
-          src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png"
-          width="30"
-          height="30"
-        />
-      </div>
-      <form (submit)="sendMessage()" class="form">
-        <div class="form-group px-3">
-          <textarea
-            class="form-control"
-            rows="5"
-            type="text"
-            [(ngModel)]="text"
-            name="text"
-            placeholder="Escribe tu Mensaje"
-          ></textarea>
-          <button type="submit" class="boton-volver">
-            {{ "TEACHERSMESSAGE.FORM.BUTTON" | translate }}
-          </button>
-        </div>
-      </form>
-    </div>
-  </div> -->
 </div>

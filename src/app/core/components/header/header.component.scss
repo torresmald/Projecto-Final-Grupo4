@@ -3,6 +3,9 @@
 .body {
   width: 100%;
   bottom: 0%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .header {
   font-family: sans-serif;
@@ -46,26 +49,27 @@
     }
   }
 }
-.div {
-  &--icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    list-style: none;
-    margin-top: 1rem;
-    margin-right: 1rem;
+.icon-theme{
+  position: absolute;
+  transform: translate(-111px, -105px);
 
-    &--button {
-      border: none;
-      border-radius: 10px;
-      background-color: $colorgeneral;
-    }
 
-    &--img {
-      width: 2rem;
-      height: 2rem;
-      margin: 0,5rem;
-    }
-  }
+}
+
+
+
+.icon-img{
+  width: 200px;
+  transform: rotate(180deg);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.theme-change{
+  width: 200px;
+  transition: 0.5s;
+  cursor: pointer;
+
+
 }
 /* Este es un archivo  que importa otro archivo con variables de color y define estilos para diferentes partes de una página web, incluyendo un encabezado con un logotipo y enlaces, así como un botón con una imagen en la esquina superior derecha. Se utilizan selectores anidados para definir estilos para elementos específicos dentro de otros elementos, y se aplican transiciones y animaciones para mejorar la interactividad. */

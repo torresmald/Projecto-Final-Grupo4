@@ -11,6 +11,7 @@ import { TeachersService } from '../../services/teachers/teachers.service';
 export class HeaderComponent implements OnInit {
   public isLogged: boolean = false;
   public langs: string[] = [];
+  public theme?: string 
 
   constructor(
     private router: Router,
@@ -33,16 +34,29 @@ export class HeaderComponent implements OnInit {
     const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
     if (userPrefersDark) {
-      this.setThema('dark')
+      this.theme = 'dark'
     }
     if (userPrefersLight) {
-      this.setThema('light')
+      this.theme = 'light'
     }
   }
   public setThema(theme: string) {
     document.documentElement.className = theme;
   } 
   //Configura tema y suscripción de inicio de sesión del usuario.//
+  public setThema() {
+    if(this.theme === 'dark'){
+
+      document.documentElement.className = 'light';
+      this.theme = 'light'
+
+    }else {
+      document.documentElement.className = 'dark';
+      this.theme = 'dark'
+    }
+   
+  }
+
   public logout() {
     this.logoutService.logout();
     this.logoutService.userLogged$.next(false);
