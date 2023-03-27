@@ -29,3 +29,10 @@
       transform: rotate(360deg);
     }
   }
+  /* Este código define estilos CSS para el componente Loading.
+
+:host se refiere al componente en sí mismo, y en este caso se utiliza para definir que el componente debe tener una posición fija en la pantalla.
+
+.loader se refiere a la animación del loader. Este se define como un círculo que gira continuamente en la pantalla y tiene una opacidad de 0.8. Se utiliza border para definir el ancho del círculo y su color, y se especifica la dirección en la que gira mediante animation y @keyframes.
+
+En resumen, este código se encarga de definir la apariencia y la animación del componente Loading.*/

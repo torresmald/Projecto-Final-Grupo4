@@ -23,3 +23,4 @@ export class ExitGuard implements CanDeactivate<LoginComponent> {
   }
   
 }
+//El código implementa un ExitGuard que implementa la interfaz CanDeactivate para permitir o denegar la salida de una ruta. El guardia toma una instancia de LoginComponent y verifica si el formulario está sucio o si el usuario ha iniciado sesión. Si el formulario está limpio o el usuario ha iniciado sesión, se permite la salida. De lo contrario, se muestra un modal con un mensaje y se devuelve un observable result$ de la instancia de ModalService.//

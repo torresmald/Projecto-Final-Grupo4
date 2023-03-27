@@ -15,3 +15,4 @@ export class LoadingComponent {
       this.showLoading$ = this.loadingService.shouldShowLoading$;
   }
 }
+//este componente se suscribe al servicio LoadingService para mostrar u ocultar un indicador de carga, según el valor de la propiedad observable shouldShowLoading$.//

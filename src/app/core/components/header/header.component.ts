@@ -25,6 +25,8 @@ export class HeaderComponent implements OnInit {
   public changeLang(lang: string) {
     this.translate.use(lang);
   }
+   
+  /* este código inicializa y configura el servicio de traducción y proporciona un método para cambiar el idioma activo en la aplicación.*/
   ngOnInit(): void {
     this.logoutService.userLogged$.subscribe(
       (isLoggedUser) => (this.isLogged = isLoggedUser)
@@ -40,6 +42,10 @@ export class HeaderComponent implements OnInit {
       this.theme = 'light'
     }
   }
+  public setThema(theme: string) {
+    document.documentElement.className = theme;
+  } 
+  //Configura tema y suscripción de inicio de sesión del usuario.//
   public setThema() {
     
     if(this.theme === 'dark'){
