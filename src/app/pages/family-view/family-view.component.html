@@ -37,8 +37,8 @@
   </div>
   <div class="calendar">
     <h5 class="calendar--text">{{ "FAMILYVIEW.CALENDAR" | translate }}</h5>
-    <div class="calendar--div" *ngFor="let notification of notifications">
-      <img class="calendar--div--i" src="{{ notification.calendar }}" />
+    <div class="calendar--div">
+      <img class="calendar--div--i" src="{{ myCalendar?.calendar }}" />
     </div>
   </div>
   <div class="chatContainer">

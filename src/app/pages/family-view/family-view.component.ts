@@ -17,6 +17,7 @@ const TOKEN_KEY = 'user-token-key';
 export class FamilyViewComponent implements OnInit{
   public token?: ApiParents;
   public notifications?: Notifications[];
+  public myCalendar?: Notifications;
   public text : string = '';
   public showChat: boolean = false;
 
@@ -26,7 +27,14 @@ export class FamilyViewComponent implements OnInit{
     authToken ? (this.token = JSON.parse(authToken).user) : null;
   }
   ngOnInit(): void {
-      this.notificationsService.getNotification().subscribe((notification) => {this.notifications = notification.sort((a: any, b: any) => (b.date > a.date) ? 1 : ((a.date > b.date) ? -1 : 0))})
+      this.notificationsService.getNotification().subscribe((notification) => {
+        
+        this.notifications = notification.sort((a: any, b: any) => (b.date > a.date) ? 1 : ((a.date > b.date) ? -1 : 0))
+        console.log(this.notifications);
+        this.myCalendar = this.notifications[0];
+        console.log(this.myCalendar);
+        
+      })
   }
   public sendMessage(){
     let messageInfo = {

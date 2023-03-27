@@ -32,6 +32,8 @@ export class HeaderComponent implements OnInit {
     const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
     if (userPrefersDark) {
+      console.log(userPrefersDark);
+      
       this.theme = 'dark'
     }
     if (userPrefersLight) {
@@ -39,6 +41,7 @@ export class HeaderComponent implements OnInit {
     }
   }
   public setThema() {
+    
     if(this.theme === 'dark'){
 
       document.documentElement.className = 'light';
