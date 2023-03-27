@@ -19,7 +19,6 @@ import { FormResourcesComponent } from './pages/form-resources/form-resources.co
 @NgModule({
   declarations: [
     AppComponent,
-
     NotFoundComponent,
     StudentsComponent,
     MyAccountComponent,
