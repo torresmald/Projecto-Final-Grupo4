@@ -1,32 +1,143 @@
-@import '../../../../styles/base/colors.scss';
+// @import '../../../../styles/base/colors.scss';
 
-.container{
+
+
+
+// .container{
+//     width: 100%;
+//     height: 60vh;
+//     margin: auto;
+// }
+// .home--buttons{
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 2rem;
+//     &--button{
+        
+//         &--teacher{
+//             margin-top: 2rem;
+//             background-color: $colorprofesores;
+//             border-radius: 50px;
+//             width: 80rem;
+//             height: 100px;
+//             justify-content: center;
+//             padding: 0;
+//             margin: 0;
+//         }
+//         &--family{
+//             background-color: $colorfamilias;
+//             border-radius: 50px;
+//             width: 80rem;
+//             height: 100px;
+//             justify-content: center;
+//         }
+//     }
+// }
+
+
+@import '../../../../styles/elements/form.scss';
+@import '../../../../styles/base/colors.scss';
+  
+  .body{
+
     width: 100%;
-    height: 60vh;
-    margin: auto;
-}
-.home--buttons{
+    height: 100%;
+    overflow-x: hidden;
+ 
+  }
+
+  .home-container{
+
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+  }
+
+  .image{
+
+    width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-    &--button{
-        
-        &--teacher{
-            margin-top: 2rem;
-            background-color: $colorprofesores;
-            border-radius: 50px;
-            width: 80rem;
-            height: 100px;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
-        &--family{
-            background-color: $colorfamilias;
-            border-radius: 50px;
-            width: 80rem;
-            height: 100px;
-            justify-content: center;
-        }
-    }
+    align-items: center;
+    animation: slideIn 1.5s ease alternate;
+    animation-duration: 2s;
+    margin: 0px 4px;
+  }
+
+  img{
+
+
+    width: 90%;
+    height: 50%;
+  }
+
+  .menu{
+
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(700px);
+    animation: slideUp 1.5s ease-in-out forwards .8s;
+    opacity: 0;
+  }
+
+  h2{
+
+    font-size: 40px;
+    
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  button{
+  
+    animation: slideUp 3s ease-in-out forwards .9s;
+    opacity: 0;
+    margin: 0px 4px;
+    @include botonVolver($colorgeneral);
+    border: 0;
+
+
+  }
+
+  .login{
+   
+    width: 50%;
+    height: 30%;
+
+  }
+
+
+  
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+  }
 }
+
+
+@keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+
+  
+  
