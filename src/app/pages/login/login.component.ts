@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   public teacher: boolean = false;
   public isUserLogged: boolean = false;
   public alertSuccess: boolean = false;
-  public alertError: boolean = false;
+  public alertError: boolean =  false;
   public msg: string = '';
   public formErr: string = '';
   public name: string = '';
