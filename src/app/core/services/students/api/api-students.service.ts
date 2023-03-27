@@ -23,7 +23,7 @@ export class ApiStudentsService {
     return this.http.get<ApiStudents>(`${API_SEMILLA}/students/${id}`)
   }
 
-  public postNewStudent(body: Students): Observable<ApiStudents>{
+  public postNewStudent(body: FormData): Observable<ApiStudents>{
     return this.http.post<ApiStudents>(`${API_SEMILLA}/students`, body)
   }
 }

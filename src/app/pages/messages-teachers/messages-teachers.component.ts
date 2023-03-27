@@ -49,7 +49,6 @@ export class MessagesTeachersComponent implements OnInit {
     form.append("calendar", this.calendar);
     form.append("student", this.msgForm?.get("student")?.value);
 
-    
 
     this.notificationService.postNotification(form).subscribe(() => {
       alert('Enviado con exito');
