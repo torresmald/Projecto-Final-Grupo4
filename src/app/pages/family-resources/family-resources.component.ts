@@ -18,6 +18,5 @@ export class FamilyResourcesComponent implements OnInit {
   ngOnInit(): void {
       this.resourcesService.getResources().subscribe((resource) => this.resources = resource);
       this.videoResources = this.resources?.filter((resource) => resource.type === 'songs');
-      console.log(this.videoResources);
   }
 }

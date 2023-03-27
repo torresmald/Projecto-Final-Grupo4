@@ -130,7 +130,6 @@ export class RegisterComponent implements OnInit {
       const formData = this.formType.value;
       if (this.typeUser === 'student') {
         formData.areas = this.areas;
-        console.log(formData);
         
         this.serviceStudent.postNewStudent(form).subscribe();
         alert('El estudiante ha sido registrado correctamente');
