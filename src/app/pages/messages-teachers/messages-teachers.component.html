@@ -1,45 +1,92 @@
-<h2 class="form-title"> {{"TEACHERSMESSAGE.TITLE" | translate}} </h2>
+<h2 class="form-title">{{ "TEACHERSMESSAGE.TITLE" | translate }}</h2>
 
 <div class="main_container">
-    <div class="imgAndForm_container">
-        <div class='img_div'>
-            <img src='../../../assets/logos/escribir.mensajes.profe.gif'/>
+  <div class="imgAndForm_container">
+    <div class="img_div">
+      <img src="../../../assets/logos/profe-unscreen.gif" />
+    </div>
+    <div class="form_div">
+      <form
+        *ngIf="msgForm"
+        (ngSubmit)="newNotifications()"
+        [formGroup]="msgForm"
+        class="form-container"
+      >
+        <div class="form-group">
+          <input
+            formControlName="name"
+            type="text"
+            placeholder="{{ 'TEACHERSMESSAGE.FORM.NAME' | translate }}"
+            class="form-input"
+          />
+          <p
+            class="errors"
+            *ngIf="msgForm.get('name')?.dirty && msgForm.get('name')?.errors?.['required']"
+          >
+            El nombre es requerido
+          </p>
         </div>
-        <div class="form_div">
-            <form *ngIf="msgForm"
-                (ngSubmit)="newNotifications()"
-                [formGroup]="msgForm"
-                class="form-container"
- >
-                <div class="form-group">
-                    <input formControlName="name" type="text" placeholder="{{'TEACHERSMESSAGE.FORM.NAME' | translate}}" class="form-input">
-                </div>
-                <div class="form-group">
-                    <input formControlName="date" type="date" placeholder="Fecha" class="form-input">
-                </div>
-                <div class="form-group">
-                    <input formControlName="description" type="text" placeholder="{{'TEACHERSMESSAGE.FORM.DESCRIPTION' | translate}}" class="form-input">
-                </div>
-                <div class="form-group">
-                    <label for="image">Adjuntar Imagen</label>
-                    <input formControlName="image" accept=".jpg,.png" 
-                    type="file" name="image" (change)="uploadImage($event)" class="form-input-file">
-                </div>
-                <div class="form-group">
-                    <label for="image">Enviar Calendario</label>
-                    <input formControlName="calendar" accept=".jpg,.png" 
-                    type="file" name="calendar" (change)="uploadImage($event)" class="form-input-file">
-                </div>
-                <div class="form-group">
-                    <select formControlName="student" class="form-input" >
-                    <option  *ngFor="let student of students" [value]="student._id">{{student.name}}</option>
-                    </select>
-                </div>
-                <button class="form-button">{{"TEACHERSMESSAGE.FORM.BUTTON" | translate}}</button>
-            </form>
-        </div> 
+        <div class="form-group">
+          <input
+            formControlName="date"
+            type="date"
+            placeholder="Fecha"
+            class="form-input"
+          />
+          <p
+            class="errors"
+            *ngIf="msgForm.get('date')?.dirty && msgForm.get('date')?.errors?.['required']"
+          >
+            La fecha es requerida
+          </p>
+        </div>
+        <div class="form-group">
+          <input
+            formControlName="description"
+            type="text"
+            placeholder="{{ 'TEACHERSMESSAGE.FORM.DESCRIPTION' | translate }}"
+            class="form-input"
+          />
+        </div>
+        <div class="form-group">
+          <label for="image">Adjuntar Imagen</label>
+          <input
+            formControlName="image"
+            accept=".jpg,.png"
+            type="file"
+            name="image"
+            (change)="uploadImage($event)"
+            class="form-input-file"
+          />
+        </div>
+        <div class="form-group">
+          <label for="image">Enviar Calendario</label>
+          <input
+            formControlName="calendar"
+            accept=".jpg,.png"
+            type="file"
+            name="calendar"
+            (change)="uploadImage($event)"
+            class="form-input-file"
+          />
+        </div>
+        <label for="student">Selecciona Alumno</label>
+        <div class="form-group">
+          <select formControlName="student" class="form-input">
+            <option *ngFor="let student of students" [value]="student._id">
+              {{ student.name }}
+            </option>
+          </select>
+        </div>
+        <button class="form-button">
+          {{ "TEACHERSMESSAGE.FORM.BUTTON" | translate }}
+        </button>
+      </form>
     </div>
-    <div>
-        <a routerLink="/teacherView" class="boton-volver">{{"TEACHERSMESSAGE.RETURN" | translate}}</a>
-    </div>
+  </div>
+  <div>
+    <a routerLink="/teacherView" class="boton-volver">{{
+      "TEACHERSMESSAGE.RETURN" | translate
+    }}</a>
+  </div>
 </div>
