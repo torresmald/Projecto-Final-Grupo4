@@ -18,18 +18,7 @@
         <li class="links--list--url">
           <a [routerLink]="['about']">{{ "HEADER.ABOUT" | translate }}</a>
         </li>
-        <li class="links--list--url">
-          <select
-            #langSelect
-            (change)="changeLang(langSelect.value)"
-            class="select"
-          >
-            <option *ngFor="let lang of langs" [value]="lang" class="option">
-              {{ lang === "es" ? "🇪🇸Español " : "🇬🇧English" }}
-            </option>
-          </select>
-        </li>
-        
+        <!--Este código define la estructura de un encabezado (header) para la página web, el cual incluye un logo y una lista de enlaces. Además, dependiendo si el usuario ha iniciado sesión o no, se muestran diferentes enlaces. Se utiliza  para enlazar los elementos y se incluye la funcionalidad de cambio de idioma -->
       </ul>
     </div>
   </div>
@@ -42,3 +31,4 @@
     </button>
   </div> 
 </header>
+<!-- Este código representa dos botones de imagen que permiten seleccionar entre los temas "light" y "dark". -->

@@ -21,3 +21,4 @@ export class AuthGuard implements CanActivate {
   }
   
 }
+//Este código proporciona una forma de proteger ciertas rutas de la aplicación para asegurarse de que solo los usuarios autenticados puedan acceder a ellas.//
