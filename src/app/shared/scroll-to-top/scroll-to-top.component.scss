@@ -15,3 +15,12 @@
   opacity: 1;
   transition: all 0.2s ease-in-out;
 }
+@media all and (max-width: 767px) {
+  .scroll-to-top{
+    bottom: 100px;
+    right: 50px;
+  }
+  .fas{
+    font-size: 30px;
+  }
+}

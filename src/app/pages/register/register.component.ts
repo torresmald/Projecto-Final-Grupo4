@@ -88,7 +88,6 @@ export class RegisterComponent implements OnInit {
         this.areas.splice(index, 1);
       }
     }
-
     const areasFormArray = this.formType?.get('areas') as FormArray;
     areasFormArray.clear();
     this.areas.forEach((area) => areasFormArray.push(new FormControl(area)));
@@ -106,7 +105,6 @@ export class RegisterComponent implements OnInit {
 
   public uploadImage(event:any) {
     const reader = new FileReader();
-
     if(event.target.files && event.target.files.length) {
       const file = event.target.files[0];     
       reader.readAsArrayBuffer(file);  
@@ -129,13 +127,12 @@ export class RegisterComponent implements OnInit {
     if (this.formType?.valid) {
       const formData = this.formType.value;
       if (this.typeUser === 'student') {
-        formData.areas = this.areas;
-        
+        formData.areas = this.areas;     
         this.serviceStudent.postNewStudent(form).subscribe();
         alert('El estudiante ha sido registrado correctamente');
       } else if (this.typeUser === 'parent') {
         this.serviceParent.registerApiParent(formData).subscribe();
-        alert('El padre ha sido registrado correctamente');
+        alert('El familiar ha sido registrado correctamente');
       } else if (this.typeUser === 'teacher') {
         this.serviceTeacher.registerApiTeacher(formData).subscribe();
         alert('El profesor ha sido registrado correctamente');
