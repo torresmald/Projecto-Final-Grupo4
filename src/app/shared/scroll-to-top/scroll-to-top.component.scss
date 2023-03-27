@@ -1,4 +1,4 @@
-@import '../../../styles/base/colors.scss';
+@import "../../../styles/base/colors.scss";
 .scroll-to-top {
   position: fixed;
   bottom: 150px;
@@ -7,13 +7,11 @@
   transition: all 0.2s ease-in-out;
   z-index: 100;
 }
-.fas{
- 
-    font-size: 50px;
-    color: $colorprofesores;
+.fas {
+  font-size: 50px;
+  color: $colorprofesores;
 }
 .show-scrollTop {
-    
   opacity: 1;
   transition: all 0.2s ease-in-out;
 }
