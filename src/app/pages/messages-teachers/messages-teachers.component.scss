@@ -2,6 +2,9 @@
 @import '../../../styles/base/fonts.scss';
 @import '../../../styles/elements/form.scss';
 
+label{
+  color: black;
+}
 
 .main_container{
   display: flex;
@@ -13,7 +16,6 @@
   display: flex;
   justify-content: space-around;
   padding: 30px;
-  flex-wrap: wrap;
 }
 
 .form-title {
@@ -30,6 +32,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 600px;
+  width: 450px;
   margin: 0 auto;
   background-color: $colorprofesores;
   padding: 20px;
@@ -51,6 +54,7 @@
 }
 
 .form-input-file {
+  
   cursor: pointer;
 }
 
@@ -76,11 +80,14 @@
   @include botonVolver($colorgeneral);
   margin-bottom: 30px; 
 }
+.errors{
+	color: $colorgeneral;
+	font-size: 18px;
+  margin-top: 5px;
+}
 
 @media (max-width: 767px) {
-  
   .img_div {
     display: none;
   }
-
 }
