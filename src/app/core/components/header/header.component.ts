@@ -42,9 +42,7 @@ export class HeaderComponent implements OnInit {
       this.theme = 'light'
     }
   }
-  public setThema(theme: string) {
-    document.documentElement.className = theme;
-  } 
+  
   //Configura tema y suscripción de inicio de sesión del usuario.//
   public setThema() {
     
