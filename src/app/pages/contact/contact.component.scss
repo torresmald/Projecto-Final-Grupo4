@@ -2,10 +2,10 @@
 @import "../../../styles/base/fonts.scss";
 
 .body {
-  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 .container {
   display: flex;

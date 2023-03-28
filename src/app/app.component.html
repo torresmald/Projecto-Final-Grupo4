@@ -1,6 +1,11 @@
-<app-header *ngIf="!_router.url.includes('login' && 'register')" ></app-header>
-<app-loading></app-loading>
-<app-scroll-to-top></app-scroll-to-top>
-<app-modal></app-modal>
-<router-outlet> </router-outlet>
-<app-footer *ngIf="!_router.url.includes('login')"></app-footer>
+<div class="app-container">
+    <app-header *ngIf="!_router.url.includes('login' && 'register')"></app-header>
+    <app-loading></app-loading>
+    <app-scroll-to-top></app-scroll-to-top>
+    <app-modal></app-modal>
+    <main class="content">
+      <router-outlet ></router-outlet>
+    </main>
+    <app-footer *ngIf="!_router.url.includes('login')"></app-footer>
+</div>
+  
