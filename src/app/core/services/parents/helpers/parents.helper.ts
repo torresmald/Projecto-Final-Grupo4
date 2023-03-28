@@ -8,3 +8,4 @@ export function transformDataParents(parent: ApiParents): Parents {
     delete parent.updatedAt;
     return parent;
 }
+/* Este es un archivo que exporta una función llamada transformDataParents, que acepta un objeto de tipo ApiParents , la función elimina las propiedades __v, createdAt y updatedAt del objeto original de ApiParents y devuelve el objeto transformado. */

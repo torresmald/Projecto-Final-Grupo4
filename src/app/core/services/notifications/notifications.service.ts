@@ -26,3 +26,4 @@ export class NotificationsService {
     return this.request.delete<Notification>(`${API_URLS}/${id}`);
   }
 }
+/* Este es un servicio  con una dependencia de HttpClient en su constructor y cuatro métodos públicos para realizar operaciones CRUD con la API de notificaciones utilizando los métodos HTTP GET, POST, PUT y DELETE. */
