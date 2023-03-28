@@ -1,27 +1,29 @@
-<div class="mi-cuenta">
-  <h2 [ngClass]="{
-    teacher: isTeacher,
-    parent: !isTeacher
-  }">{{ "MYACCOUNT.DATA" | translate }}</h2>
-  <div class="image-and-dates">
-    <div class="image_div">
-      <img
-        src="../../../assets/logos/icono foto perfil gris (2).png"
-        alt="Imagen de perfil"
-      />
+<div class="myAccount">
+  <div class="mi-cuenta">
+    <h2 [ngClass]="{
+      teacher: isTeacher,
+      parent: !isTeacher
+    }">{{ "MYACCOUNT.DATA" | translate }}</h2>
+    <div class="image-and-dates">
+      <div class="image_div">
+        <img
+          src="../../../assets/logos/icono foto perfil gris (2).png"
+          alt="Imagen de perfil"
+        />
+      </div>
+      <div class="dates" *ngIf="token">
+        <p> {{"MYACCOUNT.NAME" | translate}}: {{ token.name }}</p>
+        <p>{{"MYACCOUNT.EMAIL" | translate}}: {{ token.email }}</p>
+        <p>{{"MYACCOUNT.GRADE" | translate}}: {{ token.grade }}</p>
+      </div>
     </div>
-    <div class="dates" *ngIf="token">
-      <p> {{"MYACCOUNT.NAME" | translate}}: {{ token.name }}</p>
-      <p>{{"MYACCOUNT.EMAIL" | translate}}: {{ token.email }}</p>
-      <p>{{"MYACCOUNT.GRADE" | translate}}: {{ token.grade }}</p>
-    </div>
+    <a *ngIf="isTeacher" routerLink="/teacherView" class="boton-volver"
+      >{{ "BUTTON.BACK" | translate }}
+    </a>
+    <a
+      *ngIf="!isTeacher"
+    routerLink="/familyView" class="boton-volver">{{
+      "BUTTON.BACK" | translate
+    }}</a>
   </div>
-  <a *ngIf="isTeacher" routerLink="/teacherView" class="boton-volver"
-    >{{ "BUTTON.BACK" | translate }}
-  </a>
-  <a 
-    *ngIf="!isTeacher"
-  routerLink="/familyView" class="boton-volver">{{
-    "BUTTON.BACK" | translate
-  }}</a>
 </div>

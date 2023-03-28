@@ -192,7 +192,7 @@
         formControlName="password"
       />
 
-      <select id="studentName" (click)="onSelectChild($event)">
+      <select id="studentName" (change)="onSelectChild($event)">
         <option *ngFor="let student of students" [value]="student._id">
           {{ student.name }}
         </option>

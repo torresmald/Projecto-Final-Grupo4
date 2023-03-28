@@ -1,11 +1,12 @@
 @import "../../../styles/base/colors.scss";
 @import "../../../styles/base/fonts.scss";
 @import "../../../styles/elements/form.scss";
-
+.myAccount{
+  height: 70vh;
+}
 .mi-cuenta {
   display: flex;
   flex-direction: column;
- 
   align-items: center;
   justify-content: center;
   padding: 20px;
