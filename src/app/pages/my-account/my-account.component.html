@@ -1,5 +1,8 @@
 <div class="mi-cuenta">
-  <h2 class="titulo">{{ "MYACCOUNT.DATA" | translate }}</h2>
+  <h2 [ngClass]="{
+    teacher: isTeacher,
+    parent: !isTeacher
+  }">{{ "MYACCOUNT.DATA" | translate }}</h2>
   <div class="image-and-dates">
     <div class="image_div">
       <img
