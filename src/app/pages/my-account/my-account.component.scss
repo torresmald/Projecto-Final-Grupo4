@@ -1,9 +1,7 @@
 @import "../../../styles/base/colors.scss";
 @import "../../../styles/base/fonts.scss";
 @import "../../../styles/elements/form.scss";
-.myAccount{
-  height: 70vh;
-}
+
 .mi-cuenta {
   display: flex;
   flex-direction: column;
@@ -15,7 +13,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
-  min-height: 45vh;
 }
 
 .teacher {

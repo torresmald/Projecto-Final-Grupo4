@@ -1,5 +1,5 @@
 <div class="body">
-  <div [ngClass]="{'selected': typeUser !== undefined}">
+  <div>
     <button
       (click)="setTypeUserForm('student')"
       class="btn-select"
@@ -23,6 +23,7 @@
     </button>
   </div>
 
+  <div class="div-form">
   <form
     class="form"
     *ngIf="formType"
@@ -258,5 +259,6 @@
       Enviar
     </button>
   </form>
+</div>
 </div>
 
