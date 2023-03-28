@@ -94,7 +94,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onSelectChild(event: Event) {
-    const childId = (event.target as HTMLSelectElement).value;
+    const childId = (event.target as HTMLSelectElement).value;   
+    console.log(childId); 
     const childArray = this.formType?.get('childs') as FormArray;
     if (childArray.length === 0) {
       childArray.push(this.formBuilder.control(childId));
