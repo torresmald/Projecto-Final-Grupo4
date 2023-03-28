@@ -1,10 +1,11 @@
-@import '../../../styles/base/colors.scss';
-@import '../../../styles/base/fonts.scss';
-@import '../../../styles/elements/form.scss';
+@import "../../../styles/base/colors.scss";
+@import "../../../styles/base/fonts.scss";
+@import "../../../styles/elements/form.scss";
 
 .mi-cuenta {
   display: flex;
   flex-direction: column;
+ 
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -17,14 +18,14 @@
 }
 
 .teacher {
-  font-family: 'Coloring';
+  font-family: "Coloring";
   color: $colorprofesores;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 40px;
 }
 .parent {
-  font-family: 'Coloring';
+  font-family: "Coloring";
   color: $colorfamilias;
   font-size: 24px;
   font-weight: bold;
@@ -37,43 +38,43 @@
 }
 
 .image_div {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.image {
+  position: absolute;
+  z-index: 2;
+}
+
+.image_div:after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  background-color: $colorprofesores;
+  animation: intermitente 1.5s infinite alternate;
+  opacity: 0.5;
+}
+
+@keyframes intermitente {
+  0% {
+    opacity: 0.3;
   }
-  
-  .image {
-    position: absolute;
-    z-index: 2; 
-  }
-  
-  .image_div:after {
-    content: "";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;  
-    width: 120px;
-    height: 120px;
-    background-color: $colorprofesores;
-    animation: intermitente 1.5s infinite alternate;
+  100% {
     opacity: 0.5;
   }
-  
-  @keyframes intermitente {
-    0% {
-      opacity: 0.3;
-    }
-    100% {
-      opacity: 0.5;
-    }
-  }
+}
 
 .dates {
   display: flex;
@@ -89,5 +90,5 @@
 }
 
 .boton-volver {
-  @include botonVolver($colorgeneral); 
-}  
+  @include botonVolver($colorgeneral);
+}

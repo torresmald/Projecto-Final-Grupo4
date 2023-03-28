@@ -3,6 +3,7 @@
 .body {
   width: 100%;
   bottom: 0%;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -11,7 +12,6 @@
   font-family: sans-serif;
   position: relative;
   &--logo {
-    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;/*  */
