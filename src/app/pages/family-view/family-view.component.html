@@ -63,12 +63,14 @@
       </div>
       <div class="chat-input">
         <form (submit)="sendMessage()" class="form">
-          <input
-            type="text-msg"
+          <div class="text-msg" >
+            <input
+            type="text"
             [(ngModel)]="text"
             name="text"
             placeholder="Escribe tu Mensaje"
           />
+          </div>
           <div class="button-send">
             <input
               type="image"

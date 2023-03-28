@@ -19,10 +19,11 @@
 .container {
   display: flex;
   justify-content: center;
+  justify-content: space-between;
+  margin-top: 4vh;
 }
 .row1{
-  width: 54%;
-  margin: 3%;
+  width: 48%;
 }
 .card {
   width: 100%;
@@ -93,8 +94,8 @@
   }
 }
 .chat-card {
-  height: 45%;
-  width: 40%;
+  height: 57vh;
+  width: 48%;
   background-image: url("https://i.pinimg.com/originals/51/ed/c0/51edc046eb80046ee4755ee71d0f19ca.jpg");
   z-index: 9999;
   background-size: cover;

@@ -1,6 +1,11 @@
 @import "../../../styles/base/colors.scss";
 @import "../../../styles/base/fonts.scss";
-
+textarea {
+  resize: none;
+}
+label{
+  display: block;
+}
 .body {
   display: flex;
   justify-content: center;
