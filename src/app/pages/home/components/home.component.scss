@@ -1,39 +1,3 @@
-// @import '../../../../styles/base/colors.scss';
-
-
-
-
-// .container{
-//     width: 100%;
-//     height: 60vh;
-//     margin: auto;
-// }
-// .home--buttons{
-//     display: flex;
-//     justify-content: center;
-//     margin-top: 2rem;
-//     &--button{
-        
-//         &--teacher{
-//             margin-top: 2rem;
-//             background-color: $colorprofesores;
-//             border-radius: 50px;
-//             width: 80rem;
-//             height: 100px;
-//             justify-content: center;
-//             padding: 0;
-//             margin: 0;
-//         }
-//         &--family{
-//             background-color: $colorfamilias;
-//             border-radius: 50px;
-//             width: 80rem;
-//             height: 100px;
-//             justify-content: center;
-//         }
-//     }
-// }
-
 
 @import '../../../../styles/elements/form.scss';
 @import '../../../../styles/base/colors.scss';
@@ -41,7 +5,7 @@
   .body{
 
     width: 100%;
-    height: 100%;
+    height: 70vh  ;
     overflow-x: hidden;
  
   }
@@ -69,8 +33,9 @@
   img{
 
 
-    width: 90%;
-    height: 50%;
+    width: 794px;
+    height: 440px;
+    
   }
 
   .menu{
@@ -82,6 +47,7 @@
     transform: translateY(700px);
     animation: slideUp 1.5s ease-in-out forwards .8s;
     opacity: 0;
+    margin-bottom: 200px;
   }
 
   h2{
@@ -101,6 +67,7 @@
     margin: 0px 4px;
     @include botonVolver($colorgeneral);
     border: 0;
+    font-size: 15px;
 
 
   }
@@ -140,4 +107,84 @@
 
 
   
+  
+  @media all and (min-width: 1360px) and (max-width: 1530px) {
+
+    img{
+
+
+      width: 741px;
+      height: 406px;
+      
+    }
+
+    h2{
+
+      font-size: 35px;
+      
+    }
+  
+    p{
+      font-size: 15px;
+    }
+
+    button{
+  
+      font-size: 12px;
+     
+       }
+
+
+   }
+
+   @media all and (min-width: 480px) and (max-width: 1360px) {
+
+    img{
+
+
+      
+      width: 721px;
+      height: 386px;
+    }
+
+    h2{
+
+      font-size: 35px;
+      
+    }
+  
+    p{
+      font-size: 15px;
+    }
+
+    button{
+  
+   font-size: 10px;
+  
+    }
+
+   }
+
+
+   @media all and (max-width: 1115px) { 
+
+    .image{
+
+    display: none;
+    }
+
+    .menu{
+
+      width: 100%;
+  
+    }
+
+    .login{
+
+      width: 80%;
+    }
+
+
+
+   }
   
