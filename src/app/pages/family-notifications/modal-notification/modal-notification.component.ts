@@ -12,3 +12,5 @@ export class ModalNotificationComponent {
   constructor() {}
   
 }
+
+/* Este componente define un modal que se utiliza para mostrar una notificación. El componente recibe una notificación como entrada y la muestra en la vista. */

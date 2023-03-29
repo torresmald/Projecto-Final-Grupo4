@@ -59,3 +59,4 @@ export class FamilyNotificationsComponent  {
   }
 
 }
+/* muestra las notificaciones de la familia. Utiliza el módulo de paginación de Angular para mostrar las notificaciones de forma paginada. También utiliza los servicios de notificaciones para obtener las notificaciones y mostrarlas en la página. El código tiene variables públicas para almacenar las notificaciones, el token del estudiante, el tamaño y número de página, entre otros. También hay métodos públicos para editar la notificación, obtener más información de la notificación y eliminar las notificaciones.*/

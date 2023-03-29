@@ -19,3 +19,5 @@ import { ContactRoutingModule } from './contact-routing.module';
   ]
 })
 export class ContactModule { }
+
+/* Este modulo define el componente "ContactComponent" y además importa otros módulos como "CommonModule", "ContactRoutingModule", "ReactiveFormsModule" y "TranslateModule". */

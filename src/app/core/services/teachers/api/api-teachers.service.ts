@@ -25,3 +25,4 @@ export class ApiTeachersService {
     return this.request.post<ApiUsers>(`${API_URLS.DOMAIN}${teachers}/${register}`, body);
   }
 }
+/* Este servicio tiene dos métodos para interactuar con la API de profesores. El primero es para iniciar sesión y el segundo es para registrarse. */

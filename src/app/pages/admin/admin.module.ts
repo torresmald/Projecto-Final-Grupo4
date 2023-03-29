@@ -15,3 +15,5 @@ import { AdminComponent } from './admin.component';
   ]
 })
 export class AdminModule { }
+
+/*El módulo se llama "AdminModule" y está marcado con la decoración "@NgModule". Dentro del objeto de la decoración, se declaran los componentes que pertenecerán a este módulo y se importan otros módulos necesarios. En este caso, el módulo "CommonModule" y el "AdminRoutingModule". */

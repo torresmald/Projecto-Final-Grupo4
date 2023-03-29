@@ -30,3 +30,4 @@ export class StudentsService {
     )
   }
 }
+/* Este código define una clase StudentsService con dos métodos que se encargan de interactuar con una API para obtener y obtener los detalles de un estudiante.  */

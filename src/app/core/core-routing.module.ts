@@ -11,3 +11,4 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class CoreRoutingModule { }
+/* Este módulo define las rutas de la aplicación. */
