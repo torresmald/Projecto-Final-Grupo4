@@ -1,13 +1,7 @@
 
 @import '../../../../styles/elements/form.scss';
 @import '../../../../styles/base/colors.scss';
-  
-  .body{
 
-    width: 100%;
-   
- 
-  }
 
   .home-container{
 
@@ -46,7 +40,7 @@
     transform: translateY(700px);
     animation: slideUp 1.5s ease-in-out forwards .8s;
     opacity: 0;
-    margin-bottom: 200px;
+    margin-bottom: 60px;
   }
 
   h2{
@@ -104,10 +98,16 @@
     }
   }
 
+  @media all and (min-width: 1630px) and (max-width: 2000px) {
+    .home-container{
+      margin-top: 5%;
 
+    }
+
+  }
   
   
-  @media all and (min-width: 1360px) and (max-width: 1530px) {
+  @media all and (min-width: 1360px) and (max-width: 1630px) {
 
     img{
 

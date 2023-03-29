@@ -1,10 +1,114 @@
-<div class="body">
-  <nav class="nav">
-    <a routerLink="/notifications"> {{ "FAMILYVIEW.NAV.1" | translate }} </a>
-    <a routerLink="/resources"> {{ "FAMILYVIEW.NAV.2" | translate }} </a>
-  </nav>
-  
-  <div class="container" *ngIf="token">
+<nav class="nav">
+  <a routerLink="/notifications"> {{ "FAMILYVIEW.NAV.1" | translate }} </a>
+  <a routerLink="/resources"> {{ "FAMILYVIEW.NAV.2" | translate }} </a>
+</nav>
+
+<div *ngIf="token" class="body">
+
+
+  <div *ngFor="let child of token.childs" class="body-cards">
+
+
+    <div class="child-body">
+
+      <div class="child-card">
+        
+        <div class="child-card--img">
+
+          <div class="name">
+            <p>{{ child.name }}</p>
+          </div>
+
+          <div class="image"> <img src="{{ child.image }}" class="card-img-top" alt="..." /> </div>
+        </div>
+
+
+        <div class="child-card--info">
+          <div>
+            <p>{{ "FAMILYVIEW.CARD.GRADE" | translate }} {{ child.grade }}</p>
+          </div>
+          <div>
+            <p>{{ "FAMILYVIEW.CARD.BIRTH" | translate }} {{ child.date }}</p>
+          </div>
+          <div>
+            <div>
+              <p>{{ "FAMILYVIEW.CARD.PHONE" | translate }} {{ child.phone }}</p>
+            </div>
+          </div>
+          <div>
+            <p>{{ "FAMILYVIEW.CARD.EMAIL" | translate }} {{ child.email }}</p>
+          </div>
+          <div>
+      
+            <p>{{ "FAMILYVIEW.CARD.ADRESS" | translate }} {{ child.address }}</p>
+          </div>
+          <div>
+            <p>{{ "FAMILYVIEW.CARD.DISEASES" | translate }} {{ child.diseases }}</p>
+          </div>
+          <div>
+            <p>
+              {{ "FAMILYVIEW.CARD.ALLERGIES" | translate }} {{ child.nutrition }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calendar-body">
+
+      <div class="calendar-body--img">
+        <img src="{{ myCalendar?.calendar }}" alt="">
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="body-chat">
+
+    <div class="chat-card">
+      <div class="chat-header">
+        <p>Chat en Vivo</p>
+      </div>
+      <div class="chat-body">
+        <p
+              [ngClass]="{
+                local: message.messageType === 1,
+                remoto: message.messageType === 2
+              }"
+              *ngFor="let message of chat.chats"
+            >
+              {{ message.text }}
+            </p>
+
+      </div>
+      <div class="chat-input">
+        <form (submit)="sendMessage()" class="form">
+
+          <div class="text-msg">
+            <input
+              type="text"
+              [(ngModel)]="text"
+              name="text"
+              placeholder="Escribe tu Mensaje"
+            />
+          </div>
+
+          <div class="button-send">
+            <input type="image" src="https://cdn-icons-png.flaticon.com/512/3814/3814282.png">
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- <div class="container" *ngIf="token">
     <div class="row1">
       <div class="card" *ngFor="let child of token.childs">
         <h5 class="card--title">{{ child.name }}</h5>
@@ -46,6 +150,9 @@
         </div>
       </div>
     </div>
+
+
+
     <div class="chat-card">
       <div class="chat-header">
         <p>Chat en vivo</p>
@@ -81,8 +188,6 @@
       </div>
     </div>
     
-  </div>
-  
-</div>
 
-<!-- Este codigo muestra la vista de la familia. La vista de la familia contiene una barra de navegación, un calendario y un chat. El código utiliza Angular y la función de traducción para mostrar los textos en diferentes idiomas. -->
+  </div> -->
+
