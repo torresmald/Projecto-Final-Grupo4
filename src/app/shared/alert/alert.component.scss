@@ -4,7 +4,6 @@
     position: absolute;
     z-index: 220;
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +65,7 @@
 
 @keyframes in {
     0% {
-        transform: translatey(-100%);
+        transform: translatey(-140%);
     }
 
     100% {
