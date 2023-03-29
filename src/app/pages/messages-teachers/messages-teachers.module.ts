@@ -19,3 +19,5 @@ import { ReactiveFormsModule } from '@angular/forms';
   ]
 })
 export class MessagesTeachersModule { }
+
+/* Este código es un módulo que importa y declara un componente llamado "MessagesTeachersComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son CommonModule, MessagesTeachersRoutingModule, ReactiveFormsModule y TranslateModule. Además, se exporta el módulo "MessagesTeachersModule".*/

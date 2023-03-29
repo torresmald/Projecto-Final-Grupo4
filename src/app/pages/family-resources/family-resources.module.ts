@@ -31,3 +31,4 @@ import { TranslateModule } from '@ngx-translate/core';
   ]
 })
 export class FamilyResourcesModule { }
+/*  importa y declara componentes para la sección de recursos familiares de una aplicación. El módulo importa y usa el módulo de ruteo de la sección, y también el módulo de traducción para permitir la internacionalización.*/

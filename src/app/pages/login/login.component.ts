@@ -107,3 +107,4 @@ export class LoginComponent implements OnInit {
     this.teacher = !this.teacher;
   }
 }
+/* El código importa diferentes servicios y bibliotecas  para construir un formulario de inicio de sesión. El componente "LoginComponent" contiene propiedades que controlan el estado del formulario y realiza validaciones sobre los campos requeridos. Cuando el usuario envía el formulario, se llama a la función "userLogin". Dependiendo del valor booleano del campo "teacher", se usa un servicio diferente para realizar la autenticación con sus respectivas respuestas de éxito o error. Además, dependiendo si el usuario es administrador o si ha iniciado sesión como profesor o padre/estudiante, puede haber redirecciones específicas después de haber iniciado sesión satisfactoriamente. */

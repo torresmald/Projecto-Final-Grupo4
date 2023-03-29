@@ -19,3 +19,5 @@ import { FamilyViewComponent } from './family-view.component';
   ]
 })
 export class FamilyViewModule { }
+
+/* Este código es un módulo que importa y declara un componente llamado "FamilyViewComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son FormsModule, TranslateModule, CommonModule y FamilyViewRoutingModule. Además, se exporta el módulo "FamilyViewModule".*/

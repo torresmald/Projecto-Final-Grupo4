@@ -52,3 +52,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class FamilyResourcesRoutingModule { }
+
+/* Este código es un módulo de enrutamiento . Define las rutas para diferentes componentes que se utilizan en el módulo "FamilyResources". Las rutas incluyen "songs", "books", "math-activities", "reading-and-writing-activities", "english-activities", y "program-activities". Además, se especifica un guardia de autenticación (AuthGuard) que se utiliza para proteger ciertas rutas que requieren que el usuario esté autenticado antes de acceder a ellas. Al final, el módulo se exporta para que pueda ser utilizado en otros componentes o módulos de la aplicación.*/

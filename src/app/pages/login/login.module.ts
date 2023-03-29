@@ -22,3 +22,4 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ]
 })
 export class LoginModule { }
+/* Este código es un módulo que importa y declara un componente llamado "LoginComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son CommonModule, LoginRoutingModule, ReactiveFormsModule, RouterModule, SharedModule y TranslateModule. Además, se exporta el módulo "LoginModule".*/

@@ -31,3 +31,4 @@ export class FormResourcesComponent {
     })
   }
 }
+/* Este código es un componente  que define una clase llamada FormResourcesComponent. Este tiene un formulario FormGroup y utiliza el servicio ResourcesService para crear un recurso cuando se hace clic en el botón createNewResource. Una vez que esto ocurre, se restablece el formulario y se redirige a la vista 'teacherView'. Además, este componente utiliza FormBuilder para construir los controles del formulario FormControl y Router para manejar las rutas de la aplicación.*/
