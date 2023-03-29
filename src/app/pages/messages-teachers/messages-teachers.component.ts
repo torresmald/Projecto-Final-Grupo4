@@ -23,12 +23,12 @@ export class MessagesTeachersComponent implements OnInit {
   public calendar: Blob | string = '';
   public token?: string[];
   public alertSuccess: boolean = false;
+  public alertError: boolean = false;
   
   constructor(
     private msgBuilder: FormBuilder,
     private studentService: ApiStudentsService,
     private notificationService: NotificationsService,
-    private router: Router
   ) {
     const authToken = localStorage.getItem(TOKEN_KEY);
     authToken ? (this.token = JSON.parse(authToken).user.grade) : null;
@@ -61,17 +61,25 @@ export class MessagesTeachersComponent implements OnInit {
     form.append('calendar', this.calendar);
     form.append('student', this.msgForm?.get('student')?.value);
 
-    this.notificationService.postNotification(form).subscribe(() => {
-      if (this.msgForm?.valid) {
-        this.alertSuccess = true;
-        setTimeout(() => {
-          this.msgForm?.reset();
-        this.router.navigate(['teacherView']);
-          this.alertSuccess = false;
-        }, 2000);
-        
-      }
-    });
+
+    if (this.msgForm?.valid){
+
+      this.notificationService.postNotification(form).subscribe()
+      this.alertSuccess = true;
+      this.msgForm?.reset();
+      setTimeout(() => {
+        this.alertSuccess = false;
+      }, 4000);
+
+    }else {
+     this.alertError = true
+
+     setTimeout(() => {
+      this.alertError = false;
+    }, 4000);
+    }
+
+
   }
   public uploadImage(event: any) {
     const reader1 = new FileReader();

@@ -63,8 +63,8 @@
       </p>
       <p *ngIf="errors" class="errors">{{ errors }}</p>
       <div>
-        <button>{{ "LOGIN.FIELDS.GO" | translate }}</button>
-        <button type="button" (click)="router.navigate(['/home'])">
+        <button class="button-teacher">{{ "LOGIN.FIELDS.GO" | translate }}</button>
+        <button class="button-teacher" type="button" (click)="router.navigate(['/home'])">
           {{ "LOGIN.FIELDS.RETURN" | translate }}
         </button>
       </div>
@@ -120,8 +120,8 @@
       </p>
       <p *ngIf="errors" class="errors">{{ errors }}</p>
       <div>
-        <button>{{ "LOGIN.FIELDS.GO" | translate }}</button>
-        <button type="button" (click)="router.navigate(['/home'])">
+        <button class="button-family">{{ "LOGIN.FIELDS.GO" | translate }}</button>
+        <button class="button-family" type="button" (click)="router.navigate(['/home'])">
           {{ "LOGIN.FIELDS.RETURN" | translate }}
         </button>
       </div>

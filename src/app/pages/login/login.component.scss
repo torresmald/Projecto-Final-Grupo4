@@ -22,6 +22,7 @@ body {
 h1 {
   font-weight: bold;
   margin: 20px 0px;
+  font-size:35px;
 }
 
 h2 {
@@ -50,7 +51,6 @@ a {
 button {
   border-radius: 20px;
   border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -59,6 +59,20 @@ button {
   text-transform: uppercase;
   transition: transform 80ms ease-in;
   margin: 2px 5px;
+}
+
+.button-teacher{
+
+  background-color: $colorprofesores;
+  border: 1px solid $colorprofesores;
+
+
+}
+
+.button-family{
+
+  background-color: $colorfamilias;
+  border: 1px solid $colorfamilias;
 }
 
 button:active {
@@ -168,12 +182,8 @@ input {
 }
 
 .overlay {
-  background: #ff416c;
-  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0;
+  background: linear-gradient(to right, $colorprofesores, $colorfamilias);
+  background-size: 100%;
   color: #ffffff;
   position: relative;
   left: -100%;
