@@ -25,3 +25,4 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ]
 })
 export class FamilyNotificationsModule { }
+/* Este modulo define la ruta de la pagina de notificaciones de la familia, importa los componentes necesarios y los declara para que puedan ser utilizados en la pagina.*/

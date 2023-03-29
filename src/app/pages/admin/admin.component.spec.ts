@@ -21,3 +21,5 @@ describe('AdminComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// Se crea una instancia del componente y se comprueba si se ha creado correctamente mediante la afirmación "expect(component).toBeTruthy();" //

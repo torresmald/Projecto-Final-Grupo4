@@ -15,3 +15,4 @@ const routes: Routes = [
 })
 
 export class ContactRoutingModule { }
+/* Este código define las rutas para el módulo de contacto. La ruta ' ' se asigna al componente ContactComponent. Luego, el ContactRoutingModule se importa en el módulo ContactModule y se exporta para que pueda ser utilizado por otros módulos de la aplicación.*/

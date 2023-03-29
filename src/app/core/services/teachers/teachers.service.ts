@@ -39,3 +39,10 @@ export class TeachersService {
     this.userLogged$.next(false);
   }
 }
+/* Este es un servicio llamado TeachersService que proporciona tres métodos:
+
+isLogged: Este método devuelve un valor booleano que indica si el usuario ha iniciado sesión o no.
+
+loginTeacher: Este método toma un objeto de tipo ApiTeachers como argumento y devuelve un observable de tipo ApiUsers. Este método utiliza el método loginApiTeacher del servicio ApiTeachersService para realizar la solicitud de inicio de sesión en la API de profesores. Después de recibir una respuesta satisfactoria, el método almacena el token de autenticación y el usuario en el almacenamiento local y emite un valor booleano true a través de un ReplaySubject llamado userLogged$.
+
+logout: Este método elimina el token de autenticación del almacenamiento local y emite un valor booleano false a través de un ReplaySubject llamado userLogged$. */

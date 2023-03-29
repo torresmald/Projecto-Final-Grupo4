@@ -16,3 +16,6 @@ const routes: Routes = [
 exports: [RouterModule]
 })
 export class AdminRoutingModule { }
+/*
+Este código define las rutas para el módulo de admin . La ruta ' ' se asigna al componente AdminComponent. Luego, el AdminRoutingModule se importa en el módulo AdminModule y se exporta para que pueda ser utilizado por otros módulos de la aplicación.
+*/

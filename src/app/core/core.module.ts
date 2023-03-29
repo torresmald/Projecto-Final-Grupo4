@@ -1,6 +1,6 @@
 import { Notifications } from 'src/app/core/models/Notifications/notifications.model';
 import { RouterModule } from '@angular/router';
-import { NgModule , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA ,NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -24,7 +24,9 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, CoreRoutingModule, RouterModule, TranslateModule,HttpClientModule,],
 
   exports: [FooterComponent, HeaderComponent,  ModalComponent, LoadingComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA], 
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA], 
   providers: [NotificationsService],
 })
 export class CoreModule {}
+
+/* Este módulo define los componentes de la aplicación. */

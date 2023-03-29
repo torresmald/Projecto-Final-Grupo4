@@ -47,7 +47,7 @@ export class NotificationComponent implements OnInit {
     }
     this.notificationService.editNotification(id, this.notificationForm?.value).subscribe();
     this.isReaded = true;
-    console.log(this.notifications)
+   
     
   }
   
@@ -59,3 +59,4 @@ export class NotificationComponent implements OnInit {
   }
 
 }
+/* El componente maneja notificaciones, permitiendo a los usuarios marcarlas como leídas, eliminarlas y ver más información. Utiliza "NotificationsService" para interactuar con las notificaciones y "FormBuilder" para manejar el formulario. También tiene tres "Output" EventEmitter para comunicarse con componentes padres: "notification", "readedNotification" y "deleteModal". */

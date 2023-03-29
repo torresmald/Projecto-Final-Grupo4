@@ -30,7 +30,6 @@ export class FamilyViewComponent implements OnInit{
       this.notificationsService.getNotification().subscribe((notification) => {
         
         this.notifications = notification.sort((a: any, b: any) => (b.date > a.date) ? 1 : ((a.date > b.date) ? -1 : 0))
-        console.log(this.notifications);
         this.myCalendar = this.notifications[0];
         
       })

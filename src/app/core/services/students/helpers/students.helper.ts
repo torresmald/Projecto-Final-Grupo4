@@ -7,3 +7,4 @@ export function transformDataStudents(student: ApiStudents): Students {
     delete student.updatedAt;
     return student;
 }
+/* La función transformDataStudents transforma un objeto de tipo ApiStudents a Students, eliminando las propiedades _id, createdAt y updatedAt.*/

@@ -44,47 +44,8 @@
   </div>
 </div>
 
-<!-- <div class="body" [ngClass]="{ body: !isPressed, hidden: isPressed }">
-  <div class="card" [ngClass]="{ card: !isReaded, readed: isReaded }">
-    <img
-      src="../../../../assets/logos/email-icon.png"
-      alt=""
-    />
-    <div class="left">
-      <p class="left__name">{{ notifications?.name }}</p>
-      <p class="left__date">{{ notifications?.date }}</p>
-    </div>
-    <div class="right">
-      <button class="button-arrow" (click)="inButton()">
-        <i *ngIf="!infoButton" class="fa fa-arrow-down" aria-hidden="true"></i>
-        <i *ngIf="infoButton" class="fa fa-arrow-up" aria-hidden="true"></i>
-      </button>
-    </div>
-  </div>
+<!-- Se utiliza para mostrar una notificación en la aplicación . El código HTML tiene un contenedor de clase "msg" y se utiliza una directiva de Angular llamada "[ngClass]" para aplicar dinámicamente una o varias clases SCSS en función de una condición.
 
-  <div
-    [ngClass]="{ 'card-disable': !infoButton, 'card-active': infoButton }"
-    class="card-disable card"
-  >
-    <p>{{ notifications?.description }}</p>
+Dentro del contenedor hay dos elementos "div" con clases "title" y "notification". En el elemento "title", se muestra información sobre la notificación, como el nombre y la fecha. También hay un botón para eliminar la notificación y un botón para marcar la notificación como leída o no leída.
 
-    <div class="card-buttons">
-
-      <form
-        *ngIf="notificationForm"
-        (submit)="editNotification(notifications?._id)"
-        [formGroup]="notificationForm" >
- <div><button type="submit">Leida</button></div>
-      </form>
-      <div class="card-buttons__open">
-        <button (click)="moreInfoNotification(notifications)">
-          Abrir
-        </button>
-      </div>
-      <div *ngIf="'card-active'" class="card-buttons__icon" (click)="deleteNotification(notifications?._id)">
-        <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
-      </div>
-   
-    </div>
-  </div>
-</div> -->
+En el elemento "notification", se muestra la descripción de la notificación. Hay algunas directivas adicionales , como "ngIf" y "formGroup", que se utilizan para mostrar y ocultar elementos HTML dinámicamente y para controlar los formularios.-->
