@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
               if(this.isAdmin){
                 this.alertSuccess = true;
                 setTimeout(() => {
-                  this.router.navigate(['/about']);
+                  this.router.navigate(['/home']);
                   this.alertSuccess = false;
                 }, 4000);
                 return;

@@ -9,7 +9,7 @@ const register = 'register'
 
 const login = 'login';
 const API_URLS = {
-  DOMAIN: 'https://api-projecto-final-grupo4.vercel.app/',
+  DOMAIN: 'https://apicolegiosemilla.up.railway.app/',
   PARENTS: 'parents/'
 }
 
