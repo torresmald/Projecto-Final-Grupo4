@@ -24,3 +24,6 @@ import { FormsModule } from '@angular/forms';
  
 })
 export class StudentsModule { }
+
+
+/* Este código es un módulo que importa y declara un componente llamado "StudentsComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son CommonModule, StudentsRoutingModule, RouterModule, SharedModule, FormsModule y TranslateModule. Además, se exporta el módulo "StudentsModule".*/

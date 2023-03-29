@@ -15,11 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ]
 })
-export class RegisterModule {
+export class RegisterModule {}
 
-
-
-
-}
+/* Este código es un módulo que importa y declara un componente llamado "RegisterComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son CommonModule, RegisterRoutingModule y ReactiveFormsModule. Además, se exporta el módulo "RegisterModule".*/
 
 

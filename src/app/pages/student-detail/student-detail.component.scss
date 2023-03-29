@@ -168,3 +168,6 @@
   border: 0;
   @include botonVolver($colorfamilias);
 }
+
+
+/* Este es un código muestra información detallada sobre un estudiante. Se definen diferentes secciones utilizando contenedores con clases como .student-info, .student-grades y .student-classes. Cada sección usa el flexbox para alinear los elementos vertical u horizontalmente según sea necesario. También hay estilos definidos para dar estilo a los botones y otros elementos generales como bordes, sombras e imágenes. El archivo también importa otros archivos de estilos (form.scss y colors.scss) que no están descritos aquí pero probablemente definan más reglas de estilo compartidas por toda la aplicación web o sitio web en general. */

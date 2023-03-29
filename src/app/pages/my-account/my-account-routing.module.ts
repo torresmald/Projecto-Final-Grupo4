@@ -14,3 +14,5 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class MyAccountRoutingModule { }
+
+/* El código define y exporta una clase  llamada MyAccountRoutingModule que se encarga de manejar las rutas que estarán disponibles para el componente MyAccountComponent. Las rutas definidas son solo una, la cual está protegida por un guardia AuthGuard. La ruta apunta al componente MyAccountComponent y es importado el RouterModule del módulo @angular/router para habilitar la navegación dentro de la aplicación mediante urls amigables y el módulo de rutas.*/

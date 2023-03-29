@@ -17,3 +17,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class TeacherViewRoutingModule { }
+
+/* Este código es un módulo que importa y declara un componente llamado "TeacherViewComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son RouterModule y TeacherViewComponent. Además, se exporta el módulo "TeacherViewRoutingModule".*/

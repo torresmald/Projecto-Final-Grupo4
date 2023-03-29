@@ -17,3 +17,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class RegisterRoutingModule { }
+
+/* Este código es un módulo que importa y declara un componente llamado "RegisterComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son RouterModule y RegisterComponent. Además, se exporta el módulo "RegisterRoutingModule".*/

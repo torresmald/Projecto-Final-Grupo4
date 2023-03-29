@@ -232,127 +232,6 @@ width: 40px;
     
   }
 
-// .chatContainer {
-  
-//   border-radius: 20px;
-//   background: #eaf9ff;
-//   width: 25%;
-//   height: max-content;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-end;
-//   position: absolute;
-//   right: 10px;
-//   bottom: -200px;
-//   z-index: 10000;
-// }
-// .chat {
-//   display: flex;
-//   flex-direction: column;
-// }
-// .messages{
-//   height: 0px;
-//   overflow: auto;
-//   transition: 0.5s;
-// }
-// .messages-activate{
-//   height: 150px;
-//   overflow: auto;
-//   transition: 0.5s;
-// }
-// .message-body{
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: column;
-// }
-// .local {
-//   padding: 20px;
-//   margin-left: 5px;
-//   border-radius: 20px;
-//   background-color: darkcyan;
-//   max-width: 80%;
-//   color: white;
-//   align-self: flex-start;
-// }
-// .remoto {
-//   padding: 20px;
-//   margin-left: 5px;
-//   border-radius: 20px;
-//   background-color: darkkhaki;
-//   max-width: 80%;
-//   color: white;
-//   align-self: flex-end;
-// }
-
-
-
-// .inputContainer {
-//   bottom: 0;
-//   width: 100%;
-//   margin-bottom: 4px;
-//   margin-left: 4px;
-//   input {
-//     height: 30px;
-//     width: 90%;
-//     border-radius: 10px;
-
-//   }
-// }
-// .form {
-//   display: flex;
-//   flex-direction: row;
-//   gap: 5px;
-//   align-items: flex-end;
-//   .button {
-//     width: 10%;
-//     display: flex;
-    
-//     input{
-//       border-radius: 20px;
-//       background-color: $colorgeneral;
-//       width: 30px;
-//       height: 30px;
-//       opacity: 0.7;
-//       transition: 0.5s;
-      
-//     }
-//     input:hover{
-//       opacity: 1;
-//       transition: 0.5s;
-
-//     }
-//   }
-// }
-// .boton-volver {
-//   border: 0;
-//   @include botonVolver($colorgeneral);
-//   margin-top: 10px;
-// }
-// .header-chat{
-//   border-top-left-radius: 20px;
-//   border-top-right-radius: 20px;
-//   background-color: $colorfamilias;
-//   display: flex;
-//   align-items: center;
-//   height: 30px;
-//   margin-bottom: 30px;
-//   p{
-//     text-align: center;
-//     width: 100%;
-//     margin: 0;
-//   }
-// }
-// .header-image{
-//   position: absolute;
-//   width: 30px;
-//   cursor: pointer;
-// }
-// .header-image-rotate{
-//   position: absolute;
-//   width: 30px;
-//   cursor: pointer;
-//   transform: rotate(-180deg);
-// }
 
 
 
@@ -409,3 +288,9 @@ width: 20%;
   }
   
 }
+
+/* El código es un archivo  que define estilos para una aplicación de calendario y chat. Contiene reglas de estilo para elementos como la barra de navegación, el contenido principal, la lista de eventos, el chat y sus componentes (encabezado, cuerpo e entrada de texto).
+
+La hoja de estilo también define variables de colores, fuentes y márgenes. Además, hay algunas reglas para agregar efectos de desplazamiento personalizados y un fondo de imagen para el chat.
+
+El objetivo de este archivo CSS es mejorar la apariencia y la funcionalidad de una aplicación de calendario y chat, lo que hace que sea más fácil para los usuarios navegar y comunicarse */

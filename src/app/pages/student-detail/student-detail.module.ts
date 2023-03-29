@@ -18,3 +18,5 @@ import { StudentDetailComponent } from './student-detail.component';
   ]
 })
 export class StudentDetailModule { }
+
+/* Este código es un módulo que importa y declara un componente llamado "StudentDetailComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son CommonModule, StudentDetailRoutingModule y TranslateModule. Además, se exporta el módulo "StudentDetailModule".*/
