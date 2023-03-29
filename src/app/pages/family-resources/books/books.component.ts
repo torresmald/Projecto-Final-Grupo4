@@ -16,3 +16,11 @@ export class BooksComponent implements OnInit {
     });
   }
 }
+/* este es el código para crear una matriz de objetos "Resources", el cual acepta un argumento "resourcesService" de tipo "ResourcesService" en su constructor:El constructor toma un argumento llamado "resourcesService" que es del tipo "ResourcesService". 
+
+
+El método ngOnInit() se ejecuta cuando el componente se inicializa. Aquí, se llama al método "getResources()" del servicio "resourcesService". Este método devuelve un observable y utiliza el método "subscribe()" para suscribirse a los resultados. Los resultados (objetos "Resources") se filtran por el tipo "books" y se asignan a la propiedad "books" del componente. 
+
+
+La plantilla asociada a este componente es "./books.component.html" y tiene estilos definidos en "./books.component.scss".*/
+
