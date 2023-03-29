@@ -11,6 +11,7 @@ import { ApiStudentsService } from './../../core/services/students/api/api-stude
 import { ApiStudents } from 'src/app/core/models/Students/api/api-students.model';
 import { ApiTeachersService } from './../../core/services/teachers/api/api-teachers.service';
 import { ApiParentsService } from './../../core/services/parents/api/api-parents.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -22,13 +23,15 @@ export class RegisterComponent implements OnInit {
   public formType?: FormGroup;
   public students?: ApiStudents[];
   public areas: string[] = [];
-  public image :Blob | string="";
+  public image: Blob | string = '';
+  public alertSuccess: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
     private serviceStudent: ApiStudentsService,
     private serviceTeacher: ApiTeachersService,
-    private serviceParent: ApiParentsService
+    private serviceParent: ApiParentsService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -94,7 +97,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSelectChild(event: Event) {
-    const childId = (event.target as HTMLSelectElement).value;   
+    const childId = (event.target as HTMLSelectElement).value;
     const childArray = this.formType?.get('childs') as FormArray;
     if (childArray.length === 0) {
       childArray.push(this.formBuilder.control(childId));
@@ -103,39 +106,54 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  public uploadImage(event:any) {
+  public uploadImage(event: any) {
     const reader = new FileReader();
-    if(event.target.files && event.target.files.length) {
-      const file = event.target.files[0];     
-      reader.readAsArrayBuffer(file);  
-      this.image = file;  
+    if (event.target.files && event.target.files.length) {
+      const file = event.target.files[0];
+      reader.readAsArrayBuffer(file);
+      this.image = file;
+    }
   }
-}
   onSubmit(): void {
     const form = new FormData();
-    form.append("name", this.formType?.get("name")?.value);
-    form.append("image", this.image);
-    form.append("phone", this.formType?.get("phone")?.value);
-    form.append("address", this.formType?.get("address")?.value);
-    form.append("date", this.formType?.get("date")?.value);
-    form.append("areas", this.formType?.get("areas")?.value);
-    form.append("diseases", this.formType?.get("diseases")?.value);
-    form.append("nutrition", this.formType?.get("nutrition")?.value);
-    form.append("grade", this.formType?.get("grade")?.value);
-
+    form.append('name', this.formType?.get('name')?.value);
+    form.append('image', this.image);
+    form.append('phone', this.formType?.get('phone')?.value);
+    form.append('address', this.formType?.get('address')?.value);
+    form.append('date', this.formType?.get('date')?.value);
+    form.append('areas', this.formType?.get('areas')?.value);
+    form.append('diseases', this.formType?.get('diseases')?.value);
+    form.append('nutrition', this.formType?.get('nutrition')?.value);
+    form.append('grade', this.formType?.get('grade')?.value);
 
     if (this.formType?.valid) {
       const formData = this.formType.value;
       if (this.typeUser === 'student') {
-        formData.areas = this.areas;     
-        this.serviceStudent.postNewStudent(form).subscribe();
-        alert('El estudiante ha sido registrado correctamente');
+        formData.areas = this.areas;
+        this.serviceStudent.postNewStudent(form).subscribe(() => {
+          this.alertSuccess = true;
+          setTimeout(() => {
+            this.formType?.reset();
+            this.alertSuccess = false;
+          }, 2000);
+        });
+       
       } else if (this.typeUser === 'parent') {
-        this.serviceParent.registerApiParent(formData).subscribe();
-        alert('El familiar ha sido registrado correctamente');
+        this.serviceParent.registerApiParent(formData).subscribe(() => {
+          this.alertSuccess = true;
+          setTimeout(() => {
+            this.formType?.reset();
+            this.alertSuccess = false;
+          }, 2000);
+        });
       } else if (this.typeUser === 'teacher') {
-        this.serviceTeacher.registerApiTeacher(formData).subscribe();
-        alert('El profesor ha sido registrado correctamente');
+        this.serviceTeacher.registerApiTeacher(formData).subscribe(() => {
+          this.alertSuccess = true;
+          setTimeout(() => {
+            this.formType?.reset();
+            this.alertSuccess = false;
+          }, 2000);
+        });
       }
     } else {
       alert('El formulario esta incompleto o es invalido');

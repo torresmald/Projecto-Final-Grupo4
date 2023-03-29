@@ -1,3 +1,4 @@
+<app-alert *ngIf="alertSuccess" [successAlertMsg]="'Enviado con exito'"></app-alert>
 <div class="body">
   <div>
     <button
@@ -95,7 +96,7 @@
             value="Area 1"
             (change)="onCheckboxChange($event)"
           />
-          Area 1
+          Books
         </label>
         <label>
           <input
@@ -104,7 +105,7 @@
             value="Area 2"
             (change)="onCheckboxChange($event)"
           />
-          Area 2
+          Songs
         </label>
         <label>
           <input
@@ -113,7 +114,7 @@
             value="Area 3"
             (change)="onCheckboxChange($event)"
           />
-          Area 3
+          Writting
         </label>
         <label>
           <input
@@ -122,7 +123,7 @@
             value="Area 4"
             (change)="onCheckboxChange($event)"
           />
-          Area 4
+          Reading
         </label>
         <label>
           <input
@@ -131,7 +132,7 @@
             value="Area 5"
             (change)="onCheckboxChange($event)"
           />
-          Area 5
+          Programming
         </label>
       </div>
 

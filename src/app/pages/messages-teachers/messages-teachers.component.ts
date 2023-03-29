@@ -22,7 +22,8 @@ export class MessagesTeachersComponent implements OnInit {
   public image: Blob | string = '';
   public calendar: Blob | string = '';
   public token?: string[];
-
+  public alertSuccess: boolean = false;
+  
   constructor(
     private msgBuilder: FormBuilder,
     private studentService: ApiStudentsService,
@@ -61,10 +62,14 @@ export class MessagesTeachersComponent implements OnInit {
     form.append('student', this.msgForm?.get('student')?.value);
 
     this.notificationService.postNotification(form).subscribe(() => {
-      if(this.msgForm?.valid){
-        alert('Enviado con exito');
-        this.msgForm?.reset();
+      if (this.msgForm?.valid) {
+        this.alertSuccess = true;
+        setTimeout(() => {
+          this.msgForm?.reset();
         this.router.navigate(['teacherView']);
+          this.alertSuccess = false;
+        }, 2000);
+        
       }
     });
   }

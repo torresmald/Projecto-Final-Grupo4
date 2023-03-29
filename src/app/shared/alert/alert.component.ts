@@ -33,7 +33,5 @@ export class AlertComponent implements OnChanges {
     this.errorTitle = this.errorAlertTitle;
     this.successTitle = this.successAlertTitle  
   }
-
-
 }
 
