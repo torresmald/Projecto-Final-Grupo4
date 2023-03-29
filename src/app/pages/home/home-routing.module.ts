@@ -17,3 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class HomeRoutingModule { }
+/* Este código es un módulo que importa y declara un componente llamado "HomeComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son RouterModule y HomeComponent. Además, se exporta el módulo "HomeRoutingModule".*/

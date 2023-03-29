@@ -21,3 +21,4 @@ export class LogicalMathActivitiesComponent {
     link.click();
   }
 }
+/* El componente carga una lista de recursos de un servicio llamado "ResourcesService" y filtra los recursos para mostrar solo aquellos que tienen el tipo "actividades matemáticas lógicas". La lista de recursos filtrados se almacena en la variable "mathActivities".*/

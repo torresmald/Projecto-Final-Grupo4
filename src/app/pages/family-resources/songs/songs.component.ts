@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Resources } from '../../../core/models/Resources/transformed/resources.model';
@@ -33,3 +34,4 @@ export class SongsComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(youtubeEmbedUrl);
   }
 }
+/* Este es un componente que muestra una lista de canciones obtenidas a través del servicio ResourcesService. La clase SongsComponent implementa la interfaz OnInit y tiene un arreglo de objetos SongResource que representa las canciones. El constructor inyecta los servicios ResourcesService, DomSanitizer y Router. El método ngOnInit suscribe al método getResources del servicio ResourcesService y obtiene las canciones filtrando los recursos que tienen el tipo "songs" y creando un objeto SongResource para cada una de ellas. El método getSafeUrl utiliza el servicio DomSanitizer para obtener una URL segura para incrustar un video de YouTube en la página. */

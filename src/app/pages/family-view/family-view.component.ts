@@ -46,3 +46,8 @@ export class FamilyViewComponent implements OnInit{
     this.showChat = !this.showChat;
   }
 }
+/* Este código importa varios servicios y modelos necesarios para mostrar la vista de la familia . La clase FamilyViewComponent implementa el método OnInit y declara varias propiedades públicas, incluyendo token, notifications, myCalendar, text y showChat.
+
+En el constructor de la clase, se inicializa token leyendo el token almacenado en el almacenamiento local del navegador. El método ngOnInit suscribe al servicio de notificaciones y actualiza las notificaciones de la familia en la vista.
+
+La clase también tiene dos métodos públicos adicionales: sendMessage para enviar mensajes de chat y activateMessages para mostrar u ocultar la sección de chat. */

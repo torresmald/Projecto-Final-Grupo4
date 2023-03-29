@@ -5,9 +5,8 @@ import { io } from 'socket.io-client';
   providedIn: 'root'
 })
 export class SocketService {
-  io = io("http://localhost:4000", {
-    autoConnect: true,
-    withCredentials: true
+  io = io("https://apicolegiosemilla.up.railway.app/", {
+    autoConnect: true
   })
   constructor() { 
   }
