@@ -82,3 +82,11 @@ export class MessagesTeachersComponent implements OnInit {
     }
   }
 }
+
+/* Este código es un componente  llamado "MessagesTeachersComponent". Incluye la importación de varios módulos y servicios, como FormBuilder, FormControl, Validators y Router. Además, utiliza un servicio ApiStudentsService para obtener una lista de estudiantes desde el servidor.
+
+El componente también incluye un formulario en el que los profesores pueden enviar notificaciones a sus alumnos. El formulario tiene campos para el nombre, fecha y descripción de la notificación. También permite cargar imágenes y calendarios relacionados con la notificación.
+
+La función newNotifications() se invoca cuando se envía el formulario; crea una instancia del objeto FormData que encapsula los datos enviados al servidor a través del servicio NotificationsService.
+
+La función uploadImage () especifica cómo procesar las imágenes cargadas por los usuarios mediante FileReader(). Finalmente, este componente redirige al usuario a otra vista después del envío exitoso del mensaje. */

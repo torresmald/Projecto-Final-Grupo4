@@ -20,3 +20,4 @@ export class FamilyResourcesComponent implements OnInit {
       this.videoResources = this.resources?.filter((resource) => resource.type === 'songs');
   }
 }
+/* Este es un código  llamado "FamilyResourcesComponent" que utiliza servicios y modelos definidos previamente para mostrar recursos y videos relacionados con familias. El componente recupera los recursos utilizando un servicio llamado "ResourcesService" y los muestra en la plantilla HTML a través de variables como "resources" y "videoResources". El método ngOnInit() se utiliza para recuperar los recursos y filtrar aquellos que tienen un tipo de "canciones" y asignarlos a la variable "videoResources".*/
