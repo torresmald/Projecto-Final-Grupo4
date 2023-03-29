@@ -44,10 +44,7 @@
     *ngFor="
       let student of students | filterName : studentName | sortName : sortByName
     "
-    [ngClass]="{
-      hide: student.name === 'Todos',
-      'student-card': student.name !== 'Todos'
-    }"
+    class="student-card"
   >
     <p class="name">{{ student.name }}</p>
     <img [src]="student.image" alt="Foto del alumno" height="100" />

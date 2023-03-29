@@ -5,7 +5,7 @@ import { io } from 'socket.io-client';
   providedIn: 'root'
 })
 export class SocketService {
-  io = io("https://socketchatsemilla.vercel.app/", {
+  io = io("http://localhost:4000", {
     autoConnect: true,
     withCredentials: true
   })

@@ -26,7 +26,7 @@ export class StudentsComponent {
       authToken ? (this.token = JSON.parse(authToken).user.grade) : null;
       this.studentsService
         .getStudents()
-        .subscribe((value) => this.students = value.filter((grade) => grade.grade === this.token
+        .subscribe((value) => this.students = value.filter((student) => student.grade === this.token && student.name !== 'Todos'
         ))
     }
     public goDetail(id: string){
@@ -36,67 +36,61 @@ export class StudentsComponent {
       this.router.navigate(['teacherView']);
     }
 
-    public generatePDF(student?: Students[]) {
-      this.img.src = '../../../assets/logos/LogoGeneral.png';
+    public generatePDF(students: Students[]) {
       const doc = new jsPDF();
-      for (let index = 0; index < this.students.length - 1; index++) {
-        let student = this.students[index];
-        this.studentImg.src = student.image;        
-        autoTable(doc, {
-          body: [
-            [
-              {
-                content: 'COLEGIO SEMILLA',
-                styles: {
-                  halign: 'left',
-                  fontSize: 18,
-                  textColor: 'white',
-                },
-              },
-              {
-                content: `${student?.name}`,
-                styles: {
-                  halign: 'right',
-                  fontSize: 18,
-                  textColor: 'white',
-                },
-              },
-            ],
-          ],
-          theme: 'plain',
-          styles: {
-            fillColor: `rgb(255, 87, 87)`,
-          },
-        });
-        autoTable(doc, {
-          body: [
-            [
-              {
-                content: `
-             Direccion: ${student.address}
-             Telefono:${student?.phone} 
-             Año de nacimiento: ${student?.date}
-             Clase: ${student?.grade}
-             Alergias: ${student?.diseases}
-             Medicamentos: ${student?.nutrition}    
-             Areas:  ${student?.areas}
-            `,
-                styles: {
-                  halign: 'left',
-                },
-              },
-            ],
-          ],
-          theme: 'grid',
-        });
-        doc.addImage(this.img, 'png',100,5,40,30);
-        doc.addImage(this.studentImg,'jpg',150,35,40,30);
-        doc.addImage(this.studentImg,'jpg',150,100,40,30);
-        doc.addImage(this.studentImg,'jpg',150,165,40,30);
-        doc.addImage(this.studentImg,'jpg',150,230,40,30);
-      } 
-      return doc.save('prueba');
+      const logoImg = '../../../assets/logos/LogoGeneral.png';
+    
+      for (let i = 0; i < students.length; i++) {
+        const student = students[i];
+    
+        // Cargar la imagen del estudiante
+        const studentImg = new Image();
+        studentImg.onload = () => {
+          // Agregar el encabezado con el logo y el nombre del estudiante
+          doc.addImage(logoImg, 'PNG', 10, 10, 40, 40);
+          doc.setFontSize(18);
+          doc.text(`COLEGIO SEMILLA`, 60, 25);
+          doc.text(student.name, 160, 25);
+    
+          // Agregar la información del estudiante
+          const tableData = [
+            ['Dirección', student.address],
+            ['Teléfono', student.phone],
+            ['Año de nacimiento', student.date],
+            ['Clase', student.grade],
+            ['Alergias', student.diseases],
+            ['Medicamentos', student.nutrition],
+            ['Áreas', student.areas]
+          ];
+          autoTable(doc,{
+            startY: 100,
+            head: [['', '']],
+            body: tableData,
+            theme: 'grid',
+            styles: {
+              cellPadding: 4,
+              fontSize: 12
+            },
+            headStyles: {
+              fillColor: [255, 87, 87],
+              textColor: 'white'
+            }
+          });
+    
+          // Agregar la imagen del estudiante
+          doc.addImage(studentImg, 'JPEG', 80, 50, 50, 50);
+    
+          // Guardar el documento PDF
+          if (i === students.length - 1) {
+            doc.save('prueba.pdf');
+          } else {
+            doc.addPage();
+          }
+        };
+        studentImg.src = student.image;
+      }
     }
+    
   }
   
 
