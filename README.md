@@ -1,4 +1,4 @@
-# APLICACION PARA GESTION DE COLEGIO
+# APLICACIÓN PARA GESTIÓN DE COLEGIO
 
 ![Image Movies](https://www.gifsanimados.org/data/media/276/escuela-y-colegio-imagen-animada-0043.gif)
 
@@ -14,7 +14,7 @@ Proyecto realizado con [Angular CLI](https://github.com/angular/angular-cli) ver
     <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> 
 </p>
 
-## INSTALACION
+## INSTALACIÓN
 
 1. DESCARGA DEL REPOSITORIO
 
@@ -22,13 +22,13 @@ Proyecto realizado con [Angular CLI](https://github.com/angular/angular-cli) ver
 git clone https://github.com/torresmald/Projecto-Final-Grupo4.git
 ```
 
-2. INSTALACION DE DEPENDENCIAS UTLIZADAS.
+2. INSTALACIÓN DE DEPENDENCIAS UTLIZADAS.
 
 ```
 npm install
 ```
 
-3. LANZAMIENTO DE LA APLICACION.
+3. LANZAMIENTO DE LA APLICACIÓN.
 
 ```
 ng serve -open
@@ -37,16 +37,16 @@ Abrir el navegador en: http://localhost:4200
 
 ## ESTRUCTURA
 
-1. CORE --> NUCLEO DE LA APP CON ELEMENTOS USADOS EN TODA LA APLICACION.
+1. CORE --> NÚCLEO DE LA APP CON ELEMENTOS USADOS EN TODA LA APLICACIÓN.
    - COMPONENTES HEADER, FOOTER, LOADING, MODAL.
    - GUARDIAS
    - MODELOS TIPADOS NOTIFICACIONES, TUTORES, RECURSOS, ESTUDIANTES, PROFESORES
-   - SERVICIOS DE CHAT, MENSAJERIA, LOADING, NOTIFICACIONES, ESTUDIANTES, ETC. 
-2. PAGES --> PAGINAS DE VISTA DE CADA ELEMENTO
+   - SERVICIOS DE CHAT, MENSAJERÍA, LOADING, NOTIFICACIONES, ESTUDIANTES, ETC. 
+2. PAGES --> PÁGINAS DE VISTA DE CADA ELEMENTO
    MI CUENTA, ABOUT, CONTACT, VISTAS PROFESOR/TUTOR, ETC
 3. SHARED --> ELEMENTOS REUSABLES EN VARIOS COMPONENTES
    BOTONES, PIPES
-4. ASSETS --> BIBLIOTECA DE LOGOS, FOTOS E IMAGENES UTILIZADAS EN LA APLICACION. ARCHIVOS DE TRADUCCION.
+4. ASSETS --> BIBLIOTECA DE LOGOS, FOTOS E IMÁGENES UTILIZADAS EN LA APLICACIÓN. ARCHIVOS DE TRADUCCIÓN.
 5. STYLES --> ESTILOS UTILIZADOS GLOBALMENTE/REUTILIZABLES.
 
 
@@ -61,8 +61,8 @@ Abrir el navegador en: http://localhost:4200
 4. VISTA PROFESORES
     1. CALENDARIO Y CHAT EN DIRECTO CON PADRES
     2. VISTA DE SUS ALUMNOS. POSIBILIDAD DE DESCARGA EN PDF DE LISTADO/DETALLE INDIVIDUAL
-    3. ENVIO DE MENSAJES A LAS FAMILIAS BIEN INDIVIDUAL/TODA LA CLASE.
-    4. ENVIO DE RECURSOS LIBROS/CANCIONES/JUEGOS, ETC.
+    3. ENVÍO DE MENSAJES A LAS FAMILIAS BIEN INDIVIDUAL/TODA LA CLASE.
+    4. ENVÍO DE RECURSOS LIBROS/CANCIONES/JUEGOS, ETC.
 5. WEB TRADUCIDA INGLÉS/ESPAÑOL.
 6. WEB CON TEMA CLARO/OSCURO
 
@@ -79,7 +79,9 @@ Abrir el navegador en: http://localhost:4200
     - jonathan.torresmald@gmail.com
     - jerrygonzalezzambrano@gmail.com
     - josegs72@gmail.com
+    - bea.palomo.delpozo@gmail.com
+    - maria.inmaculada.mota@gmail.com
 
-DIVIERTETE USANDOLA......!!
+DIVIERTETE USÁNDOLA......!!
 
 ![Image Movies](https://media3.giphy.com/media/R6ZNan8ZHchva/giphy.gif)
