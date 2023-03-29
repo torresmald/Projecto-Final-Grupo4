@@ -22,6 +22,7 @@ export class FamilyNotificationsComponent {
   public page_size: number = 10;
   public page_number: number = 1;
   public notificationReaded?: Notifications[];
+  public alertSuccess: boolean = false;
   hidePageSize = true;
  
 
@@ -58,7 +59,13 @@ export class FamilyNotificationsComponent {
   }
 
   public deleteNotifications(event: boolean) {
-    this.showNotification = event;
+    this.showNotification = event;  
+    this.alertSuccess = true
+    setTimeout(() => {
+      this.alertSuccess = false
+    }, 4000);
+    
+    
   }
 
   handlePageEvent(ev: PageEvent) {

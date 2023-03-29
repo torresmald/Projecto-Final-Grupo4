@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Notifications } from 'src/app/core/models/Notifications/notifications.model';
 import { NotificationsService } from 'src/app/core/services/notifications/notifications.service';
-import { Router } from '@angular/router';
 @Component({
   selector: 'app-notification',
   templateUrl: './notification.component.html',
@@ -20,25 +19,17 @@ export class NotificationComponent implements OnInit {
         student: new FormControl(this.notifications?.student)
       });
     }
-  constructor(private notificationService: NotificationsService,private loginBuilder: FormBuilder,
-    private router: Router ) {}
+  constructor(private notificationService: NotificationsService,private loginBuilder: FormBuilder) {}
   public notificationForm?: FormGroup;
   public isReaded: boolean = false
   public isDelete: boolean = false
-  public alertSuccess: boolean = false;
 
 
   public deleteNotification(id?: string) {
     if (!id) {
       return;
     }
-    this.notificationService.deleteNotification(id).subscribe(() => {
-      this.alertSuccess = true;
-      setTimeout(() => {
-        this.router.navigate(['/notifications']);
-        this.alertSuccess = false;
-      }, 4000);
-    });
+    this.notificationService.deleteNotification(id).subscribe();
     this.isDelete = !this.isDelete;
     this.deleteModal.emit(false);
   }
