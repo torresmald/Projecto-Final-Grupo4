@@ -11,6 +11,7 @@ import { TeachersService } from '../../services/teachers/teachers.service';
 export class HeaderComponent implements OnInit {
   public isLogged: boolean = false;
   public langs: string[] = [];
+  public lang?: string;
   public theme?: string 
 
   constructor(
@@ -21,9 +22,17 @@ export class HeaderComponent implements OnInit {
     translate.setDefaultLang('es');
     translate.use('es'), this.translate.addLangs(['es', 'en']);
     this.langs = this.translate.getLangs();
+    this.lang = this.translate.currentLang;    
   }
   public changeLang(lang: string) {
-    this.translate.use(lang);
+    if (this.lang === 'es'){
+      this.translate.use(lang);
+      this.lang = lang;
+    }
+    else{
+      this.lang = 'es';
+      this.translate.use(this.lang);
+    }
   }
    
   /* este código inicializa y configura el servicio de traducción y proporciona un método para cambiar el idioma activo en la aplicación.*/
@@ -34,7 +43,6 @@ export class HeaderComponent implements OnInit {
     const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
     if (userPrefersDark) {
-      
       this.theme = 'dark'
     }
     if (userPrefersLight) {
@@ -46,7 +54,6 @@ export class HeaderComponent implements OnInit {
   public setThema() {
     
     if(this.theme === 'dark'){
-
       document.documentElement.className = 'light';
       this.theme = 'light'
 

@@ -51,11 +51,7 @@
 .icon-theme{
   position: absolute;
   transform: translate(-111px, -105px);
-
-
 }
-
-
 
 .icon-img{
   width: 200px;
@@ -68,7 +64,26 @@
   width: 200px;
   transition: 0.5s;
   cursor: pointer;
+}
 
-
+.language{
+  position: absolute;
+  right: 0;
+  transform: translate(50px, -0px);
+}
+.spanish{
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  transform: rotate(180deg);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.english{
+  height: 50px;
+  width: 100px;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
 }
 /* Este es un archivo  que importa otro archivo con variables de color y define estilos para diferentes partes de una página web, incluyendo un encabezado con un logotipo y enlaces, así como un botón con una imagen en la esquina superior derecha. Se utilizan selectores anidados para definir estilos para elementos específicos dentro de otros elementos, y se aplican transiciones y animaciones para mejorar la interactividad. */
