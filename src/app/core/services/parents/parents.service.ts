@@ -31,3 +31,8 @@ export class ParentsService {
     return authToken ? JSON.parse(authToken).token : null;
   }
 }
+/* Este es un servicio llamado ParentsService que proporciona dos métodos:
+
+loginParent: Este método toma un objeto de tipo ApiParents como argumento y devuelve un observable de tipo ApiUsers. Este método utiliza el método loginApiParent del servicio ApiParentsService para realizar la solicitud de inicio de sesión en la API de padres. Después de recibir una respuesta satisfactoria, el método almacena el token de autenticación y el usuario en el almacenamiento local y emite un valor booleano true a través de un ReplaySubject llamado userLogged$.
+
+getToken: Este método devuelve el token de autenticación almacenado en el almacenamiento local */

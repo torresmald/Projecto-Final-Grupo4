@@ -33,3 +33,10 @@ export class ResourcesService {
       .pipe(map((boardGame) => transformDataResources(boardGame)));
   }
 }
+/* Este código define una clase ResourcesService con tres métodos que se encargan de interactuar con una API para obtener, crear y eliminar recursos.
+
+El método getResources() utiliza el método getApiResources() del servicio ApiResourcesService para obtener un array de recursos en formato ApiResources, que luego es transformado a un array de recursos en formato Resources utilizando la función transformDataResources(). Este método también utiliza un servicio LoadingService para mostrar y ocultar un indicador de carga.
+
+El método createResource() utiliza el método createApiResources() del servicio ApiResourcesService para enviar una solicitud POST con los datos del nuevo recurso. Luego, transforma el objeto de respuesta a formato Resources utilizando la función transformDataResources().
+
+El método deleteResource() utiliza el método deleteApiResources() del servicio ApiResourcesService para enviar una solicitud DELETE con el ID del recurso a eliminar. Luego, transforma el objeto de respuesta a formato Resources utilizando la función transformDataResources(). */

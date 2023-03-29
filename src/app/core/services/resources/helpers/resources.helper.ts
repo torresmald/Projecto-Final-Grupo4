@@ -8,3 +8,4 @@ export function transformDataResources(resource: ApiResources): Resources {
     delete resource.updatedAt;
     return resource;
 }
+// La función transformDataResources transforma un objeto de tipo ApiResources a Resources, eliminando las propiedades __v, createdAt y updatedAt.//
