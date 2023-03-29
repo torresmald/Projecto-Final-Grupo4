@@ -5,6 +5,7 @@
         <img class="logo" src="../../../../assets/logos/LogoGeneral.png" />
       </a>
     </div>
+
     <div class="links">
       <ul class="links--list">
         <li class="links--list--url">
@@ -23,6 +24,27 @@
         <!--Este código define la estructura de un encabezado (header) para la página web, el cual incluye un logo y una lista de enlaces. Además, dependiendo si el usuario ha iniciado sesión o no, se muestran diferentes enlaces. Se utiliza  para enlazar los elementos y se incluye la funcionalidad de cambio de idioma -->
       </ul>
     </div>
+
+
+    <div (click)="activeMenu()" class="drop-icon">
+      <img src="https://assets.stickpng.com/thumbs/588a64d2d06f6719692a2d0e.png" alt="">
+    </div>
+
+    <div class="menu" [ngClass]="{'menu': !menuNav, 'menu-active': menuNav }">
+
+      <div class="menu-list">
+          <div>
+            <a *ngIf="isLogged" [routerLink]="['myAccount']">{{ "HEADER.ACCOUNT" | translate}}</a>
+          </div>
+
+          <div>
+            <a *ngIf="isLogged" [routerLink]="['home']" (click)="logout()">{{ "HEADER.LOGOUT" | translate }}</a>
+          </div>
+
+          <div><a [routerLink]="['about']">{{ "HEADER.ABOUT" | translate }}</a></div>
+      </div>
+    </div>
+    
   </div>
   <div class="language"
   >
@@ -53,3 +75,4 @@
   </div>
 </header>
 <!-- Este código representa dos botones de imagen que permiten seleccionar entre los temas "light" y "dark". -->
+
