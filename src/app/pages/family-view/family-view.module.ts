@@ -2,7 +2,7 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { SharedModule } from 'src/app/shared/shared.module';
 import { FamilyViewRoutingModule } from './family-view-routing.module';
 import { FamilyViewComponent } from './family-view.component';
 
@@ -15,7 +15,8 @@ import { FamilyViewComponent } from './family-view.component';
     CommonModule,
     FamilyViewRoutingModule,
     TranslateModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class FamilyViewModule { }

@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 50px;
+  margin-top: 30px;
   a {
     text-decoration: none;
     color: $colorfamilias;
@@ -22,9 +23,8 @@
 .body-cards{
 
   height: 100%;
-  width: 60%;
+  width: 50%;
 
- 
 }
 
 
@@ -121,7 +121,7 @@
     background-color: $colorfamilias;
     box-shadow: 0px 0px 10px gray;
     width: 700px;
-    height: 342px;
+    height: 442px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +148,7 @@
 
 
 .chat-card{
-  width: 85%;
+  width: 80%;
   height:100%;
   background-image: url("https://i.pinimg.com/originals/51/ed/c0/51edc046eb80046ee4755ee71d0f19ca.jpg");
   z-index: 9999;
@@ -234,8 +234,8 @@ width: 40px;
 
 .local {
   padding: 20px;
-  margin-top: 4px;
-  margin-left: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
   border-radius: 10px;
   text-overflow: ellipsis;
   background-color: $colorprofesores;
@@ -262,6 +262,346 @@ width: 40px;
     display: inline-block; 
     
   }
+
+
+  @media all and (min-width: 1024px) and (max-width: 1340px) {
+
+
+
+
+    .child-card{
+
+
+      img{
+
+        width: 105px;
+        height: 105px;
+       
+      }
+
+     
+      width: 550px;
+      height: 282px;
+
+      .name{
+
+        font-size: 15px;
+      }
+
+      
+  &--info{
+
+    font-size: 15px;
+  }
+  
+    }    
+
+
+    .calendar-body{
+
+    
+      &--img{
+    
+
+        width: 550px;
+        height: 282px;
+
+
+      }
+    }
+
+
+    
+
+   }
+
+
+   @media all and (min-width: 770px) and (max-width: 1024px) {
+
+    .body{
+
+      flex-direction: column;
+
+
+    }
+
+    .body-cards{
+
+      height: 60%;
+      width: 100%;
+    
+     
+    }
+
+
+
+    .body-chat{
+
+
+   width: 100%;
+   height: 500px;
+   margin-top: 20px;
+
+    }
+
+
+    .chat-card{
+
+      width: 550px;
+    }
+
+
+
+    .child-card{
+
+
+      img{
+
+        width: 105px;
+        height: 105px;
+       
+      }
+
+     
+      width: 550px;
+      height: 282px;
+
+      .name{
+
+        font-size: 15px;
+      }
+
+      
+  &--info{
+
+    font-size: 15px;
+  }
+  
+    }   
+
+
+    .calendar-body{
+
+    
+      &--img{
+    
+
+        width: 550px;
+        height: 282px;
+
+
+      }
+    }
+
+
+
+
+
+   }
+
+
+   @media all and (min-width: 460px) and (max-width: 770px){
+
+
+    
+    .body{
+
+      flex-direction: column;
+
+
+    }
+
+    .body-cards{
+
+      height: 50%;
+      width: 100%;
+    
+     
+    }
+
+
+
+    .body-chat{
+
+
+   width: 100%;
+   height: 500px;
+   margin-top: 20px;
+
+    }
+
+
+    .chat-card{
+
+      width: 700px;
+      height: 500px;
+ 
+    }
+
+
+    .child-card{
+
+
+      img{
+
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+       
+      }
+
+     
+      width: 450px;
+      height: 250px;
+
+      .name{
+
+        font-size: 13px;
+        margin-top: 10px;
+      }
+
+      
+  &--info{
+
+    font-size: 13px;
+  }
+  
+    }    
+
+
+    .calendar-body{
+
+    
+      &--img{
+    
+
+        width: 450px;
+        height: 250px
+
+      }
+    }
+
+
+    .body-chat{
+
+
+      width: 100%;
+   
+       }
+   
+   
+       .chat-card{
+
+        width: 450px;
+    
+       }
+
+   }
+
+
+   @media all and  (max-width: 460px){
+
+
+    .body{
+
+      flex-direction: column;
+
+
+    }
+
+    .body-cards{
+
+      height: 50%;
+      width: 100%;
+    
+     
+    }
+
+
+
+    .body-chat{
+
+
+   width: 100%;
+   height: 500px;
+   margin-top: 20px;
+
+    }
+
+
+    .chat-card{
+
+      width: 700px;
+      height: 500px;
+ 
+    }
+
+
+    .child-card{
+
+
+      img{
+
+        width: 70px;
+        height: 70px;
+        margin-top: 40px;
+       
+      }
+
+     
+      width: 350px;
+      height: 150px;
+
+      .name{
+
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      
+  &--info{
+
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  &--info div{
+
+    height: 20px;
+  }
+  
+    }    
+
+
+    .calendar-body{
+    
+      &--img{
+    
+        width: 350px;
+        height: 200px;
+  
+
+
+      }
+    }
+
+    .body-chat{
+
+
+      width: 100%;
+   
+       }
+   
+       .chat-card{
+
+        width: 350px; 
+    
+       }
+
+   }
+
+   
 
 
 
