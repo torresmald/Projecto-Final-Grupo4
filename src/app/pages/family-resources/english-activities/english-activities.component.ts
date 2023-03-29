@@ -23,3 +23,6 @@ export class EnglishActivitiesComponent {
     link.click();
   }
 }
+/*  El componente carga una lista de recursos de un servicio llamado "ResourcesService" y filtra los recursos para mostrar solo aquellos que tienen el tipo "actividades en inglés". La lista de recursos filtrados se almacena en la variable "englishActivities".
+
+El componente también tiene una función llamada "seeImage" que crea un enlace para abrir la imagen en una nueva pestaña cuando se hace clic en el botón de descarga en una de las tarjetas de actividad. */
