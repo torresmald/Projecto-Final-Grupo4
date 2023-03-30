@@ -45,6 +45,10 @@ export class FamilyViewComponent implements OnInit{
   public activateMessages(){
     this.showChat = !this.showChat;
   }
+
+  public openCalendar(calendar: string) {
+    window.open(calendar, '_blank');
+  }
 }
 /* Este código importa varios servicios y modelos necesarios para mostrar la vista de la familia . La clase FamilyViewComponent implementa el método OnInit y declara varias propiedades públicas, incluyendo token, notifications, myCalendar, text y showChat.
 

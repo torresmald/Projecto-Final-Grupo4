@@ -6,6 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 body {
     background-color: var(--bg-color);
     color: var(--font-color-main, #666);
+    overflow-x: hidden;
 }
 
 p {

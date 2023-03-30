@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Notifications } from 'src/app/core/models/Notifications/notifications.model';
 import { NotificationsService } from 'src/app/core/services/notifications/notifications.service';
-
 @Component({
   selector: 'app-notification',
   templateUrl: './notification.component.html',
@@ -20,12 +19,10 @@ export class NotificationComponent implements OnInit {
         student: new FormControl(this.notifications?.student)
       });
     }
-  constructor(private notificationService: NotificationsService,private loginBuilder: FormBuilder,
-    ) {}
+  constructor(private notificationService: NotificationsService,private loginBuilder: FormBuilder) {}
   public notificationForm?: FormGroup;
   public isReaded: boolean = false
   public isDelete: boolean = false
-
 
 
   public deleteNotification(id?: string) {
@@ -33,11 +30,8 @@ export class NotificationComponent implements OnInit {
       return;
     }
     this.notificationService.deleteNotification(id).subscribe();
-    alert('Borrado')
-
     this.isDelete = !this.isDelete;
     this.deleteModal.emit(false);
-
   }
 
 
@@ -47,15 +41,10 @@ export class NotificationComponent implements OnInit {
     }
     this.notificationService.editNotification(id, this.notificationForm?.value).subscribe();
     this.isReaded = true;
-   
-    
   }
   
   public moreInfoNotification(notifications?: Notifications) {
-    this.notification.emit(notifications);
-  
-
-    
+    this.notification.emit(notifications);  
   }
 
 }

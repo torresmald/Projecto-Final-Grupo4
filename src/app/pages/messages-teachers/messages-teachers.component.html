@@ -1,3 +1,6 @@
+<app-alert *ngIf="alertSuccess" [successAlertTitle]="'Exito'" [successAlertMsg]="'El mensaje ha sido enviado'"></app-alert>
+<app-alert *ngIf="alertError" [errorAlertTitle]="'Error!'" [errorAlertMsg]="'Debes completar todo el formulario'"></app-alert>
+
 <h2 class="form-title">{{ "TEACHERSMESSAGE.TITLE" | translate }}</h2>
 
 <div class="main_container">

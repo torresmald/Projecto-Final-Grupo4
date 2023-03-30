@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   public langs: string[] = [];
   public lang?: string;
   public theme?: string 
+  public menuNav: boolean = false;
 
   constructor(
     private router: Router,
@@ -68,5 +69,11 @@ export class HeaderComponent implements OnInit {
     this.logoutService.logout();
     this.logoutService.userLogged$.next(false);
     this.router.navigate(['']);
+  }
+
+  activeMenu(){
+
+    this.menuNav = !this.menuNav;
+
   }
 }

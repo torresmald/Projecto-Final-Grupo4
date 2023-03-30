@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 20;
 }
 .header {
   font-family: sans-serif;
@@ -86,4 +87,92 @@
   transition: 0.5s;
   cursor: pointer;
 }
+
+.drop-icon {
+
+  display: none;
+  
+  img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+  }
+}
+
+
+.menu{
+    
+
+  width: 100%;
+  transition: 1s;
+  height: 0px;
+  display: none;
+  overflow: hidden;
+
+
+}
+
+
+.menu-active{
+
+  height: 150px;
+  width: 100%;
+  transition: 1s;
+  display: none;
+  overflow: hidden;
+
+}
+
+.menu-list{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+
+  div{
+
+    margin: 10px 0px 0px ;
+    font-size: 18px;
+
+  }
+
+  div a{
+
+    color: $colorgeneral;
+    font-weight: bold;
+
+  }
+}
+
+
 /* Este es un archivo  que importa otro archivo con variables de color y define estilos para diferentes partes de una página web, incluyendo un encabezado con un logotipo y enlaces, así como un botón con una imagen en la esquina superior derecha. Se utilizan selectores anidados para definir estilos para elementos específicos dentro de otros elementos, y se aplican transiciones y animaciones para mejorar la interactividad. */
+
+
+@media all and  (max-width: 600px) { 
+
+  .links{
+    display: none;
+  }
+
+  .drop-icon{
+
+    display: block;
+    display: flex;
+    justify-content: center;
+    opacity: 0.8;
+  }
+
+  .menu{
+
+    display: block;
+  }
+
+  .menu-active{
+     display: block;
+
+  }
+
+}

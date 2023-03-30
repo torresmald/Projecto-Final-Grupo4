@@ -1,5 +1,5 @@
 <div class="app-container">
-    <app-header *ngIf="!_router.url.includes('login' && 'register')"></app-header>
+    <app-header class="header" *ngIf="!_router.url.includes('login') && !_router.url.includes('register') "></app-header>
     <app-loading></app-loading>
     <app-scroll-to-top></app-scroll-to-top>
     <app-modal></app-modal>
