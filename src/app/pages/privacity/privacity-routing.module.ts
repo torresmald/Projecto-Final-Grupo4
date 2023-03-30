@@ -15,3 +15,5 @@ const routes: Routes = [
 })
 
 export class PrivacityRoutingModule { }
+
+/* Este código es un módulo que importa y declara un componente llamado "PrivacityComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son RouterModule y PrivacityComponent. Además, se exporta el módulo "PrivacityRoutingModule".*/

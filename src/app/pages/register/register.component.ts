@@ -160,3 +160,11 @@ export class RegisterComponent implements OnInit {
     }
   }
 }
+
+/* El código importa varios módulos , incluyendo el 'Component' y los componentes relacionados con formularios. También importa servicios para manejar peticiones a la API de estudiantes, maestros y padres.
+
+La clase RegisterComponent se encarga de gestionar el formulario de registro que permite registrar estudiantes, padres y profesores en la aplicación. Dependiendo del tipo de usuario seleccionado (estudiante, padre o profesor), se crea un formulario diferente utilizando FormBuilder. 
+
+Además, hay métodos que se encargan del manejo de eventos como cambios en las áreas seleccionadas por el estudiante o la selección del hijo/a por parte del padre/madre. También está presente una función uploadImage() que carga una imagen al servidor.
+
+Al finalizar el método onSubmit(), si todos los campos son válidos se envían datos correspondientes al tipoUser elegido (student/parent/teacher) mediante llamadas a los servicios correspondientes. */

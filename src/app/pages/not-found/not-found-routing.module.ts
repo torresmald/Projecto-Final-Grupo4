@@ -12,3 +12,5 @@ const routes: Routes = [{
   exports: [RouterModule]
 })
 export class NotFoundRoutingModule { }
+
+/* Este código es un módulo que importa y declara un componente llamado "NotFoundComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son RouterModule y NotFoundComponent. Además, se exporta el módulo "NotFoundRoutingModule".*/

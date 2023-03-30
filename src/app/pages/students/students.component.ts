@@ -97,3 +97,5 @@ export class StudentsComponent {
     }
   }
 }
+
+/* El código es un componente  llamado "StudentsComponent" que muestra una lista de estudiantes. Utiliza el servicio "StudentsService" para obtener los datos de los estudiantes y filtrarlos según la propiedad "grade". También incluye la funcionalidad para generar un PDF con información detallada sobre cada uno de los estudiantes, como su dirección, teléfono, alergias, entre otros. Además, permite navegar a una página de detalle del estudiante cuando se hace clic en uno de ellos dentro de la lista. */

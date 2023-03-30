@@ -16,3 +16,5 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class StudentsRoutingModule {}
+
+/* Este código es un módulo que importa y declara un componente llamado "StudentsComponent" y configura las dependencias necesarias para su funcionamiento. Las dependencias importadas son RouterModule y StudentsComponent. Además, se exporta el módulo "StudentsRoutingModule".*/

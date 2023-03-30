@@ -101,3 +101,5 @@ export class StudentDetailComponent {
     return doc.save(this.student?.name);
   }
 }
+
+/* Este es un componente llamado "StudentComponent" que utiliza varios servicios y modelos. Algunas de sus funcionalidades incluyen la obtención de detalles del estudiante a través del ID proporcionado en los parámetros, filtrar estudiantes por su grado, generar y descargar un archivo PDF con información detallada sobre el estudiante actualmente seleccionado. También contiene una función para volver atrás a la página anterior. */

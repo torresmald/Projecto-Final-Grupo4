@@ -90,3 +90,9 @@
 .boton-volver {
   @include botonVolver($colorgeneral);
 }
+
+/* El código tiene un conjunto de estilos SCSS para una sección llamada "mi-cuenta". Incluye importaciones de otros archivos SCSS relacionados con colores, fuentes y formularios. El estilo utiliza display flex, dirección de columna y propiedades relacionadas para centrar los elementos en la pantalla, agregar sombra y bordes redondeados al contenedor principal.
+
+Hay estilos específicos para tipos diferentes de usuarios ("profesor" y "familia"), con tamaños de fuente, pesos y colores específicos. También incluye estilos para una imagen circular que parpadea en el fondo (para usuarios "profesor") usando animación CSS keyframes.
+
+Finalmente, hay una clase auxiliar incluida 'boton-volver' que hace uso del mixin 'botonVolver' definido anteriormente en uno de los archivos importados. */

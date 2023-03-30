@@ -48,3 +48,5 @@ export const INITIAL_EVENTS: EventInput[] = [
 export function createEventId() {
   return String(eventGuid++);
 }
+
+/* El código define una constante llamada INITIAL_EVENTS que contiene un arreglo de eventos que se mostrarán en el calendario. Cada evento tiene un id, un título, una fecha de inicio y una fecha de finalización. El código también define una función llamada createEventId que se encarga de crear un id para cada evento.*/
