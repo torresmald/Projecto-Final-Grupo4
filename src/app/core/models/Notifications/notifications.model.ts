@@ -6,6 +6,7 @@ export interface Notifications {
     _id: string,
     name: string,
     date: string,
+    image: string,
     calendar: string,
     readed: boolean,
     description: string,

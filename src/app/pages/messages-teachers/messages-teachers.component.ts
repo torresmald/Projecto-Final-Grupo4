@@ -70,7 +70,6 @@ export class MessagesTeachersComponent implements OnInit {
       setTimeout(() => {
         this.alertSuccess = false;
       }, 4000);
-
     }else {
      this.alertError = true
 
@@ -83,15 +82,20 @@ export class MessagesTeachersComponent implements OnInit {
   }
   public uploadImage(event: any) {
     const reader1 = new FileReader();
-    const reader2 = new FileReader();
-
     if (event.target.files && event.target.files.length) {
       const file1 = event.target.files[0];
-      const file2 = event.target.files[0];
+      console.log(file1);
       reader1.readAsArrayBuffer(file1);
-      reader2.readAsArrayBuffer(file2);
       this.image = file1;
-      this.calendar = file2;
+    }
+  }
+  public uploadCalendar(event: any) {
+    const reader1 = new FileReader();
+    if (event.target.files && event.target.files.length) {
+      const file1 = event.target.files[0];
+      console.log(file1);
+      reader1.readAsArrayBuffer(file1);
+      this.calendar = file1;
     }
   }
 }
