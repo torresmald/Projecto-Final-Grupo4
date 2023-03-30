@@ -22,3 +22,5 @@ export class PaginatePipe implements PipeTransform {
   }
 
 }
+
+/* Este código define un pipe  llamado 'paginate' que implementa la interfaz PipeTransform. El pipe toma un array de objetos Notifications y dos números, page_size y page_number, y devuelve un subconjunto de elementos del array basado en la paginación. Si no se proporcionan valores para page_size y page_number, se utilizan valores predeterminados de 5 y 1, respectivamente. */  

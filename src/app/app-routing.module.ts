@@ -90,3 +90,8 @@ export class AppRoutingModule { }
 
 
 
+/* Este código es un archivo de configuración de enrutamiento . Define las diferentes rutas disponibles en la aplicación, indicando el componente asociado a cada ruta.
+
+El archivo importa los módulos necesarios desde el paquete `@angular/core` y `@angular/router`. Luego define una constante llamada `routes`, que contiene objetos con información sobre cada ruta disponible en la aplicación.
+
+Finalmente, utiliza el decorador `NgModule` para definir la clase `AppRoutingModule`, que importa las rutas definidas mediante el método estático `forRoot()` del objeto RouterModule. También exporta RouterModule para proporcionar acceso a los servicios del router a otros componentes dentro de esta app.. */

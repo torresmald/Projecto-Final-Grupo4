@@ -10,7 +10,7 @@ const TOKEN_KEY = 'user-token-key';
 
 @Component({
   selector: 'app-family-view',
-  templateUrl: './family-view.component.html',
+  templateUrl:'./family-view.component.html',
   styleUrls: ['./family-view.component.scss']
 })
 

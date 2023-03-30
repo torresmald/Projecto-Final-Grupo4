@@ -19,3 +19,5 @@ import { SortNamePipe } from './pipes/filter/sort-name.pipe';
   ],
 })
 export class SharedModule { }
+
+/* Este es el archivo que se encuentra en la carpeta de shared, en el cual se encuentran los componentes que se utilizan en varias páginas. En este archivo se encuentran los pipes que se utilizan para filtrar y ordenar los datos de las tablas. */

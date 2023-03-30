@@ -28,3 +28,4 @@ import { FormsModule } from '@angular/forms';
 export class TeacherViewModule { 
 }
 
+/* Este es el archivo que se encuentra en la carpeta de pages, en el cual se encuentra el componente que se muestra en la pantalla de profesor. En este archivo se encuentra el calendario, el cual se importa de la librería de fullcalendar. */

@@ -17,3 +17,4 @@ export class SortNamePipe implements PipeTransform {
   }
 
 }
+/* Este código define un pipe llamado 'sortName', que implementa la interfaz PipeTransform. El pipe toma una lista de estudiantes y un parámetro opcional 'condition' con valores 'asc' o 'desc'. Si la lista de estudiantes es nula, devuelve una lista vacía. Si 'condition' no se proporciona, devuelve la lista sin cambios. Si 'condition' es 'asc', ordena la lista de estudiantes en orden alfabético ascendente por nombre. Si es 'desc', ordena la lista en orden alfabético descendente por nombre. */

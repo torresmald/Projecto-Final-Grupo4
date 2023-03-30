@@ -30,3 +30,5 @@ span {
     background-color: var(--bg-color-card) !important;
     color: var(--font-color-sub) !important;
 }
+
+/* El código define variables de estilo en un archivo .scss y las importa con la directiva @use. Luego establece algunas reglas de estilo para el cuerpo, párrafos, encabezados y tarjetas, utilizando las variables definidas previamente. Establece algunos colores personalizados a través del uso de variables CSS básicas (como --bg-color y --font-color-main). Además utiliza la propiedad !important para anular cualquier otra definición que se haya aplicado a los elementos HTML seleccionados. */
