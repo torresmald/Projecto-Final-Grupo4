@@ -69,20 +69,20 @@
 
 .language{
   position: absolute;
-  right: 0;
-  transform: translate(50px, -0px);
+  left: 0;
+  transform: translate(-50px, 80px);
 }
 .spanish{
-  height: 50px;
-  width: 100px;
+  height: 40px;
+  width: 80px;
   border-radius: 20px;
-  transform: rotate(180deg);
+  transform: scaleX(-1);
   transition: 0.5s;
   cursor: pointer;
 }
 .english{
-  height: 50px;
-  width: 100px;
+  height: 40px;
+  width: 80px;
   border-radius: 20px;
   transition: 0.5s;
   cursor: pointer;
