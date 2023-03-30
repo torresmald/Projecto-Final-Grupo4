@@ -1,4 +1,7 @@
-<app-alert *ngIf="alertSuccess" [successAlertMsg]="'Enviado con exito'"></app-alert>
+<app-alert
+  *ngIf="alertSuccess"
+  [successAlertMsg]="'Enviado con exito'"
+></app-alert>
 <div class="body">
   <div>
     <button
@@ -25,242 +28,240 @@
   </div>
 
   <div class="div-form">
-  <form
-    class="form"
-    *ngIf="formType"
-    [formGroup]="formType"
-    (ngSubmit)="onSubmit()"
-  >
-    <div *ngIf="typeUser === 'student'" class="student">
-      <input
-        placeholder="Nombre"
-        type="text"
-        id="name"
-        formControlName="name"
-      />
-      <p
-      class="errors"
-      *ngIf="formType.get('name')?.dirty && formType.get('name')?.errors?.['required']"
+    <form
+      class="form"
+      *ngIf="formType"
+      [formGroup]="formType"
+      (ngSubmit)="onSubmit()"
     >
-      El nombre es requerido
-    </p>
-      <label for="">
-        Foto
+      <div *ngIf="typeUser === 'student'" class="student">
         <input
-          accept=".jpg,.png"
-          placeholder="Foto"
-          type="file"
-          id="image"
-          formControlName="image"
-          (change)="uploadImage($event)"
+          placeholder="Nombre"
+          type="text"
+          id="name"
+          formControlName="name"
         />
         <p
-        class="errors"
-        *ngIf="formType.get('image')?.dirty && formType.get('image')?.errors?.['required']"
-      >
-        La foto es requerida
-      </p>
-      </label>
+          class="errors"
+          *ngIf="formType.get('name')?.dirty && formType.get('name')?.errors?.['required']"
+        >
+          El nombre es requerido
+        </p>
+        <label for="">
+          Foto
+          <input
+            accept=".jpg,.png"
+            placeholder="Foto"
+            type="file"
+            id="image"
+            formControlName="image"
+            (change)="uploadImage($event)"
+          />
+          <p
+            class="errors"
+            *ngIf="formType.get('image')?.dirty && formType.get('image')?.errors?.['required']"
+          >
+            La foto es requerida
+          </p>
+        </label>
 
-      <input
-        placeholder="Telefono"
-        type="text"
-        id="phone"
-        formControlName="phone"
-      />
-      <p
-      class="errors"
-      *ngIf="formType.get('phone')?.dirty && formType.get('phone')?.errors?.['required']"
-    >
-      El teléfono es requerido
-    </p>
-      <input
-        placeholder="Direccion"
-        type="text"
-        id="address"
-        formControlName="address"
-      />
-      <p
-      class="errors"
-      *ngIf="formType.get('address')?.dirty && formType.get('address')?.errors?.['required']"
-    >
-      La direccion es requerida
-    </p>
-      <input type="date" id="date" formControlName="date" />
+        <input
+          placeholder="Telefono"
+          type="text"
+          id="phone"
+          formControlName="phone"
+        />
+        <p
+          class="errors"
+          *ngIf="formType.get('phone')?.dirty && formType.get('phone')?.errors?.['required']"
+        >
+          El teléfono es requerido
+        </p>
+        <input
+          placeholder="Direccion"
+          type="text"
+          id="address"
+          formControlName="address"
+        />
+        <p
+          class="errors"
+          *ngIf="formType.get('address')?.dirty && formType.get('address')?.errors?.['required']"
+        >
+          La direccion es requerida
+        </p>
+        <input type="date" id="date" formControlName="date" />
+        <label>Areas</label>
+        <div formArrayName="areas" class="checkbox">
+          <label>
+            <input
+              type="checkbox"
+              name="areas"
+              value="Books"
+              (change)="onCheckboxChange($event)"
+            />
+            Books
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="areas"
+              value="Songs"
+              (change)="onCheckboxChange($event)"
+            />
+            Songs
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="areas"
+              value="Writting"
+              (change)="onCheckboxChange($event)"
+            />
+            Writting
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="areas"
+              value="Reading"
+              (change)="onCheckboxChange($event)"
+            />
+            Reading
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="areas"
+              value="Programming"
+              (change)="onCheckboxChange($event)"
+            />
+            Programming
+          </label>
+        </div>
 
-      <div formArrayName="areas" class="checkbox">
-        <label>
-          <input
-            type="checkbox"
-            name="areas"
-            value="Area 1"
-            (change)="onCheckboxChange($event)"
-          />
-          Books
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="areas"
-            value="Area 2"
-            (change)="onCheckboxChange($event)"
-          />
-          Songs
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="areas"
-            value="Area 3"
-            (change)="onCheckboxChange($event)"
-          />
-          Writting
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="areas"
-            value="Area 4"
-            (change)="onCheckboxChange($event)"
-          />
-          Reading
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            name="areas"
-            value="Area 5"
-            (change)="onCheckboxChange($event)"
-          />
-          Programming
+        <input
+          placeholder="Enfermedades/Alergias"
+          type="text"
+          id="diseases"
+          formControlName="diseases"
+        />
+        <p
+          class="errors"
+          *ngIf="formType.get('diseases')?.dirty && formType.get('diseases')?.errors?.['required']"
+        >
+          Campo requerido
+        </p>
+        <input
+          placeholder="Dieta/Alimentacion"
+          type="text"
+          id="nutrition"
+          formControlName="nutrition"
+        />
+        <p
+          class="errors"
+          *ngIf="formType.get('nutrition')?.dirty && formType.get('nutrition')?.errors?.['required']"
+        >
+          Campo requerido
+        </p>
+        <label for="">
+          Curso
+          <div>
+            <label>
+              1ºA
+              <input value="1ºA" type="radio" formControlName="grade" />
+            </label>
+            <label>
+              2ºA
+              <input value="2ºA" type="radio" formControlName="grade" />
+            </label>
+            <label>
+              3ºA
+              <input value="3ºA" type="radio" formControlName="grade" />
+            </label>
+          </div>
         </label>
       </div>
 
-      <input
-        placeholder="Enfermedades/Alergias"
-        type="text"
-        id="diseases"
-        formControlName="diseases"
-      />
-      <p
-      class="errors"
-      *ngIf="formType.get('diseases')?.dirty && formType.get('diseases')?.errors?.['required']"
-    >
-      Campo requerido
-    </p>
-      <input
-        placeholder="Dieta/Alimentacion"
-        type="text"
-        id="nutrition"
-        formControlName="nutrition"
-      />
-      <p
-      class="errors"
-      *ngIf="formType.get('nutrition')?.dirty && formType.get('nutrition')?.errors?.['required']"
-    >
-      Campo requerido
-    </p>
-      <label for="">
-        Curso
-        <div>
-          <label>
-            1ºA
-            <input value="1ºA" type="radio" formControlName="grade" />
-          </label>
-          <label>
-            2ºA
-            <input value="2ºA" type="radio" formControlName="grade" />
-          </label>
-          <label>
-            3ºA
-            <input value="3ºA" type="radio" formControlName="grade" />
-          </label>
-        </div>
-      </label>
-    </div>
+      <div class="parent" *ngIf="typeUser === 'parent'">
+        <input
+          placeholder="Email"
+          type="email"
+          id="email"
+          formControlName="email"
+        />
 
-    <div class="parent" *ngIf="typeUser === 'parent'">
-      <input
-        placeholder="Email"
-        type="email"
-        id="email"
-        formControlName="email"
-      />
+        <input
+          placeholder="Contraseña"
+          type="password"
+          id="password"
+          formControlName="password"
+        />
 
-      <input
-        placeholder="Contraseña"
-        type="password"
-        id="password"
-        formControlName="password"
-      />
+        <select id="studentName" (change)="onSelectChild($event)">
+          <option *ngFor="let student of students" [value]="student._id">
+            {{ student.name }}
+          </option>
+        </select>
+      </div>
 
-      <select id="studentName" (change)="onSelectChild($event)">
-        <option *ngFor="let student of students" [value]="student._id">
-          {{ student.name }}
-        </option>
-      </select>
-    </div>
+      <div class="teacher" *ngIf="typeUser === 'teacher'">
+        <input
+          placeholder="Email"
+          type="email"
+          id="email"
+          formControlName="email"
+        />
 
-    <div class="teacher" *ngIf="typeUser === 'teacher'">
-      <input
-        placeholder="Email"
-        type="email"
-        id="email"
-        formControlName="email"
-      />
+        <input
+          placeholder="Contraseña"
+          type="password"
+          id="password"
+          formControlName="password"
+        />
 
-      <input
-        placeholder="Contraseña"
-        type="password"
-        id="password"
-        formControlName="password"
-      />
+        <input
+          placeholder="Nombre"
+          type="text"
+          id="name"
+          formControlName="name"
+        />
 
-      <input
-        placeholder="Nombre"
-        type="text"
-        id="name"
-        formControlName="name"
-      />
+        <input
+          placeholder="Telefono"
+          type="text"
+          id="phone"
+          formControlName="phone"
+        />
 
-      <input
-        placeholder="Telefono"
-        type="text"
-        id="phone"
-        formControlName="phone"
-      />
+        <input
+          placeholder="Dni"
+          type="text"
+          id="idCard"
+          formControlName="idCard"
+        />
 
-      <input
-        placeholder="Dni"
-        type="text"
-        id="idCard"
-        formControlName="idCard"
-      />
+        <label for="">
+          Curso
+          <div>
+            <label>
+              1ºA
+              <input value="1ºA" type="radio" formControlName="grade" />
+            </label>
+            <label>
+              2ºA
+              <input value="2ºA" type="radio" formControlName="grade" />
+            </label>
+            <label>
+              3ºA
+              <input value="3ºA" type="radio" formControlName="grade" />
+            </label>
+          </div>
+        </label>
+      </div>
 
-      <label for="">
-        Curso
-        <div>
-          <label>
-            1ºA
-            <input value="1ºA" type="radio" formControlName="grade" />
-          </label>
-          <label>
-            2ºA
-            <input value="2ºA" type="radio" formControlName="grade" />
-          </label>
-          <label>
-            3ºA
-            <input value="3ºA" type="radio" formControlName="grade" />
-          </label>
-        </div>
-      </label>
-    </div>
-
-    <button class="form-button" type="submit">
-      Enviar
-    </button>
-  </form>
-</div>
+      <button class="form-button" type="submit">Enviar</button>
+    </form>
+  </div>
 </div>
 
 <!--Este código es una plantilla para un formulario que permite a los usuarios registrarse en diferentes roles: estudiante, padre/madre o profesor. Cada uno de estos roles tiene campos de entrada específicos y validaciones correspondientes. Los botones superiores permiten cambiar entre los tres tipos de usuario para completar el formulario necesario. Este se presenta como una tabla con múltiples entradas, desde simple texto hasta casillas de verificación  y selección de opciones con Radio buttons.-->

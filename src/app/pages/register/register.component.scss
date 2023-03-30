@@ -1,9 +1,9 @@
 @import "../../../styles/base/colors.scss";
 @import "../../../styles/base/fonts.scss";
 @import "../../../styles/elements/form.scss";
-label{
-    text-align: center;
-    color: black;
+label {
+  text-align: center;
+  color: black;
 }
 .body {
   width: 100%;
@@ -25,7 +25,9 @@ label{
   margin-bottom: 10px;
   transition: 0.5s;
 }
-
+.checkbox{
+  text-align: center;
+}
 .btn-select:hover {
   background-color: $colorprofesores;
 }
@@ -84,9 +86,11 @@ label{
     height: 40px;
     font-size: 12px;
   }
-  .parent, .teacher, .student{
+  .parent,
+  .teacher,
+  .student {
     width: 300px;
   }
 }
 
-/* El código es una hoja de estilo en cascada que importa otros archivos SCSS y aplica estilos a elementos HTML. Se establecen estilos para etiquetas de texto, botones selectores, botones activos y formularios para los tipos de usuario "student", "parent" y "teacher". También se incluye un conjunto de reglas de estilo para medios específicos con pantallas más pequeñas.
+/* El código es una hoja de estilo en cascada que importa otros archivos SCSS y aplica estilos a elementos HTML. Se establecen estilos para etiquetas de texto, botones selectores, botones activos y formularios para los tipos de usuario "student", "parent" y "teacher". También se incluye un conjunto de reglas de estilo para medios específicos con pantallas más pequeñas. */
