@@ -35,3 +35,4 @@ export class AlertComponent implements OnChanges {
   }
 }
 
+/* Este código define un componente de alerta llamado 'app-alert'. El componente tiene dos tipos de alertas: éxito y error, cada una con un mensaje y un título. Los mensajes y títulos son pasados como propiedades del componente (@Input). Implementa la interfaz OnChanges para actualizar las propiedades cuando cambien. */

@@ -48,3 +48,5 @@ export class AppModule { }
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
+/* Este es el archivo principal de la aplicación, en el cual se importan todos los módulos y componentes que se van a utilizar en la aplicación. */

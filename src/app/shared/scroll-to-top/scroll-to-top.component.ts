@@ -36,3 +36,5 @@ export class ScrollToTopComponent {
     })();
   }
 }
+
+/* Este código es un componente  que implementa la funcionalidad "volver arriba" . Escucha el evento de desplazamiento del usuario a través de @HostListener, y hace visible un botón para volver al principio si el usuario se desplaza hacia abajo más allá de cierta posición. Al hacer clic en ese botón, smooth scrolling para llevar al usuario al principio de la página. El código también utiliza @Inject(DOCUMENT) para acceder al objeto Document del DOM que permite interactuar con el HTML y CSS dinámicos generados por la aplicación. */  

@@ -109,3 +109,4 @@ export class TeacherViewComponent {
     this.showChat = !this.showChat;
   }
 }
+/* Este código define un componente  llamado 'TeacherViewComponent' que incluye un calendario interactivo usando FullCalendar y un chat. El componente permite a los usuarios agregar, eliminar y editar eventos en el calendario, así como enviar mensajes a través del chat. Los eventos del calendario se guardan en el almacenamiento local del navegador y se cargan al iniciar el componente. Además, el componente utiliza el servicio 'ChatService' para gestionar el envío de mensajes y la visualización del chat en la interfaz. */
