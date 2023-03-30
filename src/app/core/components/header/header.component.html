@@ -51,15 +51,11 @@
     <img src="../../../../assets/logos/flags.jpg" alt="Language"
     #langSelect (click)="changeLang('en')"
     [ngClass]="{
-      'spanish': lang == 'en',
-      'english': lang == 'es'
+      'spanish': lang == 'es',
+      'english': lang == 'en'
     }"
     >
-    <!-- <select #langSelect (change)="changeLang(langSelect.value)">
-      <option *ngFor="let lang of langs" [value]="lang">
-        {{ lang === "es" ? "🇪🇸Español " : "🇬🇧English" }}
-      </option>
-    </select> -->
+   
   </div>
   <div class="icon-theme">
     <img

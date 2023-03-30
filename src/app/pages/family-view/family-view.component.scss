@@ -213,7 +213,7 @@ input::placeholder {
 .remoto {
   padding: 20px;
   margin-top: 4px;
-  margin-left: 5px;
+  margin-left: 15px;
   border-radius: 10px;
   text-overflow: ellipsis;
   background-color: $colorfamilias;
@@ -297,7 +297,6 @@ input::placeholder {
     }
   }
 }
-
 @media all and (min-width: 460px) and (max-width: 770px) {
   .body {
     flex-direction: column;
