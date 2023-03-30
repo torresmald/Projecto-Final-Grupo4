@@ -12,6 +12,7 @@ import { ResourcesService } from 'src/app/core/services/resources/resources.serv
 export class FormResourcesComponent {
   public resourcesForm?: FormGroup;
   public types?: ResourcesType[] = Resources;
+  public alertSuccess?: boolean = false;
   constructor(
     private formBuilder: FormBuilder, 
     private resourcesService: ResourcesService,
@@ -21,13 +22,18 @@ export class FormResourcesComponent {
         title: new FormControl(''),
         description: new FormControl(''),
         link: new FormControl(''),
-        type: new FormControl('')
+        type: new FormControl(''),
+        buy: new FormControl('')
       })
   }
   public createNewResource(){
     const resourceRequest = this.resourcesService.createResource(this.resourcesForm?.value).subscribe(() => {
       this.resourcesForm?.reset();
-      this.router.navigate(['teacherView'])
+      this.alertSuccess = true;
+      setTimeout(() => {
+        this.alertSuccess = false;
+        this.router.navigate(['teacherView'])
+      }, 4000);
     })
   }
 }

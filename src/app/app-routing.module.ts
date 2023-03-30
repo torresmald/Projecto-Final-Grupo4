@@ -64,12 +64,6 @@ const routes: Routes = [
     path: 'privacity',
     loadChildren: () => import('../app/pages/privacity/privacity.module').then(m => m.PrivacityModule),
   },
-  
-  {
-    path: 'admin',
-    loadChildren: () => import('../app/pages/admin/admin.module').then(m => m.
-      AdminModule)
-  },
 
   {
     path: 'register',

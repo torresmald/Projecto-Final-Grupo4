@@ -1,3 +1,4 @@
+<app-alert *ngIf="alertSuccess" [successAlertTitle]="'Exito'" [successAlertMsg]="'Recurso enviado'"></app-alert>
 <h2 class="form-title">Añadir recursos</h2>
 
 <div class="form-container">
@@ -28,6 +29,13 @@
         id="link"
         formControlName="link"
         placeholder="Link"
+        class="form-input"
+      />
+      <input
+        type="text"
+        id="buy"
+        formControlName="buy"
+        placeholder="Compra"
         class="form-input"
       />
       <select formControlName="type" class="form-input">

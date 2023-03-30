@@ -31,7 +31,6 @@ export class FamilyViewComponent implements OnInit{
         
         this.notifications = notification.sort((a: any, b: any) => (b.date > a.date) ? 1 : ((a.date > b.date) ? -1 : 0))
         this.myCalendar = this.notifications[0];
-        
       })
   }
   public sendMessage(){
