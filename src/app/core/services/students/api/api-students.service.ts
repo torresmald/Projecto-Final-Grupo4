@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Students } from './../../../models/Students/transformed/students.model';
-const API_SEMILLA = "https://apicolegiosemilla.up.railway.app";
+const API_SEMILLA = "https://api-projecto-final-grupo4.up.railway.app";
 
 @Injectable({
 

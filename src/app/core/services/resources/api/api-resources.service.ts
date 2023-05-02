@@ -6,7 +6,7 @@ import { Resources } from 'src/app/core/models/Resources/transformed/resources.m
 const resources = 'resources';
 
 const API_URLS = {
-  DOMAIN: 'https://apicolegiosemilla.up.railway.app/',
+  DOMAIN: 'https://api-projecto-final-grupo4.up.railway.app/',
   PARENTS: 'resources/',
 };
 @Injectable({

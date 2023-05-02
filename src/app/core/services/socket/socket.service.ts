@@ -5,7 +5,7 @@ import { io } from 'socket.io-client';
   providedIn: 'root'
 })
 export class SocketService {
-  io = io("https://apicolegiosemilla.up.railway.app/", {
+  io = io("https://api-projecto-final-grupo4.up.railway.app", {
     autoConnect: true
   })
   constructor() { 

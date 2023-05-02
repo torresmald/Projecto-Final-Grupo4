@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Notifications } from '../../models/Notifications/notifications.model';
-const API_URLS = 'https://apicolegiosemilla.up.railway.app/notifications';
+const API_URLS = 'https://api-projecto-final-grupo4.up.railway.app/notifications';
 
 @Injectable({
   providedIn: 'root',
