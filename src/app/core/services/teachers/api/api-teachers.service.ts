@@ -7,7 +7,7 @@ const teachers = 'teachers';
 const register = 'register';
 const login = 'login';
 const API_URLS = {
-  DOMAIN: 'https://api-projecto-final-grupo4.up.railway.app/',
+  DOMAIN: 'https://api-projecto-final-grupo4.vercel.app/',
   TEACHERS: 'teachers/'
 }
 @Injectable({
